@@ -85,7 +85,17 @@
       '4. Storage: Very light — about 100,000 users ≈ 10 MB, roughly the size of one modern MP3 on your PC. Only successful country/region hits are stored.',
     a11y_toggle_geo_local_cache: 'Toggle local country cache',
     pop_opt_geo_cache_accounts: 'Cached accounts',
-    pop_opt_geo_cache_storage: 'Storage used (approx.)'
+    pop_opt_geo_cache_storage: 'Storage used (approx.)',
+    pop_opt_undo_on_list_click: 'Undo on list click',
+    pop_opt_undo_on_list_click_what:
+      '1. What it does: When on, clicking a managed account also undoes the action on X (unmute or unblock). When off, click only removes them from this extension’s list — nothing changes on X.',
+    pop_opt_undo_on_list_click_how:
+      '2. How it works: Opens a short-lived background tab to that profile, runs the same ⋯ menu flow used for mute/block, then closes the tab. Not interested entries are always list-only (X has no reliable undo).',
+    pop_opt_undo_on_list_click_benefits:
+      '3. Benefits when on: One click both cleans the list and reverses mute/block on your X account.',
+    pop_opt_undo_on_list_click_note:
+      '4. Note: A background profile tab will open briefly so the extension can unmute/unblock. Off by default so accidental clicks cannot open tabs or reverse actions without you meaning to.',
+    a11y_toggle_undo_on_list_click: 'Toggle undo on managed list click'
   };
 
   const isDev =

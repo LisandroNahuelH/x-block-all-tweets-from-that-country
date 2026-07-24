@@ -270,5 +270,29 @@
   "pop_opt_geo_cache_storage": {
     "message": "Storage used (approx.)",
     "description": "Label for approximate disk size of local geo cache"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Undo on list click",
+    "description": "Toggle: reverse mute/block when clicking managed account in popup"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. What it does: When on, clicking a managed account also undoes the action on X (unmute or unblock). When off, click only removes them from this extension’s list — nothing changes on X.",
+    "description": "Undo-on-click note: what it does"
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. How it works: Opens a short-lived background tab to that profile, runs the same ⋯ menu flow used for mute/block, then closes the tab. Not interested entries are always list-only (X has no reliable undo).",
+    "description": "Undo-on-click note: how it works"
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Benefits when on: One click both cleans the list and reverses mute/block on your X account.",
+    "description": "Undo-on-click note: benefits"
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Note: A background profile tab will open briefly so the extension can unmute/unblock. Off by default so accidental clicks cannot open tabs or reverse actions without you meaning to.",
+    "description": "Undo-on-click note: tab warning and default off"
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Toggle undo on managed list click",
+    "description": "Accessible label for undo-on-list-click switch"
   }
 }

@@ -26,7 +26,8 @@
       notinterested: emptyLane(true),
       showCountryLabels: true,
       tallerColumns: false,
-      geoLocalCache: true
+      geoLocalCache: true,
+      undoOnListClick: false
     };
   }
 
@@ -36,7 +37,8 @@
     notinterested: Object.freeze(emptyLane(true)),
     showCountryLabels: true,
     tallerColumns: false,
-    geoLocalCache: true
+    geoLocalCache: true,
+    undoOnListClick: false
   });
 
   function isLane(value) {
@@ -192,7 +194,8 @@
       notinterested: normalizeLaneStrict(base.notinterested),
       showCountryLabels: base.showCountryLabels !== false,
       tallerColumns: base.tallerColumns === true,
-      geoLocalCache: base.geoLocalCache !== false
+      geoLocalCache: base.geoLocalCache !== false,
+      undoOnListClick: base.undoOnListClick === true
     };
   }
 
@@ -232,7 +235,11 @@
       geoLocalCache:
         partial && 'geoLocalCache' in partial
           ? !!partial.geoLocalCache
-          : current.geoLocalCache !== false
+          : current.geoLocalCache !== false,
+      undoOnListClick:
+        partial && 'undoOnListClick' in partial
+          ? !!partial.undoOnListClick
+          : current.undoOnListClick === true
     };
     const next = normalizeSettings(nextRaw);
     try {
@@ -258,6 +265,10 @@
 
   async function setGeoLocalCache(enabled) {
     return setSettings({ geoLocalCache: !!enabled });
+  }
+
+  async function setUndoOnListClick(enabled) {
+    return setSettings({ undoOnListClick: !!enabled });
   }
 
   async function toggleLaneList(lane, field, key) {
@@ -319,61 +330,56 @@
     return settings;
   }
 
-  async function releaseManagedAccount(lane, screenName) {
+  /**
+   * Remove from managed list. Optionally reverse mute/block on X (async in SW).
+   * @param {string} lane
+   * @param {string} screenName
+   * @param {{ reverseOnX?: boolean }} [opts]
+   */
+  async function releaseManagedAccount(lane, screenName, opts) {
     const L = isLane(lane) ? lane : '';
     const name = normalizeScreenName(screenName);
     if (!L || !name) {
       return { settings: await getSettings(), released: null };
     }
     const current = await getSettings();
+    const reverseOnX =
+      opts && 'reverseOnX' in opts
+        ? !!opts.reverseOnX
+        : current.undoOnListClick === true;
+
     const released =
       (current[L].accounts || []).find(a => a.screenName === name) || null;
     const nextList = (current[L].accounts || []).filter(a => a.screenName !== name);
     const settings = await setSettings({ [L]: { accounts: nextList } });
 
-    let releaseResult = null;
-    if (released) {
+    // Not interested: never reverse on X. Mute/block only if toggle on.
+    const shouldReverse =
+      reverseOnX && released && (L === 'mute' || L === 'block');
+
+    let releaseResult = { success: true, localOnly: true };
+    if (shouldReverse) {
       try {
-        releaseResult = await new Promise(resolve => {
-          try {
-            chrome.runtime.sendMessage(
-              {
-                type: 'RELEASE_ACCOUNT',
-                payload: {
-                  screenName: released.screenName,
-                  mode: L,
-                  name: released.name,
-                  avatarUrl: released.avatarUrl
-                }
-              },
-              response => {
-                if (chrome.runtime.lastError) {
-                  resolve({
-                    success: false,
-                    error: chrome.runtime.lastError.message
-                  });
-                } else {
-                  resolve(response || { success: false, error: 'No response' });
-                }
-              }
-            );
-          } catch (e) {
-            resolve({ success: false, error: e.message });
+        // Fire-and-forget reverse: SW re-inserts only if unmute/unblock fails.
+        // Do not await full tab work (popup close would look like failure).
+        chrome.runtime.sendMessage({
+          type: 'RELEASE_ACCOUNT',
+          payload: {
+            screenName: released.screenName,
+            mode: L,
+            name: released.name,
+            avatarUrl: released.avatarUrl,
+            reverseOnX: true
           }
         });
-      } catch (_) {
-        releaseResult = { success: false, error: 'send failed' };
+        releaseResult = { success: true, pending: true, reverseOnX: true };
+      } catch (e) {
+        releaseResult = { success: false, error: e?.message || String(e) };
       }
     }
 
-    // SW may re-insert on reverse failure — reload canonical settings
-    const finalSettings =
-      releaseResult && releaseResult.reinserted
-        ? await getSettings()
-        : settings;
-
     return {
-      settings: finalSettings,
+      settings,
       released: released ? { ...released, mode: L } : null,
       releaseResult
     };
@@ -393,6 +399,7 @@
     setShowCountryLabels,
     setTallerColumns,
     setGeoLocalCache,
+    setUndoOnListClick,
     toggleLaneCountry,
     toggleLaneRegion,
     recordManagedAccount,

@@ -361,8 +361,14 @@ async function handleReleaseAccount(payload) {
   const mode = payload?.mode;
   const name = payload?.name;
   const avatarUrl = payload?.avatarUrl;
+  const reverseOnX = payload?.reverseOnX !== false;
 
-  if (mode === 'notinterested') {
+  // Local-only: no profile tab
+  if (payload?.reverseOnX === false || mode === 'notinterested') {
+    return { success: true, localOnly: true, screenName, mode };
+  }
+
+  if (!reverseOnX) {
     return { success: true, localOnly: true, screenName, mode };
   }
 
@@ -371,40 +377,36 @@ async function handleReleaseAccount(payload) {
     return { success: false, error: 'Unsupported mode', screenName, mode };
   }
 
-  try {
-    const result = await runReleaseOnX(screenName, action);
-    return {
-      success: true,
-      screenName,
-      mode,
-      action,
-      ...(result || {})
-    };
-  } catch (err) {
-    // Re-insert so user can retry; list is source of managed state
+  // Run reverse without blocking the message channel (popup may close).
+  // Re-insert into managed list only if unmute/unblock truly fails.
+  (async () => {
     try {
-      if (self.XCD_SETTINGS?.recordManagedAccount) {
-        await self.XCD_SETTINGS.recordManagedAccount({
-          screenName,
-          lane: mode,
-          name,
-          avatarUrl,
-          skipBadge: true
-        });
+      await runReleaseOnX(screenName, action);
+    } catch (err) {
+      console.warn('[xcd] RELEASE_ACCOUNT failed', mode, screenName, err);
+      try {
+        if (self.XCD_SETTINGS?.recordManagedAccount) {
+          await self.XCD_SETTINGS.recordManagedAccount({
+            screenName,
+            lane: mode,
+            name,
+            avatarUrl,
+            skipBadge: true
+          });
+        }
+      } catch (e) {
+        console.warn('[xcd] re-insert after failed release', e);
       }
-    } catch (e) {
-      console.warn('[xcd] re-insert after failed release', e);
     }
-    console.warn('[xcd] RELEASE_ACCOUNT failed', mode, screenName, err);
-    return {
-      success: false,
-      error: err?.message || String(err),
-      screenName,
-      mode,
-      action,
-      reinserted: true
-    };
-  }
+  })();
+
+  return {
+    success: true,
+    pending: true,
+    screenName,
+    mode,
+    action
+  };
 }
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {

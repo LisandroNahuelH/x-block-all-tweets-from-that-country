@@ -389,14 +389,35 @@
 
     if (kind === 'account') {
       btn.disabled = true;
-      try {
-        const { settings: next, releaseResult } =
-          await XCD_SETTINGS.releaseManagedAccount(lane, key);
-        settings = next;
-        if (releaseResult && releaseResult.success === false) {
-          console.warn('[xcd] release reverse failed', releaseResult);
+      const reverseOnX = settings.undoOnListClick === true;
+      // Optimistic UI: drop from list immediately so it never “sticks”
+      const prevAccounts = settings[lane].accounts || [];
+      settings = {
+        ...settings,
+        [lane]: {
+          ...settings[lane],
+          accounts: prevAccounts.filter(
+            a => (a.screenName || '').toLowerCase() !== String(key).toLowerCase()
+          )
         }
+      };
+      renderManaged(lane);
+      try {
+        const { settings: next } = await XCD_SETTINGS.releaseManagedAccount(
+          lane,
+          key,
+          { reverseOnX }
+        );
+        settings = next || (await XCD_SETTINGS.getSettings());
         renderManaged(lane);
+      } catch (err) {
+        console.warn('[xcd] release managed failed', err);
+        try {
+          settings = await XCD_SETTINGS.getSettings();
+          renderManaged(lane);
+        } catch (_) {
+          /* ignore */
+        }
       } finally {
         btn.disabled = false;
       }
@@ -637,6 +658,13 @@
     input.checked = s.geoLocalCache !== false;
   }
 
+  async function syncUndoOnListClickToggle() {
+    const input = document.getElementById('optUndoOnListClick');
+    if (!input || !globalThis.XCD_SETTINGS) return;
+    const s = await XCD_SETTINGS.getSettings();
+    input.checked = s.undoOnListClick === true;
+  }
+
   async function onShowCountryToggle(event) {
     const input = event.currentTarget;
     if (!globalThis.XCD_SETTINGS) return;
@@ -657,6 +685,13 @@
     await XCD_SETTINGS.setGeoLocalCache(!!input.checked);
   }
 
+  async function onUndoOnListClickToggle(event) {
+    const input = event.currentTarget;
+    if (!globalThis.XCD_SETTINGS) return;
+    const on = !!input.checked;
+    settings = await XCD_SETTINGS.setUndoOnListClick(on);
+  }
+
   async function init() {
     document.title = t('ext_name') || 'X - Block all tweets from that country or region';
     applyDom(document);
@@ -664,6 +699,7 @@
     await syncShowCountryToggle();
     await syncTallerColumnsToggle();
     await syncGeoLocalCacheToggle();
+    await syncUndoOnListClickToggle();
 
     // Wire interactions first so UI is usable even while lists fill.
     document.getElementById('p11Brand')?.addEventListener('click', onBrandClick);
@@ -680,6 +716,9 @@
     document
       .getElementById('optGeoLocalCache')
       ?.addEventListener('change', onGeoLocalCacheToggle);
+    document
+      .getElementById('optUndoOnListClick')
+      ?.addEventListener('change', onUndoOnListClickToggle);
     for (const lane of LANES) {
       const ui = els[lane];
       ui.enabled?.addEventListener('change', onEnabledChange);
@@ -720,6 +759,8 @@
             if (countryEl) countryEl.checked = settings.showCountryLabels !== false;
             const geoEl = document.getElementById('optGeoLocalCache');
             if (geoEl) geoEl.checked = settings.geoLocalCache !== false;
+            const undoEl = document.getElementById('optUndoOnListClick');
+            if (undoEl) undoEl.checked = settings.undoOnListClick === true;
             for (const L of LANES) {
               paintLaneEnabled(L);
               renderManaged(L);
