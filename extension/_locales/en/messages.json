@@ -1,0 +1,126 @@
+{
+  "ext_name": {
+    "message": "X - Block all tweets from that country or region",
+    "description": "Extension name shown in Chrome and the Web Store"
+  },
+  "ext_description": {
+    "message": "Detect the country or region of X accounts on your timeline (About this account).",
+    "description": "Extension short description for Chrome and the Web Store"
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "description": "Debug label appended next to a username; COUNTRY is the English location name from X",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Country filter",
+    "description": "Popup header eyebrow label"
+  },
+  "pop_heading": {
+    "message": "X - Block all tweets from that country or region",
+    "description": "Popup main heading"
+  },
+  "pop_lane_block": {
+    "message": "Block",
+    "description": "Title of the Block lane column"
+  },
+  "pop_lane_mute": {
+    "message": "Mute",
+    "description": "Title of the Mute lane column"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Enable or disable Block lane",
+    "description": "Accessible label for Block lane ON/OFF switch"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Enable or disable Mute lane",
+    "description": "Accessible label for Mute lane ON/OFF switch"
+  },
+  "pop_mode_warning_label": {
+    "message": "WARNING:",
+    "description": "Red prefix label for the mode warning notice"
+  },
+  "pop_mode_hint_block": {
+    "message": "Selected accounts are blocked on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web.",
+    "description": "Explains account-level Block sync across all X clients (after WARNING:)"
+  },
+  "pop_mode_hint_mute": {
+    "message": "Selected accounts are muted on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web.",
+    "description": "Explains account-level Mute sync across all X clients (after WARNING:)"
+  },
+  "pop_regions_label": {
+    "message": "Regions",
+    "description": "Section title for region multi-select list"
+  },
+  "pop_countries_label": {
+    "message": "Countries",
+    "description": "Section title for country multi-select list"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ selected",
+    "description": "Badge showing how many items are selected in a geo list",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Toggle region",
+    "description": "Accessible prefix for region toggle buttons"
+  },
+  "a11y_toggle_country": {
+    "message": "Toggle country",
+    "description": "Accessible prefix for country toggle buttons"
+  },
+  "pop_search_regions": {
+    "message": "Search regions…",
+    "description": "Placeholder for the regions search box"
+  },
+  "pop_search_countries": {
+    "message": "Search countries…",
+    "description": "Placeholder for the countries search box"
+  },
+  "pop_search_no_results": {
+    "message": "No matches",
+    "description": "Shown when geo search filter returns an empty list"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Blocked accounts",
+    "description": "Section title for accounts blocked by the extension"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Muted accounts",
+    "description": "Section title for accounts muted by the extension"
+  },
+  "pop_search_accounts": {
+    "message": "Search accounts…",
+    "description": "Placeholder for managed accounts search box"
+  },
+  "pop_managed_empty": {
+    "message": "No blocked or muted accounts yet",
+    "description": "Empty state when the extension has not managed any accounts"
+  },
+  "pop_managed_mode_block": {
+    "message": "Block",
+    "description": "Badge for a managed account that was blocked"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Mute",
+    "description": "Badge for a managed account that was muted"
+  },
+  "a11y_release_account": {
+    "message": "Unblock or unmute account",
+    "description": "Accessible label prefix for releasing a managed account"
+  },
+  "a11y_open_premium11": {
+    "message": "Open Premium11 website",
+    "description": "Accessible label for the Premium11 brand link in the popup"
+  }
+}

@@ -1,0 +1,132 @@
+/**
+ * Fail-safe i18n for Chromium extensions.
+ * Source of truth: _locales/en/messages.json (default_locale).
+ * Chrome falls back missing keys in other locales to default_locale automatically.
+ */
+(function (global) {
+  'use strict';
+
+  /** Emergency EN map if chrome.i18n is missing or a key typos. Keep in sync with _locales/en. */
+  const EN_FALLBACK = {
+    ext_name: 'X - Block all tweets from that country or region',
+    ext_description:
+      'Detect the country or region of X accounts on your timeline (About this account).',
+    msg_location_suffix: ' · $1',
+    pop_eyebrow: 'Country filter',
+    pop_heading: 'X - Block all tweets from that country or region',
+    pop_lane_block: 'Block',
+    pop_lane_mute: 'Mute',
+    a11y_toggle_lane_block: 'Enable or disable Block lane',
+    a11y_toggle_lane_mute: 'Enable or disable Mute lane',
+    pop_mode_warning_label: 'WARNING:',
+    pop_mode_hint_block:
+      'Selected accounts are blocked on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web.',
+    pop_mode_hint_mute:
+      'Selected accounts are muted on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web.',
+    pop_regions_label: 'Regions',
+    pop_countries_label: 'Countries',
+    pop_selected_count: '$1 selected',
+    a11y_toggle_region: 'Toggle region',
+    a11y_toggle_country: 'Toggle country',
+    pop_search_regions: 'Search regions…',
+    pop_search_countries: 'Search countries…',
+    pop_search_no_results: 'No matches',
+    pop_blocked_accounts_label: 'Blocked accounts',
+    pop_muted_accounts_label: 'Muted accounts',
+    pop_search_accounts: 'Search accounts…',
+    pop_managed_empty: 'No blocked or muted accounts yet',
+    pop_managed_mode_block: 'Block',
+    pop_managed_mode_mute: 'Mute',
+    a11y_release_account: 'Unblock or unmute account',
+    a11y_open_premium11: 'Open Premium11 website'
+  };
+
+  const isDev =
+    typeof chrome !== 'undefined' &&
+    chrome.runtime &&
+    typeof chrome.runtime.getManifest === 'function' &&
+    !('update_url' in (chrome.runtime.getManifest() || {}));
+
+  function substitute(template, substitutions) {
+    if (template == null) return '';
+    let out = String(template);
+    const list = Array.isArray(substitutions)
+      ? substitutions
+      : substitutions == null
+        ? []
+        : [substitutions];
+    for (let i = 0; i < list.length; i++) {
+      const val = list[i] == null ? '' : String(list[i]);
+      out = out.replace(new RegExp('\\$' + (i + 1), 'g'), val);
+      out = out.replace(new RegExp('\\$' + (i + 1) + '\\$', 'g'), val);
+    }
+    out = out.replace(/\$[A-Z_]+\$/g, '');
+    return out;
+  }
+
+  /**
+   * @param {string} key
+   * @param {string|string[]|undefined} substitutions
+   * @returns {string} never null/undefined
+   */
+  function t(key, substitutions) {
+    if (!key || typeof key !== 'string') return '';
+
+    let msg = '';
+    try {
+      if (typeof chrome !== 'undefined' && chrome.i18n && chrome.i18n.getMessage) {
+        const subs = Array.isArray(substitutions)
+          ? substitutions.map(s => (s == null ? '' : String(s)))
+          : substitutions == null
+            ? undefined
+            : [String(substitutions)];
+        msg = subs ? chrome.i18n.getMessage(key, subs) : chrome.i18n.getMessage(key);
+      }
+    } catch (_) {
+      msg = '';
+    }
+
+    if (msg) return msg;
+
+    const fb = EN_FALLBACK[key];
+    if (fb) return substitute(fb, substitutions);
+
+    if (isDev) return '⟦' + key + '⟧';
+    return '';
+  }
+
+  const ATTR_MAP = {
+    'data-i18n': 'text',
+    'data-i18n-placeholder': 'placeholder',
+    'data-i18n-title': 'title',
+    'data-i18n-aria-label': 'aria-label',
+    'data-i18n-value': 'value'
+  };
+
+  /**
+   * Apply data-i18n* attributes under root (for popup/options HTML).
+   * @param {ParentNode} [root=document]
+   */
+  function applyDom(root) {
+    const scope = root || (typeof document !== 'undefined' ? document : null);
+    if (!scope || !scope.querySelectorAll) return;
+
+    for (const [attr, target] of Object.entries(ATTR_MAP)) {
+      const nodes = scope.querySelectorAll('[' + attr + ']');
+      for (const el of nodes) {
+        const key = el.getAttribute(attr);
+        if (!key) continue;
+        const text = t(key);
+        if (target === 'text') {
+          el.textContent = text;
+        } else {
+          el.setAttribute(target, text);
+        }
+      }
+    }
+  }
+
+  const api = { t, applyDom, EN_FALLBACK };
+  global.XCD_I18N = api;
+  if (typeof self !== 'undefined') self.XCD_I18N = api;
+})(typeof globalThis !== 'undefined' ? globalThis : self);

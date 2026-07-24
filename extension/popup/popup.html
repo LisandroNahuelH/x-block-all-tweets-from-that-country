@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <a
+        class="p11-brand"
+        id="p11Brand"
+        href="https://www.premium11.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-i18n-aria-label="a11y_open_premium11"
+        data-i18n-title="a11y_open_premium11"
+      >
+        <img
+          class="p11-brand__mark"
+          src="../brand/premium11-mark.svg"
+          alt=""
+          width="28"
+          height="28"
+        />
+        <span class="p11-brand__name" aria-hidden="true"></span>
+      </a>
+
+      <header class="popup-header">
+        <div>
+          <p class="eyebrow" data-i18n="pop_eyebrow"></p>
+          <h1 data-i18n="pop_heading"></h1>
+        </div>
+      </header>
+
+      <div class="lanes">
+        <!-- BLOCK LANE -->
+        <section class="lane" id="laneBlock" data-lane="block">
+          <div class="lane-head">
+            <h2 class="lane-title" data-i18n="pop_lane_block"></h2>
+            <label class="switch">
+              <input type="checkbox" id="blockEnabled" data-lane="block" checked />
+              <span class="switch-track" aria-hidden="true"></span>
+              <span class="sr-only" data-i18n="a11y_toggle_lane_block"></span>
+            </label>
+          </div>
+          <p class="mode-hint" role="status">
+            <span class="mode-hint__warn" data-i18n="pop_mode_warning_label"></span>
+            <span class="mode-hint__text" data-i18n="pop_mode_hint_block"></span>
+          </p>
+
+          <div class="lane-body">
+            <section class="geo-panel" aria-labelledby="block-regions-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="block-regions-label" data-i18n="pop_regions_label"></h3>
+                <span class="geo-count" id="blockRegionCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="blockRegionSearch">
+                <span class="sr-only" data-i18n="pop_search_regions"></span>
+                <input
+                  id="blockRegionSearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_regions"
+                  data-lane="block"
+                  data-section="regions"
+                />
+              </label>
+              <div class="geo-list geo-list--regions" id="blockRegionList" role="list" data-lane="block" data-section="regions"></div>
+            </section>
+
+            <section class="geo-panel" aria-labelledby="block-countries-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="block-countries-label" data-i18n="pop_countries_label"></h3>
+                <span class="geo-count" id="blockCountryCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="blockCountrySearch">
+                <span class="sr-only" data-i18n="pop_search_countries"></span>
+                <input
+                  id="blockCountrySearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_countries"
+                  data-lane="block"
+                  data-section="countries"
+                />
+              </label>
+              <div class="geo-list geo-list--countries" id="blockCountryList" role="list" data-lane="block" data-section="countries"></div>
+            </section>
+
+            <section class="geo-panel" aria-labelledby="block-managed-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="block-managed-label" data-i18n="pop_blocked_accounts_label"></h3>
+                <span class="geo-count" id="blockManagedCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="blockManagedSearch">
+                <span class="sr-only" data-i18n="pop_search_accounts"></span>
+                <input
+                  id="blockManagedSearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_accounts"
+                  data-lane="block"
+                  data-section="accounts"
+                />
+              </label>
+              <div class="geo-list geo-list--accounts" id="blockManagedList" role="list" data-lane="block" data-section="accounts"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- MUTE LANE -->
+        <section class="lane" id="laneMute" data-lane="mute">
+          <div class="lane-head">
+            <h2 class="lane-title" data-i18n="pop_lane_mute"></h2>
+            <label class="switch">
+              <input type="checkbox" id="muteEnabled" data-lane="mute" checked />
+              <span class="switch-track" aria-hidden="true"></span>
+              <span class="sr-only" data-i18n="a11y_toggle_lane_mute"></span>
+            </label>
+          </div>
+          <p class="mode-hint" role="status">
+            <span class="mode-hint__warn" data-i18n="pop_mode_warning_label"></span>
+            <span class="mode-hint__text" data-i18n="pop_mode_hint_mute"></span>
+          </p>
+
+          <div class="lane-body">
+            <section class="geo-panel" aria-labelledby="mute-regions-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="mute-regions-label" data-i18n="pop_regions_label"></h3>
+                <span class="geo-count" id="muteRegionCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="muteRegionSearch">
+                <span class="sr-only" data-i18n="pop_search_regions"></span>
+                <input
+                  id="muteRegionSearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_regions"
+                  data-lane="mute"
+                  data-section="regions"
+                />
+              </label>
+              <div class="geo-list geo-list--regions" id="muteRegionList" role="list" data-lane="mute" data-section="regions"></div>
+            </section>
+
+            <section class="geo-panel" aria-labelledby="mute-countries-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="mute-countries-label" data-i18n="pop_countries_label"></h3>
+                <span class="geo-count" id="muteCountryCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="muteCountrySearch">
+                <span class="sr-only" data-i18n="pop_search_countries"></span>
+                <input
+                  id="muteCountrySearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_countries"
+                  data-lane="mute"
+                  data-section="countries"
+                />
+              </label>
+              <div class="geo-list geo-list--countries" id="muteCountryList" role="list" data-lane="mute" data-section="countries"></div>
+            </section>
+
+            <section class="geo-panel" aria-labelledby="mute-managed-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="mute-managed-label" data-i18n="pop_muted_accounts_label"></h3>
+                <span class="geo-count" id="muteManagedCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="muteManagedSearch">
+                <span class="sr-only" data-i18n="pop_search_accounts"></span>
+                <input
+                  id="muteManagedSearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_accounts"
+                  data-lane="mute"
+                  data-section="accounts"
+                />
+              </label>
+              <div class="geo-list geo-list--accounts" id="muteManagedList" role="list" data-lane="mute" data-section="accounts"></div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="../shared/i18n.js"></script>
+    <script src="../shared/geo-data.js"></script>
+    <script src="../shared/settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
