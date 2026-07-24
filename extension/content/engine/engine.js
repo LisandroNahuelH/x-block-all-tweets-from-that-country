@@ -168,9 +168,20 @@
     return lane + ':' + String(screenName || '').toLowerCase();
   }
 
+  function isWhitelisted(lane, screenName) {
+    const name = String(screenName || '')
+      .trim()
+      .replace(/^@+/, '')
+      .toLowerCase();
+    if (!name) return false;
+    const list = settings?.[lane]?.whitelist || [];
+    return list.some(s => String(s).toLowerCase() === name);
+  }
+
   function isAlreadyManaged(lane, screenName) {
     const key = handledKey(lane, screenName);
     if (handled.has(key) || inflight.has(key)) return true;
+    if (isWhitelisted(lane, screenName)) return true;
     const accounts = settings?.[lane]?.accounts || [];
     return accounts.some(a => (a.screenName || '').toLowerCase() === String(screenName || '').toLowerCase());
   }
@@ -341,7 +352,8 @@
     if (!resolved) return;
 
     const { lane, action } = resolved;
-    if (isAlreadyManaged(lane, screenName)) return;
+    // Whitelist / already managed → never re-apply geo filter action
+    if (isWhitelisted(lane, screenName) || isAlreadyManaged(lane, screenName)) return;
 
     // Only notinterested needs a tweet article; mute/block work on profile too
     if (action === 'dismiss' && isProfile && !article) return;

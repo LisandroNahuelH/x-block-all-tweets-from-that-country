@@ -450,6 +450,22 @@
           </div>
         </div>
       </section>
+
+      <section
+        id="releaseConfirmBar"
+        class="undo-hint-bar"
+        aria-hidden="true"
+        inert
+      >
+        <div class="undo-hint-bar__panel">
+          <p class="undo-hint-bar__text" data-i18n="pop_toast_release_confirm"></p>
+          <div class="undo-hint-bar__actions undo-hint-bar__actions--stack">
+            <button type="button" class="undo-hint-bar__btn undo-hint-bar__btn--primary" id="releaseConfirmWhitelist" data-i18n="pop_toast_release_whitelist"></button>
+            <button type="button" class="undo-hint-bar__btn" id="releaseConfirmOnce" data-i18n="pop_toast_release_once"></button>
+            <button type="button" class="undo-hint-bar__btn undo-hint-bar__btn--dismiss" id="releaseConfirmCancel" data-i18n="pop_toast_release_cancel"></button>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="../shared/i18n.js"></script>
     <script src="../shared/geo-data.js"></script>

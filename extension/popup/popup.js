@@ -401,41 +401,14 @@
 
     if (kind === 'account') {
       if (settings.undoOnListClick !== true) {
+        hideReleaseConfirmBar();
         showUndoHintBar();
         return;
       }
-      btn.disabled = true;
-      // Optimistic UI: drop from list immediately so it never “sticks”
-      const prevAccounts = settings[lane].accounts || [];
-      settings = {
-        ...settings,
-        [lane]: {
-          ...settings[lane],
-          accounts: prevAccounts.filter(
-            a => (a.screenName || '').toLowerCase() !== String(key).toLowerCase()
-          )
-        }
-      };
-      renderManaged(lane);
-      try {
-        const { settings: next } = await XCD_SETTINGS.releaseManagedAccount(
-          lane,
-          key,
-          { reverseOnX: true }
-        );
-        settings = next || (await XCD_SETTINGS.getSettings());
-        renderManaged(lane);
-      } catch (err) {
-        console.warn('[xcd] release managed failed', err);
-        try {
-          settings = await XCD_SETTINGS.getSettings();
-          renderManaged(lane);
-        } catch (_) {
-          /* ignore */
-        }
-      } finally {
-        btn.disabled = false;
-      }
+      // Confirm whitelist vs once before reverse
+      pendingRelease = { lane, key };
+      hideUndoHintBar();
+      showReleaseConfirmBar();
       return;
     }
 
@@ -651,34 +624,81 @@
   }
 
   let undoHintVisible = false;
+  let releaseConfirmVisible = false;
+  /** @type {{ lane: string, key: string }|null} */
+  let pendingRelease = null;
 
-  function hideUndoHintBar() {
-    const bar = document.getElementById('undoHintBar');
-    if (!bar) return;
-    undoHintVisible = false;
+  function setBarVisible(bar, visible, flagRef) {
+    if (!bar) return false;
+    if (visible) {
+      if (flagRef.value) {
+        bar.classList.add('is-visible');
+        bar.setAttribute('aria-hidden', 'false');
+        bar.removeAttribute('inert');
+        return true;
+      }
+      bar.classList.remove('is-visible');
+      bar.setAttribute('aria-hidden', 'true');
+      bar.setAttribute('inert', '');
+      requestAnimationFrame(() => {
+        flagRef.value = true;
+        bar.classList.add('is-visible');
+        bar.setAttribute('aria-hidden', 'false');
+        bar.removeAttribute('inert');
+      });
+      return true;
+    }
+    flagRef.value = false;
     bar.classList.remove('is-visible');
     bar.setAttribute('aria-hidden', 'true');
     bar.setAttribute('inert', '');
+    return false;
+  }
+
+  function hideUndoHintBar() {
+    setBarVisible(document.getElementById('undoHintBar'), false, {
+      get value() {
+        return undoHintVisible;
+      },
+      set value(v) {
+        undoHintVisible = v;
+      }
+    });
   }
 
   function showUndoHintBar() {
-    const bar = document.getElementById('undoHintBar');
-    if (!bar) return;
-    if (undoHintVisible) {
-      bar.classList.add('is-visible');
-      bar.setAttribute('aria-hidden', 'false');
-      bar.removeAttribute('inert');
-      return;
-    }
-    // Force a frame at hidden so CSS slide-up runs (Volume Booster pattern)
-    bar.classList.remove('is-visible');
-    bar.setAttribute('aria-hidden', 'true');
-    bar.setAttribute('inert', '');
-    requestAnimationFrame(() => {
-      undoHintVisible = true;
-      bar.classList.add('is-visible');
-      bar.setAttribute('aria-hidden', 'false');
-      bar.removeAttribute('inert');
+    hideReleaseConfirmBar();
+    setBarVisible(document.getElementById('undoHintBar'), true, {
+      get value() {
+        return undoHintVisible;
+      },
+      set value(v) {
+        undoHintVisible = v;
+      }
+    });
+  }
+
+  function hideReleaseConfirmBar() {
+    setBarVisible(document.getElementById('releaseConfirmBar'), false, {
+      get value() {
+        return releaseConfirmVisible;
+      },
+      set value(v) {
+        releaseConfirmVisible = v;
+      }
+    });
+    pendingRelease = null;
+  }
+
+  function showReleaseConfirmBar() {
+    hideUndoHintBar();
+    setBarVisible(document.getElementById('releaseConfirmBar'), true, {
+      get value() {
+        return releaseConfirmVisible;
+      },
+      set value(v) {
+        releaseConfirmVisible = v;
+      }
     });
   }
 
@@ -689,6 +709,45 @@
     if (input) input.checked = true;
     for (const L of LANES) renderManaged(L);
     hideUndoHintBar();
+  }
+
+  async function confirmRelease(withWhitelist) {
+    if (!pendingRelease || !globalThis.XCD_SETTINGS) {
+      hideReleaseConfirmBar();
+      return;
+    }
+    const { lane, key } = pendingRelease;
+    pendingRelease = null;
+    hideReleaseConfirmBar();
+
+    const prevAccounts = settings[lane].accounts || [];
+    settings = {
+      ...settings,
+      [lane]: {
+        ...settings[lane],
+        accounts: prevAccounts.filter(
+          a => (a.screenName || '').toLowerCase() !== String(key).toLowerCase()
+        )
+      }
+    };
+    renderManaged(lane);
+
+    try {
+      const { settings: next } = await XCD_SETTINGS.releaseManagedAccount(lane, key, {
+        reverseOnX: true,
+        whitelist: !!withWhitelist
+      });
+      settings = next || (await XCD_SETTINGS.getSettings());
+      renderManaged(lane);
+    } catch (err) {
+      console.warn('[xcd] release managed failed', err);
+      try {
+        settings = await XCD_SETTINGS.getSettings();
+        renderManaged(lane);
+      } catch (_) {
+        /* ignore */
+      }
+    }
   }
 
   function refreshAllManagedLists() {
@@ -789,6 +848,19 @@
     document
       .getElementById('undoHintDismiss')
       ?.addEventListener('click', hideUndoHintBar);
+    document
+      .getElementById('releaseConfirmWhitelist')
+      ?.addEventListener('click', () => {
+        confirmRelease(true).catch(() => {});
+      });
+    document
+      .getElementById('releaseConfirmOnce')
+      ?.addEventListener('click', () => {
+        confirmRelease(false).catch(() => {});
+      });
+    document
+      .getElementById('releaseConfirmCancel')
+      ?.addEventListener('click', hideReleaseConfirmBar);
     for (const lane of LANES) {
       const ui = els[lane];
       ui.enabled?.addEventListener('change', onEnabledChange);

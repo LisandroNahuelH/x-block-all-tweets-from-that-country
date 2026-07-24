@@ -310,5 +310,21 @@
   "a11y_managed_account_locked": {
     "message": "Managed account (enable Undo on list click to release)",
     "description": "Aria label for managed account when undo-on-click is off"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Release this account on X? If they still match an active country/region filter, the extension may act again unless you whitelist them.",
+    "description": "Confirm bar: explain re-filter risk and whitelist"
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Release + whitelist (never re-filter)",
+    "description": "Confirm bar: reverse and whitelist"
+  },
+  "pop_toast_release_once": {
+    "message": "Just this once",
+    "description": "Confirm bar: reverse without whitelist"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Cancel",
+    "description": "Confirm bar: cancel release"
   }
 }

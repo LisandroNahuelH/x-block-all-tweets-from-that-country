@@ -15,7 +15,8 @@
       enabled: enabled !== false,
       countries: [],
       regions: [],
-      accounts: []
+      accounts: [],
+      whitelist: []
     };
   }
 
@@ -121,13 +122,30 @@
     });
   }
 
+  function normalizeWhitelist(list) {
+    if (!Array.isArray(list)) return [];
+    const out = [];
+    const seen = new Set();
+    for (const raw of list) {
+      const name =
+        typeof raw === 'string'
+          ? normalizeScreenName(raw)
+          : normalizeScreenName(raw && raw.screenName);
+      if (!name || seen.has(name)) continue;
+      seen.add(name);
+      out.push(name);
+    }
+    return out.sort((a, b) => a.localeCompare(b));
+  }
+
   function normalizeLaneStrict(raw) {
     const src = raw && typeof raw === 'object' ? raw : {};
     return {
       enabled: src.enabled !== false,
       countries: filterKnownCountries(src.countries),
       regions: filterKnownRegions(src.regions),
-      accounts: normalizeAccounts(src.accounts)
+      accounts: normalizeAccounts(src.accounts),
+      whitelist: normalizeWhitelist(src.whitelist)
     };
   }
 
@@ -205,6 +223,7 @@
     if (Array.isArray(partial.countries)) next.countries = partial.countries;
     if (Array.isArray(partial.regions)) next.regions = partial.regions;
     if (Array.isArray(partial.accounts)) next.accounts = partial.accounts;
+    if (Array.isArray(partial.whitelist)) next.whitelist = partial.whitelist;
     if ('enabled' in partial) next.enabled = partial.enabled;
     return next;
   }
@@ -330,11 +349,26 @@
     return settings;
   }
 
+  function isWhitelisted(lane, screenName) {
+    if (!isLane(lane)) return false;
+    const name = normalizeScreenName(screenName);
+    if (!name) return false;
+    // sync helper used after getSettings; keep pure on a settings object via optional second form
+    return false;
+  }
+
+  function laneHasWhitelist(laneObj, screenName) {
+    const name = normalizeScreenName(screenName);
+    if (!name || !laneObj) return false;
+    const list = laneObj.whitelist || [];
+    return list.some(s => String(s).toLowerCase() === name);
+  }
+
   /**
-   * Remove from managed list. Optionally reverse mute/block on X (async in SW).
+   * Remove from managed list. Optionally reverse mute/block on X + whitelist.
    * @param {string} lane
    * @param {string} screenName
-   * @param {{ reverseOnX?: boolean }} [opts]
+   * @param {{ reverseOnX?: boolean, whitelist?: boolean }} [opts]
    */
   async function releaseManagedAccount(lane, screenName, opts) {
     const L = isLane(lane) ? lane : '';
@@ -347,21 +381,30 @@
       opts && 'reverseOnX' in opts
         ? !!opts.reverseOnX
         : current.undoOnListClick === true;
+    const addWhitelist = !!(opts && opts.whitelist);
 
     const released =
       (current[L].accounts || []).find(a => a.screenName === name) || null;
     const nextList = (current[L].accounts || []).filter(a => a.screenName !== name);
-    const settings = await setSettings({ [L]: { accounts: nextList } });
+    const nextWhitelist = addWhitelist
+      ? normalizeWhitelist([...(current[L].whitelist || []), name])
+      : current[L].whitelist || [];
 
-    // Not interested: never reverse on X. Mute/block only if toggle on.
+    const settings = await setSettings({
+      [L]: { accounts: nextList, whitelist: nextWhitelist }
+    });
+
+    // Not interested: never reverse on X. Mute/block only if reverse requested.
     const shouldReverse =
       reverseOnX && released && (L === 'mute' || L === 'block');
 
-    let releaseResult = { success: true, localOnly: true };
+    let releaseResult = {
+      success: true,
+      localOnly: !shouldReverse,
+      whitelist: addWhitelist
+    };
     if (shouldReverse) {
       try {
-        // Fire-and-forget reverse: SW re-inserts only if unmute/unblock fails.
-        // Do not await full tab work (popup close would look like failure).
         chrome.runtime.sendMessage({
           type: 'RELEASE_ACCOUNT',
           payload: {
@@ -372,7 +415,12 @@
             reverseOnX: true
           }
         });
-        releaseResult = { success: true, pending: true, reverseOnX: true };
+        releaseResult = {
+          success: true,
+          pending: true,
+          reverseOnX: true,
+          whitelist: addWhitelist
+        };
       } catch (e) {
         releaseResult = { success: false, error: e?.message || String(e) };
       }
@@ -403,7 +451,9 @@
     toggleLaneCountry,
     toggleLaneRegion,
     recordManagedAccount,
-    releaseManagedAccount
+    releaseManagedAccount,
+    laneHasWhitelist,
+    normalizeWhitelist
   };
 
   global.XCD_SETTINGS = api;

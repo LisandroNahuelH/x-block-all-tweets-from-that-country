@@ -101,7 +101,12 @@
     pop_toast_undo_on_list_cta: 'Enable now',
     pop_toast_undo_on_list_dismiss: 'Dismiss',
     a11y_managed_account_locked:
-      'Managed account (enable Undo on list click to release)'
+      'Managed account (enable Undo on list click to release)',
+    pop_toast_release_confirm:
+      'Release this account on X? If they still match an active country/region filter, the extension may act again unless you whitelist them.',
+    pop_toast_release_whitelist: 'Release + whitelist (never re-filter)',
+    pop_toast_release_once: 'Just this once',
+    pop_toast_release_cancel: 'Cancel'
   };
 
   const isDev =
