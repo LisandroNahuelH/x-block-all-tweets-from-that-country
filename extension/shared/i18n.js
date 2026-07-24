@@ -83,7 +83,9 @@
       '3. If you turn it off: Every lookup hits X again — more rate-limit risk, slower labels, and higher data use while scrolling. Existing cache is kept on disk but unused until you turn this back on.',
     pop_opt_geo_local_cache_size:
       '4. Storage: Very light — about 100,000 users ≈ 10 MB, roughly the size of one modern MP3 on your PC. Only successful country/region hits are stored.',
-    a11y_toggle_geo_local_cache: 'Toggle local country cache'
+    a11y_toggle_geo_local_cache: 'Toggle local country cache',
+    pop_opt_geo_cache_accounts: 'Cached accounts',
+    pop_opt_geo_cache_storage: 'Storage used (approx.)'
   };
 
   const isDev =

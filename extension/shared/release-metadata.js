@@ -9,7 +9,7 @@
   const EXTENSION_LAST_UPDATE_ISO = '2026-07-24';
 
   /** Fallback when chrome.runtime.getManifest() is unavailable. Keep in sync with manifest/package.json. */
-  const EXTENSION_RELEASE_VERSION = '0.1.4';
+  const EXTENSION_RELEASE_VERSION = '0.1.5';
 
   const api = {
     EXTENSION_LAST_UPDATE_ISO,

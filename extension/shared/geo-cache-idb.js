@@ -178,13 +178,44 @@
     }
   }
 
+  function estimateRowBytes(row) {
+    try {
+      // Payload size + small IDB index/key overhead
+      return new Blob([JSON.stringify(row)]).size + 48;
+    } catch (_) {
+      return 100;
+    }
+  }
+
   async function stats() {
     try {
       const db = await openDb();
       const count = await idbCount(db);
-      return { count, max: MAX_ENTRIES, db: DB_NAME };
+      let bytes = 0;
+      if (count > 0) {
+        await new Promise((resolve, reject) => {
+          const tx = db.transaction(STORE, 'readonly');
+          const req = tx.objectStore(STORE).openCursor();
+          req.onsuccess = () => {
+            const cursor = req.result;
+            if (!cursor) {
+              resolve();
+              return;
+            }
+            bytes += estimateRowBytes(cursor.value);
+            cursor.continue();
+          };
+          req.onerror = () => reject(req.error);
+        });
+      }
+      return { count, bytes, max: MAX_ENTRIES, db: DB_NAME };
     } catch (e) {
-      return { count: 0, max: MAX_ENTRIES, error: String(e?.message || e) };
+      return {
+        count: 0,
+        bytes: 0,
+        max: MAX_ENTRIES,
+        error: String(e?.message || e)
+      };
     }
   }
 

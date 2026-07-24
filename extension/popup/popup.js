@@ -540,12 +540,61 @@
     showMainView();
   }
 
+  function formatCacheBytes(bytes) {
+    const n = typeof bytes === 'number' && Number.isFinite(bytes) ? Math.max(0, bytes) : 0;
+    if (n < 1024) return n + ' B';
+    if (n < 1024 * 1024) return (n / 1024).toFixed(n < 10 * 1024 ? 1 : 0) + ' KB';
+    return (n / (1024 * 1024)).toFixed(n < 10 * 1024 * 1024 ? 2 : 1) + ' MB';
+  }
+
+  function formatCacheCount(count) {
+    const n = typeof count === 'number' && Number.isFinite(count) ? Math.max(0, count) : 0;
+    try {
+      return new Intl.NumberFormat(undefined).format(n);
+    } catch (_) {
+      return String(n);
+    }
+  }
+
+  async function refreshGeoCacheStats() {
+    const countEl = document.getElementById('geoCacheCount');
+    const bytesEl = document.getElementById('geoCacheBytes');
+    if (!countEl && !bytesEl) return;
+    try {
+      const res = await new Promise(resolve => {
+        try {
+          chrome.runtime.sendMessage({ type: 'GEO_CACHE_STATS' }, response => {
+            if (chrome.runtime.lastError) {
+              resolve(null);
+            } else {
+              resolve(response);
+            }
+          });
+        } catch (_) {
+          resolve(null);
+        }
+      });
+      if (countEl) {
+        countEl.textContent =
+          res && res.success !== false ? formatCacheCount(res.count || 0) : '—';
+      }
+      if (bytesEl) {
+        bytesEl.textContent =
+          res && res.success !== false ? formatCacheBytes(res.bytes || 0) : '—';
+      }
+    } catch (_) {
+      if (countEl) countEl.textContent = '—';
+      if (bytesEl) bytesEl.textContent = '—';
+    }
+  }
+
   function openSettingsView() {
     hideAllViews();
     const view = document.getElementById('settingsView');
     if (view) view.hidden = false;
     document.getElementById('settingsChip')?.classList.add('is-active');
     document.getElementById('settingsChip')?.setAttribute('aria-pressed', 'true');
+    refreshGeoCacheStats();
   }
 
   function closeSettingsView() {

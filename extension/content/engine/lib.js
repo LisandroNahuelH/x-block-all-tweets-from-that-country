@@ -36,11 +36,33 @@
     throw new Error('Timed out waiting for selectors: ' + list.join(', '));
   }
 
+  function fireEscape(target) {
+    if (!target || typeof target.dispatchEvent !== 'function') return;
+    const base = {
+      key: 'Escape',
+      code: 'Escape',
+      keyCode: 27,
+      which: 27,
+      bubbles: true,
+      cancelable: true,
+      view: typeof window !== 'undefined' ? window : undefined
+    };
+    try {
+      target.dispatchEvent(new KeyboardEvent('keydown', base));
+      target.dispatchEvent(new KeyboardEvent('keyup', base));
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  /** Stronger Escape — IDC never needs this; we use only as fallback. */
   function closeOpenMenus() {
     try {
-      document.dispatchEvent(
-        new KeyboardEvent('keydown', { key: 'Escape', code: 'Escape', bubbles: true })
-      );
+      const active = document.activeElement;
+      fireEscape(active);
+      fireEscape(document.body);
+      fireEscape(document);
+      if (typeof window !== 'undefined') fireEscape(window);
     } catch (_) {
       /* ignore */
     }
@@ -90,12 +112,25 @@
       '[data-testid="confirmationSheetConfirm"]'
     ];
     for (const sel of selectors) {
-      const el = document.querySelector(sel);
-      if (!(el instanceof HTMLElement)) continue;
-      const r = el.getBoundingClientRect();
-      if (r.width > 0 && r.height > 0) return true;
+      const nodes = document.querySelectorAll(sel);
+      for (const el of nodes) {
+        if (!(el instanceof HTMLElement)) continue;
+        const r = el.getBoundingClientRect();
+        if (r.width > 0 && r.height > 0) return true;
+      }
     }
     return false;
+  }
+
+  async function waitForMenusClosed(timeoutMs, pollMs) {
+    const limit = typeof timeoutMs === 'number' ? timeoutMs : 1200;
+    const step = typeof pollMs === 'number' ? pollMs : 40;
+    const expires = Date.now() + limit;
+    while (Date.now() < expires) {
+      if (!anyMenuOpen()) return true;
+      await sleep(step);
+    }
+    return !anyMenuOpen();
   }
 
   global.XCD_ENGINE_LIB = {
@@ -105,6 +140,7 @@
     closeOpenMenus,
     beginMenuStealth,
     endMenuStealth,
-    anyMenuOpen
+    anyMenuOpen,
+    waitForMenusClosed
   };
 })(typeof globalThis !== 'undefined' ? globalThis : self);

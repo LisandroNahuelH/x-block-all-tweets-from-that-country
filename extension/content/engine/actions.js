@@ -516,6 +516,10 @@
     return findActionMenuItem(menuRoot, action);
   }
 
+  /**
+   * IDC-aligned: let X close the menu after item click.
+   * Escape only as fallback if the dropdown is still mounted.
+   */
   async function runMenuActionFromButton(button, action) {
     const menuRoot = await openMenuFromButton(button);
     const menuItem = await waitForActionMenuItem(menuRoot, action, 800);
@@ -526,7 +530,98 @@
     }
     menuItem.click();
     await clickConfirmationIfPresent(action);
-    lib().closeOpenMenus();
+
+    // Critical: do NOT Escape immediately — X must process mute/block/NI and collapse the post.
+    const closed = await lib().waitForMenusClosed(1200, 40);
+    if (!closed) {
+      lib().closeOpenMenus();
+      await lib().sleep(50);
+      if (lib().anyMenuOpen()) {
+        lib().closeOpenMenus();
+        await lib().sleep(40);
+      }
+    }
+  }
+
+  const FEEDBACK_THANK_YOU = [
+    'thanks. x will use this to improve your timeline',
+    'thanks. x will use this to make your timeline better',
+    'gracias. x usara esto para mejorar tu cronologia'
+  ];
+  const FEEDBACK_UNDO = ['undo', 'deshacer'];
+
+  function isDismissFeedbackCard(article) {
+    if (!(article instanceof HTMLElement)) return false;
+    // Real tweets keep data-testid="tweet"; feedback cards usually drop it
+    if (article.dataset.testid === 'tweet') return false;
+    const text = lib().normalizeText(article.innerText || article.textContent || '');
+    if (!text) return false;
+    const thanks = FEEDBACK_THANK_YOU.some(k => text.includes(lib().normalizeText(k)));
+    if (!thanks) return false;
+    return FEEDBACK_UNDO.some(k => text.includes(lib().normalizeText(k)));
+  }
+
+  function hideDismissFeedbackCards() {
+    const articles = document.querySelectorAll('article[role="article"]');
+    for (const article of articles) {
+      if (!(article instanceof HTMLElement)) continue;
+      if (!isDismissFeedbackCard(article)) continue;
+      try {
+        article.remove();
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  }
+
+  /** Remove acted tweet from timeline if X left it fully expanded. */
+  function collapseActedArticle(article) {
+    if (!(article instanceof HTMLElement) || !article.isConnected) return;
+    try {
+      const cell =
+        article.closest('[data-testid="cellInnerDiv"]') ||
+        article.closest('[data-testid="tweet"]')?.parentElement ||
+        article;
+      if (cell && cell.isConnected) cell.remove();
+      else if (article.isConnected) article.remove();
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  async function settlePostAfterAction(article, action) {
+    // Let X swap the tweet for feedback / soft intervene
+    const expires = Date.now() + 900;
+    while (Date.now() < expires) {
+      hideDismissFeedbackCards();
+      if (!(article instanceof HTMLElement) || !article.isConnected) return;
+      // Feedback replaced this node or sibling appeared
+      if (isDismissFeedbackCard(article)) {
+        try {
+          article.remove();
+        } catch (_) {
+          /* ignore */
+        }
+        return;
+      }
+      // Still a full tweet with caret → wait a bit more
+      if (article.dataset.testid === 'tweet' && findMoreButton(article)) {
+        await lib().sleep(50);
+        continue;
+      }
+      // Transformed / no caret → treat as handled UI
+      return;
+    }
+
+    // X processed action (badge path) but left the post fully visible — remove it
+    if (
+      article instanceof HTMLElement &&
+      article.isConnected &&
+      (action === 'mute' || action === 'block' || action === 'dismiss')
+    ) {
+      collapseActedArticle(article);
+    }
+    hideDismissFeedbackCards();
   }
 
   /**
@@ -536,13 +631,20 @@
   async function runPostAction(article, action) {
     lib().beginMenuStealth();
     try {
-      let target = article;
+      const target = article;
       if (!(target instanceof HTMLElement) || !target.isConnected) {
         throw new Error('Post menu trigger not found');
       }
       const moreButton = findMoreButton(target);
       if (!moreButton) throw new Error('Post menu trigger not found');
       await runMenuActionFromButton(moreButton, action);
+      // Menus must be gone before lifting stealth (else Dropdown flashes back)
+      if (lib().anyMenuOpen()) {
+        lib().closeOpenMenus();
+        await lib().sleep(40);
+      }
+      lib().endMenuStealth();
+      await settlePostAfterAction(target, action);
     } catch (error) {
       lib().closeOpenMenus();
       throw error;
@@ -666,6 +768,9 @@
     runPostAction,
     runProfileAction,
     matchesActionLabel,
-    findActionMenuItem
+    findActionMenuItem,
+    hideDismissFeedbackCards,
+    isDismissFeedbackCard,
+    collapseActedArticle
   };
 })(typeof globalThis !== 'undefined' ? globalThis : self);

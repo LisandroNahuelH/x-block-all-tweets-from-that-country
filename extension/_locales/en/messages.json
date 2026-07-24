@@ -262,5 +262,13 @@
   "a11y_toggle_geo_local_cache": {
     "message": "Toggle local country cache",
     "description": "Accessible label for local country cache switch"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Cached accounts",
+    "description": "Label for count of accounts in local geo cache"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Storage used (approx.)",
+    "description": "Label for approximate disk size of local geo cache"
   }
 }

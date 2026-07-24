@@ -475,6 +475,12 @@
 
   async function scan() {
     if (!settings) await loadSettings();
+    // IDC scavenger: remove "Thanks… Undo" feedback cards from timeline
+    try {
+      actions().hideDismissFeedbackCards?.();
+    } catch (_) {
+      /* ignore */
+    }
     const articles = actions().findTweetArticles();
     for (const article of articles) {
       processArticle(article);
