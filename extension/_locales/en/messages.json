@@ -33,6 +33,10 @@
     "message": "Mute",
     "description": "Title of the Mute lane column"
   },
+  "pop_lane_notinterested": {
+    "message": "Not interested",
+    "description": "Title of the Not interested lane column"
+  },
   "a11y_toggle_lane_block": {
     "message": "Enable or disable Block lane",
     "description": "Accessible label for Block lane ON/OFF switch"
@@ -40,6 +44,10 @@
   "a11y_toggle_lane_mute": {
     "message": "Enable or disable Mute lane",
     "description": "Accessible label for Mute lane ON/OFF switch"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Enable or disable Not interested lane",
+    "description": "Accessible label for Not interested lane ON/OFF switch"
   },
   "pop_mode_warning_label": {
     "message": "WARNING:",
@@ -52,6 +60,10 @@
   "pop_mode_hint_mute": {
     "message": "Selected accounts are muted on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web.",
     "description": "Explains account-level Mute sync across all X clients (after WARNING:)"
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Posts from selected accounts are marked Not interested on your X account, so X will show you fewer of them across desktop, Android, iOS, and web.",
+    "description": "Explains Not interested behavior across X clients (after WARNING:)"
   },
   "pop_regions_label": {
     "message": "Regions",
@@ -99,13 +111,17 @@
     "message": "Muted accounts",
     "description": "Section title for accounts muted by the extension"
   },
+  "pop_notinterested_accounts_label": {
+    "message": "Not interested accounts",
+    "description": "Section title for accounts marked Not interested"
+  },
   "pop_search_accounts": {
     "message": "Search accounts…",
     "description": "Placeholder for managed accounts search box"
   },
   "pop_managed_empty": {
-    "message": "No blocked or muted accounts yet",
-    "description": "Empty state when the extension has not managed any accounts"
+    "message": "No managed accounts yet",
+    "description": "Empty state when the extension has not managed any accounts in this lane"
   },
   "pop_managed_mode_block": {
     "message": "Block",
@@ -115,12 +131,100 @@
     "message": "Mute",
     "description": "Badge for a managed account that was muted"
   },
+  "pop_managed_mode_notinterested": {
+    "message": "Not interested",
+    "description": "Badge for a managed account marked Not interested"
+  },
   "a11y_release_account": {
-    "message": "Unblock or unmute account",
+    "message": "Release managed account",
     "description": "Accessible label prefix for releasing a managed account"
   },
   "a11y_open_premium11": {
     "message": "Open Premium11 website",
     "description": "Accessible label for the Premium11 brand link in the popup"
+  },
+  "pop_premium_chip": {
+    "message": "Premium Activated",
+    "description": "Toolbar chip label for lifetime premium gift"
+  },
+  "pop_premium_chip_title": {
+    "message": "View your activated Premium access.",
+    "description": "Title/tooltip for the premium toolbar chip"
+  },
+  "pop_premium_back": {
+    "message": "Back",
+    "description": "Back button on the Premium status view"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium",
+    "description": "Eyebrow on the Premium status view"
+  },
+  "pop_premium_title": {
+    "message": "Lifetime Premium activated",
+    "description": "Title on the Premium status view"
+  },
+  "pop_premium_subtitle": {
+    "message": "Enjoy the complete Premium suite inside X - Block all tweets from that country or region by Premium11.",
+    "description": "Subtitle on the Premium status view"
+  },
+  "pop_premium_status_title": {
+    "message": "Your Premium subscription",
+    "description": "Status card section title"
+  },
+  "pop_premium_status_active": {
+    "message": "Lifetime Premium active",
+    "description": "Gold status badge label"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Developer gift",
+    "description": "Small badge indicating gifted premium"
+  },
+  "pop_premium_gift_message": {
+    "message": "The extension developer has gifted you a lifetime Premium subscription (USD 29.99). Thank you for being a loyal user of X - Block all tweets from that country or region by Premium11.",
+    "description": "Gift message with lifetime price for this product"
+  },
+  "pop_premium_fact_version": {
+    "message": "Extension version",
+    "description": "Fact label: version"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Last updated",
+    "description": "Fact label: last release date"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium license validity",
+    "description": "Fact label: license term"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Lifetime",
+    "description": "Fact value: lifetime license"
+  },
+  "pop_premium_fact_features": {
+    "message": "Features enabled",
+    "description": "Fact label: features"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "All",
+    "description": "Fact value: all features"
+  },
+  "pop_settings_title": {
+    "message": "Settings",
+    "description": "Settings panel title"
+  },
+  "pop_settings_btn_title": {
+    "message": "Open settings",
+    "description": "Toolbar settings button title/aria"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Show account country next to the username on feed, explore, and profiles",
+    "description": "Toggle label for inline country labels"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Note: This extension only works when X.com reports country or region data for an account (About this account). X often does not expose that information, so even with this option enabled the country or region may not appear next to the username. These limits come from X.com, not from this extension.",
+    "description": "Disclaimer under show-country toggle about X.com data limits"
+  },
+  "a11y_toggle_show_country": {
+    "message": "Toggle country labels on the timeline",
+    "description": "Accessible label for show-country switch"
   }
 }

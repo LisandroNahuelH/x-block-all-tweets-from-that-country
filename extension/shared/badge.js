@@ -9,7 +9,14 @@
   const COLOR_IDLE = '#0c8c28'; // Premium11 green — resting count
   const COLOR_BLOCK = '#E53935';
   const COLOR_MUTE = '#F9A825';
+  const COLOR_NOTINTERESTED = '#42A5F5';
   const COLOR_DIM = '#102434';
+
+  function colorForLane(lane) {
+    if (lane === 'mute') return COLOR_MUTE;
+    if (lane === 'notinterested') return COLOR_NOTINTERESTED;
+    return COLOR_BLOCK;
+  }
 
   let flashGen = 0;
 
@@ -74,13 +81,14 @@
 
   /**
    * Flash toolbar badge for a managed action, then restore the session counter.
-   * @param {'block'|'mute'} lane
+   * @param {'block'|'mute'|'notinterested'} lane
    */
   async function flashManaged(lane) {
-    const color = lane === 'mute' ? COLOR_MUTE : COLOR_BLOCK;
+    const color = colorForLane(lane);
     const gen = ++flashGen;
     const n = await getSessionCount();
     const text = formatBadge(n) || '!';
+    const textColor = lane === 'mute' ? '#1a1200' : '#FFFFFF';
 
     for (let i = 0; i < 4; i++) {
       if (gen !== flashGen) return;
@@ -88,9 +96,7 @@
         await chrome.action.setBadgeText({ text });
         await chrome.action.setBadgeBackgroundColor({ color });
         if (chrome.action.setBadgeTextColor) {
-          await chrome.action.setBadgeTextColor({
-            color: lane === 'mute' ? '#1a1200' : '#FFFFFF'
-          });
+          await chrome.action.setBadgeTextColor({ color: textColor });
         }
       } catch (_) {
         /* ignore */
@@ -110,23 +116,24 @@
   }
 
   /**
-   * Increment session counter + flash. Call whenever an account is blocked/muted.
-   * @param {'block'|'mute'} lane
+   * Increment session counter + flash. Call whenever an account is managed.
+   * @param {'block'|'mute'|'notinterested'} lane
    */
   async function onAccountManaged(lane) {
-    const L = lane === 'mute' ? 'mute' : 'block';
+    const L =
+      lane === 'mute'
+        ? 'mute'
+        : lane === 'notinterested'
+          ? 'notinterested'
+          : 'block';
     const n = (await getSessionCount()) + 1;
     await setSessionCount(n);
-    // Paint number immediately, then flash (non-blocking for callers that await)
     try {
       await chrome.action.setBadgeText({ text: formatBadge(n) });
-      await chrome.action.setBadgeBackgroundColor({
-        color: L === 'mute' ? COLOR_MUTE : COLOR_BLOCK
-      });
+      await chrome.action.setBadgeBackgroundColor({ color: colorForLane(L) });
     } catch (_) {
       /* ignore */
     }
-    // Don't await full flash so message handlers return fast
     flashManaged(L);
     return n;
   }

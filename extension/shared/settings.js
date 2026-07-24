@@ -1,12 +1,13 @@
 /**
  * Shared settings (chrome.storage.local).
- * Independent block/mute lanes: enabled, countries, regions, accounts.
+ * Independent lanes: block, mute, notinterested.
  */
 (function (global) {
   'use strict';
 
   const STORAGE_KEY = 'xcd_settings';
-  const LANES = new Set(['block', 'mute']);
+  const LANE_IDS = ['block', 'mute', 'notinterested'];
+  const LANES = new Set(LANE_IDS);
   const SCREEN_RE = /^[a-zA-Z0-9_]{1,15}$/;
 
   function emptyLane(enabled = true) {
@@ -18,9 +19,20 @@
     };
   }
 
+  function emptySettings() {
+    return {
+      block: emptyLane(true),
+      mute: emptyLane(true),
+      notinterested: emptyLane(true),
+      showCountryLabels: true
+    };
+  }
+
   const DEFAULTS = Object.freeze({
     block: Object.freeze(emptyLane(true)),
-    mute: Object.freeze(emptyLane(true))
+    mute: Object.freeze(emptyLane(true)),
+    notinterested: Object.freeze(emptyLane(true)),
+    showCountryLabels: true
   });
 
   function isLane(value) {
@@ -66,7 +78,6 @@
     if (typeof value !== 'string') return '';
     const u = value.trim();
     if (!u) return '';
-    // X serves avatars on pbs.twimg.com (http(s)); reject non-http schemes.
     if (!/^https?:\/\//i.test(u)) return '';
     return u;
   }
@@ -79,10 +90,6 @@
     return screenName || '';
   }
 
-  /**
-   * Account entries (blocked/muted). Mirrors upstream AboutAccount meta fields:
-   * screenName, name (core.name), avatarUrl (avatar.image_url).
-   */
   function normalizeAccounts(list) {
     if (!Array.isArray(list)) return [];
     const byName = new Map();
@@ -93,10 +100,8 @@
       const ts =
         typeof raw.ts === 'number' && Number.isFinite(raw.ts) ? raw.ts : Date.now();
       const prev = byName.get(screenName);
-      // Prefer richer later entry; keep prior avatar/name if new ones empty.
       const name = normalizeDisplayName(raw.name, screenName) || prev?.name || screenName;
-      const avatarUrl =
-        normalizeAvatarUrl(raw.avatarUrl) || prev?.avatarUrl || '';
+      const avatarUrl = normalizeAvatarUrl(raw.avatarUrl) || prev?.avatarUrl || '';
       byName.set(screenName, {
         screenName,
         name,
@@ -110,17 +115,6 @@
     });
   }
 
-  function normalizeLane(raw, fallbackEnabled = true) {
-    const src = raw && typeof raw === 'object' ? raw : {};
-    return {
-      enabled: src.enabled !== false && fallbackEnabled !== false ? src.enabled !== false : !!src.enabled,
-      countries: filterKnownCountries(src.countries),
-      regions: filterKnownRegions(src.regions),
-      accounts: normalizeAccounts(src.accounts)
-    };
-  }
-
-  /** Fix enabled default: prefer true unless explicitly false */
   function normalizeLaneStrict(raw) {
     const src = raw && typeof raw === 'object' ? raw : {};
     return {
@@ -132,14 +126,17 @@
   }
 
   /**
-   * Migrate legacy shape:
-   * { mode, blockedCountries, blockedRegions, managedAccounts:[{screenName,mode,ts}] }
+   * Legacy: { mode, blockedCountries, blockedRegions, managedAccounts }
+   * or dual-lane without notinterested.
    */
   function migrateLegacy(src) {
     if (!src || typeof src !== 'object') return null;
+
+    // Already multi-lane product shape (has block + mute objects).
     if (src.block && typeof src.block === 'object' && src.mute && typeof src.mute === 'object') {
-      return null; // already new shape
+      return null;
     }
+
     if (
       !('mode' in src) &&
       !('blockedCountries' in src) &&
@@ -150,18 +147,11 @@
     }
 
     const mode = src.mode === 'mute' ? 'mute' : 'block';
-    const block = emptyLane(true);
-    const mute = emptyLane(true);
+    const out = emptySettings();
     const countries = filterKnownCountries(src.blockedCountries);
     const regions = filterKnownRegions(src.blockedRegions);
-
-    if (mode === 'mute') {
-      mute.countries = countries;
-      mute.regions = regions;
-    } else {
-      block.countries = countries;
-      block.regions = regions;
-    }
+    out[mode].countries = countries;
+    out[mode].regions = regions;
 
     if (Array.isArray(src.managedAccounts)) {
       for (const raw of src.managedAccounts) {
@@ -170,34 +160,44 @@
         if (!screenName) continue;
         const ts =
           typeof raw.ts === 'number' && Number.isFinite(raw.ts) ? raw.ts : Date.now();
-        const lane = raw.mode === 'mute' ? mute : block;
-        lane.accounts.push({
+        let lane = 'block';
+        if (raw.mode === 'mute') lane = 'mute';
+        else if (raw.mode === 'notinterested' || raw.mode === 'ni') lane = 'notinterested';
+        out[lane].accounts.push({
           screenName,
           name: normalizeDisplayName(raw.name, screenName),
           avatarUrl: normalizeAvatarUrl(raw.avatarUrl),
           ts
         });
       }
-      block.accounts = normalizeAccounts(block.accounts);
-      mute.accounts = normalizeAccounts(mute.accounts);
+      for (const id of LANE_IDS) {
+        out[id].accounts = normalizeAccounts(out[id].accounts);
+      }
     }
 
-    return { block, mute };
+    return out;
   }
 
   function normalizeSettings(raw) {
     const src = raw && typeof raw === 'object' ? raw : {};
     const migrated = migrateLegacy(src);
-    if (migrated) {
-      return {
-        block: normalizeLaneStrict(migrated.block),
-        mute: normalizeLaneStrict(migrated.mute)
-      };
-    }
+    const base = migrated || src;
     return {
-      block: normalizeLaneStrict(src.block),
-      mute: normalizeLaneStrict(src.mute)
+      block: normalizeLaneStrict(base.block),
+      mute: normalizeLaneStrict(base.mute),
+      notinterested: normalizeLaneStrict(base.notinterested),
+      showCountryLabels: base.showCountryLabels !== false
     };
+  }
+
+  function applyLanePartial(target, partial) {
+    if (!partial || typeof partial !== 'object') return target;
+    const next = { ...target, ...partial };
+    if (Array.isArray(partial.countries)) next.countries = partial.countries;
+    if (Array.isArray(partial.regions)) next.regions = partial.regions;
+    if (Array.isArray(partial.accounts)) next.accounts = partial.accounts;
+    if ('enabled' in partial) next.enabled = partial.enabled;
+    return next;
   }
 
   async function getSettings() {
@@ -205,32 +205,21 @@
       const data = await chrome.storage.local.get(STORAGE_KEY);
       return normalizeSettings(data[STORAGE_KEY]);
     } catch (_) {
-      return {
-        block: emptyLane(true),
-        mute: emptyLane(true)
-      };
+      return emptySettings();
     }
   }
 
   async function setSettings(partial) {
     const current = await getSettings();
     const nextRaw = {
-      block: { ...current.block, ...(partial?.block || {}) },
-      mute: { ...current.mute, ...(partial?.mute || {}) }
+      block: applyLanePartial(current.block, partial?.block),
+      mute: applyLanePartial(current.mute, partial?.mute),
+      notinterested: applyLanePartial(current.notinterested, partial?.notinterested),
+      showCountryLabels:
+        partial && 'showCountryLabels' in partial
+          ? !!partial.showCountryLabels
+          : current.showCountryLabels !== false
     };
-    // Deep-merge arrays if provided at top level of lane
-    if (partial?.block) {
-      if (Array.isArray(partial.block.countries)) nextRaw.block.countries = partial.block.countries;
-      if (Array.isArray(partial.block.regions)) nextRaw.block.regions = partial.block.regions;
-      if (Array.isArray(partial.block.accounts)) nextRaw.block.accounts = partial.block.accounts;
-      if ('enabled' in partial.block) nextRaw.block.enabled = partial.block.enabled;
-    }
-    if (partial?.mute) {
-      if (Array.isArray(partial.mute.countries)) nextRaw.mute.countries = partial.mute.countries;
-      if (Array.isArray(partial.mute.regions)) nextRaw.mute.regions = partial.mute.regions;
-      if (Array.isArray(partial.mute.accounts)) nextRaw.mute.accounts = partial.mute.accounts;
-      if ('enabled' in partial.mute) nextRaw.mute.enabled = partial.mute.enabled;
-    }
     const next = normalizeSettings(nextRaw);
     try {
       await chrome.storage.local.set({ [STORAGE_KEY]: next });
@@ -243,6 +232,10 @@
   async function setLaneEnabled(lane, enabled) {
     if (!isLane(lane)) return getSettings();
     return setSettings({ [lane]: { enabled: !!enabled } });
+  }
+
+  async function setShowCountryLabels(enabled) {
+    return setSettings({ showCountryLabels: !!enabled });
   }
 
   async function toggleLaneList(lane, field, key) {
@@ -282,17 +275,12 @@
     const rest = (current[L].accounts || []).filter(a => a.screenName !== handle);
     rest.unshift({
       screenName: handle,
-      name:
-        normalizeDisplayName(displayName, handle) ||
-        prev?.name ||
-        handle,
+      name: normalizeDisplayName(displayName, handle) || prev?.name || handle,
       avatarUrl: normalizeAvatarUrl(avatarUrl) || prev?.avatarUrl || '',
       ts: Date.now()
     });
     const settings = await setSettings({ [L]: { accounts: rest } });
 
-    // Notify SW for toolbar badge (session counter + red/yellow flash).
-    // skipBadge when the SW already handles the badge (RECORD_ACCOUNT path).
     if (!skipBadge) {
       try {
         if (typeof chrome !== 'undefined' && chrome.runtime?.sendMessage) {
@@ -321,23 +309,58 @@
     const nextList = (current[L].accounts || []).filter(a => a.screenName !== name);
     const settings = await setSettings({ [L]: { accounts: nextList } });
 
+    let releaseResult = null;
     if (released) {
       try {
-        chrome.runtime.sendMessage({
-          type: 'RELEASE_ACCOUNT',
-          payload: { screenName: released.screenName, mode: L }
+        releaseResult = await new Promise(resolve => {
+          try {
+            chrome.runtime.sendMessage(
+              {
+                type: 'RELEASE_ACCOUNT',
+                payload: {
+                  screenName: released.screenName,
+                  mode: L,
+                  name: released.name,
+                  avatarUrl: released.avatarUrl
+                }
+              },
+              response => {
+                if (chrome.runtime.lastError) {
+                  resolve({
+                    success: false,
+                    error: chrome.runtime.lastError.message
+                  });
+                } else {
+                  resolve(response || { success: false, error: 'No response' });
+                }
+              }
+            );
+          } catch (e) {
+            resolve({ success: false, error: e.message });
+          }
         });
       } catch (_) {
-        /* best-effort */
+        releaseResult = { success: false, error: 'send failed' };
       }
     }
 
-    return { settings, released: released ? { ...released, mode: L } : null };
+    // SW may re-insert on reverse failure — reload canonical settings
+    const finalSettings =
+      releaseResult && releaseResult.reinserted
+        ? await getSettings()
+        : settings;
+
+    return {
+      settings: finalSettings,
+      released: released ? { ...released, mode: L } : null,
+      releaseResult
+    };
   }
 
   const api = {
     STORAGE_KEY,
     DEFAULTS,
+    LANE_IDS,
     LANES,
     isLane,
     normalizeScreenName,
@@ -345,6 +368,7 @@
     getSettings,
     setSettings,
     setLaneEnabled,
+    setShowCountryLabels,
     toggleLaneCountry,
     toggleLaneRegion,
     recordManagedAccount,

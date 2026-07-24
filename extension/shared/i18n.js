@@ -16,13 +16,17 @@
     pop_heading: 'X - Block all tweets from that country or region',
     pop_lane_block: 'Block',
     pop_lane_mute: 'Mute',
+    pop_lane_notinterested: 'Not interested',
     a11y_toggle_lane_block: 'Enable or disable Block lane',
     a11y_toggle_lane_mute: 'Enable or disable Mute lane',
+    a11y_toggle_lane_notinterested: 'Enable or disable Not interested lane',
     pop_mode_warning_label: 'WARNING:',
     pop_mode_hint_block:
       'Selected accounts are blocked on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web.',
     pop_mode_hint_mute:
       'Selected accounts are muted on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web.',
+    pop_mode_hint_notinterested:
+      'Posts from selected accounts are marked Not interested on your X account, so X will show you fewer of them across desktop, Android, iOS, and web.',
     pop_regions_label: 'Regions',
     pop_countries_label: 'Countries',
     pop_selected_count: '$1 selected',
@@ -33,12 +37,39 @@
     pop_search_no_results: 'No matches',
     pop_blocked_accounts_label: 'Blocked accounts',
     pop_muted_accounts_label: 'Muted accounts',
+    pop_notinterested_accounts_label: 'Not interested accounts',
     pop_search_accounts: 'Search accounts…',
-    pop_managed_empty: 'No blocked or muted accounts yet',
+    pop_managed_empty: 'No managed accounts yet',
     pop_managed_mode_block: 'Block',
     pop_managed_mode_mute: 'Mute',
-    a11y_release_account: 'Unblock or unmute account',
-    a11y_open_premium11: 'Open Premium11 website'
+    pop_managed_mode_notinterested: 'Not interested',
+    a11y_release_account: 'Release managed account',
+    a11y_open_premium11: 'Open Premium11 website',
+    pop_premium_chip: 'Premium Activated',
+    pop_premium_chip_title: 'View your activated Premium access.',
+    pop_premium_back: 'Back',
+    pop_premium_eyebrow: 'Premium',
+    pop_premium_title: 'Lifetime Premium activated',
+    pop_premium_subtitle:
+      'Enjoy the complete Premium suite inside X - Block all tweets from that country or region by Premium11.',
+    pop_premium_status_title: 'Your Premium subscription',
+    pop_premium_status_active: 'Lifetime Premium active',
+    pop_premium_gift_badge: 'Developer gift',
+    pop_premium_gift_message:
+      'The extension developer has gifted you a lifetime Premium subscription (USD 29.99). Thank you for being a loyal user of X - Block all tweets from that country or region by Premium11.',
+    pop_premium_fact_version: 'Extension version',
+    pop_premium_fact_updated: 'Last updated',
+    pop_premium_fact_license: 'Premium license validity',
+    pop_premium_fact_license_value: 'Lifetime',
+    pop_premium_fact_features: 'Features enabled',
+    pop_premium_fact_features_value: 'All',
+    pop_settings_title: 'Settings',
+    pop_settings_btn_title: 'Open settings',
+    pop_opt_show_country_labels:
+      'Show account country next to the username on feed, explore, and profiles',
+    pop_opt_show_country_note:
+      'Note: This extension only works when X.com reports country or region data for an account (About this account). X often does not expose that information, so even with this option enabled the country or region may not appear next to the username. These limits come from X.com, not from this extension.',
+    a11y_toggle_show_country: 'Toggle country labels on the timeline'
   };
 
   const isDev =

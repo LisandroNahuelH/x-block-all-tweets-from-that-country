@@ -1,19 +1,17 @@
 /**
- * Service worker: cache + AboutAccountQuery fallback + toolbar badge.
- * Tech adaptada de xaitax/x-account-location-device (MIT).
+ * Service worker: geo IDB cache + AboutAccountQuery + badge.
  */
 importScripts('shared/i18n.js');
 importScripts('shared/badge.js');
 importScripts('shared/settings.js');
+importScripts('shared/geo-cache-idb.js');
 
 const QUERY_ID = 'XRqGa7EeokUU5kppkh13EA';
 const BASE_URL = 'https://x.com/i/api/graphql';
-const CACHE_KEY = 'xcd_location_cache_v1';
 const HEADERS_KEY = 'xcd_api_headers';
-const CACHE_MAX = 50000;
-const CACHE_TTL_MS = 60 * 24 * 60 * 60 * 1000;
-const MIN_INTERVAL_MS = 150;
-const MAX_CONCURRENT = 8;
+const MEM_MAX = 10000;
+const MIN_INTERVAL_MS = 200;
+const MAX_CONCURRENT = 4;
 
 /** @type {Map<string, {value: object, expiry: number}>} */
 const memCache = new Map();
@@ -24,54 +22,82 @@ let active = 0;
 /** @type {Array<() => void>} */
 const queue = [];
 const inflight = new Map();
-let saveTimer = null;
 
 function hasHeader(headers, name) {
   const wanted = name.toLowerCase();
   return Object.keys(headers || {}).some(k => k.toLowerCase() === wanted);
 }
 
-function cacheGet(screenName) {
-  const key = screenName.toLowerCase();
+function normalizeHandle(screenName) {
+  if (typeof screenName !== 'string') return '';
+  return screenName.trim().replace(/^@+/, '').toLowerCase();
+}
+
+function memGet(screenName) {
+  const key = normalizeHandle(screenName);
   const entry = memCache.get(key);
   if (!entry) return null;
   if (Date.now() > entry.expiry) {
     memCache.delete(key);
     return null;
   }
+  // LRU touch
   memCache.delete(key);
   memCache.set(key, entry);
   return entry.value;
 }
 
-function cacheSet(screenName, value) {
-  const key = screenName.toLowerCase();
+function memSet(screenName, value) {
+  const key = normalizeHandle(screenName);
+  if (!value?.location) return; // never warm empty
   if (memCache.has(key)) memCache.delete(key);
-  if (memCache.size >= CACHE_MAX) {
+  if (memCache.size >= MEM_MAX) {
     const first = memCache.keys().next().value;
     memCache.delete(first);
   }
-  memCache.set(key, { value, expiry: Date.now() + CACHE_TTL_MS });
-  scheduleSave();
+  const ttl = self.XCD_GEO_IDB?.TTL_MS || 60 * 24 * 60 * 60 * 1000;
+  memCache.set(key, { value, expiry: Date.now() + ttl });
 }
 
-function scheduleSave() {
-  if (saveTimer) return;
-  saveTimer = setTimeout(async () => {
-    saveTimer = null;
-    const obj = {};
-    for (const [k, v] of memCache.entries()) obj[k] = v;
-    await chrome.storage.local.set({ [CACHE_KEY]: obj });
-  }, 5000);
-}
-
-async function loadCache() {
-  const data = await chrome.storage.local.get([CACHE_KEY, HEADERS_KEY]);
-  const raw = data[CACHE_KEY] || {};
-  const now = Date.now();
-  for (const [k, v] of Object.entries(raw)) {
-    if (v?.expiry > now) memCache.set(k, v);
+async function cacheGet(screenName) {
+  const warm = memGet(screenName);
+  if (warm?.location) return warm;
+  if (!self.XCD_GEO_IDB) return null;
+  const hit = await self.XCD_GEO_IDB.get(screenName);
+  if (hit?.location) {
+    memSet(screenName, {
+      location: hit.location,
+      locationAccurate: hit.locationAccurate !== false,
+      name: hit.name || ''
+    });
+    return {
+      location: hit.location,
+      locationAccurate: hit.locationAccurate !== false,
+      name: hit.name || ''
+    };
   }
+  return null;
+}
+
+/**
+ * Persist only successful location detections.
+ */
+async function cachePut(screenName, data) {
+  if (!data?.location) return false;
+  const payload = {
+    location: data.location,
+    locationAccurate: data.locationAccurate !== false,
+    name: typeof data.name === 'string' ? data.name : ''
+  };
+  memSet(screenName, payload);
+  if (self.XCD_GEO_IDB) {
+    await self.XCD_GEO_IDB.put(screenName, payload);
+  }
+  return true;
+}
+
+async function loadHeaders() {
+  const data = await chrome.storage.local.get([HEADERS_KEY]);
   if (
     data[HEADERS_KEY] &&
     hasHeader(data[HEADERS_KEY], 'authorization') &&
@@ -122,9 +148,11 @@ function parseResponse(data, requestedScreenName) {
   ) {
     throw Object.assign(new Error('screen_name mismatch'), { code: 'NOT_FOUND' });
   }
+  const name = user?.core?.name || null;
   return {
     location: profile?.account_based_in || null,
-    locationAccurate: profile?.location_accurate !== false
+    locationAccurate: profile?.location_accurate !== false,
+    name: name || ''
   };
 }
 
@@ -166,13 +194,20 @@ async function fetchFromApi(screenName) {
 }
 
 async function resolveUser({ screenName }) {
-  const cached = cacheGet(screenName);
-  if (cached) return { success: true, data: cached, source: 'local' };
+  const cached = await cacheGet(screenName);
+  if (cached?.location) {
+    return { success: true, data: cached, source: 'cache' };
+  }
 
   try {
     const data = await enqueue(() => fetchFromApi(screenName));
-    cacheSet(screenName, data);
-    return { success: true, data, source: 'api' };
+    // Only persist complete positive detections
+    if (data?.location) {
+      await cachePut(screenName, data);
+      return { success: true, data, source: 'api' };
+    }
+    // No location: return success with null location but DO NOT store
+    return { success: true, data: data || { location: null }, source: 'api', stored: false };
   } catch (error) {
     return {
       success: false,
@@ -184,12 +219,166 @@ async function resolveUser({ screenName }) {
 }
 
 function handleFetchUserInfo(payload) {
-  const key = (payload?.screenName || '').toLowerCase();
+  const key = normalizeHandle(payload?.screenName || '');
   if (!key) return resolveUser(payload);
   if (inflight.has(key)) return inflight.get(key);
   const p = resolveUser(payload).finally(() => inflight.delete(key));
   inflight.set(key, p);
   return p;
+}
+
+function putFromPayload(payload) {
+  const screenName = payload?.screenName;
+  const data = payload?.data || payload;
+  if (!screenName || !data?.location) {
+    return { success: false, stored: false, reason: 'incomplete' };
+  }
+  return cachePut(screenName, {
+    location: data.location,
+    locationAccurate: data.locationAccurate,
+    name: data.name || payload?.name || ''
+  }).then(stored => ({ success: stored, stored }));
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function waitTabComplete(tabId, timeoutMs) {
+  const limit = timeoutMs || 15000;
+  return new Promise((resolve, reject) => {
+    let done = false;
+    const finish = ok => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      try {
+        chrome.tabs.onUpdated.removeListener(onUpdated);
+      } catch (_) {
+        /* ignore */
+      }
+      if (ok) resolve();
+      else reject(new Error('Tab load timeout'));
+    };
+    const timer = setTimeout(() => finish(false), limit);
+    function onUpdated(id, info) {
+      if (id === tabId && info.status === 'complete') finish(true);
+    }
+    chrome.tabs.onUpdated.addListener(onUpdated);
+    chrome.tabs
+      .get(tabId)
+      .then(tab => {
+        if (tab?.status === 'complete') finish(true);
+      })
+      .catch(() => {
+        /* wait for onUpdated */
+      });
+  });
+}
+
+async function sendReleaseToTab(tabId, payload, attempts) {
+  const n = attempts || 10;
+  let lastErr = 'Content script not ready';
+  for (let i = 0; i < n; i++) {
+    try {
+      const res = await chrome.tabs.sendMessage(tabId, {
+        type: 'RUN_RELEASE_ACTION',
+        payload
+      });
+      if (res && res.success) return res;
+      if (res && res.success === false) {
+        lastErr = res.error || 'Release action failed';
+        // Action ran but failed — don't spin forever
+        if (i >= 2) throw new Error(lastErr);
+      }
+    } catch (e) {
+      lastErr = e?.message || String(e);
+    }
+    await sleep(450);
+  }
+  throw new Error(lastErr);
+}
+
+/**
+ * Open profile in background tab → unmute/unblock via content engine → close tab.
+ */
+async function runReleaseOnX(screenName, action) {
+  const handle = normalizeHandle(screenName);
+  if (!handle) throw new Error('Missing screenName');
+  if (action !== 'unmute' && action !== 'unblock') {
+    throw new Error('Unsupported action: ' + action);
+  }
+
+  const url = 'https://x.com/' + handle;
+  const tab = await chrome.tabs.create({ url, active: false });
+  try {
+    await waitTabComplete(tab.id, 15000);
+    // Give SPA + content scripts a beat to mount profile chrome
+    await sleep(900);
+    const result = await sendReleaseToTab(
+      tab.id,
+      { screenName: handle, action },
+      10
+    );
+    return result;
+  } finally {
+    try {
+      if (tab?.id != null) await chrome.tabs.remove(tab.id);
+    } catch (_) {
+      /* ignore */
+    }
+  }
+}
+
+async function handleReleaseAccount(payload) {
+  const screenName = payload?.screenName;
+  const mode = payload?.mode;
+  const name = payload?.name;
+  const avatarUrl = payload?.avatarUrl;
+
+  if (mode === 'notinterested') {
+    return { success: true, localOnly: true, screenName, mode };
+  }
+
+  const action = mode === 'mute' ? 'unmute' : mode === 'block' ? 'unblock' : null;
+  if (!action) {
+    return { success: false, error: 'Unsupported mode', screenName, mode };
+  }
+
+  try {
+    const result = await runReleaseOnX(screenName, action);
+    return {
+      success: true,
+      screenName,
+      mode,
+      action,
+      ...(result || {})
+    };
+  } catch (err) {
+    // Re-insert so user can retry; list is source of managed state
+    try {
+      if (self.XCD_SETTINGS?.recordManagedAccount) {
+        await self.XCD_SETTINGS.recordManagedAccount({
+          screenName,
+          lane: mode,
+          name,
+          avatarUrl,
+          skipBadge: true
+        });
+      }
+    } catch (e) {
+      console.warn('[xcd] re-insert after failed release', e);
+    }
+    console.warn('[xcd] RELEASE_ACCOUNT failed', mode, screenName, err);
+    return {
+      success: false,
+      error: err?.message || String(err),
+      screenName,
+      mode,
+      action,
+      reinserted: true
+    };
+  }
 }
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
@@ -209,24 +398,26 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         }
         return { success: false, error: 'Invalid headers' };
       }
+      case 'GEO_CACHE_GET': {
+        const data = await cacheGet(payload?.screenName);
+        return { success: true, hit: !!(data && data.location), data };
+      }
+      case 'GEO_CACHE_PUT':
+      case 'CACHE_PUT': {
+        // Only store successful location detections
+        return await putFromPayload(payload);
+      }
+      case 'GEO_CACHE_STATS': {
+        const stats = self.XCD_GEO_IDB
+          ? await self.XCD_GEO_IDB.stats()
+          : { count: 0 };
+        return { success: true, ...stats, mem: memCache.size };
+      }
       case 'FETCH_USER_INFO':
         return await handleFetchUserInfo(payload);
-      case 'CACHE_PUT': {
-        if (payload?.screenName && payload?.data) {
-          cacheSet(payload.screenName, payload.data);
-          return { success: true };
-        }
-        return { success: false };
-      }
-      case 'RELEASE_ACCOUNT': {
-        // Stub: real X unblock/unmute GraphQL lands with the block engine.
-        const screenName = payload?.screenName;
-        const mode = payload?.mode;
-        console.log('[xcd] RELEASE_ACCOUNT', mode, screenName);
-        return { success: true, stub: true, screenName, mode };
-      }
+      case 'RELEASE_ACCOUNT':
+        return await handleReleaseAccount(payload);
       case 'OPEN_URL': {
-        // Open from SW so the popup can close immediately without hanging.
         const url = typeof payload?.url === 'string' ? payload.url : '';
         if (!url || !/^https?:\/\//i.test(url)) {
           return { success: false, error: 'Invalid url' };
@@ -235,15 +426,17 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         return { success: true };
       }
       case 'ACCOUNT_MANAGED': {
-        // Flash badge + bump session counter (block=red, mute=yellow).
-        const lane = payload?.lane === 'mute' ? 'mute' : 'block';
+        let lane = 'block';
+        if (payload?.lane === 'mute') lane = 'mute';
+        else if (payload?.lane === 'notinterested') lane = 'notinterested';
         const count = await self.XCD_BADGE.onAccountManaged(lane);
         return { success: true, count, lane };
       }
       case 'RECORD_ACCOUNT': {
-        // Engine / content path: persist account + badge feedback.
         if (!self.XCD_SETTINGS) return { success: false, error: 'No settings' };
-        const lane = payload?.lane === 'mute' ? 'mute' : 'block';
+        let lane = 'block';
+        if (payload?.lane === 'mute') lane = 'mute';
+        else if (payload?.lane === 'notinterested') lane = 'notinterested';
         const settings = await self.XCD_SETTINGS.recordManagedAccount({
           screenName: payload?.screenName,
           lane,
@@ -267,13 +460,25 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   return true;
 });
 
-loadCache();
-if (self.XCD_BADGE) self.XCD_BADGE.initBadge();
+async function boot() {
+  await loadHeaders();
+  if (self.XCD_GEO_IDB?.migrateFromChromeStorage) {
+    try {
+      const r = await self.XCD_GEO_IDB.migrateFromChromeStorage();
+      if (r?.migrated) console.log('[xcd] migrated geo cache entries', r.migrated);
+    } catch (e) {
+      console.warn('[xcd] geo migrate error', e);
+    }
+  }
+  if (self.XCD_BADGE) self.XCD_BADGE.initBadge();
+}
+
+boot();
 
 chrome.runtime.onStartup?.addListener?.(() => {
   self.XCD_BADGE?.initBadge?.();
 });
 chrome.runtime.onInstalled?.addListener?.(() => {
   self.XCD_BADGE?.initBadge?.();
+  boot();
 });
-

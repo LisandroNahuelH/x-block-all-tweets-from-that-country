@@ -8,32 +8,75 @@
   </head>
   <body>
     <main class="popup-shell">
-      <a
-        class="p11-brand"
-        id="p11Brand"
-        href="https://www.premium11.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        data-i18n-aria-label="a11y_open_premium11"
-        data-i18n-title="a11y_open_premium11"
-      >
-        <img
-          class="p11-brand__mark"
-          src="../brand/premium11-mark.svg"
-          alt=""
-          width="28"
-          height="28"
-        />
-        <span class="p11-brand__name" aria-hidden="true"></span>
-      </a>
+      <div class="top-bar">
+        <a
+          class="p11-brand"
+          id="p11Brand"
+          href="https://www.premium11.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n-aria-label="a11y_open_premium11"
+          data-i18n-title="a11y_open_premium11"
+        >
+          <img
+            class="p11-brand__mark"
+            src="../brand/premium11-mark.svg"
+            alt=""
+            width="28"
+            height="28"
+          />
+          <span class="p11-brand__name" aria-hidden="true"></span>
+        </a>
+        <h1 class="ext-title" data-i18n="pop_heading"></h1>
+        <button
+          type="button"
+          class="premium-chip"
+          id="premiumChip"
+          data-i18n-title="pop_premium_chip_title"
+          data-i18n-aria-label="pop_premium_chip"
+        >
+          <span class="premium-chip__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+              <path
+                d="M5 16.5 3.5 8.5 8 11l4-6 4 6 4.5-2.5L19 16.5H5Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path d="M5 16.5h14v2.2a1.3 1.3 0 0 1-1.3 1.3H6.3A1.3 1.3 0 0 1 5 18.7v-2.2Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="premium-chip__text" data-i18n="pop_premium_chip"></span>
+        </button>
+        <button
+          type="button"
+          class="settings-chip"
+          id="settingsChip"
+          data-i18n-title="pop_settings_btn_title"
+          data-i18n-aria-label="pop_settings_btn_title"
+        >
+          <span class="settings-chip__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false">
+              <path
+                d="M13.6006 21.0761L19.0608 17.9236C19.6437 17.5871 19.9346 17.4188 20.1465 17.1834C20.3341 16.9751 20.4759 16.7297 20.5625 16.4632C20.6602 16.1626 20.6602 15.8267 20.6602 15.1568V8.84268C20.6602 8.17277 20.6602 7.83694 20.5625 7.53638C20.4759 7.26982 20.3341 7.02428 20.1465 6.816C19.9355 6.58161 19.6453 6.41405 19.0674 6.08043L13.5996 2.92359C13.0167 2.58706 12.7259 2.41913 12.416 2.35328C12.1419 2.295 11.8584 2.295 11.5843 2.35328C11.2744 2.41914 10.9826 2.58706 10.3997 2.92359L4.93843 6.07666C4.35623 6.41279 4.06535 6.58073 3.85352 6.816C3.66597 7.02428 3.52434 7.26982 3.43773 7.53638C3.33984 7.83765 3.33984 8.17436 3.33984 8.84742V15.1524C3.33984 15.8254 3.33984 16.1619 3.43773 16.4632C3.52434 16.7297 3.66597 16.9751 3.85352 17.1834C4.06548 17.4188 4.35657 17.5871 4.93945 17.9236L10.3997 21.0761C10.9826 21.4126 11.2744 21.5806 11.5843 21.6465C11.8584 21.7047 12.1419 21.7047 12.416 21.6465C12.7259 21.5806 13.0177 21.4126 13.6006 21.0761Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
 
-      <header class="popup-header">
-        <div>
-          <p class="eyebrow" data-i18n="pop_eyebrow"></p>
-          <h1 data-i18n="pop_heading"></h1>
-        </div>
-      </header>
-
+      <div class="main-view" id="mainView">
       <div class="lanes">
         <!-- BLOCK LANE -->
         <section class="lane" id="laneBlock" data-lane="block">
@@ -196,11 +239,157 @@
             </section>
           </div>
         </section>
+
+        <!-- NOT INTERESTED LANE -->
+        <section class="lane" id="laneNotInterested" data-lane="notinterested">
+          <div class="lane-head">
+            <h2 class="lane-title" data-i18n="pop_lane_notinterested"></h2>
+            <label class="switch">
+              <input type="checkbox" id="notinterestedEnabled" data-lane="notinterested" checked />
+              <span class="switch-track" aria-hidden="true"></span>
+              <span class="sr-only" data-i18n="a11y_toggle_lane_notinterested"></span>
+            </label>
+          </div>
+          <p class="mode-hint" role="status">
+            <span class="mode-hint__warn" data-i18n="pop_mode_warning_label"></span>
+            <span class="mode-hint__text" data-i18n="pop_mode_hint_notinterested"></span>
+          </p>
+
+          <div class="lane-body">
+            <section class="geo-panel" aria-labelledby="ni-regions-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="ni-regions-label" data-i18n="pop_regions_label"></h3>
+                <span class="geo-count" id="notinterestedRegionCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="notinterestedRegionSearch">
+                <span class="sr-only" data-i18n="pop_search_regions"></span>
+                <input
+                  id="notinterestedRegionSearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_regions"
+                  data-lane="notinterested"
+                  data-section="regions"
+                />
+              </label>
+              <div class="geo-list geo-list--regions" id="notinterestedRegionList" role="list" data-lane="notinterested" data-section="regions"></div>
+            </section>
+
+            <section class="geo-panel" aria-labelledby="ni-countries-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="ni-countries-label" data-i18n="pop_countries_label"></h3>
+                <span class="geo-count" id="notinterestedCountryCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="notinterestedCountrySearch">
+                <span class="sr-only" data-i18n="pop_search_countries"></span>
+                <input
+                  id="notinterestedCountrySearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_countries"
+                  data-lane="notinterested"
+                  data-section="countries"
+                />
+              </label>
+              <div class="geo-list geo-list--countries" id="notinterestedCountryList" role="list" data-lane="notinterested" data-section="countries"></div>
+            </section>
+
+            <section class="geo-panel" aria-labelledby="ni-managed-label">
+              <div class="geo-panel__head">
+                <h3 class="section-title" id="ni-managed-label" data-i18n="pop_notinterested_accounts_label"></h3>
+                <span class="geo-count" id="notinterestedManagedCount" aria-live="polite"></span>
+              </div>
+              <label class="geo-search" for="notinterestedManagedSearch">
+                <span class="sr-only" data-i18n="pop_search_accounts"></span>
+                <input
+                  id="notinterestedManagedSearch"
+                  class="geo-search__input"
+                  type="search"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="pop_search_accounts"
+                  data-lane="notinterested"
+                  data-section="accounts"
+                />
+              </label>
+              <div class="geo-list geo-list--accounts" id="notinterestedManagedList" role="list" data-lane="notinterested" data-section="accounts"></div>
+            </section>
+          </div>
+        </section>
       </div>
+      </div>
+
+      <section class="settings-view" id="settingsView" hidden>
+        <header class="premium-view__header">
+          <button type="button" class="premium-back" id="settingsBack" data-i18n="pop_premium_back"></button>
+          <div class="premium-view__copy">
+            <h2 class="premium-view__title" data-i18n="pop_settings_title"></h2>
+          </div>
+        </header>
+        <article class="settings-card">
+          <div class="settings-row">
+            <label class="settings-row__label" for="optShowCountryLabels" data-i18n="pop_opt_show_country_labels"></label>
+            <label class="switch">
+              <input type="checkbox" id="optShowCountryLabels" checked />
+              <span class="switch-track" aria-hidden="true"></span>
+              <span class="sr-only" data-i18n="a11y_toggle_show_country"></span>
+            </label>
+          </div>
+          <p class="settings-note" data-i18n="pop_opt_show_country_note"></p>
+        </article>
+      </section>
+
+      <section class="premium-view" id="premiumView" hidden>
+        <header class="premium-view__header">
+          <button type="button" class="premium-back" id="premiumBack" data-i18n="pop_premium_back"></button>
+          <div class="premium-view__copy">
+            <p class="premium-view__eyebrow" data-i18n="pop_premium_eyebrow"></p>
+            <h2 class="premium-view__title" data-i18n="pop_premium_title"></h2>
+            <p class="premium-view__subtitle" data-i18n="pop_premium_subtitle"></p>
+          </div>
+        </header>
+        <article class="premium-status-card premium-status-card--lifetime">
+          <div class="premium-status-header premium-status-header--lifetime">
+            <div class="premium-status-header__hero">
+              <div class="premium-status-header__intro">
+                <p class="premium-status-title" data-i18n="pop_premium_status_title"></p>
+                <span class="premium-gift-badge" data-i18n="pop_premium_gift_badge"></span>
+              </div>
+              <span class="premium-status-badge premium-status-badge--lifetime" aria-hidden="true">
+                <span class="premium-status-badge__label" data-i18n="pop_premium_status_active"></span>
+              </span>
+            </div>
+            <p class="premium-gift-message" data-i18n="pop_premium_gift_message"></p>
+            <dl class="premium-facts" aria-label="Premium facts">
+              <div class="premium-facts__item">
+                <dt data-i18n="pop_premium_fact_version"></dt>
+                <dd id="premiumFactVersion">—</dd>
+              </div>
+              <div class="premium-facts__item">
+                <dt data-i18n="pop_premium_fact_updated"></dt>
+                <dd id="premiumFactUpdated">—</dd>
+              </div>
+              <div class="premium-facts__item">
+                <dt data-i18n="pop_premium_fact_license"></dt>
+                <dd class="premium-facts__value--highlight" data-i18n="pop_premium_fact_license_value"></dd>
+              </div>
+              <div class="premium-facts__item">
+                <dt data-i18n="pop_premium_fact_features"></dt>
+                <dd class="premium-facts__value--highlight" data-i18n="pop_premium_fact_features_value"></dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+      </section>
     </main>
     <script src="../shared/i18n.js"></script>
     <script src="../shared/geo-data.js"></script>
     <script src="../shared/settings.js"></script>
+    <script src="../shared/release-metadata.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

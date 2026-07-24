@@ -49,10 +49,10 @@ This file is the canonical agent operating contract for this repository.
 
 ### Settings / lanes contract
 
-1. Block and Mute are **independent** lanes:  
-   `{ block: { enabled, countries, regions, accounts }, mute: { ... } }`.
+1. Block, Mute, and **Not interested** are **independent** lanes:  
+   `{ block, mute, notinterested }` each with `{ enabled, countries, regions, accounts }`.
 2. Account entries: `{ screenName, name, avatarUrl, ts }`.
-3. Toolbar badge: session counter + red flash (block) / yellow flash (mute) via `shared/badge.js` + SW.
+3. Toolbar badge: session counter + red (block) / yellow (mute) / blue (notinterested) flash via `shared/badge.js` + SW.
 4. Opening external URLs (Premium11 home): message SW `OPEN_URL` then `window.close()` — never hang the popup.
 
 ### Build and verify
@@ -69,6 +69,22 @@ Load unpacked from **`dist/`**. After `manifest.json` changes, user must reload 
 ### Chrome Web Store release (when packaging)
 
 Follow global extension release rule: bump minimum version in all truth sources, `build` + release zip, commit, leave store-ready artifact. Prefer skill `empaquetar-para-release-chrome-store` when applicable.
+
+### Release packaging — Premium status submenu (mandatory, Volume Booster pattern)
+
+On **every** rebuild / package for Chrome Web Store release, **always** refresh the Premium vitalicio submenu metadata so the popup shows the correct release facts:
+
+1. Bump version in **all** sources of truth:
+   - `package.json`
+   - `extension/manifest.json`
+   - `extension/shared/release-metadata.js` → `EXTENSION_RELEASE_VERSION`
+2. Set `EXTENSION_LAST_UPDATE_ISO` in `extension/shared/release-metadata.js` to the release day (`YYYY-MM-DD`). This drives **Last updated** in the Premium panel.
+3. Confirm Premium gift copy still matches this product and price: **USD 29.99** (`pop_premium_gift_message` and EN_FALLBACK).
+4. Confirm chip label remains **Premium Activated** (i18n keys `pop_premium_*`).
+5. Run `npm run agents:sync` if AGENTS changed; run `npm run verify` (or at least `i18n:check` + `build`).
+6. Empaquetar release; leave store-ready zip. Do not ship with stale version/date in the Premium submenu.
+
+Source of truth for the submenu dates/version: `extension/shared/release-metadata.js` (same role as Volume Booster’s `extension-release-metadata.ts`).
 
 ## 🌿 Git workflow
 
@@ -100,6 +116,21 @@ Follow global extension release rule: bump minimum version in all truth sources,
 | Brand | Premium11 (`extension/brand/premium11-mark.svg`) |
 | Homepage | `https://www.premium11.com/` |
 | Target | Chromium MV3, x.com / twitter.com |
-| Current stage | Popup dual-lane UI + geo detection + settings/badge; **block/mute engine on X still pending** |
+| Current stage | Popup 3 lanes + geo detection + **auto engine on X** (menu ⋯ port of I Don't Care) |
 
-When implementing the block/mute engine: reuse session headers + GraphQL patterns from `_upstream` / `extension/page-script.js` + `background.js`; always `recordManagedAccount` / `RECORD_ACCOUNT` so lists and badge update.
+### Content engine contract
+
+1. Action execution must follow IDC menu flow: caret → Dropdown/menu → keyword item → optional block confirm (`content/engine/actions.js`).
+2. Geo matching: enabled lane countries/regions vs `AboutAccount` location string (lowercase). Priority: block > mute > notinterested.
+3. Dedupe via `handled` + `settings[lane].accounts`; skip self.
+4. Always `RECORD_ACCOUNT` after successful action for Managed lists + badge.
+5. Serial queue only (concurrency 1).
+
+### Geo location cache (IndexedDB, CWS-safe)
+
+1. Store: `shared/geo-cache-idb.js` DB `xcd_geo_v1` — durable on device only; never upload.
+2. **Write only complete positive hits:** `screenName` + non-empty `location` (+ optional display `name`). Never persist rate-limit failures, empty AboutAccount, or “unknown country” rows.
+3. Read path: content mem → `GEO_CACHE_GET` → network → `GEO_CACHE_PUT` only if location present.
+4. Settings stay in `chrome.storage.local`; bulk geo cache is **not** dumped there (legacy key migrated once then removed).
+5. Permission `unlimitedStorage` is for this local cache scale (~100k entries).
+6. Privacy policy must mention: local cache of public X about-account country/region for filtering; not sold/sent to third parties.

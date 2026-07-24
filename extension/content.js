@@ -1,6 +1,6 @@
 /**
- * Content script: encuentra usernames en el DOM de X y resuelve país/región.
- * Tech adaptada de xaitax/x-account-location-device (MIT).
+ * Content script: location detection + geo auto-action engine.
+ * Detection from xaitax/x-account-location-device; actions from I Don't Care About Your Tweets.
  */
 (function () {
   'use strict';
@@ -12,6 +12,22 @@
   let batchTimer = null;
   /** @type {Set<Element>} */
   const pendingEls = new Set();
+  let showCountryLabels = true;
+
+  async function loadUiPrefs() {
+    try {
+      if (globalThis.XCD_SETTINGS?.getSettings) {
+        const s = await globalThis.XCD_SETTINGS.getSettings();
+        showCountryLabels = s.showCountryLabels !== false;
+      }
+    } catch (_) {
+      showCountryLabels = true;
+    }
+  }
+
+  function removeAllCountryMarks() {
+    document.querySelectorAll('.xcd-mark').forEach(el => el.remove());
+  }
 
   function sendMessage(message) {
     return new Promise(resolve => {
@@ -104,16 +120,51 @@
     return typeof name === 'string' && /^[a-zA-Z0-9_]{1,15}$/.test(name);
   }
 
+  function hasUsableLocation(data) {
+    return !!(data && data.location && String(data.location).trim());
+  }
+
+  /** Persist only complete positive detections (handle + location). */
+  function persistIfComplete(screenName, data, nameHint) {
+    if (!hasUsableLocation(data)) return;
+    const payload = {
+      location: data.location,
+      locationAccurate: data.locationAccurate !== false,
+      name: data.name || nameHint || ''
+    };
+    localInfo.set(screenName.toLowerCase(), {
+      location: payload.location,
+      locationAccurate: payload.locationAccurate,
+      name: payload.name
+    });
+    sendMessage({
+      type: 'GEO_CACHE_PUT',
+      payload: { screenName, data: payload }
+    });
+  }
+
   async function resolveLocation(screenName) {
     const key = screenName.toLowerCase();
-    if (localInfo.has(key)) return { success: true, data: localInfo.get(key), source: 'memory' };
+    const warm = localInfo.get(key);
+    if (hasUsableLocation(warm)) {
+      return { success: true, data: warm, source: 'memory' };
+    }
     if (pending.has(key)) return pending.get(key);
 
     const p = (async () => {
+      // Durable cache (IndexedDB via SW) before network
+      const cached = await sendMessage({
+        type: 'GEO_CACHE_GET',
+        payload: { screenName }
+      });
+      if (cached?.hit && hasUsableLocation(cached.data)) {
+        localInfo.set(key, cached.data);
+        return { success: true, data: cached.data, source: 'idb' };
+      }
+
       const page = await fetchUserInfoViaPage(screenName);
-      if (page?.success && page.data) {
-        localInfo.set(key, page.data);
-        sendMessage({ type: 'CACHE_PUT', payload: { screenName, data: page.data } });
+      if (page?.success && hasUsableLocation(page.data)) {
+        persistIfComplete(screenName, page.data);
         return { success: true, data: page.data, source: 'page' };
       }
 
@@ -121,9 +172,20 @@
         type: 'FETCH_USER_INFO',
         payload: { screenName }
       });
-      if (bg?.success && bg.data) {
+      if (bg?.success && hasUsableLocation(bg.data)) {
+        // SW already stored on FETCH; warm content mem
         localInfo.set(key, bg.data);
-        return bg;
+        return { success: true, data: bg.data, source: bg.source || 'api' };
+      }
+
+      // Incomplete / no location: do NOT cache — return soft result
+      if (page?.success || bg?.success) {
+        return {
+          success: true,
+          data: { location: null },
+          source: 'miss',
+          stored: false
+        };
       }
       return bg || page || { success: false, error: 'lookup failed' };
     })().finally(() => pending.delete(key));
@@ -136,8 +198,12 @@
     el.dataset.xCountry = info?.location || '';
     el.dataset.xLocationAccurate = info?.locationAccurate === false ? '0' : '1';
     el.dataset.xScreenName = screenName;
-    // Debug visual mínimo (quitar cuando haya bloqueo)
-    if (info?.location && !el.querySelector('.xcd-mark')) {
+    const existing = el.querySelector('.xcd-mark');
+    if (!showCountryLabels) {
+      if (existing) existing.remove();
+      return;
+    }
+    if (info?.location && !existing) {
       const mark = document.createElement('span');
       mark.className = 'xcd-mark';
       const t = (globalThis.XCD_I18N && XCD_I18N.t) || (k => k);
@@ -203,19 +269,59 @@
     if (!headers) return;
     await sendMessage({ type: 'CAPTURE_HEADERS', payload: { headers } });
     setTimeout(scan, 250);
+    if (globalThis.XCD_ENGINE?.scan) setTimeout(() => globalThis.XCD_ENGINE.scan(), 400);
   });
 
   injectPageScript();
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', startObserver, { once: true });
-  } else {
-    startObserver();
-  }
-
+  // Expose location resolver for the action engine before it starts.
   window.__xcd = {
     resolveLocation,
     scan,
     cacheSize: () => localInfo.size
   };
+
+  function boot() {
+    loadUiPrefs().then(() => {
+      startObserver();
+      if (globalThis.XCD_ENGINE?.start) {
+        globalThis.XCD_ENGINE.start();
+      }
+    });
+
+    try {
+      chrome.storage.onChanged.addListener((changes, area) => {
+        if (area !== 'local') return;
+        const key = globalThis.XCD_SETTINGS?.STORAGE_KEY || 'xcd_settings';
+        if (!changes[key]) return;
+        loadUiPrefs().then(() => {
+          if (!showCountryLabels) removeAllCountryMarks();
+          else {
+            // force re-apply marks on next scan for already-processed nodes
+            document.querySelectorAll('[data-xcd-processed], [data-xcdProcessed]').forEach(el => {
+              if (el instanceof HTMLElement) {
+                delete el.dataset.xcdProcessed;
+                delete el.dataset[PROCESSED];
+              }
+            });
+            // also clear PROCESSED camelCase dataset key used by this file
+            document.querySelectorAll('[data-x-country]').forEach(el => {
+              if (el instanceof HTMLElement && el.dataset[PROCESSED]) {
+                delete el.dataset[PROCESSED];
+              }
+            });
+            scan();
+          }
+        });
+      });
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
 })();

@@ -1,5 +1,5 @@
 /**
- * Popup: dual independent Block / Mute lanes (Premium11).
+ * Popup: independent Block / Mute / Not interested lanes (Premium11).
  * Keeps open path non-blocking: chunked lists + brand opens via SW then closes.
  */
 (function () {
@@ -11,7 +11,7 @@
     '</svg>';
 
   const PREMIUM11_HOME = 'https://www.premium11.com/';
-  const LANES = ['block', 'mute'];
+  const LANES = ['block', 'mute', 'notinterested'];
   const COUNTRY_CHUNK = 40;
 
   const t = (key, subs) =>
@@ -20,50 +20,50 @@
     if (globalThis.XCD_I18N && XCD_I18N.applyDom) XCD_I18N.applyDom(root);
   };
 
-  /** @type {{ block: object, mute: object }} */
+  function emptyLane() {
+    return { enabled: true, countries: [], regions: [], accounts: [] };
+  }
+
+  /** @type {Record<string, object>} */
   let settings = {
-    block: { enabled: true, countries: [], regions: [], accounts: [] },
-    mute: { enabled: true, countries: [], regions: [], accounts: [] }
+    block: emptyLane(),
+    mute: emptyLane(),
+    notinterested: emptyLane()
   };
 
   const queries = {
     block: { regions: '', countries: '', accounts: '' },
-    mute: { regions: '', countries: '', accounts: '' }
+    mute: { regions: '', countries: '', accounts: '' },
+    notinterested: { regions: '', countries: '', accounts: '' }
   };
 
   /** Invalidate in-flight chunked renders when a newer render starts or popup dies. */
   const renderSeq = {
     block: { countries: 0 },
-    mute: { countries: 0 }
+    mute: { countries: 0 },
+    notinterested: { countries: 0 }
   };
 
+  function laneEls(prefix, laneId, laneDomId) {
+    return {
+      lane: document.getElementById(laneDomId),
+      enabled: document.getElementById(prefix + 'Enabled'),
+      regionList: document.getElementById(prefix + 'RegionList'),
+      countryList: document.getElementById(prefix + 'CountryList'),
+      managedList: document.getElementById(prefix + 'ManagedList'),
+      regionCount: document.getElementById(prefix + 'RegionCount'),
+      countryCount: document.getElementById(prefix + 'CountryCount'),
+      managedCount: document.getElementById(prefix + 'ManagedCount'),
+      regionSearch: document.getElementById(prefix + 'RegionSearch'),
+      countrySearch: document.getElementById(prefix + 'CountrySearch'),
+      managedSearch: document.getElementById(prefix + 'ManagedSearch')
+    };
+  }
+
   const els = {
-    block: {
-      lane: document.getElementById('laneBlock'),
-      enabled: document.getElementById('blockEnabled'),
-      regionList: document.getElementById('blockRegionList'),
-      countryList: document.getElementById('blockCountryList'),
-      managedList: document.getElementById('blockManagedList'),
-      regionCount: document.getElementById('blockRegionCount'),
-      countryCount: document.getElementById('blockCountryCount'),
-      managedCount: document.getElementById('blockManagedCount'),
-      regionSearch: document.getElementById('blockRegionSearch'),
-      countrySearch: document.getElementById('blockCountrySearch'),
-      managedSearch: document.getElementById('blockManagedSearch')
-    },
-    mute: {
-      lane: document.getElementById('laneMute'),
-      enabled: document.getElementById('muteEnabled'),
-      regionList: document.getElementById('muteRegionList'),
-      countryList: document.getElementById('muteCountryList'),
-      managedList: document.getElementById('muteManagedList'),
-      regionCount: document.getElementById('muteRegionCount'),
-      countryCount: document.getElementById('muteCountryCount'),
-      managedCount: document.getElementById('muteManagedCount'),
-      regionSearch: document.getElementById('muteRegionSearch'),
-      countrySearch: document.getElementById('muteCountrySearch'),
-      managedSearch: document.getElementById('muteManagedSearch')
-    }
+    block: laneEls('block', 'block', 'laneBlock'),
+    mute: laneEls('mute', 'mute', 'laneMute'),
+    notinterested: laneEls('notinterested', 'notinterested', 'laneNotInterested')
   };
 
   function yieldToMain() {
@@ -222,21 +222,28 @@
     handleEl.className = 'account-meta__handle';
     handleEl.textContent = '@' + handle;
 
-    meta.append(nameEl, handleEl);
-
     const badge = document.createElement('span');
-    badge.className =
-      'account-mode-badge' +
-      (lane === 'mute' ? ' account-mode-badge--mute' : ' account-mode-badge--block');
-    badge.textContent =
-      lane === 'mute' ? t('pop_managed_mode_mute') : t('pop_managed_mode_block');
+    let badgeMod = 'account-mode-badge--block';
+    let badgeText = t('pop_managed_mode_block');
+    if (lane === 'mute') {
+      badgeMod = 'account-mode-badge--mute';
+      badgeText = t('pop_managed_mode_mute');
+    } else if (lane === 'notinterested') {
+      badgeMod = 'account-mode-badge--notinterested';
+      badgeText = t('pop_managed_mode_notinterested');
+    }
+    badge.className = 'account-mode-badge ' + badgeMod;
+    badge.textContent = badgeText;
+
+    meta.append(nameEl, handleEl, badge);
 
     const check = document.createElement('span');
     check.className = 'geo-check';
     check.setAttribute('aria-hidden', 'true');
     check.innerHTML = CHECK_SVG;
 
-    btn.append(avatarWrap, meta, badge, check);
+    // 3 slots only: avatar | meta stack | check (same grid as country rows)
+    btn.append(avatarWrap, meta, check);
     paintItem(btn, true);
     return btn;
   }
@@ -381,9 +388,18 @@
     if (settings[lane]?.enabled === false) return;
 
     if (kind === 'account') {
-      const { settings: next } = await XCD_SETTINGS.releaseManagedAccount(lane, key);
-      settings = next;
-      renderManaged(lane);
+      btn.disabled = true;
+      try {
+        const { settings: next, releaseResult } =
+          await XCD_SETTINGS.releaseManagedAccount(lane, key);
+        settings = next;
+        if (releaseResult && releaseResult.success === false) {
+          console.warn('[xcd] release reverse failed', releaseResult);
+        }
+        renderManaged(lane);
+      } finally {
+        btn.disabled = false;
+      }
       return;
     }
 
@@ -447,12 +463,123 @@
     }
   }
 
+  function resolveExtensionVersion() {
+    try {
+      const v = chrome.runtime.getManifest()?.version;
+      if (v) return v;
+    } catch (_) {
+      /* ignore */
+    }
+    return globalThis.XCD_RELEASE?.EXTENSION_RELEASE_VERSION || '0.1.0';
+  }
+
+  function formatLastUpdate(locale) {
+    const iso = globalThis.XCD_RELEASE?.EXTENSION_LAST_UPDATE_ISO || '2026-07-24';
+    const parsed = new Date(iso + 'T12:00:00.000Z');
+    if (Number.isNaN(parsed.getTime())) return iso;
+    const loc = (locale || 'en').replace(/_/g, '-');
+    try {
+      return new Intl.DateTimeFormat(loc, {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC'
+      }).format(parsed);
+    } catch (_) {
+      return new Intl.DateTimeFormat('en', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC'
+      }).format(parsed);
+    }
+  }
+
+  function fillPremiumFacts() {
+    const verEl = document.getElementById('premiumFactVersion');
+    const updEl = document.getElementById('premiumFactUpdated');
+    if (verEl) verEl.textContent = resolveExtensionVersion();
+    if (updEl) {
+      let locale = 'en';
+      try {
+        locale = chrome.i18n.getUILanguage() || 'en';
+      } catch (_) {
+        /* ignore */
+      }
+      updEl.textContent = formatLastUpdate(locale);
+    }
+  }
+
+  function hideAllViews() {
+    const main = document.getElementById('mainView');
+    const premium = document.getElementById('premiumView');
+    const settings = document.getElementById('settingsView');
+    if (main) main.hidden = true;
+    if (premium) premium.hidden = true;
+    if (settings) settings.hidden = true;
+    document.getElementById('premiumChip')?.setAttribute('aria-pressed', 'false');
+    document.getElementById('settingsChip')?.classList.remove('is-active');
+    document.getElementById('settingsChip')?.setAttribute('aria-pressed', 'false');
+  }
+
+  function showMainView() {
+    hideAllViews();
+    const main = document.getElementById('mainView');
+    if (main) main.hidden = false;
+  }
+
+  function openPremiumView() {
+    hideAllViews();
+    const view = document.getElementById('premiumView');
+    if (view) view.hidden = false;
+    fillPremiumFacts();
+    document.getElementById('premiumChip')?.setAttribute('aria-pressed', 'true');
+  }
+
+  function closePremiumView() {
+    showMainView();
+  }
+
+  function openSettingsView() {
+    hideAllViews();
+    const view = document.getElementById('settingsView');
+    if (view) view.hidden = false;
+    document.getElementById('settingsChip')?.classList.add('is-active');
+    document.getElementById('settingsChip')?.setAttribute('aria-pressed', 'true');
+  }
+
+  function closeSettingsView() {
+    showMainView();
+  }
+
+  async function syncShowCountryToggle() {
+    const input = document.getElementById('optShowCountryLabels');
+    if (!input || !globalThis.XCD_SETTINGS) return;
+    const s = await XCD_SETTINGS.getSettings();
+    input.checked = s.showCountryLabels !== false;
+  }
+
+  async function onShowCountryToggle(event) {
+    const input = event.currentTarget;
+    if (!globalThis.XCD_SETTINGS) return;
+    await XCD_SETTINGS.setShowCountryLabels(!!input.checked);
+  }
+
   async function init() {
     document.title = t('ext_name') || 'X - Block all tweets from that country or region';
     applyDom(document);
+    fillPremiumFacts();
+    await syncShowCountryToggle();
 
     // Wire interactions first so UI is usable even while lists fill.
     document.getElementById('p11Brand')?.addEventListener('click', onBrandClick);
+    document.getElementById('premiumChip')?.addEventListener('click', openPremiumView);
+    document.getElementById('premiumBack')?.addEventListener('click', closePremiumView);
+    document.getElementById('settingsChip')?.addEventListener('click', openSettingsView);
+    document.getElementById('settingsBack')?.addEventListener('click', closeSettingsView);
+    document
+      .getElementById('optShowCountryLabels')
+      ?.addEventListener('change', onShowCountryToggle);
     for (const lane of LANES) {
       const ui = els[lane];
       ui.enabled?.addEventListener('change', onEnabledChange);
@@ -476,6 +603,28 @@
     paintLaneEnabled('mute');
     // Non-blocking progressive fill
     renderAll();
+
+    // SW may re-insert a managed account if unmute/unblock fails
+    try {
+      chrome.storage.onChanged.addListener((changes, area) => {
+        if (area !== 'local') return;
+        const key = globalThis.XCD_SETTINGS?.STORAGE_KEY || 'xcd_settings';
+        if (!changes[key]) return;
+        (async () => {
+          try {
+            settings = await XCD_SETTINGS.getSettings();
+            for (const L of LANES) {
+              paintLaneEnabled(L);
+              renderManaged(L);
+            }
+          } catch (_) {
+            /* ignore */
+          }
+        })();
+      });
+    } catch (_) {
+      /* ignore */
+    }
   }
 
   if (document.readyState === 'loading') {
