@@ -276,7 +276,7 @@
     "description": "Toggle: reverse mute/block when clicking managed account in popup"
   },
   "pop_opt_undo_on_list_click_what": {
-    "message": "1. What it does: When on, clicking a managed account also undoes the action on X (unmute or unblock). When off, click only removes them from this extension’s list — nothing changes on X.",
+    "message": "1. What it does: When on, clicking a managed account removes it from the list and undoes the action on X (unmute or unblock). When off, list clicks do not release accounts — they only show a tip to enable this option.",
     "description": "Undo-on-click note: what it does"
   },
   "pop_opt_undo_on_list_click_how": {
@@ -294,5 +294,21 @@
   "a11y_toggle_undo_on_list_click": {
     "message": "Toggle undo on managed list click",
     "description": "Accessible label for undo-on-list-click switch"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "To automatically unmute, unblock, or clear Not interested when you click a managed account, turn on Undo on list click. You can enable it now or later in Settings.",
+    "description": "Bottom bar text when user clicks a managed account while undo is off"
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Enable now",
+    "description": "Bottom bar CTA to enable undo on list click"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Dismiss",
+    "description": "Bottom bar dismiss button"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Managed account (enable Undo on list click to release)",
+    "description": "Aria label for managed account when undo-on-click is off"
   }
 }

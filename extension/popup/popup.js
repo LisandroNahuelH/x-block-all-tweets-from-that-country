@@ -175,17 +175,24 @@
     const handle = entry.screenName || '';
     const displayName = (entry.name && String(entry.name).trim()) || handle;
     const avatarUrl = entry.avatarUrl || '';
+    const canUndo = settings.undoOnListClick === true;
 
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'geo-item geo-item--account';
+    btn.className =
+      'geo-item geo-item--account' + (canUndo ? '' : ' geo-item--readonly');
     btn.dataset.key = handle;
     btn.dataset.kind = 'account';
     btn.dataset.lane = lane;
     btn.setAttribute('role', 'listitem');
     btn.setAttribute(
       'aria-label',
-      t('a11y_release_account') + ': ' + displayName + ' (@' + handle + ')'
+      (canUndo ? t('a11y_release_account') : t('a11y_managed_account_locked')) +
+        ': ' +
+        displayName +
+        ' (@' +
+        handle +
+        ')'
     );
 
     // Avatar slot (same column as country flags) — upstream AboutAccount avatar.image_url
@@ -244,7 +251,12 @@
 
     // 3 slots only: avatar | meta stack | check (same grid as country rows)
     btn.append(avatarWrap, meta, check);
-    paintItem(btn, true);
+    // When undo is OFF, keep badge look but do not imply "release on click"
+    paintItem(btn, canUndo);
+    if (!canUndo) {
+      btn.classList.add('is-selected');
+      btn.setAttribute('aria-pressed', 'true');
+    }
     return btn;
   }
 
@@ -388,8 +400,11 @@
     if (settings[lane]?.enabled === false) return;
 
     if (kind === 'account') {
+      if (settings.undoOnListClick !== true) {
+        showUndoHintBar();
+        return;
+      }
       btn.disabled = true;
-      const reverseOnX = settings.undoOnListClick === true;
       // Optimistic UI: drop from list immediately so it never “sticks”
       const prevAccounts = settings[lane].accounts || [];
       settings = {
@@ -406,7 +421,7 @@
         const { settings: next } = await XCD_SETTINGS.releaseManagedAccount(
           lane,
           key,
-          { reverseOnX }
+          { reverseOnX: true }
         );
         settings = next || (await XCD_SETTINGS.getSettings());
         renderManaged(lane);
@@ -635,6 +650,51 @@
     document.documentElement.classList.toggle('xcd-taller-columns', !!on);
   }
 
+  let undoHintVisible = false;
+
+  function hideUndoHintBar() {
+    const bar = document.getElementById('undoHintBar');
+    if (!bar) return;
+    undoHintVisible = false;
+    bar.classList.remove('is-visible');
+    bar.setAttribute('aria-hidden', 'true');
+    bar.setAttribute('inert', '');
+  }
+
+  function showUndoHintBar() {
+    const bar = document.getElementById('undoHintBar');
+    if (!bar) return;
+    if (undoHintVisible) {
+      bar.classList.add('is-visible');
+      bar.setAttribute('aria-hidden', 'false');
+      bar.removeAttribute('inert');
+      return;
+    }
+    // Force a frame at hidden so CSS slide-up runs (Volume Booster pattern)
+    bar.classList.remove('is-visible');
+    bar.setAttribute('aria-hidden', 'true');
+    bar.setAttribute('inert', '');
+    requestAnimationFrame(() => {
+      undoHintVisible = true;
+      bar.classList.add('is-visible');
+      bar.setAttribute('aria-hidden', 'false');
+      bar.removeAttribute('inert');
+    });
+  }
+
+  async function enableUndoOnListClickFromHint() {
+    if (!globalThis.XCD_SETTINGS) return;
+    settings = await XCD_SETTINGS.setUndoOnListClick(true);
+    const input = document.getElementById('optUndoOnListClick');
+    if (input) input.checked = true;
+    for (const L of LANES) renderManaged(L);
+    hideUndoHintBar();
+  }
+
+  function refreshAllManagedLists() {
+    for (const L of LANES) renderManaged(L);
+  }
+
   async function syncShowCountryToggle() {
     const input = document.getElementById('optShowCountryLabels');
     if (!input || !globalThis.XCD_SETTINGS) return;
@@ -690,6 +750,8 @@
     if (!globalThis.XCD_SETTINGS) return;
     const on = !!input.checked;
     settings = await XCD_SETTINGS.setUndoOnListClick(on);
+    refreshAllManagedLists();
+    if (on) hideUndoHintBar();
   }
 
   async function init() {
@@ -719,6 +781,14 @@
     document
       .getElementById('optUndoOnListClick')
       ?.addEventListener('change', onUndoOnListClickToggle);
+    document
+      .getElementById('undoHintEnable')
+      ?.addEventListener('click', () => {
+        enableUndoOnListClickFromHint().catch(() => {});
+      });
+    document
+      .getElementById('undoHintDismiss')
+      ?.addEventListener('click', hideUndoHintBar);
     for (const lane of LANES) {
       const ui = els[lane];
       ui.enabled?.addEventListener('change', onEnabledChange);

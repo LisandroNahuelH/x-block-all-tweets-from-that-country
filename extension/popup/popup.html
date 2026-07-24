@@ -435,6 +435,21 @@
           </div>
         </article>
       </section>
+
+      <section
+        id="undoHintBar"
+        class="undo-hint-bar"
+        aria-hidden="true"
+        inert
+      >
+        <div class="undo-hint-bar__panel">
+          <p class="undo-hint-bar__text" data-i18n="pop_toast_undo_on_list_off"></p>
+          <div class="undo-hint-bar__actions">
+            <button type="button" class="undo-hint-bar__btn undo-hint-bar__btn--primary" id="undoHintEnable" data-i18n="pop_toast_undo_on_list_cta"></button>
+            <button type="button" class="undo-hint-bar__btn undo-hint-bar__btn--dismiss" id="undoHintDismiss" data-i18n="pop_toast_undo_on_list_dismiss"></button>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="../shared/i18n.js"></script>
     <script src="../shared/geo-data.js"></script>

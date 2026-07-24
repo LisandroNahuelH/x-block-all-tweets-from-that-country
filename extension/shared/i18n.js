@@ -88,14 +88,20 @@
     pop_opt_geo_cache_storage: 'Storage used (approx.)',
     pop_opt_undo_on_list_click: 'Undo on list click',
     pop_opt_undo_on_list_click_what:
-      '1. What it does: When on, clicking a managed account also undoes the action on X (unmute or unblock). When off, click only removes them from this extension’s list — nothing changes on X.',
+      '1. What it does: When on, clicking a managed account removes it from the list and undoes the action on X (unmute or unblock). When off, list clicks do not release accounts — they only show a tip to enable this option.',
     pop_opt_undo_on_list_click_how:
-      '2. How it works: Opens a short-lived background tab to that profile, runs the same ⋯ menu flow used for mute/block, then closes the tab. Not interested entries are always list-only (X has no reliable undo).',
+      '2. How it works: Opens a short-lived background tab to that profile, runs the same ⋯ menu flow used for mute/block, then closes the tab. Not interested entries are list-only on X (no reliable undo).',
     pop_opt_undo_on_list_click_benefits:
       '3. Benefits when on: One click both cleans the list and reverses mute/block on your X account.',
     pop_opt_undo_on_list_click_note:
       '4. Note: A background profile tab will open briefly so the extension can unmute/unblock. Off by default so accidental clicks cannot open tabs or reverse actions without you meaning to.',
-    a11y_toggle_undo_on_list_click: 'Toggle undo on managed list click'
+    a11y_toggle_undo_on_list_click: 'Toggle undo on managed list click',
+    pop_toast_undo_on_list_off:
+      'To automatically unmute, unblock, or clear Not interested when you click a managed account, turn on Undo on list click. You can enable it now or later in Settings.',
+    pop_toast_undo_on_list_cta: 'Enable now',
+    pop_toast_undo_on_list_dismiss: 'Dismiss',
+    a11y_managed_account_locked:
+      'Managed account (enable Undo on list click to release)'
   };
 
   const isDev =
