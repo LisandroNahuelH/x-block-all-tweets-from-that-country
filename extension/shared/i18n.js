@@ -69,7 +69,11 @@
       'Show account country next to the username on feed, explore, and profiles',
     pop_opt_show_country_note:
       'Note: This extension only works when X.com reports country or region data for an account (About this account). X often does not expose that information, so even with this option enabled the country or region may not appear next to the username. These limits come from X.com, not from this extension.',
-    a11y_toggle_show_country: 'Toggle country labels on the timeline'
+    a11y_toggle_show_country: 'Toggle country labels on the timeline',
+    pop_opt_taller_columns: 'Taller columns',
+    pop_opt_taller_columns_note:
+      'Makes the region, country, and managed-account lists about two to three times taller, and lets the whole popup scroll so the layout feels less cramped. Off by default.',
+    a11y_toggle_taller_columns: 'Toggle taller columns layout'
   };
 
   const isDev =

@@ -552,11 +552,24 @@
     showMainView();
   }
 
+  function applyTallerColumnsClass(on) {
+    document.documentElement.classList.toggle('xcd-taller-columns', !!on);
+  }
+
   async function syncShowCountryToggle() {
     const input = document.getElementById('optShowCountryLabels');
     if (!input || !globalThis.XCD_SETTINGS) return;
     const s = await XCD_SETTINGS.getSettings();
     input.checked = s.showCountryLabels !== false;
+  }
+
+  async function syncTallerColumnsToggle() {
+    const input = document.getElementById('optTallerColumns');
+    if (!globalThis.XCD_SETTINGS) return;
+    const s = await XCD_SETTINGS.getSettings();
+    const on = s.tallerColumns === true;
+    if (input) input.checked = on;
+    applyTallerColumnsClass(on);
   }
 
   async function onShowCountryToggle(event) {
@@ -565,11 +578,20 @@
     await XCD_SETTINGS.setShowCountryLabels(!!input.checked);
   }
 
+  async function onTallerColumnsToggle(event) {
+    const input = event.currentTarget;
+    if (!globalThis.XCD_SETTINGS) return;
+    const on = !!input.checked;
+    applyTallerColumnsClass(on);
+    await XCD_SETTINGS.setTallerColumns(on);
+  }
+
   async function init() {
     document.title = t('ext_name') || 'X - Block all tweets from that country or region';
     applyDom(document);
     fillPremiumFacts();
     await syncShowCountryToggle();
+    await syncTallerColumnsToggle();
 
     // Wire interactions first so UI is usable even while lists fill.
     document.getElementById('p11Brand')?.addEventListener('click', onBrandClick);
@@ -580,6 +602,9 @@
     document
       .getElementById('optShowCountryLabels')
       ?.addEventListener('change', onShowCountryToggle);
+    document
+      .getElementById('optTallerColumns')
+      ?.addEventListener('change', onTallerColumnsToggle);
     for (const lane of LANES) {
       const ui = els[lane];
       ui.enabled?.addEventListener('change', onEnabledChange);
@@ -613,6 +638,11 @@
         (async () => {
           try {
             settings = await XCD_SETTINGS.getSettings();
+            applyTallerColumnsClass(settings.tallerColumns === true);
+            const tallEl = document.getElementById('optTallerColumns');
+            if (tallEl) tallEl.checked = settings.tallerColumns === true;
+            const countryEl = document.getElementById('optShowCountryLabels');
+            if (countryEl) countryEl.checked = settings.showCountryLabels !== false;
             for (const L of LANES) {
               paintLaneEnabled(L);
               renderManaged(L);

@@ -142,6 +142,61 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/*
+ * Taller columns (settings): lists ~2–3× taller + whole popup scrolls.
+ * Viewport stays ≤600px; scroll is on body.
+ */
+html.xcd-taller-columns,
+html.xcd-taller-columns body {
+  height: 600px;
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html.xcd-taller-columns .popup-shell {
+  height: auto;
+  min-height: 100%;
+  overflow: visible;
+}
+
+html.xcd-taller-columns .main-view {
+  flex: 0 0 auto;
+  overflow: visible;
+  min-height: 0;
+}
+
+html.xcd-taller-columns .lanes {
+  flex: 0 0 auto;
+  align-items: flex-start;
+  overflow: visible;
+  min-height: 0;
+}
+
+html.xcd-taller-columns .lane:not(.is-off) {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+html.xcd-taller-columns .lane-body {
+  flex: 0 0 auto;
+  overflow: visible;
+  min-height: 0;
+}
+
+html.xcd-taller-columns .geo-list--regions {
+  max-height: 240px;
+}
+
+html.xcd-taller-columns .geo-list--countries {
+  max-height: 360px;
+}
+
+html.xcd-taller-columns .geo-list--accounts {
+  max-height: 320px;
+}
+
 button {
   font-family: inherit;
 }

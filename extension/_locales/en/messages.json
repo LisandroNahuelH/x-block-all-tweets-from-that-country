@@ -226,5 +226,17 @@
   "a11y_toggle_show_country": {
     "message": "Toggle country labels on the timeline",
     "description": "Accessible label for show-country switch"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Taller columns",
+    "description": "Toggle label: taller vertical lists in popup columns"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Makes the region, country, and managed-account lists about two to three times taller, and lets the whole popup scroll so the layout feels less cramped. Off by default.",
+    "description": "Note under taller-columns toggle"
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Toggle taller columns layout",
+    "description": "Accessible label for taller-columns switch"
   }
 }

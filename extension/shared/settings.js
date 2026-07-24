@@ -24,7 +24,8 @@
       block: emptyLane(true),
       mute: emptyLane(true),
       notinterested: emptyLane(true),
-      showCountryLabels: true
+      showCountryLabels: true,
+      tallerColumns: false
     };
   }
 
@@ -32,7 +33,8 @@
     block: Object.freeze(emptyLane(true)),
     mute: Object.freeze(emptyLane(true)),
     notinterested: Object.freeze(emptyLane(true)),
-    showCountryLabels: true
+    showCountryLabels: true,
+    tallerColumns: false
   });
 
   function isLane(value) {
@@ -186,7 +188,8 @@
       block: normalizeLaneStrict(base.block),
       mute: normalizeLaneStrict(base.mute),
       notinterested: normalizeLaneStrict(base.notinterested),
-      showCountryLabels: base.showCountryLabels !== false
+      showCountryLabels: base.showCountryLabels !== false,
+      tallerColumns: base.tallerColumns === true
     };
   }
 
@@ -218,7 +221,11 @@
       showCountryLabels:
         partial && 'showCountryLabels' in partial
           ? !!partial.showCountryLabels
-          : current.showCountryLabels !== false
+          : current.showCountryLabels !== false,
+      tallerColumns:
+        partial && 'tallerColumns' in partial
+          ? !!partial.tallerColumns
+          : current.tallerColumns === true
     };
     const next = normalizeSettings(nextRaw);
     try {
@@ -236,6 +243,10 @@
 
   async function setShowCountryLabels(enabled) {
     return setSettings({ showCountryLabels: !!enabled });
+  }
+
+  async function setTallerColumns(enabled) {
+    return setSettings({ tallerColumns: !!enabled });
   }
 
   async function toggleLaneList(lane, field, key) {
@@ -369,6 +380,7 @@
     setSettings,
     setLaneEnabled,
     setShowCountryLabels,
+    setTallerColumns,
     toggleLaneCountry,
     toggleLaneRegion,
     recordManagedAccount,
