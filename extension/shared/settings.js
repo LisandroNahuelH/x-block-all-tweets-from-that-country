@@ -349,14 +349,6 @@
     return settings;
   }
 
-  function isWhitelisted(lane, screenName) {
-    if (!isLane(lane)) return false;
-    const name = normalizeScreenName(screenName);
-    if (!name) return false;
-    // sync helper used after getSettings; keep pure on a settings object via optional second form
-    return false;
-  }
-
   function laneHasWhitelist(laneObj, screenName) {
     const name = normalizeScreenName(screenName);
     if (!name || !laneObj) return false;
