@@ -346,10 +346,27 @@
       if (!locationMatchesLane(location, settings?.[lane])) return;
 
       try {
-        if (isProfile && !article) {
-          await actions().runProfileAction(action);
-        } else if (article) {
-          await actions().runPostAction(article, action);
+        // Re-scan for a tweet at job time (SPA may load posts after location resolve)
+        let targetArticle = article;
+        if (
+          !targetArticle &&
+          isProfile &&
+          (action === 'mute' || action === 'block')
+        ) {
+          try {
+            targetArticle =
+              actions().findTweetArticleByScreenName?.(screenName) || null;
+          } catch (_) {
+            targetArticle = null;
+          }
+        }
+
+        // Prefer post ⋯ when we have a tweet (more reliable than profile header)
+        if (targetArticle) {
+          await actions().runPostAction(targetArticle, action);
+          article = targetArticle;
+        } else if (isProfile) {
+          await actions().runProfileAction(action, { screenName });
         } else {
           return;
         }
@@ -410,10 +427,18 @@
     const location = result?.success ? result.data?.location : null;
     if (!location) return;
 
+    // Prefer a timeline tweet by this user (post menu); else profile ⋯ with wait
+    let article = null;
+    try {
+      article = actions().findTweetArticleByScreenName?.(screenName) || null;
+    } catch (_) {
+      article = null;
+    }
+
     await handleTarget({
       screenName,
       location,
-      article: null,
+      article,
       isProfile: true
     });
   }

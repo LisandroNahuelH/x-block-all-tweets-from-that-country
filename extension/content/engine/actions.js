@@ -18,10 +18,14 @@
     PROFILE_MORE: [
       'button[data-testid="userActions"]',
       '[data-testid="userActions"]',
-      'button[data-testid="userActions"] div[role="button"]',
+      '[data-testid="userActions"] button',
+      '[data-testid="userActions"] [role="button"]',
+      '[data-testid="userActions"] div[tabindex="0"]',
       // Primary column header "More" (not inside a tweet)
       'div[data-testid="primaryColumn"] button[aria-haspopup="menu"]',
-      'div[data-testid="primaryColumn"] div[role="button"][aria-haspopup="menu"]'
+      'div[data-testid="primaryColumn"] div[role="button"][aria-haspopup="menu"]',
+      'div[data-testid="primaryColumn"] button[data-testid="caret"]',
+      'div[data-testid="primaryColumn"] div[data-testid="caret"][role="button"]'
     ],
     MENU_ROOT: [
       'div[data-testid="Dropdown"]',
@@ -156,33 +160,126 @@
     return null;
   }
 
-  function findProfileMoreButton() {
-    // Prefer explicit userActions in primary column
-    const primary = document.querySelector('[data-testid="primaryColumn"]');
-    const roots = primary ? [primary, document] : [document];
+  function isProfileChromeExcluded(el) {
+    if (!(el instanceof HTMLElement)) return true;
+    if (el.closest('article[data-testid="tweet"], article[role="article"]')) return true;
+    if (el.closest('[data-testid="SidebarColumn"], [data-testid="sidebarColumn"]')) {
+      return true;
+    }
+    if (el.closest('nav, [role="navigation"]')) return true;
+    if (el.closest('[data-testid="DMDrawer"], [data-testid="toolBar"]')) return true;
+    if (el.closest('[data-testid="primaryColumn"] header[role="banner"]')) {
+      // top timeline back/history chrome — keep scanning body of profile
+    }
+    const al = (el.getAttribute('aria-label') || '').toLowerCase();
+    if (
+      /share|compartir|grok|reply|retweet|like|bookmark|view post|views|mensaje|message|notificaciones|notifications/.test(
+        al
+      )
+    ) {
+      return true;
+    }
+    return false;
+  }
 
+  function resolveClickable(el) {
+    if (!(el instanceof HTMLElement)) return null;
+    if (
+      el.matches('button, [role="button"], [tabindex="0"]') ||
+      el.getAttribute('data-testid') === 'caret'
+    ) {
+      return el;
+    }
+    const inner = el.querySelector(
+      'button, [role="button"], div[tabindex="0"], [data-testid="caret"]'
+    );
+    return inner instanceof HTMLElement ? inner : el;
+  }
+
+  function findProfileMoreButton() {
+    const primary =
+      document.querySelector('[data-testid="primaryColumn"]') || document.body;
+    const roots = primary !== document.body ? [primary, document.body] : [document.body];
+
+    // 1) Explicit userActions (most reliable when present)
     for (const root of roots) {
-      for (const selector of SELECTORS.PROFILE_MORE) {
-        const button = root.querySelector(selector);
-        if (button instanceof HTMLElement && !button.closest('article[data-testid="tweet"]')) {
-          return button;
-        }
+      const ua = root.querySelector('[data-testid="userActions"]');
+      if (ua instanceof HTMLElement && !isProfileChromeExcluded(ua)) {
+        return resolveClickable(ua);
       }
     }
 
-    // Fallback: first caret not inside a tweet, prefer near Follow/Subscribe buttons
-    const candidates = document.querySelectorAll(
-      'button[data-testid="caret"], div[data-testid="caret"][role="button"], button[aria-haspopup="menu"], div[role="button"][aria-haspopup="menu"]'
+    // 2) Declared PROFILE_MORE selectors
+    for (const root of roots) {
+      for (const selector of SELECTORS.PROFILE_MORE) {
+        const hit = root.querySelector(selector);
+        if (!(hit instanceof HTMLElement) || isProfileChromeExcluded(hit)) continue;
+        return resolveClickable(hit);
+      }
+    }
+
+    // 3) Score header controls near Follow / DM / UserName (X UI varies by locale)
+    const followZone =
+      primary.querySelector(
+        '[data-testid="placementTracking"], [data-testid="-follow"], [data-testid="sendDMFromProfile"]'
+      ) || primary.querySelector('[data-testid="UserName"]');
+
+    const candidates = primary.querySelectorAll(
+      'button, div[role="button"], [data-testid="caret"], [aria-haspopup="menu"], [tabindex="0"]'
     );
+
+    let best = null;
+    let bestScore = -1;
+
     for (const el of candidates) {
-      if (!(el instanceof HTMLElement)) continue;
-      if (el.closest('article[data-testid="tweet"]')) continue;
-      if (el.closest('[data-testid="SidebarColumn"]')) continue;
-      if (el.closest('nav')) continue;
-      // Skip compose / DM style menus if possible
+      if (!(el instanceof HTMLElement) || isProfileChromeExcluded(el)) continue;
+      const rect = el.getBoundingClientRect();
+      if (rect.width < 8 || rect.height < 8) continue;
+      if (rect.width > 96 || rect.height > 96) continue;
+
+      let score = 0;
+      const testId = (el.getAttribute('data-testid') || '').toLowerCase();
       const al = (el.getAttribute('aria-label') || '').toLowerCase();
-      if (al.includes('share') || al.includes('compartir')) continue;
-      return el;
+      const hasPopup =
+        el.getAttribute('aria-haspopup') === 'menu' ||
+        el.getAttribute('aria-haspopup') === 'true';
+
+      if (testId === 'useractions' || testId.includes('useraction')) score += 100;
+      if (testId === 'caret') score += 45;
+      if (hasPopup) score += 30;
+      if (/^(more|más|mas)$/i.test(al.trim())) score += 55;
+      if (
+        /more options|más opciones|mas opciones|weitere optionen|plus d.options|その他/.test(
+          al
+        )
+      ) {
+        score += 50;
+      } else if (al.includes('more') && al.length < 48) {
+        score += 28;
+      }
+
+      if (followZone && followZone.parentElement?.contains(el)) score += 40;
+      else if (followZone?.closest('div')?.parentElement?.contains(el)) score += 25;
+
+      // Profile action row is usually upper half of primary column
+      if (rect.top > 0 && rect.top < 420) score += 8;
+
+      if (score > bestScore) {
+        bestScore = score;
+        best = el;
+      }
+    }
+
+    return bestScore >= 28 ? resolveClickable(best) : null;
+  }
+
+  async function waitForProfileMoreButton(timeoutMs) {
+    const limit = typeof timeoutMs === 'number' ? timeoutMs : 4500;
+    const expires = Date.now() + limit;
+    while (Date.now() < expires) {
+      const btn = findProfileMoreButton();
+      if (btn) return btn;
+      await lib().sleep(160);
     }
     return null;
   }
@@ -403,8 +500,10 @@
 
   /**
    * @param {'block'|'mute'|'dismiss'|'unmute'|'unblock'} action
+   * @param {{ screenName?: string }} [opts]
    */
-  async function runProfileAction(action) {
+  async function runProfileAction(action, opts) {
+    const screenName = opts && opts.screenName ? String(opts.screenName) : '';
     try {
       // Prefer visible CTA for reverse actions (blocked profile Unblock, etc.)
       if (action === 'unblock' || action === 'unmute') {
@@ -417,8 +516,18 @@
         }
       }
 
-      const moreButton = findProfileMoreButton();
+      // Wait for header ⋯ — SPA often mounts after AboutAccount resolves
+      let moreButton = await waitForProfileMoreButton(4500);
+      if (!moreButton && screenName && (action === 'mute' || action === 'block')) {
+        // Fallback: mute/block via a visible post by this author
+        const article = findTweetArticleByScreenName(screenName);
+        if (article) {
+          await runPostAction(article, action);
+          return;
+        }
+      }
       if (!moreButton) throw new Error('Profile menu trigger not found');
+
       const menuRoot = await openMenuFromButton(moreButton);
       const menuItem = await findActionWithRetry(menuRoot, action);
       if (!menuItem) {
@@ -431,6 +540,14 @@
           await clickConfirmationIfPresent(action);
           await lib().sleep(250);
           return;
+        }
+        if (screenName && (action === 'mute' || action === 'block')) {
+          lib().closeOpenMenus();
+          const article = findTweetArticleByScreenName(screenName);
+          if (article) {
+            await runPostAction(article, action);
+            return;
+          }
         }
         debugMenuSnapshot(action);
         lib().closeOpenMenus();
@@ -445,12 +562,37 @@
     }
   }
 
+  function findTweetArticleByScreenName(screenName) {
+    const want = String(screenName || '')
+      .trim()
+      .replace(/^@+/, '')
+      .toLowerCase();
+    if (!want) return null;
+    for (const article of findTweetArticles()) {
+      if (!(article instanceof HTMLElement)) continue;
+      const links = article.querySelectorAll('a[href^="/"]');
+      for (const link of links) {
+        const href = link.getAttribute('href') || '';
+        const m = href.match(/^\/([A-Za-z0-9_]{1,15})(?:[/?#]|$)/);
+        if (m && m[1].toLowerCase() === want) return article;
+      }
+      // @handle text
+      const text = article.textContent || '';
+      if (text.toLowerCase().includes('@' + want)) {
+        if (findMoreButton(article)) return article;
+      }
+    }
+    return null;
+  }
+
   global.XCD_ENGINE_ACTIONS = {
     SELECTORS,
     ACTION_DEFINITIONS,
     findTweetArticles,
+    findTweetArticleByScreenName,
     findMoreButton,
     findProfileMoreButton,
+    waitForProfileMoreButton,
     findVisibleProfileActionButton,
     runPostAction,
     runProfileAction,
