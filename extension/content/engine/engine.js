@@ -31,11 +31,14 @@
   let settings = null;
   /** @type {Set<string>} keys `${lane}:${screenName}` already handled this session */
   const handled = new Set();
+  /** @type {Set<string>} in-flight soft-lock `${lane}:${screenName}` */
+  const inflight = new Set();
   /** @type {Set<string>} screenNames currently being unmuted/unblocked from popup */
   const releasing = new Set();
   /** @type {Array<() => Promise<void>>} */
   const queue = [];
   let draining = false;
+  const QUEUE_GAP_MS = 150;
   let started = false;
   let scanTimer = null;
   let lastProfileKey = '';
@@ -161,15 +164,19 @@
     return null;
   }
 
+  function handledKey(lane, screenName) {
+    return lane + ':' + String(screenName || '').toLowerCase();
+  }
+
   function isAlreadyManaged(lane, screenName) {
-    const key = screenName.toLowerCase();
-    if (handled.has(lane + ':' + key)) return true;
+    const key = handledKey(lane, screenName);
+    if (handled.has(key) || inflight.has(key)) return true;
     const accounts = settings?.[lane]?.accounts || [];
-    return accounts.some(a => (a.screenName || '').toLowerCase() === key);
+    return accounts.some(a => (a.screenName || '').toLowerCase() === String(screenName || '').toLowerCase());
   }
 
   function markHandled(lane, screenName) {
-    handled.add(lane + ':' + screenName.toLowerCase());
+    handled.add(handledKey(lane, screenName));
   }
 
   function enqueue(job) {
@@ -201,7 +208,7 @@
       } catch (err) {
         console.warn('[xcd] engine job failed', err);
       }
-      await lib().sleep(550);
+      if (queue.length) await lib().sleep(QUEUE_GAP_MS);
     }
     draining = false;
   }
@@ -339,19 +346,31 @@
     // Only notinterested needs a tweet article; mute/block work on profile too
     if (action === 'dismiss' && isProfile && !article) return;
 
-    markHandled(lane, screenName);
+    const lockKey = handledKey(lane, screenName);
+    inflight.add(lockKey);
 
     enqueue(async () => {
-      if (releasing.has(String(screenName || '').toLowerCase())) return;
-      if (!locationMatchesLane(location, settings?.[lane])) return;
+      if (releasing.has(String(screenName || '').toLowerCase())) {
+        inflight.delete(lockKey);
+        return;
+      }
+      if (!locationMatchesLane(location, settings?.[lane])) {
+        inflight.delete(lockKey);
+        return;
+      }
 
       try {
         // Re-scan for a tweet at job time (SPA may load posts after location resolve)
         let targetArticle = article;
         if (
+          targetArticle &&
+          (!(targetArticle instanceof HTMLElement) || !targetArticle.isConnected)
+        ) {
+          targetArticle = null;
+        }
+        if (
           !targetArticle &&
-          isProfile &&
-          (action === 'mute' || action === 'block')
+          (action === 'mute' || action === 'block' || action === 'dismiss')
         ) {
           try {
             targetArticle =
@@ -368,9 +387,11 @@
         } else if (isProfile) {
           await actions().runProfileAction(action, { screenName });
         } else {
+          inflight.delete(lockKey);
           return;
         }
 
+        markHandled(lane, screenName);
         const meta = extractAvatarAndName(article, screenName);
         await sendMessage({
           type: 'RECORD_ACCOUNT',
@@ -383,9 +404,10 @@
         });
         await loadSettings();
       } catch (err) {
-        handled.delete(lane + ':' + screenName.toLowerCase());
         if (isProfile) lastProfileKey = '';
         console.warn('[xcd] action failed', action, screenName, err);
+      } finally {
+        inflight.delete(lockKey);
       }
     });
   }

@@ -274,12 +274,12 @@
   }
 
   async function waitForProfileMoreButton(timeoutMs) {
-    const limit = typeof timeoutMs === 'number' ? timeoutMs : 4500;
+    const limit = typeof timeoutMs === 'number' ? timeoutMs : 1500;
     const expires = Date.now() + limit;
     while (Date.now() < expires) {
       const btn = findProfileMoreButton();
       if (btn) return btn;
-      await lib().sleep(160);
+      await lib().sleep(50);
     }
     return null;
   }
@@ -297,37 +297,50 @@
     );
   }
 
-  async function waitForMenuRoot() {
-    // Prefer the last opened dropdown (newest in DOM)
-    const expiresAt = Date.now() + 2800;
-    while (Date.now() < expiresAt) {
-      const menus = [];
-      for (const selector of SELECTORS.MENU_ROOT) {
-        document.querySelectorAll(selector).forEach(el => {
-          if (el instanceof HTMLElement) menus.push(el);
-        });
-      }
-      // visible menus only
-      const visible = menus.filter(el => {
-        const r = el.getBoundingClientRect();
-        return r.width > 0 && r.height > 0;
+  function queryVisibleMenus() {
+    const menus = [];
+    for (const selector of SELECTORS.MENU_ROOT) {
+      document.querySelectorAll(selector).forEach(el => {
+        if (el instanceof HTMLElement) menus.push(el);
       });
+    }
+    return menus.filter(el => {
+      const r = el.getBoundingClientRect();
+      // Stealth sets opacity 0 but keeps layout box — still "open"
+      return r.width > 0 && r.height > 0;
+    });
+  }
+
+  /** IDC-style: poll until Dropdown/menu exists (no fixed pre-delay). */
+  async function waitForMenuRoot(timeoutMs) {
+    const limit = typeof timeoutMs === 'number' ? timeoutMs : 2000;
+    const expiresAt = Date.now() + limit;
+    while (Date.now() < expiresAt) {
+      const visible = queryVisibleMenus();
       if (visible.length) return visible[visible.length - 1];
-      await lib().sleep(75);
+      await lib().sleep(40);
     }
     throw new Error('Timed out waiting for menu root');
   }
 
+  /**
+   * IDC hot-path: click caret immediately.
+   * Only Escape first if a menu is already open (stale layer).
+   */
   async function openMenuFromButton(button) {
     if (!button) throw new Error('Menu trigger not found');
-    lib().closeOpenMenus();
-    await lib().sleep(80);
+    if (lib().anyMenuOpen && lib().anyMenuOpen()) {
+      lib().closeOpenMenus();
+      await lib().sleep(30);
+    }
     button.click();
-    await lib().sleep(120);
-    return waitForMenuRoot();
+    return waitForMenuRoot(2000);
   }
 
   async function openPostMenu(article) {
+    if (!(article instanceof HTMLElement) || !article.isConnected) {
+      throw new Error('Post menu trigger not found');
+    }
     const moreButton = findMoreButton(article);
     if (!moreButton) throw new Error('Post menu trigger not found');
     return openMenuFromButton(moreButton);
@@ -440,13 +453,34 @@
   }
 
   async function clickConfirmationIfPresent(action) {
-    try {
-      await lib().waitForElement(SELECTORS.CONFIRM, 900);
-    } catch {
+    const def = ACTION_DEFINITIONS[action];
+    if (!def || !def.confirmKeywords || !def.confirmKeywords.length) return;
+
+    let confirmationButton = findConfirmationButton(action);
+    if (confirmationButton) {
+      confirmationButton.click();
       return;
     }
-    const confirmationButton = findConfirmationButton(action);
-    if (confirmationButton) confirmationButton.click();
+
+    const started = Date.now();
+    const expires = started + 750;
+    while (Date.now() < expires) {
+      confirmationButton = findConfirmationButton(action);
+      if (confirmationButton) {
+        confirmationButton.click();
+        return;
+      }
+      // No sheet after ~120ms → not a confirm flow (or already gone)
+      if (
+        Date.now() - started >= 120 &&
+        !document.querySelector(
+          '[data-testid="confirmationSheetConfirm"], [data-testid="confirmationSheet"], [role="dialog"]'
+        )
+      ) {
+        return;
+      }
+      await lib().sleep(40);
+    }
   }
 
   function debugMenuSnapshot(action) {
@@ -465,15 +499,34 @@
     }
   }
 
-  async function findActionWithRetry(menuRoot, action) {
-    let item = findActionMenuItem(menuRoot, action);
-    if (item) return item;
-    await lib().sleep(200);
-    item = findActionMenuItem(menuRoot, action);
-    if (item) return item;
-    // One more pass after short wait (slow render)
-    await lib().sleep(350);
+  /** Unified poll for menu item (replaces sleep(200)+sleep(350) retries). */
+  async function waitForActionMenuItem(menuRoot, action, timeoutMs) {
+    const limit = typeof timeoutMs === 'number' ? timeoutMs : 800;
+    const expires = Date.now() + limit;
+    let root = menuRoot;
+    while (Date.now() < expires) {
+      if (!(root instanceof HTMLElement) || !root.isConnected) {
+        const visible = queryVisibleMenus();
+        root = visible.length ? visible[visible.length - 1] : root;
+      }
+      const item = findActionMenuItem(root, action);
+      if (item) return item;
+      await lib().sleep(40);
+    }
     return findActionMenuItem(menuRoot, action);
+  }
+
+  async function runMenuActionFromButton(button, action) {
+    const menuRoot = await openMenuFromButton(button);
+    const menuItem = await waitForActionMenuItem(menuRoot, action, 800);
+    if (!menuItem) {
+      debugMenuSnapshot(action);
+      lib().closeOpenMenus();
+      throw new Error('Action item not found: ' + action);
+    }
+    menuItem.click();
+    await clickConfirmationIfPresent(action);
+    lib().closeOpenMenus();
   }
 
   /**
@@ -481,20 +534,20 @@
    * @param {'block'|'mute'|'dismiss'|'unmute'|'unblock'} action
    */
   async function runPostAction(article, action) {
+    lib().beginMenuStealth();
     try {
-      const menuRoot = await openPostMenu(article);
-      const menuItem = await findActionWithRetry(menuRoot, action);
-      if (!menuItem) {
-        debugMenuSnapshot(action);
-        lib().closeOpenMenus();
-        throw new Error('Action item not found: ' + action);
+      let target = article;
+      if (!(target instanceof HTMLElement) || !target.isConnected) {
+        throw new Error('Post menu trigger not found');
       }
-      menuItem.click();
-      await clickConfirmationIfPresent(action);
-      await lib().sleep(250);
+      const moreButton = findMoreButton(target);
+      if (!moreButton) throw new Error('Post menu trigger not found');
+      await runMenuActionFromButton(moreButton, action);
     } catch (error) {
       lib().closeOpenMenus();
       throw error;
+    } finally {
+      lib().endMenuStealth();
     }
   }
 
@@ -504,6 +557,17 @@
    */
   async function runProfileAction(action, opts) {
     const screenName = opts && opts.screenName ? String(opts.screenName) : '';
+
+    // Prefer a timeline tweet by this author (same IDC hot-path as feed)
+    if (screenName && (action === 'mute' || action === 'block' || action === 'dismiss')) {
+      const article = findTweetArticleByScreenName(screenName);
+      if (article) {
+        await runPostAction(article, action);
+        return;
+      }
+    }
+
+    lib().beginMenuStealth();
     try {
       // Prefer visible CTA for reverse actions (blocked profile Unblock, etc.)
       if (action === 'unblock' || action === 'unmute') {
@@ -511,54 +575,59 @@
         if (visible) {
           visible.click();
           await clickConfirmationIfPresent(action);
-          await lib().sleep(250);
+          lib().closeOpenMenus();
           return;
         }
       }
 
-      // Wait for header ⋯ — SPA often mounts after AboutAccount resolves
-      let moreButton = await waitForProfileMoreButton(4500);
-      if (!moreButton && screenName && (action === 'mute' || action === 'block')) {
-        // Fallback: mute/block via a visible post by this author
-        const article = findTweetArticleByScreenName(screenName);
-        if (article) {
-          await runPostAction(article, action);
-          return;
+      const moreButton = await waitForProfileMoreButton(1500);
+      if (!moreButton) {
+        if (screenName && (action === 'mute' || action === 'block')) {
+          const article = findTweetArticleByScreenName(screenName);
+          if (article) {
+            lib().endMenuStealth();
+            try {
+              await runPostAction(article, action);
+            } finally {
+              lib().beginMenuStealth();
+            }
+            return;
+          }
         }
+        throw new Error('Profile menu trigger not found');
       }
-      if (!moreButton) throw new Error('Profile menu trigger not found');
 
-      const menuRoot = await openMenuFromButton(moreButton);
-      const menuItem = await findActionWithRetry(menuRoot, action);
-      if (!menuItem) {
-        // Last resort: scan page again after menu open
+      try {
+        await runMenuActionFromButton(moreButton, action);
+      } catch (err) {
         const fallback = findVisibleProfileActionButton(action);
         if (fallback) {
           lib().closeOpenMenus();
-          await lib().sleep(80);
           fallback.click();
           await clickConfirmationIfPresent(action);
-          await lib().sleep(250);
+          lib().closeOpenMenus();
           return;
         }
         if (screenName && (action === 'mute' || action === 'block')) {
           lib().closeOpenMenus();
           const article = findTweetArticleByScreenName(screenName);
           if (article) {
-            await runPostAction(article, action);
+            lib().endMenuStealth();
+            try {
+              await runPostAction(article, action);
+            } finally {
+              lib().beginMenuStealth();
+            }
             return;
           }
         }
-        debugMenuSnapshot(action);
-        lib().closeOpenMenus();
-        throw new Error('Profile action item not found: ' + action);
+        throw err;
       }
-      menuItem.click();
-      await clickConfirmationIfPresent(action);
-      await lib().sleep(250);
     } catch (error) {
       lib().closeOpenMenus();
       throw error;
+    } finally {
+      lib().endMenuStealth();
     }
   }
 
