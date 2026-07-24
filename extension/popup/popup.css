@@ -397,6 +397,15 @@ body::-webkit-scrollbar-corner {
   line-height: 1.45;
 }
 
+.settings-note--rich {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-note__p {
+  margin: 0;
+}
+
 .premium-chip {
   position: relative;
   isolation: isolate;

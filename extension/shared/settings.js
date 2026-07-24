@@ -25,7 +25,8 @@
       mute: emptyLane(true),
       notinterested: emptyLane(true),
       showCountryLabels: true,
-      tallerColumns: false
+      tallerColumns: false,
+      geoLocalCache: true
     };
   }
 
@@ -34,7 +35,8 @@
     mute: Object.freeze(emptyLane(true)),
     notinterested: Object.freeze(emptyLane(true)),
     showCountryLabels: true,
-    tallerColumns: false
+    tallerColumns: false,
+    geoLocalCache: true
   });
 
   function isLane(value) {
@@ -189,7 +191,8 @@
       mute: normalizeLaneStrict(base.mute),
       notinterested: normalizeLaneStrict(base.notinterested),
       showCountryLabels: base.showCountryLabels !== false,
-      tallerColumns: base.tallerColumns === true
+      tallerColumns: base.tallerColumns === true,
+      geoLocalCache: base.geoLocalCache !== false
     };
   }
 
@@ -225,7 +228,11 @@
       tallerColumns:
         partial && 'tallerColumns' in partial
           ? !!partial.tallerColumns
-          : current.tallerColumns === true
+          : current.tallerColumns === true,
+      geoLocalCache:
+        partial && 'geoLocalCache' in partial
+          ? !!partial.geoLocalCache
+          : current.geoLocalCache !== false
     };
     const next = normalizeSettings(nextRaw);
     try {
@@ -247,6 +254,10 @@
 
   async function setTallerColumns(enabled) {
     return setSettings({ tallerColumns: !!enabled });
+  }
+
+  async function setGeoLocalCache(enabled) {
+    return setSettings({ geoLocalCache: !!enabled });
   }
 
   async function toggleLaneList(lane, field, key) {
@@ -381,6 +392,7 @@
     setLaneEnabled,
     setShowCountryLabels,
     setTallerColumns,
+    setGeoLocalCache,
     toggleLaneCountry,
     toggleLaneRegion,
     recordManagedAccount,

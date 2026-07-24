@@ -17,6 +17,8 @@ const MAX_CONCURRENT = 4;
 const memCache = new Map();
 /** @type {Record<string, string>|null} */
 let apiHeaders = null;
+/** Local country cache setting (default ON). */
+let geoLocalCacheEnabled = true;
 let lastRequestAt = 0;
 let active = 0;
 /** @type {Array<() => void>} */
@@ -59,7 +61,26 @@ function memSet(screenName, value) {
   memCache.set(key, { value, expiry: Date.now() + ttl });
 }
 
+async function refreshGeoLocalCacheFlag() {
+  try {
+    if (!self.XCD_SETTINGS?.getSettings) {
+      geoLocalCacheEnabled = true;
+      return geoLocalCacheEnabled;
+    }
+    const s = await self.XCD_SETTINGS.getSettings();
+    geoLocalCacheEnabled = s.geoLocalCache !== false;
+  } catch (_) {
+    geoLocalCacheEnabled = true;
+  }
+  return geoLocalCacheEnabled;
+}
+
+function isGeoLocalCacheEnabled() {
+  return geoLocalCacheEnabled !== false;
+}
+
 async function cacheGet(screenName) {
+  if (!isGeoLocalCacheEnabled()) return null;
   const warm = memGet(screenName);
   if (warm?.location) return warm;
   if (!self.XCD_GEO_IDB) return null;
@@ -80,9 +101,10 @@ async function cacheGet(screenName) {
 }
 
 /**
- * Persist only successful location detections.
+ * Persist only successful location detections (when local cache is ON).
  */
 async function cachePut(screenName, data) {
+  if (!isGeoLocalCacheEnabled()) return false;
   if (!data?.location) return false;
   const payload = {
     location: data.location,
@@ -227,17 +249,21 @@ function handleFetchUserInfo(payload) {
   return p;
 }
 
-function putFromPayload(payload) {
+async function putFromPayload(payload) {
+  if (!isGeoLocalCacheEnabled()) {
+    return { success: false, stored: false, disabled: true };
+  }
   const screenName = payload?.screenName;
   const data = payload?.data || payload;
   if (!screenName || !data?.location) {
     return { success: false, stored: false, reason: 'incomplete' };
   }
-  return cachePut(screenName, {
+  const stored = await cachePut(screenName, {
     location: data.location,
     locationAccurate: data.locationAccurate,
     name: data.name || payload?.name || ''
-  }).then(stored => ({ success: stored, stored }));
+  });
+  return { success: stored, stored };
 }
 
 function sleep(ms) {
@@ -462,6 +488,16 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 
 async function boot() {
   await loadHeaders();
+  await refreshGeoLocalCacheFlag();
+  try {
+    const key = self.XCD_SETTINGS?.STORAGE_KEY || 'xcd_settings';
+    chrome.storage.onChanged.addListener((changes, area) => {
+      if (area !== 'local' || !changes[key]) return;
+      refreshGeoLocalCacheFlag();
+    });
+  } catch (_) {
+    /* ignore */
+  }
   if (self.XCD_GEO_IDB?.migrateFromChromeStorage) {
     try {
       const r = await self.XCD_GEO_IDB.migrateFromChromeStorage();

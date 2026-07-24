@@ -73,7 +73,17 @@
     pop_opt_taller_columns: 'Taller columns',
     pop_opt_taller_columns_note:
       'Makes the region, country, and managed-account lists about two to three times taller, and lets the whole popup scroll so the layout feels less cramped. Off by default.',
-    a11y_toggle_taller_columns: 'Toggle taller columns layout'
+    a11y_toggle_taller_columns: 'Toggle taller columns layout',
+    pop_opt_geo_local_cache: 'Local country cache',
+    pop_opt_geo_local_cache_what:
+      '1. What it does: After a successful “About this account” lookup, saves that account’s country or region on this device so the extension can reuse it later without asking X again.',
+    pop_opt_geo_local_cache_benefits:
+      '2. Benefits when on: Fewer network calls, lower chance of rate limits, and faster country labels plus auto mute/block decisions for accounts you have already seen.',
+    pop_opt_geo_local_cache_off:
+      '3. If you turn it off: Every lookup hits X again — more rate-limit risk, slower labels, and higher data use while scrolling. Existing cache is kept on disk but unused until you turn this back on.',
+    pop_opt_geo_local_cache_size:
+      '4. Storage: Very light — about 100,000 users ≈ 10 MB, roughly the size of one modern MP3 on your PC. Only successful country/region hits are stored.',
+    a11y_toggle_geo_local_cache: 'Toggle local country cache'
   };
 
   const isDev =

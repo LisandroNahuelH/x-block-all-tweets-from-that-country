@@ -552,6 +552,15 @@
     showMainView();
   }
 
+  function toggleSettingsView() {
+    const view = document.getElementById('settingsView');
+    if (view && !view.hidden) {
+      closeSettingsView();
+      return;
+    }
+    openSettingsView();
+  }
+
   function applyTallerColumnsClass(on) {
     document.documentElement.classList.toggle('xcd-taller-columns', !!on);
   }
@@ -572,6 +581,13 @@
     applyTallerColumnsClass(on);
   }
 
+  async function syncGeoLocalCacheToggle() {
+    const input = document.getElementById('optGeoLocalCache');
+    if (!input || !globalThis.XCD_SETTINGS) return;
+    const s = await XCD_SETTINGS.getSettings();
+    input.checked = s.geoLocalCache !== false;
+  }
+
   async function onShowCountryToggle(event) {
     const input = event.currentTarget;
     if (!globalThis.XCD_SETTINGS) return;
@@ -586,18 +602,25 @@
     await XCD_SETTINGS.setTallerColumns(on);
   }
 
+  async function onGeoLocalCacheToggle(event) {
+    const input = event.currentTarget;
+    if (!globalThis.XCD_SETTINGS) return;
+    await XCD_SETTINGS.setGeoLocalCache(!!input.checked);
+  }
+
   async function init() {
     document.title = t('ext_name') || 'X - Block all tweets from that country or region';
     applyDom(document);
     fillPremiumFacts();
     await syncShowCountryToggle();
     await syncTallerColumnsToggle();
+    await syncGeoLocalCacheToggle();
 
     // Wire interactions first so UI is usable even while lists fill.
     document.getElementById('p11Brand')?.addEventListener('click', onBrandClick);
     document.getElementById('premiumChip')?.addEventListener('click', openPremiumView);
     document.getElementById('premiumBack')?.addEventListener('click', closePremiumView);
-    document.getElementById('settingsChip')?.addEventListener('click', openSettingsView);
+    document.getElementById('settingsChip')?.addEventListener('click', toggleSettingsView);
     document.getElementById('settingsBack')?.addEventListener('click', closeSettingsView);
     document
       .getElementById('optShowCountryLabels')
@@ -605,6 +628,9 @@
     document
       .getElementById('optTallerColumns')
       ?.addEventListener('change', onTallerColumnsToggle);
+    document
+      .getElementById('optGeoLocalCache')
+      ?.addEventListener('change', onGeoLocalCacheToggle);
     for (const lane of LANES) {
       const ui = els[lane];
       ui.enabled?.addEventListener('change', onEnabledChange);
@@ -643,6 +669,8 @@
             if (tallEl) tallEl.checked = settings.tallerColumns === true;
             const countryEl = document.getElementById('optShowCountryLabels');
             if (countryEl) countryEl.checked = settings.showCountryLabels !== false;
+            const geoEl = document.getElementById('optGeoLocalCache');
+            if (geoEl) geoEl.checked = settings.geoLocalCache !== false;
             for (const L of LANES) {
               paintLaneEnabled(L);
               renderManaged(L);
