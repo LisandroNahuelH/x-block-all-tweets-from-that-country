@@ -117,7 +117,9 @@
     pop_toast_release_cancel: 'Cancel',
     toast_blocked: 'Blocked',
     toast_muted: 'Muted',
-    toast_notinterested: 'Not interested'
+    toast_notinterested: 'Not interested',
+    toast_reason_country: 'Country filter: $1',
+    toast_reason_region: 'Region filter: $1'
   };
 
   const isDev =

@@ -339,6 +339,26 @@
     "message": "Not interested",
     "description": "In-page toast action label after geo not interested"
   },
+  "toast_reason_country": {
+    "message": "Country filter: $FILTER$",
+    "description": "Toast line: country filter that triggered the action; FILTER is the country name",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Region filter: $FILTER$",
+    "description": "Toast line: region filter that triggered the action; FILTER is the region name",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
   "pop_opt_show_action_toasts": {
     "message": "Action notifications",
     "description": "Settings: toggle in-page toasts when accounts are blocked/muted/not interested"
