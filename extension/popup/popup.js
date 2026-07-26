@@ -784,6 +784,13 @@
     input.checked = s.undoOnListClick === true;
   }
 
+  async function syncShowActionToastsToggle() {
+    const input = document.getElementById('optShowActionToasts');
+    if (!input || !globalThis.XCD_SETTINGS) return;
+    const s = await XCD_SETTINGS.getSettings();
+    input.checked = s.showActionToasts !== false;
+  }
+
   async function onShowCountryToggle(event) {
     const input = event.currentTarget;
     if (!globalThis.XCD_SETTINGS) return;
@@ -813,14 +820,21 @@
     if (on) hideUndoHintBar();
   }
 
+  async function onShowActionToastsToggle(event) {
+    const input = event.currentTarget;
+    if (!globalThis.XCD_SETTINGS) return;
+    await XCD_SETTINGS.setShowActionToasts(!!input.checked);
+  }
+
   async function init() {
-    document.title = t('ext_name') || 'X - Block all tweets from that country or region';
+    document.title = t('ext_name') || 'X - Block All Tweets From That Country Or Region';
     applyDom(document);
     fillPremiumFacts();
     await syncShowCountryToggle();
     await syncTallerColumnsToggle();
     await syncGeoLocalCacheToggle();
     await syncUndoOnListClickToggle();
+    await syncShowActionToastsToggle();
 
     // Wire interactions first so UI is usable even while lists fill.
     document.getElementById('p11Brand')?.addEventListener('click', onBrandClick);
@@ -840,6 +854,9 @@
     document
       .getElementById('optUndoOnListClick')
       ?.addEventListener('change', onUndoOnListClickToggle);
+    document
+      .getElementById('optShowActionToasts')
+      ?.addEventListener('change', onShowActionToastsToggle);
     document
       .getElementById('undoHintEnable')
       ?.addEventListener('click', () => {
@@ -903,6 +920,8 @@
             if (geoEl) geoEl.checked = settings.geoLocalCache !== false;
             const undoEl = document.getElementById('optUndoOnListClick');
             if (undoEl) undoEl.checked = settings.undoOnListClick === true;
+            const toastEl = document.getElementById('optShowActionToasts');
+            if (toastEl) toastEl.checked = settings.showActionToasts !== false;
             for (const L of LANES) {
               paintLaneEnabled(L);
               renderManaged(L);
