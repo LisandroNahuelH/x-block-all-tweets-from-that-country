@@ -5,6 +5,7 @@ importScripts('shared/i18n.js');
 importScripts('shared/badge.js');
 importScripts('shared/settings.js');
 importScripts('shared/geo-cache-idb.js');
+importScripts('shared/dev-reload.js');
 
 const QUERY_ID = 'XRqGa7EeokUU5kppkh13EA';
 const BASE_URL = 'https://x.com/i/api/graphql';
