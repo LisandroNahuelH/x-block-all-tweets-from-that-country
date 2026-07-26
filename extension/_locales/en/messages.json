@@ -338,5 +338,25 @@
   "toast_notinterested": {
     "message": "Not interested",
     "description": "In-page toast action label after geo not interested"
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Action notifications",
+    "description": "Settings: toggle in-page toasts when accounts are blocked/muted/not interested"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. What it does: When the extension blocks, mutes, or marks a post Not interested, a short toast appears at the bottom of X with that account's name, @handle, and profile photo.",
+    "description": "Settings note: what action toasts do"
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Benefits when on: You can see each automatic action as it happens, with a 6-second countdown before the toast disappears.",
+    "description": "Settings note: benefits of action toasts"
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. If you turn it off: Actions still run as usual; only the on-page toast is hidden. The toolbar badge flash still works.",
+    "description": "Settings note: what happens when action toasts are off"
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Toggle action notifications on X",
+    "description": "Aria label for action toasts settings switch"
   }
 }

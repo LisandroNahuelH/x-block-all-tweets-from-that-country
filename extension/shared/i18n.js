@@ -96,6 +96,14 @@
     pop_opt_undo_on_list_click_note:
       '4. Note: A background profile tab will open briefly so the extension can unmute/unblock. Off by default so accidental clicks cannot open tabs or reverse actions without you meaning to.',
     a11y_toggle_undo_on_list_click: 'Toggle undo on managed list click',
+    pop_opt_show_action_toasts: 'Action notifications',
+    pop_opt_show_action_toasts_what:
+      '1. What it does: When the extension blocks, mutes, or marks a post Not interested, a short toast appears at the bottom of X with that account''s name, @handle, and profile photo.',
+    pop_opt_show_action_toasts_benefits:
+      '2. Benefits when on: You can see each automatic action as it happens, with a 6-second countdown before the toast disappears.',
+    pop_opt_show_action_toasts_off:
+      '3. If you turn it off: Actions still run as usual; only the on-page toast is hidden. The toolbar badge flash still works.',
+    a11y_toggle_show_action_toasts: 'Toggle action notifications on X',
     pop_toast_undo_on_list_off:
       'To automatically unmute, unblock, or clear Not interested when you click a managed account, turn on Undo on list click. You can enable it now or later in Settings.',
     pop_toast_undo_on_list_cta: 'Enable now',
