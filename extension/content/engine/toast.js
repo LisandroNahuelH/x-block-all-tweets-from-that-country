@@ -5,7 +5,7 @@
 (function (global) {
   'use strict';
 
-  const STYLE_ID = 'xcd-action-toast-style';
+  const STYLE_ID = 'xcd-action-toast-style-v2';
   const HOST_ID = 'xcd-action-toast';
   const DURATION_MS = 6000;
 
@@ -24,15 +24,27 @@
   let hideTimer = 0;
   let gen = 0;
 
-  function t(key) {
+  function t(key, substitutions) {
     try {
       if (global.XCD_I18N && typeof global.XCD_I18N.t === 'function') {
-        return global.XCD_I18N.t(key) || key;
+        return global.XCD_I18N.t(key, substitutions) || key;
       }
     } catch (_) {
       /* ignore */
     }
     return key;
+  }
+
+  function formatFilterLabel(key) {
+    const k = String(key || '').trim().toLowerCase();
+    if (!k) return '';
+    const geo = global.XCD_GEO;
+    if (geo && Array.isArray(geo.REGION_DATA)) {
+      const region = geo.REGION_DATA.find(r => r && r.key === k);
+      if (region && region.name) return region.name;
+    }
+    if (geo && typeof geo.titleCase === 'function') return geo.titleCase(k);
+    return k;
   }
 
   function ensureStyle() {
@@ -84,6 +96,10 @@
       'margin:0;color:rgba(196,210,224,0.85);font-size:0.8rem;',
       'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
       '}',
+      '#' + HOST_ID + ' .xcd-toast__reason{',
+      'margin:2px 0 0;color:rgba(196,210,224,0.72);font-size:0.72rem;font-weight:500;',
+      'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+      '}',
       '#' + HOST_ID + ' .xcd-toast__bar{',
       'display:block;height:3px;width:100%;transform-origin:left center;',
       'background:var(--xcd-toast-accent,#E53935);transform:scaleX(1);',
@@ -98,7 +114,15 @@
   function ensureHost() {
     ensureStyle();
     let host = document.getElementById(HOST_ID);
-    if (host) return host;
+    if (host) {
+      const meta = host.querySelector('.xcd-toast__meta');
+      if (meta && !host.querySelector('.xcd-toast__reason')) {
+        const reason = document.createElement('p');
+        reason.className = 'xcd-toast__reason';
+        meta.appendChild(reason);
+      }
+      return host;
+    }
     host = document.createElement('div');
     host.id = HOST_ID;
     host.setAttribute('role', 'status');
@@ -111,6 +135,7 @@
       '<p class="xcd-toast__action"></p>' +
       '<p class="xcd-toast__name"></p>' +
       '<p class="xcd-toast__handle"></p>' +
+      '<p class="xcd-toast__reason"></p>' +
       '</div></div>' +
       '<div class="xcd-toast__bar" aria-hidden="true"></div>' +
       '</div>';
@@ -149,17 +174,25 @@
     }
   }
 
-  function show({ lane, name, screenName, avatarUrl } = {}) {
+  function show({ lane, name, screenName, avatarUrl, filterKey, filterKind } = {}) {
     const host = ensureHost();
     const accent = LANE_COLOR[lane] || LANE_COLOR.block;
     const actionKey = LANE_I18N[lane] || LANE_I18N.block;
     const displayName = String(name || screenName || '').trim() || String(screenName || '');
     const handle = String(screenName || '').replace(/^@/, '');
+    const label = formatFilterLabel(filterKey);
+    const reasonKey =
+      filterKind === 'region' ? 'toast_reason_region' : 'toast_reason_country';
+    const reasonEl = host.querySelector('.xcd-toast__reason');
 
     host.style.setProperty('--xcd-toast-accent', accent);
     host.querySelector('.xcd-toast__action').textContent = t(actionKey);
     host.querySelector('.xcd-toast__name').textContent = displayName;
     host.querySelector('.xcd-toast__handle').textContent = handle ? '@' + handle : '';
+    if (reasonEl) {
+      reasonEl.textContent = label ? t(reasonKey, [label]) : '';
+      reasonEl.hidden = !label;
+    }
     setAvatar(host.querySelector('.xcd-toast__avatar'), displayName, handle, avatarUrl || '');
 
     const bar = host.querySelector('.xcd-toast__bar');
