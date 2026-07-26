@@ -392,6 +392,9 @@
           }
         }
 
+        // Capture identity before action — settle/collapse may remove the article
+        const meta = extractAvatarAndName(targetArticle || article, screenName);
+
         // Prefer post ⋯ when we have a tweet (more reliable than profile header)
         if (targetArticle) {
           await actions().runPostAction(targetArticle, action);
@@ -404,7 +407,16 @@
         }
 
         markHandled(lane, screenName);
-        const meta = extractAvatarAndName(article, screenName);
+        try {
+          global.XCD_TOAST?.show?.({
+            lane,
+            name: meta.name,
+            screenName,
+            avatarUrl: meta.avatarUrl
+          });
+        } catch (_) {
+          /* ignore */
+        }
         await sendMessage({
           type: 'RECORD_ACCOUNT',
           payload: {
