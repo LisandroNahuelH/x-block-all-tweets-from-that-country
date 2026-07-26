@@ -2,8 +2,19 @@
 /**
  * Build loadable Chromium package → dist/
  * Usage: npm run build
+ *
+ * Syncs in place (no wipe) so the unpacked extension can see build-stamp.json
+ * and auto-reload via shared/dev-reload.js.
  */
-import { cpSync, rmSync, existsSync, mkdirSync, readdirSync, statSync } from 'fs';
+import {
+  cpSync,
+  rmSync,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  statSync,
+  writeFileSync
+} from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { spawnSync } from 'child_process';
@@ -19,6 +30,7 @@ const required = [
   'content.js',
   'content/engine/lib.js',
   'content/engine/actions.js',
+  'content/engine/toast.js',
   'content/engine/engine.js',
   'page-script.js',
   'popup/popup.html',
@@ -30,6 +42,7 @@ const required = [
   'shared/badge.js',
   'shared/geo-cache-idb.js',
   'shared/release-metadata.js',
+  'shared/dev-reload.js',
   'brand/premium11-mark.svg',
   'assets/fonts/montserrat/montserrat-latin.woff2',
   '_locales/en/messages.json',
@@ -41,6 +54,24 @@ function fail(msg) {
   process.exit(1);
 }
 
+/** Copy src → dest; remove dest entries that are not in src (keep build-stamp.json). */
+function syncTree(srcDir, destDir) {
+  mkdirSync(destDir, { recursive: true });
+  const srcNames = new Set(readdirSync(srcDir));
+  for (const name of readdirSync(destDir)) {
+    if (name === 'build-stamp.json') continue;
+    if (!srcNames.has(name)) {
+      rmSync(join(destDir, name), { recursive: true, force: true });
+    }
+  }
+  for (const name of srcNames) {
+    const s = join(srcDir, name);
+    const d = join(destDir, name);
+    if (statSync(s).isDirectory()) syncTree(s, d);
+    else cpSync(s, d);
+  }
+}
+
 if (!existsSync(src)) fail(`missing ${src}`);
 
 const check = spawnSync(process.execPath, [join(root, 'scripts', 'check-i18n.mjs')], {
@@ -49,14 +80,18 @@ const check = spawnSync(process.execPath, [join(root, 'scripts', 'check-i18n.mjs
 });
 if (check.status !== 0) fail('i18n check failed');
 
-if (existsSync(dist)) rmSync(dist, { recursive: true, force: true });
-mkdirSync(dist, { recursive: true });
-cpSync(src, dist, { recursive: true });
+syncTree(src, dist);
 
 for (const rel of required) {
   const p = join(dist, rel);
   if (!existsSync(p)) fail(`missing in dist: ${rel}`);
 }
+
+writeFileSync(
+  join(dist, 'build-stamp.json'),
+  JSON.stringify({ t: Date.now(), v: Date.now().toString(36) }) + '\n',
+  'utf8'
+);
 
 function countFiles(dir) {
   let n = 0;
@@ -68,4 +103,4 @@ function countFiles(dir) {
 }
 
 console.log(`BUILD OK → dist/ (${countFiles(dist)} files)`);
-console.log('Load unpacked: dist/');
+console.log('Load unpacked: dist/ (dev auto-reload on next builds)');
