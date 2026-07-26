@@ -408,12 +408,14 @@
 
         markHandled(lane, screenName);
         try {
-          global.XCD_TOAST?.show?.({
-            lane,
-            name: meta.name,
-            screenName,
-            avatarUrl: meta.avatarUrl
-          });
+          if (settings?.showActionToasts !== false) {
+            global.XCD_TOAST?.show?.({
+              lane,
+              name: meta.name,
+              screenName,
+              avatarUrl: meta.avatarUrl
+            });
+          }
         } catch (_) {
           /* ignore */
         }
