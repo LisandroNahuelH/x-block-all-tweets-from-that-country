@@ -465,6 +465,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         let lane = 'block';
         if (payload?.lane === 'mute') lane = 'mute';
         else if (payload?.lane === 'notinterested') lane = 'notinterested';
+        // Persist only — badge flash is ACCOUNT_MANAGED (fired in parallel from engine).
         const settings = await self.XCD_SETTINGS.recordManagedAccount({
           screenName: payload?.screenName,
           lane,
@@ -472,8 +473,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
           avatarUrl: payload?.avatarUrl,
           skipBadge: true
         });
-        const count = await self.XCD_BADGE.onAccountManaged(lane);
-        return { success: true, settings, count, lane };
+        return { success: true, settings, lane };
       }
       case 'GET_SESSION_MANAGED_COUNT': {
         const count = await self.XCD_BADGE.getSessionCount();

@@ -419,6 +419,8 @@
         } catch (_) {
           /* ignore */
         }
+        // Badge ASAP (do not await — SW keeps alive via sendResponse until flash ends)
+        void sendMessage({ type: 'ACCOUNT_MANAGED', payload: { lane } });
         await sendMessage({
           type: 'RECORD_ACCOUNT',
           payload: {
