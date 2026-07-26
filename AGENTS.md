@@ -64,7 +64,7 @@ npm run i18n:check
 npm run build
 ```
 
-Load unpacked from **`dist/`**. After `manifest.json` changes, user must reload the extension in Chrome.
+Load unpacked from **`dist/`**. Unpacked builds auto-reload via `build-stamp.json` + `shared/dev-reload.js` (no-op on CWS). Refresh open x.com tabs if content scripts look stale.
 
 ### Chrome Web Store release (when packaging)
 

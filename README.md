@@ -1,4 +1,4 @@
-# X - Block all tweets from that country or region
+# X - Block All Tweets From That Country Or Region
 
 Chromium MV3 extension (Premium11). Dual **Block** / **Mute** lanes by country & region on x.com.
 
@@ -19,11 +19,13 @@ npm run build
 2. **Load unpacked** → `dist/`  
 3. Open popup; configure Block / Mute lanes  
 
+After the first load, each `npm run build` writes `dist/build-stamp.json` and the extension **auto-reloads** in Chrome (dev/unpacked only). Refresh open x.com tabs if content scripts look stale.
+
 ## Scripts
 
 | Command | Purpose |
 |---------|---------|
-| `npm run build` | i18n check + copy `extension/` → `dist/` |
+| `npm run build` | i18n check + sync `extension/` → `dist/` (+ auto-reload stamp) |
 | `npm run i18n:check` | Validate locales |
 | `npm run agents:sync` | Mirror AGENTS → CLAUDE + GEMINI |
 | `npm run agents:verify` | Assert agent triplet identity |
