@@ -106,7 +106,10 @@
       'Release this account on X? If they still match an active country/region filter, the extension may act again unless you whitelist them.',
     pop_toast_release_whitelist: 'Release + whitelist (never re-filter)',
     pop_toast_release_once: 'Just this once',
-    pop_toast_release_cancel: 'Cancel'
+    pop_toast_release_cancel: 'Cancel',
+    toast_blocked: 'Blocked',
+    toast_muted: 'Muted',
+    toast_notinterested: 'Not interested'
   };
 
   const isDev =

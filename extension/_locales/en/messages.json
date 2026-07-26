@@ -326,5 +326,17 @@
   "pop_toast_release_cancel": {
     "message": "Cancel",
     "description": "Confirm bar: cancel release"
+  },
+  "toast_blocked": {
+    "message": "Blocked",
+    "description": "In-page toast action label after geo block"
+  },
+  "toast_muted": {
+    "message": "Muted",
+    "description": "In-page toast action label after geo mute"
+  },
+  "toast_notinterested": {
+    "message": "Not interested",
+    "description": "In-page toast action label after geo not interested"
   }
 }
