@@ -134,7 +134,8 @@
     } catch (_) {
       /* ignore */
     }
-    flashManaged(L);
+    // Await so MV3 SW stays alive for the full flash (timers die if we return early).
+    await flashManaged(L);
     return n;
   }
 
