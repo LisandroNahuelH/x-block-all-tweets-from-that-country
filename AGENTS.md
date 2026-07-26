@@ -26,10 +26,10 @@ This file is the canonical agent operating contract for this repository.
 
 ## 💾 Backups
 
-1. **UI backups:** before non-trivial UI edits to `extension/popup/*` (or brand CSS/HTML), copy current files into  
-   `Backups UI/ui-YYYY-MM-DD/` (create folder if missing). Keep working tree clean of loose backups.
-2. **`.txt` code (global rule):** if editing code that lives in a `.txt` file, backup first into `Backups .txt/` beside that file.
-3. Do not commit large dump folders of secrets; `Backups UI/` is gitignored like peer Premium11 repos.
+1. **Always before starting work:** copy every file you will edit into `Backups UI/ui-YYYY-MM-DD/` (create folder if missing; clear names, e.g. `content-engine-toast.js`). No edits until the backup exists.
+2. **UI backups:** before non-trivial UI edits to `extension/popup/*` (or brand CSS/HTML), same folder as above. Keep working tree clean of loose backups.
+3. **`.txt` code (global rule):** if editing code that lives in a `.txt` file, backup first into `Backups .txt/` beside that file.
+4. Do not commit large dump folders of secrets; `Backups UI/` is gitignored like peer Premium11 repos.
 
 ## 🛠️ Technical rules
 
@@ -89,10 +89,20 @@ Source of truth for the submenu dates/version: `extension/shared/release-metadat
 ## 🌿 Git workflow
 
 1. Prefer small, conventional commits: `feat:`, `fix:`, `chore:`, `docs:`.
-2. Do not force-push unless explicitly requested.
-3. Do not commit `dist/`, `node_modules/`, secrets, or personal dumps.
-4. `_upstream/` is reference only (gitignored); re-clone if needed:
+2. **Always at task end (mandatory):** land the completed unit as **atomic commits** (one logical change per commit; no mixed unrelated WIP). Do not leave finished toast/feature/docs work uncommitted.
+3. Do not force-push unless explicitly requested.
+4. Do not commit `dist/`, `node_modules/`, secrets, or personal dumps.
+5. `_upstream/` is reference only (gitignored); re-clone if needed:
    `git clone --depth 1 https://github.com/xaitax/x-account-location-device.git _upstream`
+
+## 🔁 Mandatory task loop
+
+On **every** non-trivial coding task:
+
+1. **Start:** backup files to touch → then edit.
+2. **End:** atomic commit(s) for the finished unit → `npm run i18n:check` + `npm run build` (or `npm run verify` if agents mirrors changed).
+
+Skip only for pure Q&A / read-only exploration with no file changes.
 
 ## 💬 Communication
 
@@ -102,17 +112,17 @@ Source of truth for the submenu dates/version: `extension/shared/release-metadat
 
 ## ✅ Task completion checklist
 
-1. Backup UI if UI changed.
+1. Backup done before edits (always).
 2. Code + i18n updated.
 3. `npm run i18n:check` and `npm run build` pass.
 4. Mirrors `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` still identical.
-5. Meaningful git commit when the user asked to commit or closed a complete unit of work.
+5. Atomic git commit(s) for the finished unit (always when files changed).
 
 ## Project-specific product notes
 
 | Item | Value |
 |------|--------|
-| Product name | `X - Block all tweets from that country or region` |
+| Product name | `X - Block All Tweets From That Country Or Region` |
 | Brand | Premium11 (`extension/brand/premium11-mark.svg`) |
 | Homepage | `https://www.premium11.com/` |
 | Target | Chromium MV3, x.com / twitter.com |
