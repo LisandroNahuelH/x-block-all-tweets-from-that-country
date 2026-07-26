@@ -151,6 +151,15 @@
     return false;
   }
 
+  /** Which filter key fired the lane (country before region), same order as locationMatchesLane. */
+  function matchedFilter(location, laneState) {
+    const loc = String(location || '').trim().toLowerCase();
+    if (!loc || !laneState) return null;
+    if ((laneState.countries || []).includes(loc)) return { key: loc, kind: 'country' };
+    if ((laneState.regions || []).includes(loc)) return { key: loc, kind: 'region' };
+    return null;
+  }
+
   /**
    * @returns {{ lane: string, action: string }|null}
    */
@@ -409,11 +418,14 @@
         markHandled(lane, screenName);
         try {
           if (settings?.showActionToasts !== false) {
+            const match = matchedFilter(location, settings?.[lane]);
             global.XCD_TOAST?.show?.({
               lane,
               name: meta.name,
               screenName,
-              avatarUrl: meta.avatarUrl
+              avatarUrl: meta.avatarUrl,
+              filterKey: match?.key || '',
+              filterKind: match?.kind || ''
             });
           }
         } catch (_) {
