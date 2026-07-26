@@ -28,7 +28,8 @@
       showCountryLabels: true,
       tallerColumns: false,
       geoLocalCache: true,
-      undoOnListClick: false
+      undoOnListClick: false,
+      showActionToasts: true
     };
   }
 
@@ -39,7 +40,8 @@
     showCountryLabels: true,
     tallerColumns: false,
     geoLocalCache: true,
-    undoOnListClick: false
+    undoOnListClick: false,
+    showActionToasts: true
   });
 
   function isLane(value) {
@@ -213,7 +215,8 @@
       showCountryLabels: base.showCountryLabels !== false,
       tallerColumns: base.tallerColumns === true,
       geoLocalCache: base.geoLocalCache !== false,
-      undoOnListClick: base.undoOnListClick === true
+      undoOnListClick: base.undoOnListClick === true,
+      showActionToasts: base.showActionToasts !== false
     };
   }
 
@@ -258,7 +261,11 @@
       undoOnListClick:
         partial && 'undoOnListClick' in partial
           ? !!partial.undoOnListClick
-          : current.undoOnListClick === true
+          : current.undoOnListClick === true,
+      showActionToasts:
+        partial && 'showActionToasts' in partial
+          ? !!partial.showActionToasts
+          : current.showActionToasts !== false
     };
     const next = normalizeSettings(nextRaw);
     try {
@@ -288,6 +295,10 @@
 
   async function setUndoOnListClick(enabled) {
     return setSettings({ undoOnListClick: !!enabled });
+  }
+
+  async function setShowActionToasts(enabled) {
+    return setSettings({ showActionToasts: !!enabled });
   }
 
   async function toggleLaneList(lane, field, key) {
@@ -440,6 +451,7 @@
     setTallerColumns,
     setGeoLocalCache,
     setUndoOnListClick,
+    setShowActionToasts,
     toggleLaneCountry,
     toggleLaneRegion,
     recordManagedAccount,
