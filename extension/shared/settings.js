@@ -26,7 +26,7 @@
       mute: emptyLane(true),
       notinterested: emptyLane(true),
       showCountryLabels: true,
-      showCountryFlags: false,
+      showCountryFlags: true,
       tallerColumns: false,
       geoLocalCache: true,
       undoOnListClick: false,
@@ -39,7 +39,7 @@
     mute: Object.freeze(emptyLane(true)),
     notinterested: Object.freeze(emptyLane(true)),
     showCountryLabels: true,
-    showCountryFlags: false,
+    showCountryFlags: true,
     tallerColumns: false,
     geoLocalCache: true,
     undoOnListClick: false,
@@ -215,7 +215,7 @@
       mute: normalizeLaneStrict(base.mute),
       notinterested: normalizeLaneStrict(base.notinterested),
       showCountryLabels: base.showCountryLabels !== false,
-      showCountryFlags: base.showCountryFlags === true,
+      showCountryFlags: base.showCountryFlags !== false,
       tallerColumns: base.tallerColumns === true,
       geoLocalCache: base.geoLocalCache !== false,
       undoOnListClick: base.undoOnListClick === true,
@@ -256,7 +256,7 @@
       showCountryFlags:
         partial && 'showCountryFlags' in partial
           ? !!partial.showCountryFlags
-          : current.showCountryFlags === true,
+          : current.showCountryFlags !== false,
       tallerColumns:
         partial && 'tallerColumns' in partial
           ? !!partial.tallerColumns

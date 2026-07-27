@@ -13,18 +13,18 @@
   /** @type {Set<Element>} */
   const pendingEls = new Set();
   let showCountryLabels = true;
-  let showCountryFlags = false;
+  let showCountryFlags = true;
 
   async function loadUiPrefs() {
     try {
       if (globalThis.XCD_SETTINGS?.getSettings) {
         const s = await globalThis.XCD_SETTINGS.getSettings();
         showCountryLabels = s.showCountryLabels !== false;
-        showCountryFlags = s.showCountryFlags === true;
+        showCountryFlags = s.showCountryFlags !== false;
       }
     } catch (_) {
       showCountryLabels = true;
-      showCountryFlags = false;
+      showCountryFlags = true;
     }
   }
 

@@ -765,7 +765,7 @@
     const input = document.getElementById('optShowCountryFlags');
     if (!input || !globalThis.XCD_SETTINGS) return;
     const s = await XCD_SETTINGS.getSettings();
-    input.checked = s.showCountryFlags === true;
+    input.checked = s.showCountryFlags !== false;
   }
 
   async function syncTallerColumnsToggle() {
@@ -934,7 +934,7 @@
             const countryEl = document.getElementById('optShowCountryLabels');
             if (countryEl) countryEl.checked = settings.showCountryLabels !== false;
             const flagsEl = document.getElementById('optShowCountryFlags');
-            if (flagsEl) flagsEl.checked = settings.showCountryFlags === true;
+            if (flagsEl) flagsEl.checked = settings.showCountryFlags !== false;
             const geoEl = document.getElementById('optGeoLocalCache');
             if (geoEl) geoEl.checked = settings.geoLocalCache !== false;
             const undoEl = document.getElementById('optUndoOnListClick');
