@@ -1,6 +1,6 @@
 {
   "name": "x-block-all-tweets-from-that-country",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "private": true,
   "description": "X - Block all tweets from that country or region (Premium11 Chromium extension).",
   "scripts": {
