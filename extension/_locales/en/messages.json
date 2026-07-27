@@ -219,6 +219,10 @@
     "message": "Show account country next to the username on feed, explore, and profiles",
     "description": "Toggle label for inline country labels"
   },
+  "pop_opt_show_country_flags": {
+    "message": "Show account country flag next to the username on feed, explore, and profiles",
+    "description": "Toggle label for inline country flags"
+  },
   "pop_opt_show_country_note": {
     "message": "Note: This extension only works when X.com reports country or region data for an account (About this account). X often does not expose that information, so even with this option enabled the country or region may not appear next to the username. These limits come from X.com, not from this extension.",
     "description": "Disclaimer under show-country toggle about X.com data limits"
@@ -226,6 +230,10 @@
   "a11y_toggle_show_country": {
     "message": "Toggle country labels on the timeline",
     "description": "Accessible label for show-country switch"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Toggle country flags on the timeline",
+    "description": "Accessible label for show-country-flag switch"
   },
   "pop_opt_taller_columns": {
     "message": "Taller columns",
