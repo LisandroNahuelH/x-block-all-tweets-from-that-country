@@ -194,7 +194,9 @@ html.xcd-taller-columns .geo-list--countries {
 }
 
 html.xcd-taller-columns .geo-list--accounts {
+  height: 320px;
   max-height: 320px;
+  min-height: 320px;
 }
 
 button {
@@ -1339,7 +1341,10 @@ body::-webkit-scrollbar-corner {
 }
 
 .geo-list--accounts {
+  /* Lock height so empty/full lanes stay aligned across columns. */
+  height: 148px;
   max-height: 148px;
+  min-height: 148px;
   width: 100%;
   max-width: 100%;
   min-width: 0;
