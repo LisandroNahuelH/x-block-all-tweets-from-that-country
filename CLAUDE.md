@@ -44,8 +44,9 @@ This file is the canonical agent operating contract for this repository.
 1. Default locale: **English** (`extension/_locales/en/messages.json`).
 2. User-facing strings via `chrome.i18n` / `XCD_I18N.t` / `data-i18n*`. No hard-coded UI copy.
 3. New keys: add to `en` first (with `description`), update `shared/i18n.js` `EN_FALLBACK`, run `npm run i18n:check`.
-4. Country/region names from X stay **English canonical** for matching; do not i18n those keys for block logic.
-5. Locale codes: only those in `extension/locales.manifest.json`.
+4. In `EN_FALLBACK` string literals: never use doubled `''` for apostrophes (breaks SW `importScripts`). Prefer double-quoted strings or `\'` / typographic `’`.
+5. Country/region names from X stay **English canonical** for matching; do not i18n those keys for block logic.
+6. Locale codes: only those in `extension/locales.manifest.json`.
 
 ### Settings / lanes contract
 
