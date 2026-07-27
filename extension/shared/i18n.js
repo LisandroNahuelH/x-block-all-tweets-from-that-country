@@ -101,7 +101,7 @@
     a11y_toggle_undo_on_list_click: 'Toggle undo on managed list click',
     pop_opt_show_action_toasts: 'Action notifications',
     pop_opt_show_action_toasts_what:
-      '1. What it does: When the extension blocks, mutes, or marks a post Not interested, a short toast appears at the bottom of X with that account''s name, @handle, and profile photo.',
+      "1. What it does: When the extension blocks, mutes, or marks a post Not interested, a short toast appears at the bottom of X with that account's name, @handle, and profile photo.",
     pop_opt_show_action_toasts_benefits:
       '2. Benefits when on: You can see each automatic action as it happens, with a 6-second countdown before the toast disappears.',
     pop_opt_show_action_toasts_off:
