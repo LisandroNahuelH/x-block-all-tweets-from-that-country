@@ -36,6 +36,15 @@ Either, both, or neither may be enabled. Pref changes via `storage.onChanged` cl
 - Registry entry: `0. Chrome Web Store Publish/extensions.json` (mirrored under `~\.grok\chrome-webstore\`)
 - Publish CLI: `node cws-cli.mjs release --name "X - Block" --zip <release-zip>`
 
+## i18n surface
+
+- **SoT:** `extension/_locales/en/messages.json` (~92 keys: manifest, popup lanes/settings/premium/bars, timeline suffix, in-page toasts).
+- **Runtime:** `shared/i18n.js` (`t`, `EN_FALLBACK`, `applyDom` for `data-i18n*`).
+- **Shipping locales:** `extension/_locales/<code>/` generated from overrides (`scripts/locale-overrides/` + `npm run i18n:apply`).
+- **Checks:** `i18n:check` (structure/parity), `i18n:audit` (no English leftovers except allowlist / `en_*`).
+- **Docs:** `docs/i18n/` (glossary, onboarding, 55-code registry, program status).
+- **Not localized:** geo matching labels (English AboutAccount), handles, menu-match keywords in `actions.js`, brand Premium11, `USD 29.99`.
+
 ## Popup lane columns
 
 Three `.lane` cards (block / mute / notinterested). Managed-account lists use `.geo-list--accounts` with a locked height (`height`/`min-height`/`max-height` = 148px; 320px under `html.xcd-taller-columns`) so empty and full lanes keep the same managed-section size; overflow scrolls inside the list.

@@ -46,7 +46,10 @@ This file is the canonical agent operating contract for this repository.
 3. New keys: add to `en` first (with `description`), update `shared/i18n.js` `EN_FALLBACK`, run `npm run i18n:check`.
 4. In `EN_FALLBACK` string literals: never use doubled `''` for apostrophes (breaks SW `importScripts`). Prefer double-quoted strings or `\'` / typographic `’`.
 5. Country/region names from X stay **English canonical** for matching; do not i18n those keys for block logic.
-6. Locale codes: only those in `extension/locales.manifest.json`.
+6. Locale codes: only those in `extension/locales.manifest.json` (**55** CWS codes including `en_US`). See `docs/i18n/`.
+7. **Multi-locale program:** translate one locale (or variant pair) at a time via `scripts/locale-overrides/<code>.json` → `npm run i18n:apply` → `i18n:check` + `i18n:audit`. No machine-batch dumps. Product glossary: `docs/i18n/glossary.md`. Status: `docs/i18n/translation-program-status.md`.
+8. Deliberate English leftovers only via `scripts/i18n-identical-allowlist.json`. Variants `en_AU`/`en_GB`/`en_US` skipped by identical audit.
+9. Real variant pairs (not clones): `es`≠`es_419`, `pt_BR`≠`pt_PT`, `zh_CN`≠`zh_TW`.
 
 ### Settings / lanes contract
 
