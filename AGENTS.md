@@ -56,6 +56,7 @@ This file is the canonical agent operating contract for this repository.
 3. Toolbar badge: session counter + red (block) / yellow (mute) / blue (notinterested) flash via `shared/badge.js` + SW.
 4. Opening external URLs (Premium11 home): message SW `OPEN_URL` then `window.close()` — never hang the popup.
 5. Timeline country UI prefs (independent): `showCountryLabels` and `showCountryFlags` (both default ON, opt-out). Both can be on/off in any combo. When both on, `.xcd-mark` order is **flag → name** (Twemoji SVG from `abs-0.twimg.com` via `XCD_GEO.COUNTRY_FLAGS` / `REGION_DATA`).
+6. Popup managed-account lists (`.geo-list--accounts`) use a **fixed height** (148px; 320px with taller-columns) so the three lanes stay vertically aligned even when one lane has many accounts and others are empty.
 
 ### Build and verify
 
