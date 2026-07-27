@@ -30,6 +30,12 @@ Either, both, or neither may be enabled. Pref changes via `storage.onChanged` cl
 
 `popup.html` settings view: toggle `#optShowCountryLabels`, then `#optShowCountryFlags`, then shared data-availability note.
 
+## Chrome Web Store
+
+- Extension ID: `obpgcigehkijhgjdldddiaijimhihpma`
+- Registry entry: `0. Chrome Web Store Publish/extensions.json` (mirrored under `~\.grok\chrome-webstore\`)
+- Publish CLI: `node cws-cli.mjs release --name "X - Block" --zip <release-zip>`
+
 ## Popup lane columns
 
 Three `.lane` cards (block / mute / notinterested). Managed-account lists use `.geo-list--accounts` with a locked height (`height`/`min-height`/`max-height` = 148px; 320px under `html.xcd-taller-columns`) so empty and full lanes keep the same managed-section size; overflow scrolls inside the list.

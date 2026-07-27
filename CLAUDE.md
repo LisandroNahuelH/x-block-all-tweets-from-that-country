@@ -129,6 +129,8 @@ Skip only for pure Q&A / read-only exploration with no file changes.
 | Brand | Premium11 (`extension/brand/premium11-mark.svg`) |
 | Homepage | `https://www.premium11.com/` |
 | Target | Chromium MV3, x.com / twitter.com |
+| Chrome Web Store ID | `obpgcigehkijhgjdldddiaijimhihpma` |
+| CWS registry | `D:\OfiSync\0. Lisandro\0. Programacion\0. Chrome Web Store Publish\extensions.json` (name match / `--extension-id`) |
 | Current stage | Popup 3 lanes + geo detection + **auto engine on X** (menu ⋯ port of I Don't Care) |
 
 ### Content engine contract
