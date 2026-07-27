@@ -6,7 +6,7 @@
 
 ## Readiness
 
-- Status: **IN PROGRESS** (W1 done; craft remaining)
+- Status: **IN PROGRESS** (W1–W5 done)
 - Last update: 2026-07-27
 - Blockers: none
 
@@ -14,13 +14,15 @@
 
 | State | Locales |
 |-------|---------|
-| Completed | `en`, `es`, `es_419` |
+| Completed | `en`, `es`, `es_419`, `pt_BR`, `pt_PT`, `de`, `fr`, `it`, `nl`, `ja`, `ko`, `zh_CN`, `zh_TW`, `ru`, `uk`, `pl`, `tr` (**17** shipping) |
 | In progress | — |
-| Pending waves | W2 `pt_BR` `pt_PT` · W3 `de` `fr` `it` `nl` · W4 `ja` `ko` `zh_CN` `zh_TW` · W5 `ru` `uk` `pl` `tr` · W6 `ar` `he` `fa` · W7 India scripts · W8 SEA · W9 EU rest · W10 `ca` `sw` `am` · W11 `en_GB` `en_AU` `en_US` |
+| Pending waves | W6 `ar` `he` `fa` · W7 India · W8 SEA · W9 EU rest · W10 `ca` `sw` `am` · W11 `en_GB` `en_AU` `en_US` |
 
-## Variant notes (W1)
+## Variant notes
 
-- `es` vs `es_419`: tuits/tweets; Ajustes/Configuración; AVISO/ADVERTENCIA; gestionadas/administradas; Atrás/Volver; lista blanca/lista de permitidos; voseo en tips LATAM (activá/podés); rate limits / scrollear / toast en 419; posts vs publicaciones.
+- W1 `es`/`es_419`: tuits/tweets; Ajustes/Configuración; AVISO/ADVERTENCIA; gestionadas/administradas; voseo LATAM.
+- W2 `pt_BR`/`pt_PT`: você vs tu; Configurações/Definições; postagens/publicações; gerenciadas/geridas; Buscar/Pesquisar.
+- W4 `zh_CN`/`zh_TW`: 简/繁; 屏蔽/封鎖; 隐藏/靜音; 设置/設定; 缓存/快取.
 
 ## Target registry
 

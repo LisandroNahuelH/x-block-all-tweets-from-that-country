@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Bloquear todos os tweets daquele país ou região"
+  },
+  "ext_description": {
+    "message": "Deteta o país ou a região das contas do X na sua timeline (Acerca desta conta)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Filtro por país"
+  },
+  "pop_heading": {
+    "message": "X - Bloquear todos os tweets daquele país ou região"
+  },
+  "pop_lane_block": {
+    "message": "Bloquear"
+  },
+  "pop_lane_mute": {
+    "message": "Silenciar"
+  },
+  "pop_lane_notinterested": {
+    "message": "Não tenho interesse"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Ativar ou desativar a coluna Bloquear"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Ativar ou desativar a coluna Silenciar"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Ativar ou desativar a coluna Não tenho interesse"
+  },
+  "pop_mode_warning_label": {
+    "message": "AVISO:"
+  },
+  "pop_mode_hint_block": {
+    "message": "As contas selecionadas são bloqueadas na tua conta do X. As publicações delas deixam de aparecer em todas as apps do X: ambiente de trabalho, Android, iOS ou web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "As contas selecionadas são silenciadas na tua conta do X. As publicações delas deixam de aparecer em todas as apps do X: ambiente de trabalho, Android, iOS ou web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "As publicações das contas selecionadas são marcadas como Não tenho interesse na tua conta do X, para o X te mostrar menos delas no ambiente de trabalho, Android, iOS e web."
+  },
+  "pop_regions_label": {
+    "message": "Regiões"
+  },
+  "pop_countries_label": {
+    "message": "Países"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ selecionados",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Alternar região"
+  },
+  "a11y_toggle_country": {
+    "message": "Alternar país"
+  },
+  "pop_search_regions": {
+    "message": "Pesquisar regiões…"
+  },
+  "pop_search_countries": {
+    "message": "Pesquisar países…"
+  },
+  "pop_search_no_results": {
+    "message": "Sem correspondências"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Contas bloqueadas"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Contas silenciadas"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Contas Não tenho interesse"
+  },
+  "pop_search_accounts": {
+    "message": "Pesquisar contas…"
+  },
+  "pop_managed_empty": {
+    "message": "Ainda não há contas geridas"
+  },
+  "pop_managed_mode_block": {
+    "message": "Bloquear"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Silenciar"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Não tenho interesse"
+  },
+  "a11y_release_account": {
+    "message": "Libertar conta gerida"
+  },
+  "a11y_open_premium11": {
+    "message": "Abrir o sítio web da Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Dados do Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium ativado"
+  },
+  "pop_premium_chip_title": {
+    "message": "Ver o teu acesso Premium ativado."
+  },
+  "pop_premium_back": {
+    "message": "Voltar"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Premium vitalício ativado"
+  },
+  "pop_premium_subtitle": {
+    "message": "Desfruta da suíte Premium completa em X - Bloquear todos os tweets daquele país ou região da Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "A tua subscrição Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Premium vitalício ativo"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Presente do programador"
+  },
+  "pop_premium_gift_message": {
+    "message": "O programador da extensão ofereceu-te uma subscrição Premium vitalícia (USD 29.99). Obrigado por seres um utilizador fiel de X - Bloquear todos os tweets daquele país ou região da Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Versão da extensão"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Última atualização"
+  },
+  "pop_premium_fact_license": {
+    "message": "Validade da licença Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Vitalícia"
+  },
+  "pop_premium_fact_features": {
+    "message": "Funcionalidades ativadas"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Todas"
+  },
+  "pop_settings_title": {
+    "message": "Definições"
+  },
+  "pop_settings_btn_title": {
+    "message": "Abrir definições"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Mostrar o país da conta junto ao nome de utilizador no feed, Explorar e perfis"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Mostrar a bandeira do país da conta junto ao nome de utilizador no feed, Explorar e perfis"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Nota: Esta extensão só funciona quando o X.com indica o país ou a região de uma conta (Acerca desta conta). Muitas vezes o X não expõe essa informação, por isso mesmo com esta opção ativada o país ou a região pode não aparecer junto ao nome. Esses limites vêm do X.com, não desta extensão."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Ativar ou desativar etiquetas de país na timeline"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Ativar ou desativar bandeiras de país na timeline"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Colunas mais altas"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Torna as listas de regiões, países e contas geridas cerca de duas a três vezes mais altas e permite deslocar o popup inteiro para o esquema parecer menos apertado. Desativado por predefinição."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Ativar ou desativar colunas mais altas"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Cache local de países"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. O que faz: Após uma consulta bem-sucedida de «Acerca desta conta», guarda o país ou a região dessa conta neste dispositivo para reutilizar mais tarde sem voltar a perguntar ao X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Vantagens quando ativo: Menos pedidos de rede, menor risco de limites de frequência e etiquetas de país mais rápidas, além de decisões automáticas de silenciar/bloquear para contas que já viste."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Se desativares: Cada consulta volta a ir ao X — mais risco de limites de frequência, etiquetas mais lentas e maior uso de dados ao deslocar. A cache existente mantém-se no disco, mas não é usada até voltares a ativar."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Armazenamento: Muito leve — cerca de 100.000 utilizadores ≈ 10 MB, aproximadamente o tamanho de um MP3 moderno no teu PC. Só guarda acertos de país/região."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Ativar ou desativar a cache local de países"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Contas em cache"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Espaço usado (aprox.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Anular ao clicar na lista"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. O que faz: Quando ativo, clicar numa conta gerida remove-a da lista e anula a ação no X (deixar de silenciar ou desbloquear). Quando inativo, cliques na lista não libertam contas — só mostram uma dica para ativar esta opção."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Como funciona: Abre um separador em segundo plano breve no perfil, executa o mesmo fluxo do menu ⋯ usado para silenciar/bloquear e fecha o separador. Entradas de Não tenho interesse são só da lista no X (não há anular fiável)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Vantagens quando ativo: Um clique limpa a lista e reverte silenciar/bloquear na tua conta do X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Nota: Um separador de perfil em segundo plano abre-se por um instante para a extensão deixar de silenciar ou desbloquear. Desativado por predefinição para cliques acidentais não abrirem separadores nem reverterem ações sem o queres."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Ativar ou desativar anular ao clicar na lista gerida"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Para deixar de silenciar, desbloquear ou limpar Não tenho interesse ao clicar numa conta gerida, ativa Anular ao clicar na lista. Podes ativar agora ou mais tarde em Definições."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Ativar agora"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Dispensar"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Conta gerida (ativa Anular ao clicar na lista para libertar)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Libertar esta conta no X? Se ainda corresponder a um filtro ativo de país/região, a extensão pode voltar a atuar a menos que a coloques na lista de permissões."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Libertar + lista de permissões (nunca refiltrar)"
+  },
+  "pop_toast_release_once": {
+    "message": "Só desta vez"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Cancelar"
+  },
+  "toast_blocked": {
+    "message": "Bloqueada"
+  },
+  "toast_muted": {
+    "message": "Silenciada"
+  },
+  "toast_notinterested": {
+    "message": "Não tenho interesse"
+  },
+  "toast_reason_country": {
+    "message": "Filtro de país: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Filtro de região: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Notificações de ações"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. O que faz: Quando a extensão bloqueia, silencia ou marca uma publicação como Não tenho interesse, aparece um aviso breve no fundo do X com o nome da conta, o @utilizador e a foto de perfil."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Vantagens quando ativo: Vês cada ação automática no momento, com contagem decrescente de 6 segundos antes do aviso desaparecer."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Se desativares: As ações continuam normais; só o aviso na página fica oculto. O flash do distintivo da barra de ferramentas continua a funcionar."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Ativar ou desativar notificações de ações no X"
+  }
+}

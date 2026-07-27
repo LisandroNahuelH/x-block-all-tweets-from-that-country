@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - 屏蔽来自该国家或地区的所有推文"
+  },
+  "ext_description": {
+    "message": "检测时间线上 X 账号的国家或地区（关于此账号）。"
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "国家筛选"
+  },
+  "pop_heading": {
+    "message": "X - 屏蔽来自该国家或地区的所有推文"
+  },
+  "pop_lane_block": {
+    "message": "屏蔽"
+  },
+  "pop_lane_mute": {
+    "message": "隐藏"
+  },
+  "pop_lane_notinterested": {
+    "message": "不感兴趣"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "开启或关闭“屏蔽”列"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "开启或关闭“隐藏”列"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "开启或关闭“不感兴趣”列"
+  },
+  "pop_mode_warning_label": {
+    "message": "警告："
+  },
+  "pop_mode_hint_block": {
+    "message": "所选账号会在你的 X 账号上被屏蔽。其帖子将不再出现在你的任何 X 应用中：桌面端、Android、iOS 或网页。"
+  },
+  "pop_mode_hint_mute": {
+    "message": "所选账号会在你的 X 账号上被隐藏。其帖子将不再出现在你的任何 X 应用中：桌面端、Android、iOS 或网页。"
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "所选账号的帖子会在你的 X 账号上被标记为不感兴趣，从而在桌面端、Android、iOS 和网页上减少展示。"
+  },
+  "pop_regions_label": {
+    "message": "地区"
+  },
+  "pop_countries_label": {
+    "message": "国家"
+  },
+  "pop_selected_count": {
+    "message": "已选 $COUNT$ 项",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "切换地区"
+  },
+  "a11y_toggle_country": {
+    "message": "切换国家"
+  },
+  "pop_search_regions": {
+    "message": "搜索地区…"
+  },
+  "pop_search_countries": {
+    "message": "搜索国家…"
+  },
+  "pop_search_no_results": {
+    "message": "无匹配项"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "已屏蔽账号"
+  },
+  "pop_muted_accounts_label": {
+    "message": "已隐藏账号"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "不感兴趣账号"
+  },
+  "pop_search_accounts": {
+    "message": "搜索账号…"
+  },
+  "pop_managed_empty": {
+    "message": "尚无已管理账号"
+  },
+  "pop_managed_mode_block": {
+    "message": "屏蔽"
+  },
+  "pop_managed_mode_mute": {
+    "message": "隐藏"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "不感兴趣"
+  },
+  "a11y_release_account": {
+    "message": "释放已管理账号"
+  },
+  "a11y_open_premium11": {
+    "message": "打开 Premium11 网站"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium 详情"
+  },
+  "pop_premium_chip": {
+    "message": "Premium 已激活"
+  },
+  "pop_premium_chip_title": {
+    "message": "查看已激活的 Premium 权限。"
+  },
+  "pop_premium_back": {
+    "message": "返回"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "终身 Premium 已激活"
+  },
+  "pop_premium_subtitle": {
+    "message": "在 Premium11 的「X - 屏蔽来自该国家或地区的所有推文」中畅享完整 Premium 功能。"
+  },
+  "pop_premium_status_title": {
+    "message": "你的 Premium 订阅"
+  },
+  "pop_premium_status_active": {
+    "message": "终身 Premium 有效"
+  },
+  "pop_premium_gift_badge": {
+    "message": "开发者赠送"
+  },
+  "pop_premium_gift_message": {
+    "message": "扩展开发者已赠送你终身 Premium 订阅（USD 29.99）。感谢你一直使用 Premium11 的「X - 屏蔽来自该国家或地区的所有推文」。"
+  },
+  "pop_premium_fact_version": {
+    "message": "扩展版本"
+  },
+  "pop_premium_fact_updated": {
+    "message": "最近更新"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium 许可有效期"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "终身"
+  },
+  "pop_premium_fact_features": {
+    "message": "已启用功能"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "全部"
+  },
+  "pop_settings_title": {
+    "message": "设置"
+  },
+  "pop_settings_btn_title": {
+    "message": "打开设置"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "在信息流、探索和资料页的用户名旁显示账号国家"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "在信息流、探索和资料页的用户名旁显示账号国旗"
+  },
+  "pop_opt_show_country_note": {
+    "message": "注意：仅当 X.com 为账号提供国家或地区信息（关于此账号）时，本扩展才会生效。X 经常不公开这些信息，因此即使开启此选项，用户名旁也可能不显示国家或地区。这些限制来自 X.com，而非本扩展。"
+  },
+  "a11y_toggle_show_country": {
+    "message": "切换时间线上的国家标签"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "切换时间线上的国旗"
+  },
+  "pop_opt_taller_columns": {
+    "message": "加高列"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "将地区、国家和已管理账号列表大约加高两到三倍，并允许整个弹窗滚动，布局更宽松。默认关闭。"
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "切换加高列布局"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "本地国家缓存"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. 作用：在成功查询「关于此账号」后，将该账号的国家或地区保存在本设备，以便之后无需再次向 X 请求即可复用。"
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. 开启后的好处：网络请求更少、触发频率限制的风险更低，国家标签更快，并对已见过的账号更快做出自动隐藏/屏蔽判断。"
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. 若关闭：每次查询都会再次请求 X——频率限制风险更高、标签更慢、滚动时流量更大。已有缓存仍留在磁盘上，但在重新开启前不会使用。"
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. 存储：非常轻量——约 10 万用户 ≈ 10 MB，大约相当于电脑上一个现代 MP3 的大小。仅保存成功获取的国家/地区。"
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "切换本地国家缓存"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "已缓存账号"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "占用空间（约）"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "点击列表撤销"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. 作用：开启后，点击已管理账号会将其移出列表，并在 X 上撤销操作（取消隐藏或取消屏蔽）。关闭后，点击列表不会释放账号，只会提示启用此选项。"
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. 工作方式：短暂打开指向该资料页的后台标签页，执行与隐藏/屏蔽相同的 ⋯ 菜单流程，然后关闭标签页。不感兴趣条目在 X 上仅列表有效（没有可靠的撤销）。"
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. 开启后的好处：一次点击即可清理列表，并撤销你 X 账号上的隐藏/屏蔽。"
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. 说明：为取消隐藏/取消屏蔽，会短暂打开后台资料页标签。默认关闭，避免误点打开标签或撤销操作。"
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "切换点击已管理列表撤销"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "若要在点击已管理账号时自动取消隐藏、取消屏蔽或清除不感兴趣，请开启「点击列表撤销」。可立即开启，也可稍后在设置中开启。"
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "立即开启"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "关闭"
+  },
+  "a11y_managed_account_locked": {
+    "message": "已管理账号（请开启“点击列表撤销”以释放）"
+  },
+  "pop_toast_release_confirm": {
+    "message": "在 X 上释放此账号？若仍匹配有效的国家/地区筛选，扩展可能再次处理，除非你将其加入白名单。"
+  },
+  "pop_toast_release_whitelist": {
+    "message": "释放 + 白名单（不再筛选）"
+  },
+  "pop_toast_release_once": {
+    "message": "仅此一次"
+  },
+  "pop_toast_release_cancel": {
+    "message": "取消"
+  },
+  "toast_blocked": {
+    "message": "已屏蔽"
+  },
+  "toast_muted": {
+    "message": "已隐藏"
+  },
+  "toast_notinterested": {
+    "message": "不感兴趣"
+  },
+  "toast_reason_country": {
+    "message": "国家筛选：$FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "地区筛选：$FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "操作通知"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. 作用：扩展屏蔽、隐藏或将帖子标为不感兴趣时，会在 X 底部显示简短提示，包含账号名称、@用户名和头像。"
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. 开启后的好处：可实时看到每次自动操作，提示在 6 秒倒计时后消失。"
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. 若关闭：操作仍照常执行，仅隐藏页面提示。工具栏徽章闪烁仍然有效。"
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "切换 X 上的操作通知"
+  }
+}

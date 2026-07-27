@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Blokkeer alle tweets uit dat land of die regio"
+  },
+  "ext_description": {
+    "message": "Detecteert het land of de regio van X-accounts in je tijdlijn (Over dit account)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Landfilter"
+  },
+  "pop_heading": {
+    "message": "X - Blokkeer alle tweets uit dat land of die regio"
+  },
+  "pop_lane_block": {
+    "message": "Blokkeren"
+  },
+  "pop_lane_mute": {
+    "message": "Negeren"
+  },
+  "pop_lane_notinterested": {
+    "message": "Niet geïnteresseerd"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Kolom Blokkeren in- of uitschakelen"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Kolom Negeren in- of uitschakelen"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Kolom Niet geïnteresseerd in- of uitschakelen"
+  },
+  "pop_mode_warning_label": {
+    "message": "WAARSCHUWING:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Geselecteerde accounts worden geblokkeerd op je X-account. Hun posts verschijnen niet meer in je X-apps: desktop, Android, iOS of web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Geselecteerde accounts worden genegeerd op je X-account. Hun posts verschijnen niet meer in je X-apps: desktop, Android, iOS of web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Posts van geselecteerde accounts worden gemarkeerd als Niet geïnteresseerd op je X-account, zodat X er minder van toont op desktop, Android, iOS en web."
+  },
+  "pop_regions_label": {
+    "message": "Regio’s"
+  },
+  "pop_countries_label": {
+    "message": "Landen"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ geselecteerd",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Regio omschakelen"
+  },
+  "a11y_toggle_country": {
+    "message": "Land omschakelen"
+  },
+  "pop_search_regions": {
+    "message": "Regio’s zoeken…"
+  },
+  "pop_search_countries": {
+    "message": "Landen zoeken…"
+  },
+  "pop_search_no_results": {
+    "message": "Geen resultaten"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Geblokkeerde accounts"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Genegeerde accounts"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Accounts Niet geïnteresseerd"
+  },
+  "pop_search_accounts": {
+    "message": "Accounts zoeken…"
+  },
+  "pop_managed_empty": {
+    "message": "Nog geen beheerde accounts"
+  },
+  "pop_managed_mode_block": {
+    "message": "Blokkeren"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Negeren"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Niet geïnteresseerd"
+  },
+  "a11y_release_account": {
+    "message": "Beheerd account vrijgeven"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11-website openen"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium-gegevens"
+  },
+  "pop_premium_chip": {
+    "message": "Premium geactiveerd"
+  },
+  "pop_premium_chip_title": {
+    "message": "Bekijk je geactiveerde Premium-toegang."
+  },
+  "pop_premium_back": {
+    "message": "Terug"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Levenslang Premium geactiveerd"
+  },
+  "pop_premium_subtitle": {
+    "message": "Geniet van de volledige Premium-suite in X - Blokkeer alle tweets uit dat land of die regio van Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Je Premium-abonnement"
+  },
+  "pop_premium_status_active": {
+    "message": "Levenslang Premium actief"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Cadeau van de ontwikkelaar"
+  },
+  "pop_premium_gift_message": {
+    "message": "De ontwikkelaar van de extensie heeft je een levenslang Premium-abonnement cadeau gedaan (USD 29.99). Bedankt dat je een trouwe gebruiker bent van X - Blokkeer alle tweets uit dat land of die regio van Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Extensieversie"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Laatst bijgewerkt"
+  },
+  "pop_premium_fact_license": {
+    "message": "Geldigheid Premium-licentie"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Levenslang"
+  },
+  "pop_premium_fact_features": {
+    "message": "Ingeschakelde functies"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Alle"
+  },
+  "pop_settings_title": {
+    "message": "Instellingen"
+  },
+  "pop_settings_btn_title": {
+    "message": "Instellingen openen"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Toon het land van het account naast de gebruikersnaam in feed, Verkennen en profielen"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Toon de landenvlag van het account naast de gebruikersnaam in feed, Verkennen en profielen"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Let op: deze extensie werkt alleen wanneer X.com land of regio van een account doorgeeft (Over dit account). Vaak deelt X die gegevens niet, dus zelfs met deze optie aan kan land of regio naast de naam ontbreken. Die grenzen komen van X.com, niet van deze extensie."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Landlabels op de tijdlijn in- of uitschakelen"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Landenvlaggen op de tijdlijn in- of uitschakelen"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Hogere kolommen"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Maakt de lijsten met regio’s, landen en beheerde accounts ongeveer twee tot drie keer hoger en laat de hele popup scrollen zodat de layout minder krap aanvoelt. Standaard uit."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Hogere kolommen in- of uitschakelen"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Lokale landencache"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Wat het doet: na een geslaagde opzoeking van «Over dit account» bewaart het land of regio van dat account op dit apparaat, zodat de extensie het later kan hergebruiken zonder X opnieuw te vragen."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Voordelen wanneer aan: minder netwerkcalls, lager risico op rate limits en snellere landlabels plus automatische negeer-/blokkeerbeslissingen voor accounts die je al zag."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Als je het uitzet: elke opzoeking gaat weer naar X — meer rate-limitrisico, tragere labels en meer dataverbruik bij scrollen. Bestaande cache blijft op schijf maar wordt niet gebruikt tot je het weer aanzet."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Opslag: heel licht — ongeveer 100.000 gebruikers ≈ 10 MB, grofweg de grootte van één moderne MP3 op je pc. Alleen geslaagde land-/regiotreffers worden opgeslagen."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Lokale landencache in- of uitschakelen"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Gecachte accounts"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Gebruikte opslag (ca.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Ongedaan maken bij klik op de lijst"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Wat het doet: wanneer aan, verwijdert een klik op een beheerd account het uit de lijst en maakt de actie op X ongedaan (negeren opheffen of deblokkeren). Wanneer uit, geven lijstklikken accounts niet vrij — ze tonen alleen een tip om deze optie in te schakelen."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Hoe het werkt: opent kort een achtergrondtab naar dat profiel, voert dezelfde ⋯-menustroom uit als bij negeren/blokkeren en sluit de tab. Niet-geïnteresseerd-items zijn alleen op de lijst bij X (geen betrouwbare undo)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Voordelen wanneer aan: één klik ruimt de lijst op en draait negeren/blokkeren terug op je X-account."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Let op: er opent kort een profieltabel op de achtergrond zodat de extensie kan deblokkeren/negeren opheffen. Standaard uit zodat een per ongeluk klik geen tabs opent of acties terugdraait."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Ongedaan maken bij klik op beheerde lijst in- of uitschakelen"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Om automatisch negeren op te heffen, te deblokkeren of Niet geïnteresseerd te wissen wanneer je op een beheerd account klikt, zet Ongedaan maken bij klik op de lijst aan. Je kunt dat nu of later doen in Instellingen."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Nu inschakelen"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Sluiten"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Beheerd account (zet Ongedaan maken bij klik op de lijst aan om vrij te geven)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Dit account op X vrijgeven? Als het nog bij een actief land-/regiofilter past, kan de extensie opnieuw ingrijpen tenzij je het op de uitzonderingslijst zet."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Vrijgeven + uitzonderingslijst (nooit opnieuw filteren)"
+  },
+  "pop_toast_release_once": {
+    "message": "Alleen deze keer"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Annuleren"
+  },
+  "toast_blocked": {
+    "message": "Geblokkeerd"
+  },
+  "toast_muted": {
+    "message": "Genegeerd"
+  },
+  "toast_notinterested": {
+    "message": "Niet geïnteresseerd"
+  },
+  "toast_reason_country": {
+    "message": "Landfilter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Regiofilter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Actiemeldingen"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Wat het doet: wanneer de extensie blokkeert, negeert of een post markeert als Niet geïnteresseerd, verschijnt onderaan X een korte toast met de accountnaam, @handle en profielfoto."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Voordelen wanneer aan: je ziet elke automatische actie meteen, met een aftelling van 6 seconden voordat de toast verdwijnt."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Als je het uitzet: acties lopen gewoon door; alleen de toast op de pagina is verborgen. De badgeflits in de werkbalk werkt nog."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Actiemeldingen op X in- of uitschakelen"
+  }
+}

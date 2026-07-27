@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Блокировать все твиты из этой страны или региона"
+  },
+  "ext_description": {
+    "message": "Определяет страну или регион аккаунтов X в вашей ленте (Об этом аккаунте)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Фильтр по стране"
+  },
+  "pop_heading": {
+    "message": "X - Блокировать все твиты из этой страны или региона"
+  },
+  "pop_lane_block": {
+    "message": "Блокировать"
+  },
+  "pop_lane_mute": {
+    "message": "Игнорировать"
+  },
+  "pop_lane_notinterested": {
+    "message": "Не интересно"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Включить или выключить колонку «Блокировать»"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Включить или выключить колонку «Игнорировать»"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Включить или выключить колонку «Не интересно»"
+  },
+  "pop_mode_warning_label": {
+    "message": "ВНИМАНИЕ:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Выбранные аккаунты блокируются в вашем аккаунте X. Их публикации больше не появятся ни в одном приложении X: на компьютере, Android, iOS или в вебе."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Выбранные аккаунты игнорируются в вашем аккаунте X. Их публикации больше не появятся ни в одном приложении X: на компьютере, Android, iOS или в вебе."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Публикации выбранных аккаунтов помечаются как «Не интересно» в вашем аккаунте X, чтобы X показывал их реже на компьютере, Android, iOS и в вебе."
+  },
+  "pop_regions_label": {
+    "message": "Регионы"
+  },
+  "pop_countries_label": {
+    "message": "Страны"
+  },
+  "pop_selected_count": {
+    "message": "Выбрано: $COUNT$",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Переключить регион"
+  },
+  "a11y_toggle_country": {
+    "message": "Переключить страну"
+  },
+  "pop_search_regions": {
+    "message": "Поиск регионов…"
+  },
+  "pop_search_countries": {
+    "message": "Поиск стран…"
+  },
+  "pop_search_no_results": {
+    "message": "Нет совпадений"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Заблокированные аккаунты"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Игнорируемые аккаунты"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Аккаунты «Не интересно»"
+  },
+  "pop_search_accounts": {
+    "message": "Поиск аккаунтов…"
+  },
+  "pop_managed_empty": {
+    "message": "Пока нет управляемых аккаунтов"
+  },
+  "pop_managed_mode_block": {
+    "message": "Блокировать"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Игнорировать"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Не интересно"
+  },
+  "a11y_release_account": {
+    "message": "Снять управляемый аккаунт"
+  },
+  "a11y_open_premium11": {
+    "message": "Открыть сайт Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Сведения о Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium активирован"
+  },
+  "pop_premium_chip_title": {
+    "message": "Просмотреть активированный доступ Premium."
+  },
+  "pop_premium_back": {
+    "message": "Назад"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Пожизненный Premium активирован"
+  },
+  "pop_premium_subtitle": {
+    "message": "Пользуйтесь полным набором Premium в X - Блокировать все твиты из этой страны или региона от Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Ваша подписка Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Пожизненный Premium активен"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Подарок разработчика"
+  },
+  "pop_premium_gift_message": {
+    "message": "Разработчик расширения подарил вам пожизненную подписку Premium (USD 29.99). Спасибо, что остаётесь пользователем X - Блокировать все твиты из этой страны или региона от Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Версия расширения"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Последнее обновление"
+  },
+  "pop_premium_fact_license": {
+    "message": "Срок лицензии Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Пожизненно"
+  },
+  "pop_premium_fact_features": {
+    "message": "Включённые функции"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Все"
+  },
+  "pop_settings_title": {
+    "message": "Настройки"
+  },
+  "pop_settings_btn_title": {
+    "message": "Открыть настройки"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Показывать страну аккаунта рядом с именем пользователя в ленте, «Обзор» и профилях"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Показывать флаг страны аккаунта рядом с именем пользователя в ленте, «Обзор» и профилях"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Примечание: расширение работает только когда X.com сообщает страну или регион аккаунта (Об этом аккаунте). Часто X не раскрывает эти данные, поэтому даже при включённой опции страна или регион могут не появиться рядом с именем. Это ограничения X.com, а не расширения."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Переключить метки стран в ленте"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Переключить флаги стран в ленте"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Более высокие колонки"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Делает списки регионов, стран и управляемых аккаунтов примерно в два–три раза выше и позволяет прокручивать весь popup, чтобы интерфейс был менее тесным. По умолчанию выкл."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Переключить более высокие колонки"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Локальный кэш стран"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Что делает: после успешного запроса «Об этом аккаунте» сохраняет страну или регион этого аккаунта на устройстве, чтобы позже использовать без повторного запроса к X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Плюсы при включении: меньше сетевых запросов, ниже риск лимитов, быстрее метки стран и авто-решения mute/block для уже виденных аккаунтов."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Если выключить: каждый запрос снова идёт в X — выше риск лимитов, медленнее метки и больше трафика при прокрутке. Существующий кэш остаётся на диске, но не используется, пока опцию не включат снова."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Память: очень лёгкий — около 100 000 пользователей ≈ 10 МБ, примерно размер одного современного MP3 на ПК. Сохраняются только успешные страны/регионы."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Переключить локальный кэш стран"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Аккаунтов в кэше"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Занято места (прибл.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Отмена по клику в списке"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Что делает: если включено, клик по управляемому аккаунту убирает его из списка и отменяет действие в X (снять игнор или разблокировать). Если выкл., клики по списку не освобождают аккаунты — только подсказка включить опцию."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Как работает: кратко открывает фоновую вкладку профиля, выполняет тот же поток меню ⋯, что для mute/block, и закрывает вкладку. Записи «Не интересно» только в списке (надёжной отмены в X нет)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Плюсы при включении: один клик очищает список и отменяет mute/block в вашем аккаунте X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Примечание: на мгновение откроется фоновая вкладка профиля, чтобы снять mute/block. По умолчанию выкл., чтобы случайный клик не открывал вкладки и не отменял действия."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Переключить отмену по клику в управляемом списке"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Чтобы автоматически снять игнор, разблокировать или убрать «Не интересно» по клику на управляемый аккаунт, включите «Отмена по клику в списке». Можно сейчас или позже в Настройках."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Включить сейчас"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Закрыть"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Управляемый аккаунт (включите «Отмена по клику в списке», чтобы снять)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Снять этот аккаунт в X? Если он всё ещё подходит под активный фильтр страны/региона, расширение может снова сработать, если не добавить его в белый список."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Снять + белый список (больше не фильтровать)"
+  },
+  "pop_toast_release_once": {
+    "message": "Только сейчас"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Отмена"
+  },
+  "toast_blocked": {
+    "message": "Заблокирован"
+  },
+  "toast_muted": {
+    "message": "В игноре"
+  },
+  "toast_notinterested": {
+    "message": "Не интересно"
+  },
+  "toast_reason_country": {
+    "message": "Фильтр страны: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Фильтр региона: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Уведомления о действиях"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Что делает: когда расширение блокирует, игнорирует или отмечает пост как «Не интересно», внизу X появляется короткий toast с именем, @ником и аватаром."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Плюсы при включении: вы видите каждое авто-действие сразу, с обратным отсчётом 6 секунд до исчезновения toast."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Если выключить: действия выполняются как обычно; скрыт только toast на странице. Мигание значка на панели инструментов сохраняется."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Переключить уведомления о действиях в X"
+  }
+}

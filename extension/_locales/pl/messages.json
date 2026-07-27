@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Blokuj wszystkie tweety z tego kraju lub regionu"
+  },
+  "ext_description": {
+    "message": "Wykrywa kraj lub region kont X na osi czasu (Informacje o tym koncie)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Filtr kraju"
+  },
+  "pop_heading": {
+    "message": "X - Blokuj wszystkie tweety z tego kraju lub regionu"
+  },
+  "pop_lane_block": {
+    "message": "Zablokuj"
+  },
+  "pop_lane_mute": {
+    "message": "Wycisz"
+  },
+  "pop_lane_notinterested": {
+    "message": "Nie interesuje mnie"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Włącz lub wyłącz kolumnę Zablokuj"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Włącz lub wyłącz kolumnę Wycisz"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Włącz lub wyłącz kolumnę Nie interesuje mnie"
+  },
+  "pop_mode_warning_label": {
+    "message": "OSTRZEŻENIE:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Wybrane konta są blokowane na Twoim koncie X. Ich posty nie pojawią się już w żadnej aplikacji X: na komputerze, Androidzie, iOS ani w sieci."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Wybrane konta są wyciszane na Twoim koncie X. Ich posty nie pojawią się już w żadnej aplikacji X: na komputerze, Androidzie, iOS ani w sieci."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Posty wybranych kont są oznaczane jako Nie interesuje mnie na Twoim koncie X, więc X pokazuje ich mniej na komputerze, Androidzie, iOS i w sieci."
+  },
+  "pop_regions_label": {
+    "message": "Regiony"
+  },
+  "pop_countries_label": {
+    "message": "Kraje"
+  },
+  "pop_selected_count": {
+    "message": "Wybrano: $COUNT$",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Przełącz region"
+  },
+  "a11y_toggle_country": {
+    "message": "Przełącz kraj"
+  },
+  "pop_search_regions": {
+    "message": "Szukaj regionów…"
+  },
+  "pop_search_countries": {
+    "message": "Szukaj krajów…"
+  },
+  "pop_search_no_results": {
+    "message": "Brak wyników"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Zablokowane konta"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Wyciszone konta"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Konta Nie interesuje mnie"
+  },
+  "pop_search_accounts": {
+    "message": "Szukaj kont…"
+  },
+  "pop_managed_empty": {
+    "message": "Brak jeszcze zarządzanych kont"
+  },
+  "pop_managed_mode_block": {
+    "message": "Zablokuj"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Wycisz"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Nie interesuje mnie"
+  },
+  "a11y_release_account": {
+    "message": "Zwolnij zarządzane konto"
+  },
+  "a11y_open_premium11": {
+    "message": "Otwórz stronę Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Dane Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktywne"
+  },
+  "pop_premium_chip_title": {
+    "message": "Zobacz aktywowany dostęp Premium."
+  },
+  "pop_premium_back": {
+    "message": "Wstecz"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Dożywotnie Premium aktywne"
+  },
+  "pop_premium_subtitle": {
+    "message": "Korzystaj z pełnego pakietu Premium w X - Blokuj wszystkie tweety z tego kraju lub regionu od Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Twoja subskrypcja Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Dożywotnie Premium aktywne"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Prezent od dewelopera"
+  },
+  "pop_premium_gift_message": {
+    "message": "Twórca rozszerzenia podarował Ci dożywotnią subskrypcję Premium (USD 29.99). Dziękujemy, że korzystasz z X - Blokuj wszystkie tweety z tego kraju lub regionu od Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Wersja rozszerzenia"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Ostatnia aktualizacja"
+  },
+  "pop_premium_fact_license": {
+    "message": "Ważność licencji Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Dożywotnia"
+  },
+  "pop_premium_fact_features": {
+    "message": "Włączone funkcje"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Wszystkie"
+  },
+  "pop_settings_title": {
+    "message": "Ustawienia"
+  },
+  "pop_settings_btn_title": {
+    "message": "Otwórz ustawienia"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Pokazuj kraj konta obok nazwy użytkownika w kanale, Przeglądaj i profilach"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Pokazuj flagę kraju konta obok nazwy użytkownika w kanale, Przeglądaj i profilach"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Uwaga: to rozszerzenie działa tylko, gdy X.com podaje kraj lub region konta (Informacje o tym koncie). Często X nie ujawnia tych danych, więc nawet przy włączonej opcji kraj lub region może nie pojawić się obok nazwy. Te ograniczenia wynikają z X.com, nie z tego rozszerzenia."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Przełącz etykiety krajów na osi czasu"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Przełącz flagi krajów na osi czasu"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Wyższe kolumny"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Sprawia, że listy regionów, krajów i zarządzanych kont są około dwa–trzy razy wyższe i pozwala przewijać cały popup, by układ był mniej ciasny. Domyślnie wyłączone."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Przełącz wyższe kolumny"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Lokalna pamięć podręczna krajów"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Co robi: po udanym odczycie «Informacje o tym koncie» zapisuje kraj lub region tego konta na tym urządzeniu, by później użyć go bez ponownego pytania X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Korzyści przy włączeniu: mniej zapytań sieciowych, mniejsze ryzyko limitów, szybsze etykiety krajów oraz automatyczne decyzje wycisz/blokuj dla już widzianych kont."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Po wyłączeniu: każde odpytanie idzie znów do X — większe ryzyko limitów, wolniejsze etykiety i większe zużycie danych przy przewijaniu. Istniejąca pamięć zostaje na dysku, ale nie jest używana, dopóki nie włączysz opcji ponownie."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Pamięć: bardzo lekka — ok. 100 000 użytkowników ≈ 10 MB, mniej więcej rozmiar jednego nowoczesnego MP3 na PC. Zapisuje tylko udane kraje/regiony."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Przełącz lokalną pamięć podręczną krajów"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Konta w pamięci"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Zajęte miejsce (ok.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Cofnij po kliknięciu na liście"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Co robi: gdy włączone, kliknięcie zarządzanego konta usuwa je z listy i cofa akcję w X (odwycisz lub odblokuj). Gdy wyłączone, kliknięcia na liście nie zwalniają kont — pokazują tylko wskazówkę, by włączyć opcję."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Jak działa: krótko otwiera kartę w tle do profilu, wykonuje ten sam przepływ menu ⋯ co przy wycisz/blokuj i zamyka kartę. Wpisy Nie interesuje mnie są tylko na liście w X (brak niezawodnego cofania)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Korzyści przy włączeniu: jedno kliknięcie czyści listę i cofa wycisz/blokuj na Twoim koncie X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Uwaga: na chwilę otworzy się karta profilu w tle, by rozszerzenie mogło odwyciszyć/odblokować. Domyślnie wyłączone, by przypadkowe kliknięcie nie otwierało kart ani nie cofało akcji."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Przełącz cofanie po kliknięciu na liście zarządzanej"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Aby automatycznie odwyciszyć, odblokować lub usunąć Nie interesuje mnie po kliknięciu zarządzanego konta, włącz Cofnij po kliknięciu na liście. Możesz to zrobić teraz lub później w Ustawieniach."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Włącz teraz"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Zamknij"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Konto zarządzane (włącz Cofnij po kliknięciu na liście, by zwolnić)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Zwolnić to konto w X? Jeśli nadal pasuje do aktywnego filtra kraju/regionu, rozszerzenie może znów zadziałać, chyba że dodasz je do białej listy."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Zwolnij + biała lista (nie filtruj ponownie)"
+  },
+  "pop_toast_release_once": {
+    "message": "Tylko tym razem"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Anuluj"
+  },
+  "toast_blocked": {
+    "message": "Zablokowano"
+  },
+  "toast_muted": {
+    "message": "Wyciszono"
+  },
+  "toast_notinterested": {
+    "message": "Nie interesuje mnie"
+  },
+  "toast_reason_country": {
+    "message": "Filtr kraju: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Filtr regionu: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Powiadomienia o akcjach"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Co robi: gdy rozszerzenie blokuje, wycisza lub oznacza post jako Nie interesuje mnie, na dole X pojawia się krótki toast z nazwą konta, @handle i zdjęciem profilowym."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Korzyści przy włączeniu: widzisz każdą automatyczną akcję od razu, z odliczaniem 6 sekund zanim toast zniknie."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Po wyłączeniu: akcje działają jak zwykle; ukryty jest tylko toast na stronie. Miganie odznaki na pasku narzędzi nadal działa."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Przełącz powiadomienia o akcjach w X"
+  }
+}

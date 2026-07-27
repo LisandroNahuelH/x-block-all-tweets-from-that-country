@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - O ülke veya bölgeden tüm tweetleri engelle"
+  },
+  "ext_description": {
+    "message": "Zaman akışındaki X hesaplarının ülke veya bölgesini algılar (Bu hesap hakkında)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Ülke filtresi"
+  },
+  "pop_heading": {
+    "message": "X - O ülke veya bölgeden tüm tweetleri engelle"
+  },
+  "pop_lane_block": {
+    "message": "Engelle"
+  },
+  "pop_lane_mute": {
+    "message": "Sessize al"
+  },
+  "pop_lane_notinterested": {
+    "message": "İlgilenmiyorum"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Engelle sütununu aç veya kapat"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Sessize al sütununu aç veya kapat"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "İlgilenmiyorum sütununu aç veya kapat"
+  },
+  "pop_mode_warning_label": {
+    "message": "UYARI:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Seçilen hesaplar X hesabınızda engellenir. Gönderileri masaüstü, Android, iOS veya web dahil hiçbir X uygulamanızda görünmez."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Seçilen hesaplar X hesabınızda sessize alınır. Gönderileri masaüstü, Android, iOS veya web dahil hiçbir X uygulamanızda görünmez."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Seçilen hesapların gönderileri X hesabınızda İlgilenmiyorum olarak işaretlenir; X bunları masaüstü, Android, iOS ve webde daha az gösterir."
+  },
+  "pop_regions_label": {
+    "message": "Bölgeler"
+  },
+  "pop_countries_label": {
+    "message": "Ülkeler"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ seçili",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Bölgeyi değiştir"
+  },
+  "a11y_toggle_country": {
+    "message": "Ülkeyi değiştir"
+  },
+  "pop_search_regions": {
+    "message": "Bölge ara…"
+  },
+  "pop_search_countries": {
+    "message": "Ülke ara…"
+  },
+  "pop_search_no_results": {
+    "message": "Eşleşme yok"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Engellenen hesaplar"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Sessize alınan hesaplar"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "İlgilenmiyorum hesapları"
+  },
+  "pop_search_accounts": {
+    "message": "Hesap ara…"
+  },
+  "pop_managed_empty": {
+    "message": "Henüz yönetilen hesap yok"
+  },
+  "pop_managed_mode_block": {
+    "message": "Engelle"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Sessize al"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "İlgilenmiyorum"
+  },
+  "a11y_release_account": {
+    "message": "Yönetilen hesabı bırak"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11 web sitesini aç"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium bilgileri"
+  },
+  "pop_premium_chip": {
+    "message": "Premium etkin"
+  },
+  "pop_premium_chip_title": {
+    "message": "Etkinleştirilmiş Premium erişiminizi görüntüleyin."
+  },
+  "pop_premium_back": {
+    "message": "Geri"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Ömür boyu Premium etkin"
+  },
+  "pop_premium_subtitle": {
+    "message": "Premium11’in X - O ülke veya bölgeden tüm tweetleri engelle ürününde tam Premium paketinin keyfini çıkarın."
+  },
+  "pop_premium_status_title": {
+    "message": "Premium aboneliğiniz"
+  },
+  "pop_premium_status_active": {
+    "message": "Ömür boyu Premium aktif"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Geliştirici hediyesi"
+  },
+  "pop_premium_gift_message": {
+    "message": "Uzantı geliştiricisi size ömür boyu Premium abonelik hediye etti (USD 29.99). Premium11’in X - O ülke veya bölgeden tüm tweetleri engelle ürününü kullandığınız için teşekkürler."
+  },
+  "pop_premium_fact_version": {
+    "message": "Uzantı sürümü"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Son güncelleme"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium lisans süresi"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Ömür boyu"
+  },
+  "pop_premium_fact_features": {
+    "message": "Etkin özellikler"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Tümü"
+  },
+  "pop_settings_title": {
+    "message": "Ayarlar"
+  },
+  "pop_settings_btn_title": {
+    "message": "Ayarları aç"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Akış, Keşfet ve profillerde kullanıcı adının yanında hesap ülkesini göster"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Akış, Keşfet ve profillerde kullanıcı adının yanında hesap ülke bayrağını göster"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Not: Bu uzantı yalnızca X.com bir hesap için ülke veya bölge bildirdiğinde çalışır (Bu hesap hakkında). X çoğu zaman bu bilgiyi göstermez; seçenek açık olsa bile adın yanında ülke veya bölge görünmeyebilir. Bu sınırlar X.com’dan kaynaklanır, bu uzantıdan değil."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Zaman akışında ülke etiketlerini aç veya kapat"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Zaman akışında ülke bayraklarını aç veya kapat"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Daha yüksek sütunlar"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Bölge, ülke ve yönetilen hesap listelerini yaklaşık iki-üç kat yükseltir ve tüm popup’ı kaydırılabilir yaparak düzeni daha ferah hisseder. Varsayılan kapalı."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Daha yüksek sütun düzenini aç veya kapat"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Yerel ülke önbelleği"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Ne yapar: Başarılı bir «Bu hesap hakkında» sorgusundan sonra o hesabın ülke veya bölgesini bu cihaza kaydeder; sonra X’e yeniden sormadan yeniden kullanır."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Açıkken faydalar: Daha az ağ çağrısı, daha düşük hız sınırı riski, daha hızlı ülke etiketleri ve daha önce gördüğünüz hesaplar için otomatik sessize alma/engelleme kararları."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Kapatırsanız: Her sorgu yeniden X’e gider — daha fazla hız sınırı riski, daha yavaş etiketler ve kaydırırken daha fazla veri. Mevcut önbellek diskte kalır ama yeniden açana kadar kullanılmaz."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Depolama: Çok hafif — yaklaşık 100.000 kullanıcı ≈ 10 MB, bilgisayarınızdaki modern bir MP3 boyutu kadar. Yalnızca başarılı ülke/bölge kayıtları saklanır."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Yerel ülke önbelleğini aç veya kapat"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Önbellekteki hesaplar"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Kullanılan depolama (yakl.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Listede tıklayınca geri al"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Ne yapar: Açıkken yönetilen bir hesaba tıklamak onu listeden çıkarır ve X’teki eylemi geri alır (sessizi kaldır veya engeli kaldır). Kapalıyken liste tıklamaları hesapları serbest bırakmaz — yalnızca bu seçeneği açmanız için ipucu gösterir."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Nasıl çalışır: Profile kısa bir arka plan sekmesi açar, sessize al/engelle için kullanılan ⋯ menü akışını çalıştırır ve sekmeyi kapatır. İlgilenmiyorum girdileri X’te yalnızca listedir (güvenilir geri alma yoktur)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Açıkken faydalar: Tek tıkla listeyi temizler ve X hesabınızdaki sessize alma/engellemeyi geri alır."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Not: Sessizi kaldırma/engeli kaldırma için kısa süre arka planda bir profil sekmesi açılır. Yanlışlıkla sekme açılmasın veya eylemler geri alınmasın diye varsayılan kapalıdır."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Yönetilen listede tıklayınca geri almayı aç veya kapat"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Yönetilen bir hesaba tıklayınca otomatik olarak sessizi kaldırmak, engeli kaldırmak veya İlgilenmiyorum’u temizlemek için Listede tıklayınca geri al’ı açın. Şimdi veya sonra Ayarlar’dan etkinleştirebilirsiniz."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Şimdi etkinleştir"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Kapat"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Yönetilen hesap (bırakmak için Listede tıklayınca geri al’ı açın)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Bu hesabı X’te bırakılsın mı? Hâlâ etkin bir ülke/bölge filtresiyle eşleşiyorsa, beyaz listeye almadığınız sürece uzantı yeniden işlem yapabilir."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Bırak + beyaz liste (yeniden filtreleme)"
+  },
+  "pop_toast_release_once": {
+    "message": "Yalnızca bu sefer"
+  },
+  "pop_toast_release_cancel": {
+    "message": "İptal"
+  },
+  "toast_blocked": {
+    "message": "Engellendi"
+  },
+  "toast_muted": {
+    "message": "Sessize alındı"
+  },
+  "toast_notinterested": {
+    "message": "İlgilenmiyorum"
+  },
+  "toast_reason_country": {
+    "message": "Ülke filtresi: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Bölge filtresi: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "İşlem bildirimleri"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Ne yapar: Uzantı engellediğinde, sessize aldığında veya bir gönderiyi İlgilenmiyorum olarak işaretlediğinde X’in altında hesap adı, @kullanıcı adı ve profil fotoğrafı olan kısa bir toast görünür."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Açıkken faydalar: Her otomatik işlemi anında görürsünüz; toast 6 saniyelik geri sayımla kaybolur."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Kapatırsanız: İşlemler normal devam eder; yalnızca sayfadaki toast gizlenir. Araç çubuğu rozet flaşı çalışmaya devam eder."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "X’te işlem bildirimlerini aç veya kapat"
+  }
+}
