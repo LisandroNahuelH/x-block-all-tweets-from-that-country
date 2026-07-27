@@ -7,9 +7,11 @@
     "build": "node scripts/build.mjs",
     "i18n:check": "node scripts/check-i18n.mjs",
     "i18n:scaffold": "node scripts/scaffold-locale.mjs",
+    "i18n:apply": "node scripts/apply-locale-overrides.mjs",
+    "i18n:audit": "node scripts/audit-i18n-translations.mjs",
     "agents:sync": "node scripts/agents-sync.mjs",
     "agents:verify": "node scripts/agents-verify.mjs",
-    "verify": "npm run agents:verify && npm run i18n:check && npm run build"
+    "verify": "npm run agents:verify && npm run i18n:check && npm run i18n:audit && npm run build"
   },
   "engines": {
     "node": ">=18"

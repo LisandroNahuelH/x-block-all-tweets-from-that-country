@@ -1,0 +1,4 @@
+{
+  "identicalMessageKeys": [],
+  "notes": "Keys allowed to remain identical to English in non-en locales. Add product brand/token keys only when deliberate (e.g. short 'Premium'). en_AU/en_GB/en_US are skipped by audit as English variants."
+}
