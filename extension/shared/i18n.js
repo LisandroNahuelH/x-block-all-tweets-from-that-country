@@ -45,6 +45,7 @@
     pop_managed_mode_notinterested: 'Not interested',
     a11y_release_account: 'Release managed account',
     a11y_open_premium11: 'Open Premium11 website',
+    a11y_premium_facts: 'Premium facts',
     pop_premium_chip: 'Premium Activated',
     pop_premium_chip_title: 'View your activated Premium access.',
     pop_premium_back: 'Back',

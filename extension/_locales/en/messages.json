@@ -143,6 +143,10 @@
     "message": "Open Premium11 website",
     "description": "Accessible label for the Premium11 brand link in the popup"
   },
+  "a11y_premium_facts": {
+    "message": "Premium facts",
+    "description": "Accessible label for the Premium status facts list (version, last updated, license, features)"
+  },
   "pop_premium_chip": {
     "message": "Premium Activated",
     "description": "Toolbar chip label for lifetime premium gift"
@@ -288,7 +292,7 @@
     "description": "Undo-on-click note: what it does"
   },
   "pop_opt_undo_on_list_click_how": {
-    "message": "2. How it works: Opens a short-lived background tab to that profile, runs the same ⋯ menu flow used for mute/block, then closes the tab. Not interested entries are always list-only (X has no reliable undo).",
+    "message": "2. How it works: Opens a short-lived background tab to that profile, runs the same ⋯ menu flow used for mute/block, then closes the tab. Not interested entries are list-only on X (no reliable undo).",
     "description": "Undo-on-click note: how it works"
   },
   "pop_opt_undo_on_list_click_benefits": {
