@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - সেই দেশ বা অঞ্চলের সব টুইট ব্লক করুন"
+  },
+  "ext_description": {
+    "message": "আপনার টাইমলাইনে X অ্যাকাউন্টের দেশ বা অঞ্চল শনাক্ত করুন (এই অ্যাকাউন্ট সম্পর্কে)।"
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "দেশ ফিল্টার"
+  },
+  "pop_heading": {
+    "message": "X - সেই দেশ বা অঞ্চলের সব টুইট ব্লক করুন"
+  },
+  "pop_lane_block": {
+    "message": "ব্লক"
+  },
+  "pop_lane_mute": {
+    "message": "মিউট"
+  },
+  "pop_lane_notinterested": {
+    "message": "আগ্রহী নই"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "ব্লক কলাম চালু বা বন্ধ করুন"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "মিউট কলাম চালু বা বন্ধ করুন"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "আগ্রহী নই কলাম চালু বা বন্ধ করুন"
+  },
+  "pop_mode_warning_label": {
+    "message": "সতর্কতা:"
+  },
+  "pop_mode_hint_block": {
+    "message": "নির্বাচিত অ্যাকাউন্টগুলো আপনার X অ্যাকাউন্টে ব্লক হয়। তাদের পোস্ট আর কোনো X অ্যাপে দেখা যাবে না: ডেস্কটপ, Android, iOS বা ওয়েব।"
+  },
+  "pop_mode_hint_mute": {
+    "message": "নির্বাচিত অ্যাকাউন্টগুলো আপনার X অ্যাকাউন্টে মিউট হয়। তাদের পোস্ট আর কোনো X অ্যাপে দেখা যাবে না: ডেস্কটপ, Android, iOS বা ওয়েব।"
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "নির্বাচিত অ্যাকাউন্টের পোস্ট আপনার X অ্যাকাউন্টে «আগ্রহী নই» চিহ্নিত হয়, যাতে X ডেস্কটপ, Android, iOS ও ওয়েবে কম দেখায়।"
+  },
+  "pop_regions_label": {
+    "message": "অঞ্চল"
+  },
+  "pop_countries_label": {
+    "message": "দেশ"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ নির্বাচিত",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "অঞ্চল টগল করুন"
+  },
+  "a11y_toggle_country": {
+    "message": "দেশ টগল করুন"
+  },
+  "pop_search_regions": {
+    "message": "অঞ্চল খুঁজুন…"
+  },
+  "pop_search_countries": {
+    "message": "দেশ খুঁজুন…"
+  },
+  "pop_search_no_results": {
+    "message": "কোনো মিল নেই"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "ব্লক করা অ্যাকাউন্ট"
+  },
+  "pop_muted_accounts_label": {
+    "message": "মিউট করা অ্যাকাউন্ট"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "আগ্রহী নই অ্যাকাউন্ট"
+  },
+  "pop_search_accounts": {
+    "message": "অ্যাকাউন্ট খুঁজুন…"
+  },
+  "pop_managed_empty": {
+    "message": "এখনও কোনো পরিচালিত অ্যাকাউন্ট নেই"
+  },
+  "pop_managed_mode_block": {
+    "message": "ব্লক"
+  },
+  "pop_managed_mode_mute": {
+    "message": "মিউট"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "আগ্রহী নই"
+  },
+  "a11y_release_account": {
+    "message": "পরিচালিত অ্যাকাউন্ট ছেড়ে দিন"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11 ওয়েবসাইট খুলুন"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium বিবরণ"
+  },
+  "pop_premium_chip": {
+    "message": "Premium সক্রিয়"
+  },
+  "pop_premium_chip_title": {
+    "message": "আপনার সক্রিয় Premium অ্যাক্সেস দেখুন।"
+  },
+  "pop_premium_back": {
+    "message": "পিছনে"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "আজীবন Premium সক্রিয়"
+  },
+  "pop_premium_subtitle": {
+    "message": "Premium11-এর X - সেই দেশ বা অঞ্চলের সব টুইট ব্লক করুন-এ সম্পূর্ণ Premium সুইট উপভোগ করুন।"
+  },
+  "pop_premium_status_title": {
+    "message": "আপনার Premium সাবস্ক্রিপশন"
+  },
+  "pop_premium_status_active": {
+    "message": "আজীবন Premium সক্রিয়"
+  },
+  "pop_premium_gift_badge": {
+    "message": "ডেভেলপার উপহার"
+  },
+  "pop_premium_gift_message": {
+    "message": "এক্সটেনশন ডেভেলপার আপনাকে আজীবন Premium সাবস্ক্রিপশন (USD 29.99) উপহার দিয়েছেন। Premium11-এর X - সেই দেশ বা অঞ্চলের সব টুইট ব্লক করুন-এর বিশ্বস্ত ব্যবহারকারী হওয়ার জন্য ধন্যবাদ।"
+  },
+  "pop_premium_fact_version": {
+    "message": "এক্সটেনশন সংস্করণ"
+  },
+  "pop_premium_fact_updated": {
+    "message": "সর্বশেষ আপডেট"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium লাইসেন্স বৈধতা"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "আজীবন"
+  },
+  "pop_premium_fact_features": {
+    "message": "সক্রিয় ফিচার"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "সব"
+  },
+  "pop_settings_title": {
+    "message": "সেটিংস"
+  },
+  "pop_settings_btn_title": {
+    "message": "সেটিংস খুলুন"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "ফিড, এক্সপ্লোর ও প্রোফাইলে ব্যবহারকারীর নামের পাশে অ্যাকাউন্টের দেশ দেখান"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "ফিড, এক্সপ্লোর ও প্রোফাইলে ব্যবহারকারীর নামের পাশে অ্যাকাউন্টের দেশের পতাকা দেখান"
+  },
+  "pop_opt_show_country_note": {
+    "message": "নোট: এই এক্সটেনশন তখনই কাজ করে যখন X.com কোনো অ্যাকাউন্টের জন্য দেশ বা অঞ্চলের তথ্য দেয় (এই অ্যাকাউন্ট সম্পর্কে)। X প্রায়ই সেই তথ্য প্রকাশ করে না, তাই বিকল্প চালু থাকলেও নামের পাশে দেশ বা অঞ্চল নাও দেখা যেতে পারে। এই সীমা X.com থেকে, এই এক্সটেনশন থেকে নয়।"
+  },
+  "a11y_toggle_show_country": {
+    "message": "টাইমলাইনে দেশের লেবেল টগল করুন"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "টাইমলাইনে দেশের পতাকা টগল করুন"
+  },
+  "pop_opt_taller_columns": {
+    "message": "লম্বা কলাম"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "অঞ্চল, দেশ ও পরিচালিত-অ্যাকাউন্ট তালিকা প্রায় দুই থেকে তিন গুণ লম্বা করে এবং পুরো পপআপ স্ক্রল করতে দেয় যাতে লেআউট কম ঠাসা লাগে। ডিফল্টে বন্ধ।"
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "লম্বা কলাম লেআউট টগল করুন"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "স্থানীয় দেশ ক্যাশ"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. এটি কী করে: সফল «এই অ্যাকাউন্ট সম্পর্কে» অনুসন্ধানের পর সেই অ্যাকাউন্টের দেশ বা অঞ্চল এই ডিভাইসে সংরক্ষণ করে যাতে এক্সটেনশন পরে আবার X-কে না জিজ্ঞেস করে ব্যবহার করতে পারে।"
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. চালু থাকলে সুবিধা: কম নেটওয়ার্ক কল, রেট-লিমিটের কম ঝুঁকি, এবং আগে দেখা অ্যাকাউন্টের জন্য দ্রুত দেশ লেবেল ও স্বয়ংক্রিয় মিউট/ব্লক সিদ্ধান্ত।"
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. বন্ধ করলে: প্রতিটি অনুসন্ধান আবার X-এ যায় — বেশি রেট-লিমিট ঝুঁকি, ধীর লেবেল, স্ক্রলের সময় বেশি ডেটা। বিদ্যমান ক্যাশ ডিস্কে থাকে কিন্তু চালু না করা পর্যন্ত অব্যবহৃত।"
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. স্টোরেজ: খুব হালকা — প্রায় ১০০,০০০ ব্যবহারকারী ≈ ১০ MB, আপনার PC-তে একটি আধুনিক MP3-এর মতো। শুধু সফল দেশ/অঞ্চল ফলাফল সংরক্ষিত হয়।"
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "স্থানীয় দেশ ক্যাশ টগল করুন"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "ক্যাশ করা অ্যাকাউন্ট"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "ব্যবহৃত স্টোরেজ (আনুমানিক)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "তালিকায় ক্লিকে পূর্বাবস্থা"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. এটি কী করে: চালু থাকলে, পরিচালিত অ্যাকাউন্টে ক্লিক তালিকা থেকে সরায় এবং X-এ কাজ পূর্বাবস্থায় ফেরায় (আনমিউট বা আনব্লক)। বন্ধ থাকলে ক্লিক অ্যাকাউন্ট ছাড়ে না — শুধু এই বিকল্প চালুর টিপ দেখায়।"
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. কীভাবে কাজ করে: সেই প্রোফাইলে স্বল্পস্থায়ী ব্যাকগ্রাউন্ড ট্যাব খোলে, মিউট/ব্লকের একই ⋯ মেনু প্রবাহ চালায়, তারপর ট্যাব বন্ধ করে। «আগ্রহী নই» এন্ট্রি X-এ শুধু তালিকা (নির্ভরযোগ্য পূর্বাবস্থা নেই)।"
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. চালু থাকলে সুবিধা: এক ক্লিকে তালিকা পরিষ্কার এবং আপনার X অ্যাকাউন্টে মিউট/ব্লক উল্টোয়।"
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. নোট: এক্সটেনশন আনমিউট/আনব্লক করতে ব্যাকগ্রাউন্ড প্রোফাইল ট্যাব সাময়িক খুলবে। ডিফল্টে বন্ধ যাতে ভুল ক্লিকে ট্যাব না খোলে বা অনিচ্ছায় কাজ না উল্টোয়।"
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "পরিচালিত তালিকায় ক্লিকে পূর্বাবস্থা টগল করুন"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "পরিচালিত অ্যাকাউন্টে ক্লিক করলে স্বয়ংক্রিয় আনমিউট, আনব্লক বা «আগ্রহী নই» মুছতে «তালিকায় ক্লিকে পূর্বাবস্থা» চালু করুন। এখন বা পরে সেটিংসে সক্রিয় করতে পারেন।"
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "এখনই সক্রিয় করুন"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "বাতিল"
+  },
+  "a11y_managed_account_locked": {
+    "message": "পরিচালিত অ্যাকাউন্ট (ছাড়তে তালিকায় ক্লিকে পূর্বাবস্থা চালু করুন)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "এই অ্যাকাউন্ট X-এ ছাড়বেন? সক্রিয় দেশ/অঞ্চল ফিল্টারের সাথে মিল থাকলে, হোয়াইটলিস্ট না করলে এক্সটেনশন আবার কাজ করতে পারে।"
+  },
+  "pop_toast_release_whitelist": {
+    "message": "ছাড়ুন + হোয়াইটলিস্ট (আর ফিল্টার নয়)"
+  },
+  "pop_toast_release_once": {
+    "message": "শুধু এবার"
+  },
+  "pop_toast_release_cancel": {
+    "message": "বাতিল"
+  },
+  "toast_blocked": {
+    "message": "ব্লক করা হয়েছে"
+  },
+  "toast_muted": {
+    "message": "মিউট করা হয়েছে"
+  },
+  "toast_notinterested": {
+    "message": "আগ্রহী নই"
+  },
+  "toast_reason_country": {
+    "message": "দেশ ফিল্টার: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "অঞ্চল ফিল্টার: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "অ্যাকশন বিজ্ঞপ্তি"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. এটি কী করে: এক্সটেনশন ব্লক, মিউট বা পোস্ট «আগ্রহী নই» করলে X-এর নিচে সেই অ্যাকাউন্টের নাম, @হ্যান্ডেল ও প্রোফাইল ছবিসহ ছোট টোস্ট দেখায়।"
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. চালু থাকলে সুবিধা: প্রতিটি স্বয়ংক্রিয় কাজ ঘটার সাথে সাথে দেখেন, টোস্ট অদৃশ্য হওয়ার আগে ৬ সেকেন্ডের কাউন্টডাউন।"
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. বন্ধ করলে: কাজগুলো স্বাভাবিক চলে; শুধু পৃষ্ঠার টোস্ট লুকানো থাকে। টুলবার ব্যাজ ফ্ল্যাশ এখনও কাজ করে।"
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "X-এ অ্যাকশন বিজ্ঞপ্তি টগল করুন"
+  }
+}

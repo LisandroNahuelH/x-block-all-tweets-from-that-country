@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Bloķēt visus tvītus no šīs valsts vai reģiona"
+  },
+  "ext_description": {
+    "message": "Nosaka X kontu valsti vai reģionu jūsu laika skalā (Par šo kontu)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Valsts filtrs"
+  },
+  "pop_heading": {
+    "message": "X - Bloķēt visus tvītus no šīs valsts vai reģiona"
+  },
+  "pop_lane_block": {
+    "message": "Bloķēt"
+  },
+  "pop_lane_mute": {
+    "message": "Apklusināt"
+  },
+  "pop_lane_notinterested": {
+    "message": "Neinteresē"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Ieslēgt vai izslēgt kolonnu Bloķēt"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Ieslēgt vai izslēgt kolonnu Apklusināt"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Ieslēgt vai izslēgt kolonnu Neinteresē"
+  },
+  "pop_mode_warning_label": {
+    "message": "BRĪDINĀJUMS:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Atlasītie konti tiek bloķēti jūsu X kontā. To ieraksti vairs neparādīsies nevienā jūsu X lietotnē: darbvirsmā, Android, iOS vai tīmeklī."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Atlasītie konti tiek apklusināti jūsu X kontā. To ieraksti vairs neparādīsies nevienā jūsu X lietotnē: darbvirsmā, Android, iOS vai tīmeklī."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Atlasīto kontu ieraksti jūsu X kontā tiek atzīmēti kā Neinteresē, lai X rādītu mazāk no tiem darbvirsmā, Android, iOS un tīmeklī."
+  },
+  "pop_regions_label": {
+    "message": "Reģioni"
+  },
+  "pop_countries_label": {
+    "message": "Valstis"
+  },
+  "pop_selected_count": {
+    "message": "Atlasīts: $COUNT$",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Pārslēgt reģionu"
+  },
+  "a11y_toggle_country": {
+    "message": "Pārslēgt valsti"
+  },
+  "pop_search_regions": {
+    "message": "Meklēt reģionus…"
+  },
+  "pop_search_countries": {
+    "message": "Meklēt valstis…"
+  },
+  "pop_search_no_results": {
+    "message": "Nav rezultātu"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Bloķētie konti"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Apklusinātie konti"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Konti Neinteresē"
+  },
+  "pop_search_accounts": {
+    "message": "Meklēt kontus…"
+  },
+  "pop_managed_empty": {
+    "message": "Vēl nav pārvaldītu kontu"
+  },
+  "pop_managed_mode_block": {
+    "message": "Bloķēt"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Apklusināt"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Neinteresē"
+  },
+  "a11y_release_account": {
+    "message": "Atbrīvot pārvaldīto kontu"
+  },
+  "a11y_open_premium11": {
+    "message": "Atvērt Premium11 vietni"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium dati"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktivizēts"
+  },
+  "pop_premium_chip_title": {
+    "message": "Skatīt aktivizēto Premium piekļuvi."
+  },
+  "pop_premium_back": {
+    "message": "Atpakaļ"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Mūža Premium aktivizēts"
+  },
+  "pop_premium_subtitle": {
+    "message": "Baudiet pilnu Premium komplektu paplašinājumā X - Bloķēt visus tvītus no šīs valsts vai reģiona no Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Jūsu Premium abonements"
+  },
+  "pop_premium_status_active": {
+    "message": "Mūža Premium aktīvs"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Izstrādātāja dāvana"
+  },
+  "pop_premium_gift_message": {
+    "message": "Paplašinājuma izstrādātājs jums ir uzdāvinājis mūža Premium abonementu (USD 29.99). Paldies, ka esat lojāls lietotājs: X - Bloķēt visus tvītus no šīs valsts vai reģiona no Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Paplašinājuma versija"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Pēdējoreiz atjaunināts"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium licences derīgums"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Mūža"
+  },
+  "pop_premium_fact_features": {
+    "message": "Iespējotās funkcijas"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Visas"
+  },
+  "pop_settings_title": {
+    "message": "Iestatījumi"
+  },
+  "pop_settings_btn_title": {
+    "message": "Atvērt iestatījumus"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Rādīt konta valsti blakus lietotājvārdam plūsmā, Izpētīt un profilos"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Rādīt konta valsts karogu blakus lietotājvārdam plūsmā, Izpētīt un profilos"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Piezīme: Šis paplašinājums darbojas tikai tad, kad X.com norāda konta valsti vai reģionu (Par šo kontu). X bieži neatklāj šos datus, tāpēc pat ar ieslēgtu opciju valsts vai reģions var neparādīties pie vārda. Šie ierobežojumi nāk no X.com, ne no šī paplašinājuma."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Pārslēgt valsts etiķetes laika skalā"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Pārslēgt valstu karogus laika skalā"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Augstākas kolonnas"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Padara reģionu, valstu un pārvaldīto kontu sarakstus aptuveni divas līdz trīs reizes augstākus un ļauj ritināt visu uznirstošo logu, lai izkārtojums justos mazāk saspiests. Pēc noklusējuma izslēgts."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Pārslēgt augstākas kolonnas"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Lokālā valstu kešatmiņa"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Ko tas dara: Pēc veiksmīga «Par šo kontu» vaicājuma saglabā konta valsti vai reģionu šajā ierīcē, lai paplašinājums vēlāk varētu to atkārtoti izmantot, nevaicājot X no jauna."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Ieguvumi, kad ieslēgts: Mazāk tīkla pieprasījumu, mazāks rate limit risks un ātrākas valsts etiķetes, kā arī automātiski apklusināt/bloķēt lēmumi jau redzētiem kontiem."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Ja izslēdzat: Katrs vaicājums atkal iet uz X — lielāks ierobežojumu risks, lēnākas etiķetes un lielāka datu izmantošana ritināšanas laikā. Esošā kešatmiņa paliek diskā, bet netiek izmantota, līdz atkal ieslēdzat opciju."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Krātuve: Ļoti viegla — apmēram 100 000 lietotāju ≈ 10 MB, aptuveni viena mūsdienu MP3 izmērs datorā. Tiek saglabāti tikai veiksmīgi valsts/reģiona trāpījumi."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Pārslēgt lokālo valstu kešatmiņu"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Kešotie konti"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Izmantotā krātuve (aptuveni)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Atsaukt ar klikšķi sarakstā"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Ko tas dara: Kad ieslēgts, klikšķis uz pārvaldīta konta noņem to no saraksta un atsauc darbību X (noņemt apklusināšanu vai atbloķēt). Kad izslēgts, saraksta klikšķi neatbrīvo kontus — rāda tikai padomu ieslēgt opciju."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Kā tas darbojas: Īslaicīgi atver fona cilni uz profilu, izpilda to pašu ⋯ izvēlnes plūsmu kā apklusināšanai/bloķēšanai un aizver cilni. Neinteresē ieraksti X ir tikai sarakstā (nav uzticamas atsaukšanas)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Ieguvumi, kad ieslēgts: Viens klikšķis notīra sarakstu un atceļ apklusināšanu/bloķēšanu jūsu X kontā."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Piezīme: Īslaicīgi atveras profila cilne fonā, lai paplašinājums varētu noņemt apklusināšanu/atbloķēt. Pēc noklusējuma izslēgts, lai nejauši klikšķi neatvērtu cilnes un neatceltu darbības."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Pārslēgt atsaukšanu ar klikšķi pārvaldītajā sarakstā"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Lai automātiski noņemtu apklusināšanu, atbloķētu vai notīrītu Neinteresē, klikšķinot pārvaldītu kontu, ieslēdziet Atsaukt ar klikšķi sarakstā. Varat to izdarīt tagad vai vēlāk sadaļā Iestatījumi."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Ieslēgt tūlīt"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Aizvērt"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Pārvaldīts konts (lai atbrīvotu, ieslēdziet Atsaukt ar klikšķi sarakstā)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Atbrīvot šo kontu X? Ja tas joprojām atbilst aktīvam valsts/reģiona filtram, paplašinājums var rīkoties atkal, ja nepievienojat to balto sarakstu."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Atbrīvot + baltais saraksts (vairs nekad nefiltrēt)"
+  },
+  "pop_toast_release_once": {
+    "message": "Tikai šoreiz"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Atcelt"
+  },
+  "toast_blocked": {
+    "message": "Bloķēts"
+  },
+  "toast_muted": {
+    "message": "Apklusināts"
+  },
+  "toast_notinterested": {
+    "message": "Neinteresē"
+  },
+  "toast_reason_country": {
+    "message": "Valsts filtrs: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Reģiona filtrs: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Darbību paziņojumi"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Ko tas dara: Kad paplašinājums bloķē, apklusina vai atzīmē ierakstu kā Neinteresē, X apakšā parādās īss toast ar konta vārdu, @handle un profila foto."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Ieguvumi, kad ieslēgts: Katru automātisko darbību redzat uzreiz, ar 6 sekunžu atskaiti pirms toast izzušanas."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Ja izslēdzat: Darbības turpinās kā parasti; paslēpts ir tikai lapas toast. Rīkjoslas žetona mirgošana joprojām darbojas."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Pārslēgt darbību paziņojumus X"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - I-block ang lahat ng tweet mula sa bansang o rehiyong iyon"
+  },
+  "ext_description": {
+    "message": "Tukuyin ang bansa o rehiyon ng mga X account sa iyong timeline (Tungkol sa account na ito)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Filter ng bansa"
+  },
+  "pop_heading": {
+    "message": "X - I-block ang lahat ng tweet mula sa bansang o rehiyong iyon"
+  },
+  "pop_lane_block": {
+    "message": "I-block"
+  },
+  "pop_lane_mute": {
+    "message": "I-mute"
+  },
+  "pop_lane_notinterested": {
+    "message": "Hindi interesado"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "I-on o i-off ang column na I-block"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "I-on o i-off ang column na I-mute"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "I-on o i-off ang column na Hindi interesado"
+  },
+  "pop_mode_warning_label": {
+    "message": "BABALA:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Na-block ang mga napiling account sa iyong X account. Hindi na lalabas ang kanilang mga post sa anumang X app: desktop, Android, iOS, o web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Na-mute ang mga napiling account sa iyong X account. Hindi na lalabas ang kanilang mga post sa anumang X app: desktop, Android, iOS, o web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Minarkahan bilang Hindi interesado ang mga post mula sa mga napiling account sa iyong X account, kaya mas kaunti ang ipapakita ng X sa desktop, Android, iOS, at web."
+  },
+  "pop_regions_label": {
+    "message": "Mga rehiyon"
+  },
+  "pop_countries_label": {
+    "message": "Mga bansa"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ napili",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "I-toggle ang rehiyon"
+  },
+  "a11y_toggle_country": {
+    "message": "I-toggle ang bansa"
+  },
+  "pop_search_regions": {
+    "message": "Maghanap ng rehiyon…"
+  },
+  "pop_search_countries": {
+    "message": "Maghanap ng bansa…"
+  },
+  "pop_search_no_results": {
+    "message": "Walang tugma"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Mga naka-block na account"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Mga naka-mute na account"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Mga account na Hindi interesado"
+  },
+  "pop_search_accounts": {
+    "message": "Maghanap ng account…"
+  },
+  "pop_managed_empty": {
+    "message": "Wala pang pinamamahalaang account"
+  },
+  "pop_managed_mode_block": {
+    "message": "I-block"
+  },
+  "pop_managed_mode_mute": {
+    "message": "I-mute"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Hindi interesado"
+  },
+  "a11y_release_account": {
+    "message": "I-release ang pinamamahalaang account"
+  },
+  "a11y_open_premium11": {
+    "message": "Buksan ang website ng Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Mga detalye ng Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Naka-activate ang Premium"
+  },
+  "pop_premium_chip_title": {
+    "message": "Tingnan ang iyong naka-activate na Premium access."
+  },
+  "pop_premium_back": {
+    "message": "Bumalik"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Naka-activate ang lifetime Premium"
+  },
+  "pop_premium_subtitle": {
+    "message": "I-enjoy ang kumpletong Premium suite sa loob ng X - I-block ang lahat ng tweet mula sa bansang o rehiyong iyon ng Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Ang iyong Premium subscription"
+  },
+  "pop_premium_status_active": {
+    "message": "Aktibo ang lifetime Premium"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Regalo ng developer"
+  },
+  "pop_premium_gift_message": {
+    "message": "Binigyan ka ng developer ng extension ng lifetime Premium subscription (USD 29.99). Salamat sa pagiging tapat na user ng X - I-block ang lahat ng tweet mula sa bansang o rehiyong iyon ng Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Bersyon ng extension"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Huling na-update"
+  },
+  "pop_premium_fact_license": {
+    "message": "Bisa ng lisensya ng Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Habang-buhay"
+  },
+  "pop_premium_fact_features": {
+    "message": "Mga naka-enable na feature"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Lahat"
+  },
+  "pop_settings_title": {
+    "message": "Mga setting"
+  },
+  "pop_settings_btn_title": {
+    "message": "Buksan ang mga setting"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Ipakita ang bansa ng account sa tabi ng username sa feed, explore, at mga profile"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Ipakita ang bandila ng bansa ng account sa tabi ng username sa feed, explore, at mga profile"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Tandaan: Gumagana lang ang extension na ito kapag nag-uulat ang X.com ng data ng bansa o rehiyon para sa isang account (Tungkol sa account na ito). Madalas hindi inilalantad ng X ang impormasyong iyon, kaya kahit naka-on ang opsyong ito maaaring hindi lumabas ang bansa o rehiyon sa tabi ng username. Mula sa X.com ang mga limitasyong ito, hindi sa extension na ito."
+  },
+  "a11y_toggle_show_country": {
+    "message": "I-toggle ang mga label ng bansa sa timeline"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "I-toggle ang mga bandila ng bansa sa timeline"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Mas matataas na column"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Ginagawang humigit-kumulang dalawa hanggang tatlong beses na mas mataas ang listahan ng rehiyon, bansa, at pinamamahalaang account, at pinapayagan ang buong popup na mag-scroll. Naka-off bilang default."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "I-toggle ang layout ng mas matataas na column"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Lokal na cache ng bansa"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Ano ang ginagawa nito: Pagkatapos ng matagumpay na «Tungkol sa account na ito» lookup, sine-save ang bansa o rehiyon ng account na iyon sa device na ito para magamit muli ng extension nang hindi muling nagtatanong sa X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Mga benepisyo kapag naka-on: Mas kaunting network call, mas mababang tsansa ng rate limit, at mas mabilis na label ng bansa plus auto mute/block para sa mga account na nakita mo na."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Kung i-off mo: Bawat lookup ay muling tumatama sa X — mas mataas na panganib sa rate limit, mas mabagal na label, at mas mataas na data habang nag-i-scroll. Nananatili ang existing cache sa disk pero hindi ginagamit hanggang i-on mo ulit."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Storage: Napakagaan — mga 100,000 user ≈ 10 MB, humigit-kumulang laki ng isang modernong MP3 sa PC mo. Mga matagumpay na country/region hit lang ang sine-store."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "I-toggle ang lokal na cache ng bansa"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Mga naka-cache na account"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Ginagamit na storage (approx.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "I-undo sa click sa listahan"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Ano ang ginagawa nito: Kapag naka-on, ang pag-click sa pinamamahalaang account ay tinatanggal ito sa listahan at ini-undo ang aksyon sa X (i-unmute o i-unblock). Kapag naka-off, hindi nagre-release ang mga click — tip lang ang ipinapakita para i-enable ang opsyong ito."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Paano gumagana: Nagbubukas ng maikling background tab sa profile na iyon, pinapatakbo ang parehong ⋯ menu flow para sa mute/block, tapos isinasara ang tab. Ang mga entry na Hindi interesado ay listahan lang sa X (walang maaasahang undo)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Mga benepisyo kapag naka-on: Isang click ang naglilinis ng listahan at nagbabalik ng mute/block sa iyong X account."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Tandaan: Magbubukas nang sandali ang background profile tab para ma-unmute/unblock ng extension. Naka-off bilang default para hindi magbukas ng tab o magbalik ng aksyon ang aksidenteng click."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "I-toggle ang undo sa click sa pinamamahalaang listahan"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Para awtomatikong mag-unmute, mag-unblock, o mag-clear ng Hindi interesado kapag nag-click ka ng pinamamahalaang account, i-on ang Undo sa click sa listahan. Pwede ngayon o sa Settings mamaya."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "I-enable ngayon"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "I-dismiss"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Pinamamahalaang account (i-enable ang Undo sa click sa listahan para i-release)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "I-release ang account na ito sa X? Kung tumutugma pa rin sa aktibong filter ng bansa/rehiyon, maaaring muling kumilos ang extension maliban kung i-whitelist mo sila."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "I-release + whitelist (huwag muling i-filter)"
+  },
+  "pop_toast_release_once": {
+    "message": "Ngayong beses lang"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Kanselahin"
+  },
+  "toast_blocked": {
+    "message": "Na-block"
+  },
+  "toast_muted": {
+    "message": "Na-mute"
+  },
+  "toast_notinterested": {
+    "message": "Hindi interesado"
+  },
+  "toast_reason_country": {
+    "message": "Filter ng bansa: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Filter ng rehiyon: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Mga notification ng aksyon"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Ano ang ginagawa nito: Kapag nag-block, nag-mute, o nag-mark ng post bilang Hindi interesado ang extension, lumalabas ang maikling toast sa ibaba ng X na may pangalan ng account, @handle, at profile photo."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Mga benepisyo kapag naka-on: Nakikita mo ang bawat awtomatikong aksyon habang nangyayari, na may 6-segundong countdown bago mawala ang toast."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Kung i-off mo: Tumakbo pa rin ang mga aksyon; naka-hide lang ang toast sa page. Gumagana pa rin ang toolbar badge flash."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "I-toggle ang mga notification ng aksyon sa X"
+  }
+}

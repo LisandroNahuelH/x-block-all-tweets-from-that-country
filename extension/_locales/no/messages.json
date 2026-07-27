@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Blokker alle tweets fra det landet eller den regionen"
+  },
+  "ext_description": {
+    "message": "Oppdager land eller region for X-kontoer i tidslinjen din (Om denne kontoen)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Landsfilter"
+  },
+  "pop_heading": {
+    "message": "X - Blokker alle tweets fra det landet eller den regionen"
+  },
+  "pop_lane_block": {
+    "message": "Blokker"
+  },
+  "pop_lane_mute": {
+    "message": "Skjul"
+  },
+  "pop_lane_notinterested": {
+    "message": "Ikke interessert"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Slå kolonnen Blokker av eller på"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Slå kolonnen Skjul av eller på"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Slå kolonnen Ikke interessert av eller på"
+  },
+  "pop_mode_warning_label": {
+    "message": "ADVARSEL:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Valgte kontoer blokkeres på X-kontoen din. Innleggene deres vises ikke lenger i noen av X-appene dine: skrivebord, Android, iOS eller nett."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Valgte kontoer skjules på X-kontoen din. Innleggene deres vises ikke lenger i noen av X-appene dine: skrivebord, Android, iOS eller nett."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Innlegg fra valgte kontoer merkes som Ikke interessert på X-kontoen din, slik at X viser deg færre av dem på skrivebord, Android, iOS og nett."
+  },
+  "pop_regions_label": {
+    "message": "Regioner"
+  },
+  "pop_countries_label": {
+    "message": "Land"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ valgt",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Bytt region"
+  },
+  "a11y_toggle_country": {
+    "message": "Bytt land"
+  },
+  "pop_search_regions": {
+    "message": "Søk regioner…"
+  },
+  "pop_search_countries": {
+    "message": "Søk land…"
+  },
+  "pop_search_no_results": {
+    "message": "Ingen treff"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Blokkerte kontoer"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Skjulte kontoer"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Kontoer Ikke interessert"
+  },
+  "pop_search_accounts": {
+    "message": "Søk kontoer…"
+  },
+  "pop_managed_empty": {
+    "message": "Ingen administrerte kontoer ennå"
+  },
+  "pop_managed_mode_block": {
+    "message": "Blokker"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Skjul"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Ikke interessert"
+  },
+  "a11y_release_account": {
+    "message": "Frigi administrert konto"
+  },
+  "a11y_open_premium11": {
+    "message": "Åpne Premium11-nettstedet"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium-opplysninger"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktivert"
+  },
+  "pop_premium_chip_title": {
+    "message": "Se din aktiverte Premium-tilgang."
+  },
+  "pop_premium_back": {
+    "message": "Tilbake"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Livstids-Premium aktivert"
+  },
+  "pop_premium_subtitle": {
+    "message": "Nyt hele Premium-pakken i X - Blokker alle tweets fra det landet eller den regionen fra Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Premium-abonnementet ditt"
+  },
+  "pop_premium_status_active": {
+    "message": "Livstids-Premium aktivt"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Gave fra utvikleren"
+  },
+  "pop_premium_gift_message": {
+    "message": "Utvikleren av utvidelsen har gitt deg et livstids-Premium-abonnement (USD 29.99). Takk for at du er en lojal bruker av X - Blokker alle tweets fra det landet eller den regionen fra Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Utvidelsesversjon"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Sist oppdatert"
+  },
+  "pop_premium_fact_license": {
+    "message": "Gyldighet for Premium-lisens"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Livstid"
+  },
+  "pop_premium_fact_features": {
+    "message": "Aktiverte funksjoner"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Alle"
+  },
+  "pop_settings_title": {
+    "message": "Innstillinger"
+  },
+  "pop_settings_btn_title": {
+    "message": "Åpne innstillinger"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Vis kontoens land ved brukernavnet i feed, Utforsk og profiler"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Vis kontoens landsflagg ved brukernavnet i feed, Utforsk og profiler"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Merk: Denne utvidelsen fungerer bare når X.com oppgir land eller region for en konto (Om denne kontoen). X viser ofte ikke den informasjonen, så selv med alternativet på kan land eller region mangle ved navnet. Begrensningene kommer fra X.com, ikke fra denne utvidelsen."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Slå landsetiketter på tidslinjen av eller på"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Slå landsflagg på tidslinjen av eller på"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Høyere kolonner"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Gjør listene for regioner, land og administrerte kontoer omtrent to til tre ganger høyere og lar hele popupen rulle, så oppsettet føles mindre trangt. Av som standard."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Slå høyere kolonner av eller på"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Lokal landbuffer"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Hva den gjør: Etter et vellykket oppslag av «Om denne kontoen» lagres kontoens land eller region på denne enheten, slik at utvidelsen kan gjenbruke det senere uten å spørre X på nytt."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Fordeler når den er på: Færre nettverksforespørsler, lavere risiko for rate limits og raskere landsetiketter pluss automatiske skjul/blokker-beslutninger for kontoer du allerede har sett."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Hvis du slår den av: Hvert oppslag går til X igjen — høyere risiko for begrensninger, tregere etiketter og mer databruk under rulling. Eksisterende buffer blir på disken, men brukes ikke før du slår den på igjen."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Lagring: Svært lett — omtrent 100 000 brukere ≈ 10 MB, omtrent størrelsen på én moderne MP3 på PC-en. Bare vellykkede land-/regiontreff lagres."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Slå lokal landbuffer av eller på"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Bufrede kontoer"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Brukt lagring (ca.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Angre ved listeklikk"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Hva den gjør: Når den er på, fjerner et klikk på en administrert konto den fra listen og angre handlingen på X (vis igjen eller opphev blokkering). Når den er av, frigir ikke listeklikk kontoer — de viser bare et tips om å aktivere alternativet."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Slik fungerer det: Åpner en kortvarig fane i bakgrunnen til profilen, kjører samme ⋯-menyflyt som for skjul/blokker og lukker fanen. Oppføringer med Ikke interessert er bare listebaserte på X (ingen pålitelig angring)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Fordeler når den er på: Ett klikk renser listen og reverserer skjul/blokker på X-kontoen din."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Merk: En profilfane åpnes kort i bakgrunnen slik at utvidelsen kan vise igjen/oppheve blokkering. Av som standard, så utilsiktede klikk ikke åpner faner eller angre handlinger."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Slå angre ved klikk i administrert liste av eller på"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "For automatisk å vise igjen, oppheve blokkering eller fjerne Ikke interessert når du klikker på en administrert konto, slå på Angre ved listeklikk. Du kan aktivere det nå eller senere under Innstillinger."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Aktiver nå"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Lukk"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Administrert konto (aktiver Angre ved listeklikk for å frigi)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Frigi denne kontoen på X? Hvis den fortsatt matcher et aktivt lands-/regionsfilter, kan utvidelsen handle igjen med mindre du hvitelister den."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Frigi + hviteliste (filtrer aldri igjen)"
+  },
+  "pop_toast_release_once": {
+    "message": "Bare denne gangen"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Avbryt"
+  },
+  "toast_blocked": {
+    "message": "Blokkert"
+  },
+  "toast_muted": {
+    "message": "Skjult"
+  },
+  "toast_notinterested": {
+    "message": "Ikke interessert"
+  },
+  "toast_reason_country": {
+    "message": "Landsfilter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Regionsfilter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Handlingsvarsler"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Hva den gjør: Når utvidelsen blokkerer, skjuler eller merker et innlegg som Ikke interessert, vises en kort toast nederst på X med kontoens navn, @handle og profilbilde."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Fordeler når den er på: Du ser hver automatiske handling med en gang, med en 6-sekunders nedtelling før toasten forsvinner."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Hvis du slår den av: Handlinger kjører som vanlig; bare toasten på siden skjules. Badge-blinket i verktøylinjen fungerer fortsatt."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Slå handlingsvarsler på X av eller på"
+  }
+}

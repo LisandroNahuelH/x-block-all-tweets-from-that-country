@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Αποκλεισμός όλων των tweet από αυτή τη χώρα ή περιοχή"
+  },
+  "ext_description": {
+    "message": "Εντοπίζει τη χώρα ή την περιοχή λογαριασμών X στο χρονολόγιό σας (Σχετικά με αυτόν τον λογαριασμό)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Φίλτρο χώρας"
+  },
+  "pop_heading": {
+    "message": "X - Αποκλεισμός όλων των tweet από αυτή τη χώρα ή περιοχή"
+  },
+  "pop_lane_block": {
+    "message": "Αποκλεισμός"
+  },
+  "pop_lane_mute": {
+    "message": "Σίγαση"
+  },
+  "pop_lane_notinterested": {
+    "message": "Δεν με ενδιαφέρει"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Ενεργοποίηση ή απενεργοποίηση στήλης Αποκλεισμός"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Ενεργοποίηση ή απενεργοποίηση στήλης Σίγαση"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Ενεργοποίηση ή απενεργοποίηση στήλης Δεν με ενδιαφέρει"
+  },
+  "pop_mode_warning_label": {
+    "message": "ΠΡΟΕΙΔΟΠΟΙΗΣΗ:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Οι επιλεγμένοι λογαριασμοί αποκλείονται στον λογαριασμό σας X. Οι δημοσιεύσεις τους δεν θα εμφανίζονται πλέον σε καμία εφαρμογή X: επιτραπέζιο, Android, iOS ή web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Οι επιλεγμένοι λογαριασμοί τίθενται σε σίγαση στον λογαριασμό σας X. Οι δημοσιεύσεις τους δεν θα εμφανίζονται πλέον σε καμία εφαρμογή X: επιτραπέζιο, Android, iOS ή web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Οι δημοσιεύσεις επιλεγμένων λογαριασμών επισημαίνονται ως Δεν με ενδιαφέρει στον λογαριασμό σας X, ώστε το X να σας δείχνει λιγότερες σε επιτραπέζιο, Android, iOS και web."
+  },
+  "pop_regions_label": {
+    "message": "Περιοχές"
+  },
+  "pop_countries_label": {
+    "message": "Χώρες"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ επιλεγμένα",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Εναλλαγή περιοχής"
+  },
+  "a11y_toggle_country": {
+    "message": "Εναλλαγή χώρας"
+  },
+  "pop_search_regions": {
+    "message": "Αναζήτηση περιοχών…"
+  },
+  "pop_search_countries": {
+    "message": "Αναζήτηση χωρών…"
+  },
+  "pop_search_no_results": {
+    "message": "Κανένα αποτέλεσμα"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Αποκλεισμένοι λογαριασμοί"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Σε σίγαση λογαριασμοί"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Λογαριασμοί Δεν με ενδιαφέρει"
+  },
+  "pop_search_accounts": {
+    "message": "Αναζήτηση λογαριασμών…"
+  },
+  "pop_managed_empty": {
+    "message": "Δεν υπάρχουν ακόμη διαχειριζόμενοι λογαριασμοί"
+  },
+  "pop_managed_mode_block": {
+    "message": "Αποκλεισμός"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Σίγαση"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Δεν με ενδιαφέρει"
+  },
+  "a11y_release_account": {
+    "message": "Αποδέσμευση διαχειριζόμενου λογαριασμού"
+  },
+  "a11y_open_premium11": {
+    "message": "Άνοιγμα ιστοτόπου Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Στοιχεία Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium ενεργοποιημένο"
+  },
+  "pop_premium_chip_title": {
+    "message": "Δείτε την ενεργοποιημένη πρόσβαση Premium."
+  },
+  "pop_premium_back": {
+    "message": "Πίσω"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Ισόβιο Premium ενεργοποιημένο"
+  },
+  "pop_premium_subtitle": {
+    "message": "Απολαύστε την πλήρη σουίτα Premium μέσα στο X - Αποκλεισμός όλων των tweet από αυτή τη χώρα ή περιοχή από την Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Η συνδρομή σας Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Ισόβιο Premium ενεργό"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Δώρο προγραμματιστή"
+  },
+  "pop_premium_gift_message": {
+    "message": "Ο προγραμματιστής της επέκτασης σας χάρισε ισόβια συνδρομή Premium (USD 29.99). Ευχαριστούμε που είστε πιστός χρήστης του X - Αποκλεισμός όλων των tweet από αυτή τη χώρα ή περιοχή από την Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Έκδοση επέκτασης"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Τελευταία ενημέρωση"
+  },
+  "pop_premium_fact_license": {
+    "message": "Ισχύς άδειας Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Ισόβια"
+  },
+  "pop_premium_fact_features": {
+    "message": "Ενεργοποιημένες λειτουργίες"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Όλες"
+  },
+  "pop_settings_title": {
+    "message": "Ρυθμίσεις"
+  },
+  "pop_settings_btn_title": {
+    "message": "Άνοιγμα ρυθμίσεων"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Εμφάνιση χώρας λογαριασμού δίπλα στο όνομα χρήστη στη ροή, Εξερεύνηση και προφίλ"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Εμφάνιση σημαίας χώρας λογαριασμού δίπλα στο όνομα χρήστη στη ροή, Εξερεύνηση και προφίλ"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Σημείωση: Αυτή η επέκταση λειτουργεί μόνο όταν το X.com αναφέρει χώρα ή περιοχή για λογαριασμό (Σχετικά με αυτόν τον λογαριασμό). Συχνά το X δεν εκθέτει αυτά τα δεδομένα, οπότε ακόμη και με ενεργή την επιλογή η χώρα ή η περιοχή μπορεί να μην εμφανίζεται δίπλα στο όνομα. Αυτά τα όρια προέρχονται από το X.com, όχι από αυτή την επέκταση."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Εναλλαγή ετικετών χώρας στο χρονολόγιο"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Εναλλαγή σημαιών χώρας στο χρονολόγιο"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Ψηλότερες στήλες"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Κάνει τις λίστες περιοχών, χωρών και διαχειριζόμενων λογαριασμών περίπου δύο έως τρεις φορές ψηλότερες και επιτρέπει κύλιση σε όλο το αναδυόμενο παράθυρο για λιγότερο στριμωγμένη διάταξη. Απενεργοποιημένο από προεπιλογή."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Εναλλαγή ψηλότερων στηλών"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Τοπική προσωρινή μνήμη χωρών"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Τι κάνει: Μετά από επιτυχή αναζήτηση «Σχετικά με αυτόν τον λογαριασμό», αποθηκεύει τη χώρα ή την περιοχή του λογαριασμού σε αυτή τη συσκευή, ώστε η επέκταση να την ξαναχρησιμοποιήσει χωρίς νέο ερώτημα στο X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Οφέλη όταν είναι ενεργή: Λιγότερα αιτήματα δικτύου, μικρότερος κίνδυνος rate limit και ταχύτερες ετικέτες χώρας, συν αυτόματες αποφάσεις σίγασης/αποκλεισμού για λογαριασμούς που έχετε ήδη δει."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Αν την απενεργοποιήσετε: Κάθε αναζήτηση πηγαίνει ξανά στο X — μεγαλύτερος κίνδυνος ορίων, πιο αργές ετικέτες και περισσότερα δεδομένα κατά την κύλιση. Η υπάρχουσα μνήμη μένει στο δίσκο, αλλά δεν χρησιμοποιείται μέχρι να την ενεργοποιήσετε ξανά."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Αποθήκευση: Πολύ ελαφριά — περίπου 100.000 χρήστες ≈ 10 MB, περίπου το μέγεθος ενός σύγχρονου MP3 στον υπολογιστή σας. Αποθηκεύονται μόνο επιτυχημένα hits χώρας/περιοχής."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Εναλλαγή τοπικής προσωρινής μνήμης χωρών"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Αποθηκευμένοι λογαριασμοί"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Χώρος σε χρήση (περ.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Αναίρεση με κλικ στη λίστα"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Τι κάνει: Όταν είναι ενεργή, το κλικ σε διαχειριζόμενο λογαριασμό τον αφαιρεί από τη λίστα και αναιρεί την ενέργεια στο X (κατάργηση σίγασης ή άρση αποκλεισμού). Όταν είναι ανενεργή, τα κλικ στη λίστα δεν αποδεσμεύουν λογαριασμούς — δείχνουν μόνο υπόδειξη να ενεργοποιήσετε την επιλογή."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Πώς λειτουργεί: Ανοίγει σύντομη καρτέλα παρασκηνίου στο προφίλ, εκτελεί την ίδια ροή μενού ⋯ όπως για σίγαση/αποκλεισμό και κλείνει την καρτέλα. Οι καταχωρίσεις Δεν με ενδιαφέρει είναι μόνο λίστας στο X (χωρίς αξιόπιστη αναίρεση)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Οφέλη όταν είναι ενεργή: Ένα κλικ καθαρίζει τη λίστα και αντιστρέφει σίγαση/αποκλεισμό στον λογαριασμό σας X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Σημείωση: Ανοίγει για λίγο καρτέλα προφίλ στο παρασκήνιο ώστε η επέκταση να καταργήσει σίγαση/άρση αποκλεισμού. Απενεργοποιημένο από προεπιλογή, ώστε τυχαία κλικ να μην ανοίγουν καρτέλες ούτε να αναιρούν ενέργειες."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Εναλλαγή αναίρεσης με κλικ στη διαχειριζόμενη λίστα"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Για αυτόματη κατάργηση σίγασης, άρση αποκλεισμού ή αφαίρεση Δεν με ενδιαφέρει όταν κάνετε κλικ σε διαχειριζόμενο λογαριασμό, ενεργοποιήστε την Αναίρεση με κλικ στη λίστα. Μπορείτε τώρα ή αργότερα στις Ρυθμίσεις."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Ενεργοποίηση τώρα"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Κλείσιμο"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Διαχειριζόμενος λογαριασμός (ενεργοποιήστε Αναίρεση με κλικ στη λίστα για αποδέσμευση)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Αποδέσμευση αυτού του λογαριασμού στο X; Αν εξακολουθεί να ταιριάζει σε ενεργό φίλτρο χώρας/περιοχής, η επέκταση μπορεί να ενεργήσει ξανά εκτός αν τον βάλετε σε λευκή λίστα."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Αποδέσμευση + λευκή λίστα (ποτέ ξανά φιλτράρισμα)"
+  },
+  "pop_toast_release_once": {
+    "message": "Μόνο αυτή τη φορά"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Ακύρωση"
+  },
+  "toast_blocked": {
+    "message": "Αποκλείστηκε"
+  },
+  "toast_muted": {
+    "message": "Σε σίγαση"
+  },
+  "toast_notinterested": {
+    "message": "Δεν με ενδιαφέρει"
+  },
+  "toast_reason_country": {
+    "message": "Φίλτρο χώρας: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Φίλτρο περιοχής: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Ειδοποιήσεις ενεργειών"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Τι κάνει: Όταν η επέκταση αποκλείει, θέτει σε σίγαση ή επισημαίνει δημοσίευση ως Δεν με ενδιαφέρει, εμφανίζεται σύντομο toast στο κάτω μέρος του X με όνομα λογαριασμού, @handle και φωτογραφία προφίλ."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Οφέλη όταν είναι ενεργή: Βλέπετε κάθε αυτόματη ενέργεια αμέσως, με αντίστροφη μέτρηση 6 δευτερολέπτων πριν εξαφανιστεί το toast."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Αν την απενεργοποιήσετε: Οι ενέργειες συνεχίζουν κανονικά· κρύβεται μόνο το toast στη σελίδα. Το flash του σήματος στη γραμμή εργαλείων συνεχίζει να λειτουργεί."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Εναλλαγή ειδοποιήσεων ενεργειών στο X"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Blokiraj sve tweetove iz te zemlje ili regije"
+  },
+  "ext_description": {
+    "message": "Otkriva zemlju ili regiju X računa na vašoj vremenskoj traci (O ovom računu)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Filtar zemlje"
+  },
+  "pop_heading": {
+    "message": "X - Blokiraj sve tweetove iz te zemlje ili regije"
+  },
+  "pop_lane_block": {
+    "message": "Blokiraj"
+  },
+  "pop_lane_mute": {
+    "message": "Utišaj"
+  },
+  "pop_lane_notinterested": {
+    "message": "Ne zanima me"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Uključi ili isključi stupac Blokiraj"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Uključi ili isključi stupac Utišaj"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Uključi ili isključi stupac Ne zanima me"
+  },
+  "pop_mode_warning_label": {
+    "message": "UPOZORENJE:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Odabrani računi blokiraju se na vašem X računu. Njihove objave više se neće pojavljivati ni u jednoj X aplikaciji: desktop, Android, iOS ili web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Odabrani računi utišavaju se na vašem X računu. Njihove objave više se neće pojavljivati ni u jednoj X aplikaciji: desktop, Android, iOS ili web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Objave odabranih računa označavaju se kao Ne zanima me na vašem X računu, pa vam X prikazuje manje njih na desktopu, Androidu, iOS-u i webu."
+  },
+  "pop_regions_label": {
+    "message": "Regije"
+  },
+  "pop_countries_label": {
+    "message": "Zemlje"
+  },
+  "pop_selected_count": {
+    "message": "Odabrano: $COUNT$",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Prebaci regiju"
+  },
+  "a11y_toggle_country": {
+    "message": "Prebaci zemlju"
+  },
+  "pop_search_regions": {
+    "message": "Pretraži regije…"
+  },
+  "pop_search_countries": {
+    "message": "Pretraži zemlje…"
+  },
+  "pop_search_no_results": {
+    "message": "Nema podudaranja"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Blokirani računi"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Utišani računi"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Računi Ne zanima me"
+  },
+  "pop_search_accounts": {
+    "message": "Pretraži račune…"
+  },
+  "pop_managed_empty": {
+    "message": "Još nema upravljanih računa"
+  },
+  "pop_managed_mode_block": {
+    "message": "Blokiraj"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Utišaj"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Ne zanima me"
+  },
+  "a11y_release_account": {
+    "message": "Oslobodi upravljani račun"
+  },
+  "a11y_open_premium11": {
+    "message": "Otvori web-mjesto Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Podaci o Premiumu"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktiviran"
+  },
+  "pop_premium_chip_title": {
+    "message": "Pogledajte aktivirani Premium pristup."
+  },
+  "pop_premium_back": {
+    "message": "Natrag"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Doživotni Premium aktiviran"
+  },
+  "pop_premium_subtitle": {
+    "message": "Uživajte u cjelovitom Premium paketu u proširenju X - Blokiraj sve tweetove iz te zemlje ili regije od Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Vaša Premium pretplata"
+  },
+  "pop_premium_status_active": {
+    "message": "Doživotni Premium aktivan"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Poklon programera"
+  },
+  "pop_premium_gift_message": {
+    "message": "Programer proširenja poklonio vam je doživotnu Premium pretplatu (USD 29.99). Hvala što ste vjerni korisnik proširenja X - Blokiraj sve tweetove iz te zemlje ili regije od Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Verzija proširenja"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Zadnja aktualizacija"
+  },
+  "pop_premium_fact_license": {
+    "message": "Valjanost Premium licence"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Doživotna"
+  },
+  "pop_premium_fact_features": {
+    "message": "Omogućene značajke"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Sve"
+  },
+  "pop_settings_title": {
+    "message": "Postavke"
+  },
+  "pop_settings_btn_title": {
+    "message": "Otvori postavke"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Prikaži zemlju računa pored korisničkog imena u feedu, Istraži i profilima"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Prikaži zastavu zemlje računa pored korisničkog imena u feedu, Istraži i profilima"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Napomena: Ovo proširenje radi samo kada X.com prijavi zemlju ili regiju računa (O ovom računu). X često ne izlaže te podatke, pa čak i s uključenom opcijom zemlja ili regija možda se neće pojaviti pored imena. Ta ograničenja dolaze od X.com, ne od ovog proširenja."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Uključi ili isključi oznake zemlje na vremenskoj traci"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Uključi ili isključi zastave zemalja na vremenskoj traci"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Viši stupci"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Čini popise regija, zemalja i upravljanih računa otprilike dva do tri puta višima i omogućuje pomicanje cijelog skočnog prozora radi manje zbijenog izgleda. Prema zadanim postavkama isključeno."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Uključi ili isključi više stupce"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Lokalna predmemorija zemalja"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Što radi: Nakon uspješnog upita «O ovom računu» sprema zemlju ili regiju tog računa na ovom uređaju kako bi je proširenje kasnije moglo ponovno iskoristiti bez ponovnog upita X-u."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Prednosti kada je uključeno: Manje mrežnih poziva, manji rizik od rate limita i brže oznake zemlje te automatske odluke utišaj/blokiraj za već viđene račune."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Ako isključite: Svaki upit opet ide na X — veći rizik ograničenja, sporije oznake i veća potrošnja podataka pri pomicanju. Postojeća predmemorija ostaje na disku, ali se ne koristi dok ponovno ne uključite opciju."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Pohrana: Vrlo lagana — oko 100.000 korisnika ≈ 10 MB, otprilike veličina jedne moderne MP3 datoteke na računalu. Pohranjuju se samo uspješni pogoci zemlje/regije."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Uključi ili isključi lokalnu predmemoriju zemalja"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Predmemorirani računi"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Iskorištena pohrana (pribl.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Poništi klikom na popis"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Što radi: Kada je uključeno, klik na upravljani račun uklanja ga s popisa i poništava radnju na X-u (ukloni utišavanje ili odblokiraj). Kada je isključeno, klikovi na popisu ne oslobađaju račune — samo pokazuju savjet za uključivanje opcije."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Kako radi: Kratko otvara karticu u pozadini na profil, pokreće isti tok izbornika ⋯ kao za utišavanje/blokiranje i zatvara karticu. Unosi Ne zanima me na X-u su samo na popisu (nema pouzdanog poništavanja)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Prednosti kada je uključeno: Jedan klik čisti popis i vraća utišavanje/blokiranje na vašem X računu."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Napomena: Kratko se otvara kartica profila u pozadini da proširenje može ukloniti utišavanje/odblokirati. Prema zadanim postavkama isključeno da slučajni klikovi ne otvaraju kartice ni ne poništavaju radnje."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Uključi ili isključi poništavanje klikom na upravljani popis"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Za automatsko uklanjanje utišavanja, odblokiranje ili uklanjanje Ne zanima me pri kliku na upravljani račun uključite Poništi klikom na popis. Možete to učiniti sada ili kasnije u Postavkama."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Uključi sada"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Zatvori"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Upravljani račun (uključite Poništi klikom na popis za oslobađanje)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Osloboditi ovaj račun na X-u? Ako i dalje odgovara aktivnom filtru zemlje/regije, proširenje može ponovno djelovati osim ako ga ne stavite na bijelu listu."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Oslobodi + bijela lista (nikad više ne filtriraj)"
+  },
+  "pop_toast_release_once": {
+    "message": "Samo ovaj put"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Odustani"
+  },
+  "toast_blocked": {
+    "message": "Blokirano"
+  },
+  "toast_muted": {
+    "message": "Utišano"
+  },
+  "toast_notinterested": {
+    "message": "Ne zanima me"
+  },
+  "toast_reason_country": {
+    "message": "Filtar zemlje: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Filtar regije: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Obavijesti o radnjama"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Što radi: Kada proširenje blokira, utiša ili označi objavu kao Ne zanima me, na dnu X-a pojavi se kratki toast s imenom računa, @handleom i profilnom fotografijom."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Prednosti kada je uključeno: Odmah vidite svaku automatsku radnju, s odbrojavanjem od 6 sekundi prije nestanka toasta."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Ako isključite: Radnje i dalje rade kao i obično; skriven je samo toast na stranici. Treperenje značke na alatnoj traci i dalje radi."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Uključi ili isključi obavijesti o radnjama na X-u"
+  }
+}

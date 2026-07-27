@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - તે દેશ અથવા પ્રદેશના બધા ટ્વીટ્સ બ્લોક કરો"
+  },
+  "ext_description": {
+    "message": "તમારી ટાઇમલાઇન પર X એકાઉન્ટ્સનો દેશ અથવા પ્રદેશ શોધો (આ એકાઉન્ટ વિશે)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "દેશ ફિલ્ટર"
+  },
+  "pop_heading": {
+    "message": "X - તે દેશ અથવા પ્રદેશના બધા ટ્વીટ્સ બ્લોક કરો"
+  },
+  "pop_lane_block": {
+    "message": "બ્લોક"
+  },
+  "pop_lane_mute": {
+    "message": "મ્યૂટ"
+  },
+  "pop_lane_notinterested": {
+    "message": "રસ નથી"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "બ્લોક કૉલમ ચાલુ અથવા બંધ કરો"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "મ્યૂટ કૉલમ ચાલુ અથવા બંધ કરો"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "રસ નથી કૉલમ ચાલુ અથવા બંધ કરો"
+  },
+  "pop_mode_warning_label": {
+    "message": "ચેતવણી:"
+  },
+  "pop_mode_hint_block": {
+    "message": "પસંદ કરેલા એકાઉન્ટ્સ તમારા X એકાઉન્ટ પર બ્લોક થાય છે. તેમની પોસ્ટ્સ હવે કોઈપણ X એપમાં દેખાશે નહીં: ડેસ્કટોપ, Android, iOS અથવા વેબ."
+  },
+  "pop_mode_hint_mute": {
+    "message": "પસંદ કરેલા એકાઉન્ટ્સ તમારા X એકાઉન્ટ પર મ્યૂટ થાય છે. તેમની પોસ્ટ્સ હવે કોઈપણ X એપમાં દેખાશે નહીં: ડેસ્કટોપ, Android, iOS અથવા વેબ."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "પસંદ કરેલા એકાઉન્ટ્સની પોસ્ટ્સ તમારા X એકાઉન્ટ પર «રસ નથી» તરીકે ચિહ્નિત થાય છે, જેથી X ડેસ્કટોપ, Android, iOS અને વેબ પર ઓછી બતાવે."
+  },
+  "pop_regions_label": {
+    "message": "પ્રદેશો"
+  },
+  "pop_countries_label": {
+    "message": "દેશો"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ પસંદ",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "પ્રદેશ ટૉગલ કરો"
+  },
+  "a11y_toggle_country": {
+    "message": "દેશ ટૉગલ કરો"
+  },
+  "pop_search_regions": {
+    "message": "પ્રદેશો શોધો…"
+  },
+  "pop_search_countries": {
+    "message": "દેશો શોધો…"
+  },
+  "pop_search_no_results": {
+    "message": "કોઈ મેળ નથી"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "બ્લોક કરેલા એકાઉન્ટ્સ"
+  },
+  "pop_muted_accounts_label": {
+    "message": "મ્યૂટ કરેલા એકાઉન્ટ્સ"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "રસ નથી એકાઉન્ટ્સ"
+  },
+  "pop_search_accounts": {
+    "message": "એકાઉન્ટ્સ શોધો…"
+  },
+  "pop_managed_empty": {
+    "message": "હજુ કોઈ વ્યવસ્થિત એકાઉન્ટ નથી"
+  },
+  "pop_managed_mode_block": {
+    "message": "બ્લોક"
+  },
+  "pop_managed_mode_mute": {
+    "message": "મ્યૂટ"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "રસ નથી"
+  },
+  "a11y_release_account": {
+    "message": "વ્યવસ્થિત એકાઉન્ટ છોડો"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11 વેબસાઇટ ખોલો"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium વિગતો"
+  },
+  "pop_premium_chip": {
+    "message": "Premium સક્રિય"
+  },
+  "pop_premium_chip_title": {
+    "message": "તમારું સક્રિય Premium ઍક્સેસ જુઓ."
+  },
+  "pop_premium_back": {
+    "message": "પાછા"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "આજીવન Premium સક્રિય"
+  },
+  "pop_premium_subtitle": {
+    "message": "Premium11 ના X - તે દેશ અથવા પ્રદેશના બધા ટ્વીટ્સ બ્લોક કરો અંદર સંપૂર્ણ Premium સ્યૂટનો આનંદ લો."
+  },
+  "pop_premium_status_title": {
+    "message": "તમારું Premium સબ્સ્ક્રિપ્શન"
+  },
+  "pop_premium_status_active": {
+    "message": "આજીવન Premium સક્રિય"
+  },
+  "pop_premium_gift_badge": {
+    "message": "ડેવલપર ભેટ"
+  },
+  "pop_premium_gift_message": {
+    "message": "એક્સટેન્શન ડેવલપરે તમને આજીવન Premium સબ્સ્ક્રિપ્શન (USD 29.99) ભેટ આપ્યું છે. Premium11 ના X - તે દેશ અથવા પ્રદેશના બધા ટ્વીટ્સ બ્લોક કરો ના વફાદાર વપરાશકર્તા બનવા બદલ આભાર."
+  },
+  "pop_premium_fact_version": {
+    "message": "એક્સટેન્શન સંસ્કરણ"
+  },
+  "pop_premium_fact_updated": {
+    "message": "છેલ્લું અપડેટ"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium લાઇસન્સ માન્યતા"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "આજીવન"
+  },
+  "pop_premium_fact_features": {
+    "message": "સક્રિય સુવિધાઓ"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "બધું"
+  },
+  "pop_settings_title": {
+    "message": "સેટિંગ્સ"
+  },
+  "pop_settings_btn_title": {
+    "message": "સેટિંગ્સ ખોલો"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "ફીડ, એક્સપ્લોર અને પ્રોફાઇલ પર વપરાશકર્તા નામ પાસે એકાઉન્ટનો દેશ બતાવો"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "ફીડ, એક્સપ્લોર અને પ્રોફાઇલ પર વપરાશકર્તા નામ પાસે એકાઉન્ટનો દેશ ધ્વજ બતાવો"
+  },
+  "pop_opt_show_country_note": {
+    "message": "નોંધ: X.com કોઈ એકાઉન્ટ માટે દેશ અથવા પ્રદેશ ડેટા રિપોર્ટ કરે ત્યારે જ આ એક્સટેન્શન કામ કરે છે (આ એકાઉન્ટ વિશે). X ઘણી વાર તે માહિતી દર્શાવતું નથી, તેથી વિકલ્પ ચાલુ હોય તો પણ દેશ અથવા પ્રદેશ નામ પાસે ન દેખાય. આ મર્યાદાઓ X.com થી છે, આ એક્સટેન્શનથી નહીં."
+  },
+  "a11y_toggle_show_country": {
+    "message": "ટાઇમલાઇન પર દેશ લેબલ ટૉગલ કરો"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "ટાઇમલાઇન પર દેશ ધ્વજ ટૉગલ કરો"
+  },
+  "pop_opt_taller_columns": {
+    "message": "ઊંચા કૉલમ"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "પ્રદેશ, દેશ અને વ્યવસ્થિત-એકાઉન્ટ યાદીઓ લગભગ બે થી ત્રણ ગણી ઊંચી કરે છે, અને આખું પોપઅપ સ્ક્રોલ થવા દે છે. ડિફૉલ્ટ બંધ."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "ઊંચા કૉલમ લેઆઉટ ટૉગલ કરો"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "સ્થાનિક દેશ કેશ"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. તે શું કરે છે: સફળ «આ એકાઉન્ટ વિશે» શોધ પછી, તે એકાઉન્ટનો દેશ અથવા પ્રદેશ આ ડિવાઇસ પર સાચવે છે જેથી એક્સટેન્શન પછીથી Xને ફરી પૂછ્યા વિના વાપરી શકે."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. ચાલુ હોય ત્યારે ફાયદા: ઓછા નેટવર્ક કૉલ, રેટ-લિમિટનું ઓછું જોખમ, અને પહેલાં જોયેલા એકાઉન્ટ્સ માટે ઝડપી દેશ લેબલ અને ઓટો મ્યૂટ/બ્લોક નિર્ણયો."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. બંધ કરો તો: દરેક શોધ ફરી X પર જાય છે — વધુ રેટ-લિમિટ જોખમ, ધીમા લેબલ, સ્ક્રોલ કરતી વખતે વધુ ડેટા. મોજૂદ કેશ ડિસ્ક પર રહે છે પણ ફરી ચાલુ કરો ત્યાં સુધી ન વપરાય."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. સ્ટોરેજ: ખૂબ હલકું — લગભગ 100,000 વપરાશકર્તા ≈ 10 MB, તમારા PC પર એક આધુનિક MP3 જેટલું. ફક્ત સફળ દેશ/પ્રદેશ પરિણામો સંગ્રહાય છે."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "સ્થાનિક દેશ કેશ ટૉગલ કરો"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "કેશ કરેલા એકાઉન્ટ્સ"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "વપરાયેલ સ્ટોરેજ (અંદાજે)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "યાદી ક્લિક પર પૂર્વવત્"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. તે શું કરે છે: ચાલુ હોય ત્યારે, વ્યવસ્થિત એકાઉન્ટ પર ક્લિક યાદીમાંથી કાઢે છે અને X પર ક્રિયા પૂર્વવત્ કરે છે (અનમ્યૂટ અથવા અનબ્લોક). બંધ હોય ત્યારે ક્લિક એકાઉન્ટ્સ છોડતા નથી — ફક્ત આ વિકલ્પ ચાલુ કરવાની ટિપ બતાવે છે."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. કેવી રીતે કામ કરે છે: તે પ્રોફાઇલ પર ટૂંકી બેકગ્રાઉન્ડ ટેબ ખોલે છે, મ્યૂટ/બ્લોક માટેનો જ ⋯ મેનૂ પ્રવાહ ચલાવે છે, પછી ટેબ બંધ કરે છે. «રસ નથી» એન્ટ્રીઓ X પર ફક્ત યાદી (વિશ્વસનીય પૂર્વવત્ નથી)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. ચાલુ હોય ત્યારે ફાયદા: એક ક્લિક યાદી સાફ કરે છે અને તમારા X એકાઉન્ટ પર મ્યૂટ/બ્લોક ઉલટાવે છે."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. નોંધ: એક્સટેન્શન અનમ્યૂટ/અનબ્લોક કરી શકે તે માટે બેકગ્રાઉન્ડ પ્રોફાઇલ ટેબ થોડી વાર ખુલશે. અજાણ્યા ક્લિકથી ટેબ ન ખુલે અથવા ક્રિયા ન ઉલટે તે માટે ડિફૉલ્ટ બંધ."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "વ્યવસ્થિત યાદી ક્લિક પર પૂર્વવત્ ટૉગલ કરો"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "વ્યવસ્થિત એકાઉન્ટ પર ક્લિક કરો ત્યારે આપમેળે અનમ્યૂટ, અનબ્લોક અથવા «રસ નથી» સાફ કરવા «યાદી ક્લિક પર પૂર્વવત્» ચાલુ કરો. હમણાં અથવા પછી સેટિંગ્સમાં સક્ષમ કરો."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "હમણાં સક્ષમ કરો"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "કાઢી નાખો"
+  },
+  "a11y_managed_account_locked": {
+    "message": "વ્યવસ્થિત એકાઉન્ટ (છોડવા યાદી ક્લિક પર પૂર્વવત્ ચાલુ કરો)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "આ એકાઉન્ટ X પર છોડીએ? સક્રિય દેશ/પ્રદેશ ફિલ્ટર સાથે હજુ મેળ ખાતું હોય તો, વ્હાઇટલિસ્ટ ન કરો તો એક્સટેન્શન ફરી કાર્ય કરી શકે."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "છોડો + વ્હાઇટલિસ્ટ (ફરી ફિલ્ટર નહીં)"
+  },
+  "pop_toast_release_once": {
+    "message": "ફક્ત આ વખતે"
+  },
+  "pop_toast_release_cancel": {
+    "message": "રદ કરો"
+  },
+  "toast_blocked": {
+    "message": "બ્લોક થયું"
+  },
+  "toast_muted": {
+    "message": "મ્યૂટ થયું"
+  },
+  "toast_notinterested": {
+    "message": "રસ નથી"
+  },
+  "toast_reason_country": {
+    "message": "દેશ ફિલ્ટર: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "પ્રદેશ ફિલ્ટર: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "ક્રિયા સૂચનાઓ"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. તે શું કરે છે: એક્સટેન્શન બ્લોક, મ્યૂટ અથવા પોસ્ટ «રસ નથી» કરે ત્યારે X ના તળિયે તે એકાઉન્ટનું નામ, @હેન્ડલ અને પ્રોફાઇલ ફોટો સાથે ટૂંકી ટોસ્ટ દેખાય છે."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. ચાલુ હોય ત્યારે ફાયદા: દરેક સ્વચાલિત ક્રિયા થાય ત્યારે જોવાય છે; ટોસ્ટ અદૃશ્ય થાય તે પહેલાં 6 સેકન્ડનો કાઉન્ટડાઉન."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. બંધ કરો તો: ક્રિયાઓ સામાન્ય રીતે ચાલે છે; ફક્ત પેજ પરની ટોસ્ટ છુપાય છે. ટૂલબાર બેજ ફ્લેશ હજુ કામ કરે છે."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "X પર ક્રિયા સૂચનાઓ ટૉગલ કરો"
+  }
+}

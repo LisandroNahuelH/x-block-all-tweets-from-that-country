@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - उस देश या क्षेत्र के सभी ट्वीट ब्लॉक करें"
+  },
+  "ext_description": {
+    "message": "अपनी टाइमलाइन पर X खातों का देश या क्षेत्र पहचानें (इस खाते के बारे में)।"
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "देश फ़िल्टर"
+  },
+  "pop_heading": {
+    "message": "X - उस देश या क्षेत्र के सभी ट्वीट ब्लॉक करें"
+  },
+  "pop_lane_block": {
+    "message": "ब्लॉक"
+  },
+  "pop_lane_mute": {
+    "message": "म्यूट"
+  },
+  "pop_lane_notinterested": {
+    "message": "रुचि नहीं"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "ब्लॉक कॉलम चालू या बंद करें"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "म्यूट कॉलम चालू या बंद करें"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "रुचि नहीं कॉलम चालू या बंद करें"
+  },
+  "pop_mode_warning_label": {
+    "message": "चेतावनी:"
+  },
+  "pop_mode_hint_block": {
+    "message": "चयनित खाते आपके X खाते पर ब्लॉक हो जाते हैं। उनके पोस्ट अब किसी भी X ऐप में नहीं दिखेंगे: डेस्कटॉप, Android, iOS या वेब।"
+  },
+  "pop_mode_hint_mute": {
+    "message": "चयनित खाते आपके X खाते पर म्यूट हो जाते हैं। उनके पोस्ट अब किसी भी X ऐप में नहीं दिखेंगे: डेस्कटॉप, Android, iOS या वेब।"
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "चयनित खातों के पोस्ट आपके X खाते पर «रुचि नहीं» चिह्नित होते हैं, ताकि X डेस्कटॉप, Android, iOS और वेब पर कम दिखाए।"
+  },
+  "pop_regions_label": {
+    "message": "क्षेत्र"
+  },
+  "pop_countries_label": {
+    "message": "देश"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ चयनित",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "क्षेत्र टॉगल करें"
+  },
+  "a11y_toggle_country": {
+    "message": "देश टॉगल करें"
+  },
+  "pop_search_regions": {
+    "message": "क्षेत्र खोजें…"
+  },
+  "pop_search_countries": {
+    "message": "देश खोजें…"
+  },
+  "pop_search_no_results": {
+    "message": "कोई मिलान नहीं"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "ब्लॉक किए गए खाते"
+  },
+  "pop_muted_accounts_label": {
+    "message": "म्यूट किए गए खाते"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "रुचि नहीं वाले खाते"
+  },
+  "pop_search_accounts": {
+    "message": "खाते खोजें…"
+  },
+  "pop_managed_empty": {
+    "message": "अभी कोई प्रबंधित खाता नहीं"
+  },
+  "pop_managed_mode_block": {
+    "message": "ब्लॉक"
+  },
+  "pop_managed_mode_mute": {
+    "message": "म्यूट"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "रुचि नहीं"
+  },
+  "a11y_release_account": {
+    "message": "प्रबंधित खाता छोड़ें"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11 वेबसाइट खोलें"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium विवरण"
+  },
+  "pop_premium_chip": {
+    "message": "Premium सक्रिय"
+  },
+  "pop_premium_chip_title": {
+    "message": "अपना सक्रिय Premium एक्सेस देखें।"
+  },
+  "pop_premium_back": {
+    "message": "वापस"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "आजीवन Premium सक्रिय"
+  },
+  "pop_premium_subtitle": {
+    "message": "Premium11 द्वारा X - उस देश या क्षेत्र के सभी ट्वीट ब्लॉक करें में पूरी Premium सुविधा का आनंद लें।"
+  },
+  "pop_premium_status_title": {
+    "message": "आपकी Premium सदस्यता"
+  },
+  "pop_premium_status_active": {
+    "message": "आजीवन Premium सक्रिय"
+  },
+  "pop_premium_gift_badge": {
+    "message": "डेवलपर उपहार"
+  },
+  "pop_premium_gift_message": {
+    "message": "एक्सटेंशन डेवलपर ने आपको आजीवन Premium सदस्यता (USD 29.99) उपहार में दी है। Premium11 द्वारा X - उस देश या क्षेत्र के सभी ट्वीट ब्लॉक करें के वफादार उपयोगकर्ता होने के लिए धन्यवाद।"
+  },
+  "pop_premium_fact_version": {
+    "message": "एक्सटेंशन संस्करण"
+  },
+  "pop_premium_fact_updated": {
+    "message": "अंतिम अपडेट"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium लाइसेंस वैधता"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "आजीवन"
+  },
+  "pop_premium_fact_features": {
+    "message": "सक्रिय सुविधाएँ"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "सभी"
+  },
+  "pop_settings_title": {
+    "message": "सेटिंग्स"
+  },
+  "pop_settings_btn_title": {
+    "message": "सेटिंग्स खोलें"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "फ़ीड, एक्सप्लोर और प्रोफ़ाइल पर उपयोगकर्ता नाम के पास खाते का देश दिखाएँ"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "फ़ीड, एक्सप्लोर और प्रोफ़ाइल पर उपयोगकर्ता नाम के पास खाते का देश झंडा दिखाएँ"
+  },
+  "pop_opt_show_country_note": {
+    "message": "नोट: यह एक्सटेंशन तभी काम करता है जब X.com किसी खाते के लिए देश या क्षेत्र डेटा रिपोर्ट करे (इस खाते के बारे में)। X अक्सर वह जानकारी नहीं दिखाता, इसलिए विकल्प चालू होने पर भी देश या क्षेत्र नाम के पास न दिखे। ये सीमाएँ X.com से हैं, इस एक्सटेंशन से नहीं।"
+  },
+  "a11y_toggle_show_country": {
+    "message": "टाइमलाइन पर देश लेबल टॉगल करें"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "टाइमलाइन पर देश झंडे टॉगल करें"
+  },
+  "pop_opt_taller_columns": {
+    "message": "ऊँचे कॉलम"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "क्षेत्र, देश और प्रबंधित-खाता सूचियों को लगभग दो से तीन गुना ऊँचा बनाता है, और पूरे पॉपअप को स्क्रॉल करने देता है ताकि लेआउट कम तंग लगे। डिफ़ॉल्ट रूप से बंद।"
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "ऊँचे कॉलम लेआउट टॉगल करें"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "स्थानीय देश कैश"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. यह क्या करता है: सफल «इस खाते के बारे में» खोज के बाद, उस खाते का देश या क्षेत्र इस डिवाइस पर सहेजता है ताकि एक्सटेंशन बाद में बिना X से फिर पूछे उपयोग कर सके।"
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. चालू होने पर लाभ: कम नेटवर्क कॉल, रेट-लिमिट का कम जोखिम, और पहले देखे खातों के लिए तेज़ देश लेबल व स्वतः म्यूट/ब्लॉक निर्णय।"
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. अगर बंद करें: हर खोज फिर X पर जाती है — अधिक रेट-लिमिट जोखिम, धीमे लेबल, और स्क्रॉल करते समय अधिक डेटा। मौजूदा कैश डिस्क पर रहता है लेकिन चालू करने तक अनुपयुक्त।"
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. स्टोरेज: बहुत हल्का — लगभग 100,000 उपयोगकर्ता ≈ 10 MB, आपके PC पर एक आधुनिक MP3 जितना। केवल सफल देश/क्षेत्र परिणाम संग्रहीत होते हैं।"
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "स्थानीय देश कैश टॉगल करें"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "कैश किए गए खाते"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "उपयोग किया स्टोरेज (लगभग)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "सूची क्लिक पर पूर्ववत"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. यह क्या करता है: चालू होने पर, प्रबंधित खाते पर क्लिक उसे सूची से हटाता है और X पर कार्रवाई पूर्ववत करता है (अनम्यूट या अनब्लॉक)। बंद होने पर क्लिक खाते नहीं छोड़ते — केवल यह विकल्प चालू करने का सुझाव दिखाते हैं।"
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. कैसे काम करता है: उस प्रोफ़ाइल पर अल्पकालिक बैकग्राउंड टैब खोलता है, म्यूट/ब्लॉक वाला वही ⋯ मेनू प्रवाह चलाता है, फिर टैब बंद करता है। «रुचि नहीं» प्रविष्टियाँ X पर केवल सूची हैं (विश्वसनीय पूर्ववत नहीं)।"
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. चालू होने पर लाभ: एक क्लिक सूची साफ़ करता है और आपके X खाते पर म्यूट/ब्लॉक पलटता है।"
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. नोट: एक्सटेंशन अनम्यूट/अनब्लॉक कर सके, इसके लिए बैकग्राउंड प्रोफ़ाइल टैब थोड़ी देर खुलेगा। डिफ़ॉल्ट बंद ताकि आकस्मिक क्लिक टैब न खोलें या बिना इरादे कार्रवाई न पलटें।"
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "प्रबंधित सूची क्लिक पर पूर्ववत टॉगल करें"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "प्रबंधित खाते पर क्लिक करने पर स्वतः अनम्यूट, अनब्लॉक या «रुचि नहीं» साफ़ करने के लिए «सूची क्लिक पर पूर्ववत» चालू करें। अभी या बाद में सेटिंग्स में सक्षम करें।"
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "अभी सक्षम करें"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "खारिज करें"
+  },
+  "a11y_managed_account_locked": {
+    "message": "प्रबंधित खाता (छोड़ने के लिए सूची क्लिक पर पूर्ववत सक्षम करें)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "इस खाते को X पर छोड़ें? यदि वे सक्रिय देश/क्षेत्र फ़िल्टर से मेल खाते रहें, तो व्हाइटलिस्ट न करने पर एक्सटेंशन फिर कार्रवाई कर सकता है।"
+  },
+  "pop_toast_release_whitelist": {
+    "message": "छोड़ें + व्हाइटलिस्ट (फिर फ़िल्टर नहीं)"
+  },
+  "pop_toast_release_once": {
+    "message": "केवल इस बार"
+  },
+  "pop_toast_release_cancel": {
+    "message": "रद्द करें"
+  },
+  "toast_blocked": {
+    "message": "ब्लॉक किया"
+  },
+  "toast_muted": {
+    "message": "म्यूट किया"
+  },
+  "toast_notinterested": {
+    "message": "रुचि नहीं"
+  },
+  "toast_reason_country": {
+    "message": "देश फ़िल्टर: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "क्षेत्र फ़िल्टर: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "कार्रवाई सूचनाएँ"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. यह क्या करता है: जब एक्सटेंशन ब्लॉक, म्यूट या पोस्ट को «रुचि नहीं» चिह्नित करता है, X के नीचे खाते का नाम, @हैंडल और प्रोफ़ाइल फ़ोटो वाला छोटा टोस्ट दिखता है।"
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. चालू होने पर लाभ: हर स्वचालित कार्रवाई तुरंत दिखती है, टोस्ट गायब होने से पहले 6 सेकंड का काउंटडाउन।"
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. अगर बंद करें: कार्रवाइयाँ सामान्य चलती रहती हैं; केवल पेज पर टोस्ट छिपता है। टूलबार बैज फ्लैश अभी भी काम करता है।"
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "X पर कार्रवाई सूचनाएँ टॉगल करें"
+  }
+}

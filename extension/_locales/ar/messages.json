@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - حظر كل التغريدات من ذلك البلد أو المنطقة"
+  },
+  "ext_description": {
+    "message": "اكتشف بلد أو منطقة حسابات X في خطك الزمني (حول هذا الحساب)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "فلتر البلد"
+  },
+  "pop_heading": {
+    "message": "X - حظر كل التغريدات من ذلك البلد أو المنطقة"
+  },
+  "pop_lane_block": {
+    "message": "حظر"
+  },
+  "pop_lane_mute": {
+    "message": "كتم"
+  },
+  "pop_lane_notinterested": {
+    "message": "غير مهتم"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "تفعيل أو إيقاف عمود الحظر"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "تفعيل أو إيقاف عمود الكتم"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "تفعيل أو إيقاف عمود غير مهتم"
+  },
+  "pop_mode_warning_label": {
+    "message": "تحذير:"
+  },
+  "pop_mode_hint_block": {
+    "message": "تُحظر الحسابات المحددة على حسابك في X. لن تظهر منشوراتها بعد ذلك في أي من تطبيقات X: سطح المكتب أو Android أو iOS أو الويب."
+  },
+  "pop_mode_hint_mute": {
+    "message": "تُكتم الحسابات المحددة على حسابك في X. لن تظهر منشوراتها بعد ذلك في أي من تطبيقات X: سطح المكتب أو Android أو iOS أو الويب."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "تُعلَّم منشورات الحسابات المحددة كـ «غير مهتم» على حسابك في X، فيعرض X منها أقل على سطح المكتب وAndroid وiOS والويب."
+  },
+  "pop_regions_label": {
+    "message": "المناطق"
+  },
+  "pop_countries_label": {
+    "message": "البلدان"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ محدد",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "تبديل المنطقة"
+  },
+  "a11y_toggle_country": {
+    "message": "تبديل البلد"
+  },
+  "pop_search_regions": {
+    "message": "البحث في المناطق…"
+  },
+  "pop_search_countries": {
+    "message": "البحث في البلدان…"
+  },
+  "pop_search_no_results": {
+    "message": "لا نتائج"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "الحسابات المحظورة"
+  },
+  "pop_muted_accounts_label": {
+    "message": "الحسابات المكتومة"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "حسابات غير مهتم"
+  },
+  "pop_search_accounts": {
+    "message": "البحث في الحسابات…"
+  },
+  "pop_managed_empty": {
+    "message": "لا حسابات مُدارة بعد"
+  },
+  "pop_managed_mode_block": {
+    "message": "حظر"
+  },
+  "pop_managed_mode_mute": {
+    "message": "كتم"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "غير مهتم"
+  },
+  "a11y_release_account": {
+    "message": "إطلاق الحساب المُدار"
+  },
+  "a11y_open_premium11": {
+    "message": "فتح موقع Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "تفاصيل Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium مفعّل"
+  },
+  "pop_premium_chip_title": {
+    "message": "عرض وصول Premium المفعّل."
+  },
+  "pop_premium_back": {
+    "message": "رجوع"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Premium مدى الحياة مفعّل"
+  },
+  "pop_premium_subtitle": {
+    "message": "استمتع بمجموعة Premium الكاملة داخل X - حظر كل التغريدات من ذلك البلد أو المنطقة من Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "اشتراكك في Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Premium مدى الحياة نشط"
+  },
+  "pop_premium_gift_badge": {
+    "message": "هدية المطوّر"
+  },
+  "pop_premium_gift_message": {
+    "message": "أهداك مطوّر الإضافة اشتراك Premium مدى الحياة (USD 29.99). شكرًا لكونك مستخدمًا وفيًا لـ X - حظر كل التغريدات من ذلك البلد أو المنطقة من Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "إصدار الإضافة"
+  },
+  "pop_premium_fact_updated": {
+    "message": "آخر تحديث"
+  },
+  "pop_premium_fact_license": {
+    "message": "صلاحية ترخيص Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "مدى الحياة"
+  },
+  "pop_premium_fact_features": {
+    "message": "الميزات المفعّلة"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "الكل"
+  },
+  "pop_settings_title": {
+    "message": "الإعدادات"
+  },
+  "pop_settings_btn_title": {
+    "message": "فتح الإعدادات"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "إظهار بلد الحساب بجانب اسم المستخدم في الخلاصة والاستكشاف والملفات"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "إظهار علم بلد الحساب بجانب اسم المستخدم في الخلاصة والاستكشاف والملفات"
+  },
+  "pop_opt_show_country_note": {
+    "message": "ملاحظة: تعمل هذه الإضافة فقط عندما يوفّر X.com بيانات البلد أو المنطقة للحساب (حول هذا الحساب). غالبًا لا يعرض X هذه المعلومات، لذا حتى مع تفعيل هذا الخيار قد لا يظهر البلد أو المنطقة بجانب اسم المستخدم. هذه القيود من X.com وليست من الإضافة."
+  },
+  "a11y_toggle_show_country": {
+    "message": "تبديل تسميات البلد في الخط الزمني"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "تبديل أعلام البلد في الخط الزمني"
+  },
+  "pop_opt_taller_columns": {
+    "message": "أعمدة أطول"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "يجعل قوائم المناطق والبلدان والحسابات المُدارة أطول بنحو مرتين إلى ثلاث، ويسمح بتمرير النافذة المنبثقة بالكامل ليقل الازدحام. معطّل افتراضيًا."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "تبديل تخطيط الأعمدة الأطول"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "ذاكرة البلد المحلية"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. ماذا تفعل: بعد بحث ناجح عن «حول هذا الحساب»، تحفظ بلد أو منطقة ذلك الحساب على هذا الجهاز لتعيد الإضافة استخدامه لاحقًا دون سؤال X مرة أخرى."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. الفوائد عند التفعيل: مكالمات شبكة أقل، واحتمال أقل لحدود المعدّل، وتسميات بلد أسرع وقرارات كتم/حظر تلقائية للحسابات التي رأيتها من قبل."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. إذا أوقفتها: كل بحث يضرب X من جديد — مزيد من خطر حدود المعدّل، وتسميات أبطأ، واستخدام بيانات أعلى أثناء التمرير. تبقى الذاكرة على القرص دون استخدام حتى تعيد التفعيل."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. التخزين: خفيف جدًا — حوالي 100,000 مستخدم ≈ 10 ميجابايت، بحجم ملف MP3 حديث تقريبًا على جهازك. تُخزَّن فقط نتائج البلد/المنطقة الناجحة."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "تبديل ذاكرة البلد المحلية"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "الحسابات المخزّنة"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "التخزين المستخدم (تقريبي)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "التراجع عند النقر على القائمة"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. ماذا تفعل: عند التفعيل، النقر على حساب مُدار يزيله من القائمة ويتراجع عن الإجراء على X (إلغاء الكتم أو الحظر). عند الإيقاف، النقرات لا تطلق الحسابات — تعرض فقط تلميحًا لتفعيل هذا الخيار."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. كيف تعمل: تفتح علامة تبويب خلفية قصيرة لملف ذلك الحساب، وتشغّل نفس مسار قائمة ⋯ المستخدم للكتم/الحظر، ثم تغلق التبويب. إدخالات «غير مهتم» قائمة فقط على X (لا تراجع موثوق)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. الفوائد عند التفعيل: نقرة واحدة تنظّف القائمة وتعكس الكتم/الحظر على حسابك في X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. ملاحظة: ستُفتح علامة تبويب ملف شخصية في الخلفية لفترة قصيرة حتى تلغي الإضافة الكتم/الحظر. معطّل افتراضيًا حتى لا تفتح النقرات العرضية تبويبات أو تعكس إجراءات دون قصد."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "تبديل التراجع عند النقر على القائمة المُدارة"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "لإلغاء الكتم أو الحظر أو مسح «غير مهتم» تلقائيًا عند النقر على حساب مُدار، فعّل «التراجع عند النقر على القائمة». يمكنك التفعيل الآن أو لاحقًا من الإعدادات."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "تفعيل الآن"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "تجاهل"
+  },
+  "a11y_managed_account_locked": {
+    "message": "حساب مُدار (فعّل التراجع عند النقر على القائمة للإطلاق)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "إطلاق هذا الحساب على X؟ إن بقي مطابقًا لفلتر بلد/منطقة نشط، قد تعمل الإضافة عليه مجددًا ما لم تضفه للقائمة البيضاء."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "إطلاق + قائمة بيضاء (لا إعادة فلترة)"
+  },
+  "pop_toast_release_once": {
+    "message": "هذه المرة فقط"
+  },
+  "pop_toast_release_cancel": {
+    "message": "إلغاء"
+  },
+  "toast_blocked": {
+    "message": "محظور"
+  },
+  "toast_muted": {
+    "message": "مكتوم"
+  },
+  "toast_notinterested": {
+    "message": "غير مهتم"
+  },
+  "toast_reason_country": {
+    "message": "فلتر البلد: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "فلتر المنطقة: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "إشعارات الإجراءات"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. ماذا تفعل: عندما تحظر الإضافة أو تكتم أو تعلّم منشورًا كـ «غير مهتم»، تظهر رسالة قصيرة أسفل X باسم الحساب و@المعرّف وصورة الملف."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. الفوائد عند التفعيل: ترى كل إجراء تلقائي فور حدوثه، مع عدّاد 6 ثوانٍ قبل اختفاء الرسالة."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. إذا أوقفتها: تبقى الإجراءات كالمعتاد؛ تُخفى رسالة الصفحة فقط. وميض شارة شريط الأدوات يعمل."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "تبديل إشعارات الإجراءات على X"
+  }
+}

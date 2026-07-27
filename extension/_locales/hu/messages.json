@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Az adott országból vagy régióból származó összes tweet blokkolása"
+  },
+  "ext_description": {
+    "message": "Felismeri az X-fiókok országát vagy régióját az idővonaladon (Erről a fiókról)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Ország-szűrő"
+  },
+  "pop_heading": {
+    "message": "X - Az adott országból vagy régióból származó összes tweet blokkolása"
+  },
+  "pop_lane_block": {
+    "message": "Letiltás"
+  },
+  "pop_lane_mute": {
+    "message": "Némítás"
+  },
+  "pop_lane_notinterested": {
+    "message": "Nem érdekel"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "A Letiltás oszlop be- vagy kikapcsolása"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "A Némítás oszlop be- vagy kikapcsolása"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "A Nem érdekel oszlop be- vagy kikapcsolása"
+  },
+  "pop_mode_warning_label": {
+    "message": "FIGYELMEZTETÉS:"
+  },
+  "pop_mode_hint_block": {
+    "message": "A kiválasztott fiókok le lesznek tiltva az X-fiókodon. Bejegyzéseik többé nem jelennek meg egyetlen X-alkalmazásodban sem: asztali, Android, iOS vagy web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "A kiválasztott fiókok el lesznek némítva az X-fiókodon. Bejegyzéseik többé nem jelennek meg egyetlen X-alkalmazásodban sem: asztali, Android, iOS vagy web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "A kiválasztott fiókok bejegyzései Nem érdekel jelölést kapnak az X-fiókodon, így az X kevesebbet mutat belőlük asztalon, Androidon, iOS-en és weben."
+  },
+  "pop_regions_label": {
+    "message": "Régiók"
+  },
+  "pop_countries_label": {
+    "message": "Országok"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ kiválasztva",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Régió váltása"
+  },
+  "a11y_toggle_country": {
+    "message": "Ország váltása"
+  },
+  "pop_search_regions": {
+    "message": "Régiók keresése…"
+  },
+  "pop_search_countries": {
+    "message": "Országok keresése…"
+  },
+  "pop_search_no_results": {
+    "message": "Nincs találat"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Letiltott fiókok"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Némított fiókok"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Nem érdekel fiókok"
+  },
+  "pop_search_accounts": {
+    "message": "Fiókok keresése…"
+  },
+  "pop_managed_empty": {
+    "message": "Még nincsenek kezelt fiókok"
+  },
+  "pop_managed_mode_block": {
+    "message": "Letiltás"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Némítás"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Nem érdekel"
+  },
+  "a11y_release_account": {
+    "message": "Kezelt fiók feloldása"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11 webhely megnyitása"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium adatok"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktiválva"
+  },
+  "pop_premium_chip_title": {
+    "message": "Aktivált Premium-hozzáférés megtekintése."
+  },
+  "pop_premium_back": {
+    "message": "Vissza"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Élethosszig tartó Premium aktiválva"
+  },
+  "pop_premium_subtitle": {
+    "message": "Élvezd a teljes Premium csomagot a következöben: X - Az adott országból vagy régióból származó összes tweet blokkolása a Premium11-től."
+  },
+  "pop_premium_status_title": {
+    "message": "Premium előfizetésed"
+  },
+  "pop_premium_status_active": {
+    "message": "Élethosszig tartó Premium aktív"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Fejlesztői ajándék"
+  },
+  "pop_premium_gift_message": {
+    "message": "A bővítmény fejlesztője élethosszig tartó Premium előfizetést ajándékozott neked (USD 29.99). Köszönjük, hogy hűséges felhasználója vagy az X - Az adott országból vagy régióból származó összes tweet blokkolása bővítménynek a Premium11-től."
+  },
+  "pop_premium_fact_version": {
+    "message": "Bővítmény verziója"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Utolsó frissítés"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium licenc érvényessége"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Élethosszig"
+  },
+  "pop_premium_fact_features": {
+    "message": "Engedélyezett funkciók"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Összes"
+  },
+  "pop_settings_title": {
+    "message": "Beállítások"
+  },
+  "pop_settings_btn_title": {
+    "message": "Beállítások megnyitása"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Fiók országának megjelenítése a felhasználónév mellett a hírfolyamon, a Felfedezésben és a profilokon"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Fiók országzászlójának megjelenítése a felhasználónév mellett a hírfolyamon, a Felfedezésben és a profilokon"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Megjegyzés: Ez a bővítmény csak akkor működik, ha az X.com megadja a fiók országát vagy régióját (Erről a fiókról). Az X gyakran nem adja ki ezeket az adatokat, ezért a beállítás bekapcsolása mellett sem mindig jelenik meg az ország vagy a régió a név mellett. Ezek a korlátok az X.com-tól származnak, nem ebből a bővítményből."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Országcímkék be- vagy kikapcsolása az idővonalon"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Országzászlók be- vagy kikapcsolása az idővonalon"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Magasabb oszlopok"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "A régió-, ország- és kezelt fióklistákat körülbelül két-háromszor magasabbá teszi, és engedélyezi a teljes felugró ablak görgetését, hogy a elrendezés kevésbé legyen szűk. Alapértelmezés szerint ki."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Magasabb oszlopok be- vagy kikapcsolása"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Helyi ország-gyorsítótár"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Mit csinál: Sikeres «Erről a fiókról» lekérdezés után elmenti a fiók országát vagy régióját ezen az eszközön, hogy a bővítmény később újra felhasználhassa anélkül, hogy újra kérdezné az X-et."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Előnyök bekapcsolva: Kevesebb hálózati hívás, kisebb rate limit kockázat, gyorsabb országcímkék, valamint automatikus némítás/letiltás a már látott fiókoknál."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Ha kikapcsolod: Minden lekérdezés újra az X-hez megy — nagyobb korlátozási kockázat, lassabb címkék és több adatforgalom görgetéskor. A meglévő gyorsítótár a lemezen marad, de csak a bekapcsolás után használódik."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Tárhely: Nagyon könnyű — kb. 100 000 felhasználó ≈ 10 MB, nagyjából egy modern MP3 mérete a PC-den. Csak sikeres ország-/régiótalálatok tárolódnak."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Helyi ország-gyorsítótár be- vagy kikapcsolása"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Gyorsítótárazott fiókok"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Használt tárhely (kb.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Visszavonás listakattintásra"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Mit csinál: Bekapcsolva egy kezelt fiókra kattintás eltávolítja a listáról, és visszavonja a műveletet az X-en (némítás feloldása vagy tiltás feloldása). Kikapcsolva a listakattintások nem oldanak fel fiókokat — csak tippet mutatnak a beállítás bekapcsolásához."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Hogyan működik: Rövid háttérlapot nyit a profilhoz, lefuttatja ugyanazt a ⋯ menüfolyamot, mint némításnál/letiltásnál, majd bezárja a lapot. A Nem érdekel bejegyzések az X-en csak listásak (nincs megbízható visszavonás)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Előnyök bekapcsolva: Egy kattintás tisztítja a listát, és visszaállítja a némítást/letiltást az X-fiókodon."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Megjegyzés: Röviden megnyílik egy profillap a háttérben, hogy a bővítmény feloldhassa a némítást/tiltást. Alapértelmezés szerint ki, hogy a véletlen kattintás ne nyisson lapokat és ne vonjon vissza műveleteket."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Visszavonás a kezelt listán kattintásra be- vagy kikapcsolása"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Ha automatikusan fel szeretnéd oldani a némítást, a tiltást vagy el szeretnéd távolítani a Nem érdekel jelölést egy kezelt fiókra kattintva, kapcsold be a Visszavonás listakattintásra opciót. Most vagy később a Beállításokban is megteheted."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Bekapcsolás most"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Bezárás"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Kezelt fiók (a feloldáshoz kapcsold be a Visszavonás listakattintásra opciót)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Feloldod ezt a fiókot az X-en? Ha továbbra is illeszkedik egy aktív ország-/régiószűrőhöz, a bővítmény újra léphet, hacsak nem teszed kivétellistára."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Feloldás + kivétellista (soha ne szűrjön újra)"
+  },
+  "pop_toast_release_once": {
+    "message": "Csak most"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Mégse"
+  },
+  "toast_blocked": {
+    "message": "Letiltva"
+  },
+  "toast_muted": {
+    "message": "Elnémítva"
+  },
+  "toast_notinterested": {
+    "message": "Nem érdekel"
+  },
+  "toast_reason_country": {
+    "message": "Ország-szűrő: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Régió-szűrő: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Műveleti értesítések"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Mit csinál: Ha a bővítmény letilt, némít vagy Nem érdekel jelöléssel lát el egy bejegyzést, az X alján rövid toast jelenik meg a fiók nevével, @azonosítójával és profilképével."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Előnyök bekapcsolva: Azonnal látod az automatikus műveleteket, 6 másodperces visszaszámlálással, mielőtt a toast eltűnik."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Ha kikapcsolod: A műveletek továbbra is futnak; csak az oldalon megjelenő toast rejtőzik el. Az eszköztár jelvényvillanása továbbra is működik."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Műveleti értesítések be- vagy kikapcsolása az X-en"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Блокирай всички туитове от тази държава или регион"
+  },
+  "ext_description": {
+    "message": "Открива държавата или региона на акаунти в X в хрониката ви (За този акаунт)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Филтър по държава"
+  },
+  "pop_heading": {
+    "message": "X - Блокирай всички туитове от тази държава или регион"
+  },
+  "pop_lane_block": {
+    "message": "Блокиране"
+  },
+  "pop_lane_mute": {
+    "message": "Заглушаване"
+  },
+  "pop_lane_notinterested": {
+    "message": "Не ме интересува"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Включване или изключване на колоната Блокиране"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Включване или изключване на колоната Заглушаване"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Включване или изключване на колоната Не ме интересува"
+  },
+  "pop_mode_warning_label": {
+    "message": "ПРЕДУПРЕЖДЕНИЕ:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Избраните акаунти се блокират в акаунта ви в X. Публикациите им вече няма да се показват в никое от приложенията ви за X: компютър, Android, iOS или уеб."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Избраните акаунти се заглушават в акаунта ви в X. Публикациите им вече няма да се показват в никое от приложенията ви за X: компютър, Android, iOS или уеб."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Публикациите от избраните акаунти се отбелязват като Не ме интересува в акаунта ви в X, така че X да ви показва по-малко от тях на компютър, Android, iOS и уеб."
+  },
+  "pop_regions_label": {
+    "message": "Региони"
+  },
+  "pop_countries_label": {
+    "message": "Държави"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ избрани",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Превключване на регион"
+  },
+  "a11y_toggle_country": {
+    "message": "Превключване на държава"
+  },
+  "pop_search_regions": {
+    "message": "Търсене на региони…"
+  },
+  "pop_search_countries": {
+    "message": "Търсене на държави…"
+  },
+  "pop_search_no_results": {
+    "message": "Няма съвпадения"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Блокирани акаунти"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Заглушени акаунти"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Акаунти Не ме интересува"
+  },
+  "pop_search_accounts": {
+    "message": "Търсене на акаунти…"
+  },
+  "pop_managed_empty": {
+    "message": "Все още няма управлявани акаунти"
+  },
+  "pop_managed_mode_block": {
+    "message": "Блокиране"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Заглушаване"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Не ме интересува"
+  },
+  "a11y_release_account": {
+    "message": "Освобождаване на управляван акаунт"
+  },
+  "a11y_open_premium11": {
+    "message": "Отваряне на сайта на Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Данни за Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium активиран"
+  },
+  "pop_premium_chip_title": {
+    "message": "Вижте активирания си достъп до Premium."
+  },
+  "pop_premium_back": {
+    "message": "Назад"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Доживотен Premium активиран"
+  },
+  "pop_premium_subtitle": {
+    "message": "Насладете се на пълния пакет Premium в X - Блокирай всички туитове от тази държава или регион от Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Вашият абонамент Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Доживотен Premium активен"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Подарък от разработчика"
+  },
+  "pop_premium_gift_message": {
+    "message": "Разработчикът на разширението ви е подарил доживотен абонамент Premium (USD 29.99). Благодарим, че сте лоялен потребител на X - Блокирай всички туитове от тази държава или регион от Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Версия на разширението"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Последна актуализация"
+  },
+  "pop_premium_fact_license": {
+    "message": "Валидност на лиценза Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Доживотен"
+  },
+  "pop_premium_fact_features": {
+    "message": "Активирани функции"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Всички"
+  },
+  "pop_settings_title": {
+    "message": "Настройки"
+  },
+  "pop_settings_btn_title": {
+    "message": "Отваряне на настройките"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Показване на държавата на акаунта до потребителското име в емисията, Откриване и профилите"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Показване на знамето на държавата на акаунта до потребителското име в емисията, Откриване и профилите"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Забележка: Това разширение работи само когато X.com посочи държава или регион на акаунт (За този акаунт). Често X не предоставя тези данни, така че дори при включена опция държавата или регионът може да не се появят до името. Тези ограничения идват от X.com, не от това разширение."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Превключване на етикети за държава в хрониката"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Превключване на знамена на държави в хрониката"
+  },
+  "pop_opt_taller_columns": {
+    "message": "По-високи колони"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Прави списъците с региони, държави и управлявани акаунти около два до три пъти по-високи и позволява превъртане на целия изскачащ прозорец, за да изглежда оформлението по-малко натоварено. Изключено по подразбиране."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Превключване на по-високи колони"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Локален кеш на държави"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Какво прави: След успешно търсене «За този акаунт» запазва държавата или региона на акаунта на това устройство, за да може разширението да ги използва отново без ново запитване към X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Ползи при включване: По-малко мрежови заявки, по-нисък риск от rate limit и по-бързи етикети за държава, плюс автоматични решения за заглушаване/блокиране за вече видени акаунти."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Ако го изключите: Всяко търсене отново отива към X — по-висок риск от ограничения, по-бавни етикети и повече данни при превъртане. Съществуващият кеш остава на диска, но не се използва, докато не включите опцията отново."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Съхранение: Много лек — около 100 000 потребители ≈ 10 MB, приблизително размерът на един модерен MP3 на компютъра ви. Запазват се само успешни попадения за държава/регион."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Превключване на локалния кеш на държави"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Кеширани акаунти"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Използвано място (прибл.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Отмяна при клик в списъка"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Какво прави: Когато е включено, клик върху управляван акаунт го премахва от списъка и отменя действието в X (премахване на заглушаване или разблокиране). Когато е изключено, кликовете в списъка не освобождават акаунти — показват само съвет да активирате опцията."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Как работи: Отваря краткотраен раздел на заден план към профила, изпълнява същия поток на менюто ⋯ както при заглушаване/блокиране и затваря раздела. Записите Не ме интересува са само в списъка в X (няма надеждна отмяна)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Ползи при включване: Един клик изчиства списъка и отменя заглушаването/блокирането в акаунта ви в X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Забележка: За кратко се отваря раздел с профил на заден план, за да може разширението да премахне заглушаване/разблокира. Изключено по подразбиране, за да не отварят случайни кликове раздели и да не отменят действия."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Превключване на отмяна при клик в управлявания списък"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "За автоматично премахване на заглушаване, разблокиране или премахване на Не ме интересува при клик върху управляван акаунт, включете Отмяна при клик в списъка. Можете да го направите сега или по-късно в Настройки."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Активиране сега"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Затваряне"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Управляван акаунт (включете Отмяна при клик в списъка за освобождаване)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Освобождаване на този акаунт в X? Ако все още съвпада с активен филтър по държава/регион, разширението може да действа отново, освен ако не го добавите в белия списък."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Освобождаване + бял списък (без повторно филтриране)"
+  },
+  "pop_toast_release_once": {
+    "message": "Само този път"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Отказ"
+  },
+  "toast_blocked": {
+    "message": "Блокиран"
+  },
+  "toast_muted": {
+    "message": "Заглушен"
+  },
+  "toast_notinterested": {
+    "message": "Не ме интересува"
+  },
+  "toast_reason_country": {
+    "message": "Филтър по държава: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Филтър по регион: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Известия за действия"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Какво прави: Когато разширението блокира, заглушава или отбелязва публикация като Не ме интересува, в долната част на X се появява кратък toast с името на акаунта, @handle и профилната снимка."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Ползи при включване: Виждате всяко автоматично действие веднага, с обратно броене от 6 секунди преди toast-ът да изчезне."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Ако го изключите: Действията продължават както обикновено; скрит е само toast-ът на страницата. Мигането на значката в лентата с инструменти работи."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Превключване на известия за действия в X"
+  }
+}

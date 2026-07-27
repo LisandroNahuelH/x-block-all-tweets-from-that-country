@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Block all tweets from that country or region"
+  },
+  "ext_description": {
+    "message": "Detect the country or region of X accounts on your timeline (About this account)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Country filter"
+  },
+  "pop_heading": {
+    "message": "X - Block all tweets from that country or region"
+  },
+  "pop_lane_block": {
+    "message": "Block"
+  },
+  "pop_lane_mute": {
+    "message": "Mute"
+  },
+  "pop_lane_notinterested": {
+    "message": "Not interested"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Enable or disable Block lane"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Enable or disable Mute lane"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Enable or disable Not interested lane"
+  },
+  "pop_mode_warning_label": {
+    "message": "WARNING:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Selected accounts are blocked on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Selected accounts are muted on your X account. Their posts will no longer appear in any of your X apps: desktop, Android, iOS, or web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Posts from selected accounts are marked Not interested on your X account, so X will show you fewer of them across desktop, Android, iOS, and web."
+  },
+  "pop_regions_label": {
+    "message": "Regions"
+  },
+  "pop_countries_label": {
+    "message": "Countries"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ selected",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Toggle region"
+  },
+  "a11y_toggle_country": {
+    "message": "Toggle country"
+  },
+  "pop_search_regions": {
+    "message": "Search regions…"
+  },
+  "pop_search_countries": {
+    "message": "Search countries…"
+  },
+  "pop_search_no_results": {
+    "message": "No matches"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Blocked accounts"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Muted accounts"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Not interested accounts"
+  },
+  "pop_search_accounts": {
+    "message": "Search accounts…"
+  },
+  "pop_managed_empty": {
+    "message": "No managed accounts yet"
+  },
+  "pop_managed_mode_block": {
+    "message": "Block"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Mute"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Not interested"
+  },
+  "a11y_release_account": {
+    "message": "Release managed account"
+  },
+  "a11y_open_premium11": {
+    "message": "Open Premium11 website"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium facts"
+  },
+  "pop_premium_chip": {
+    "message": "Premium Activated"
+  },
+  "pop_premium_chip_title": {
+    "message": "View your activated Premium access."
+  },
+  "pop_premium_back": {
+    "message": "Back"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Lifetime Premium activated"
+  },
+  "pop_premium_subtitle": {
+    "message": "Enjoy the complete Premium suite inside X - Block all tweets from that country or region by Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Your Premium subscription"
+  },
+  "pop_premium_status_active": {
+    "message": "Lifetime Premium active"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Developer gift"
+  },
+  "pop_premium_gift_message": {
+    "message": "The extension developer has gifted you a lifetime Premium subscription (USD 29.99). Thank you for being a loyal user of X - Block all tweets from that country or region by Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Extension version"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Last updated"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium license validity"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Lifetime"
+  },
+  "pop_premium_fact_features": {
+    "message": "Features enabled"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "All"
+  },
+  "pop_settings_title": {
+    "message": "Settings"
+  },
+  "pop_settings_btn_title": {
+    "message": "Open settings"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Show account country next to the username on feed, explore, and profiles"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Show account country flag next to the username on feed, explore, and profiles"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Note: This extension only works when X.com reports country or region data for an account (About this account). X often does not expose that information, so even with this option enabled the country or region may not appear next to the username. These limits come from X.com, not from this extension."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Toggle country labels on the timeline"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Toggle country flags on the timeline"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Taller columns"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Makes the region, country, and managed-account lists about two to three times taller, and lets the whole popup scroll so the layout feels less cramped. Off by default."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Toggle taller columns layout"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Local country cache"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. What it does: After a successful “About this account” lookup, saves that account’s country or region on this device so the extension can reuse it later without asking X again."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Benefits when on: Fewer network calls, lower chance of rate limits, and faster country labels plus auto mute/block decisions for accounts you have already seen."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. If you turn it off: Every lookup hits X again — more rate-limit risk, slower labels, and higher data use while scrolling. Existing cache is kept on disk but unused until you turn this back on."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Storage: Very light — about 100,000 users ≈ 10 MB, roughly the size of one modern MP3 on your PC. Only successful country/region hits are stored."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Toggle local country cache"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Cached accounts"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Storage used (approx.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Undo on list click"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. What it does: When on, clicking a managed account removes it from the list and undoes the action on X (unmute or unblock). When off, list clicks do not release accounts — they only show a tip to enable this option."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. How it works: Opens a short-lived background tab to that profile, runs the same ⋯ menu flow used for mute/block, then closes the tab. Not interested entries are list-only on X (no reliable undo)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Benefits when on: One click both cleans the list and reverses mute/block on your X account."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Note: A background profile tab will open briefly so the extension can unmute/unblock. Off by default so accidental clicks cannot open tabs or reverse actions without you meaning to."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Toggle undo on managed list click"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "To automatically unmute, unblock, or clear Not interested when you click a managed account, turn on Undo on list click. You can enable it now or later in Settings."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Enable now"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Dismiss"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Managed account (enable Undo on list click to release)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Release this account on X? If they still match an active country/region filter, the extension may act again unless you whitelist them."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Release + whitelist (never re-filter)"
+  },
+  "pop_toast_release_once": {
+    "message": "Just this once"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Cancel"
+  },
+  "toast_blocked": {
+    "message": "Blocked"
+  },
+  "toast_muted": {
+    "message": "Muted"
+  },
+  "toast_notinterested": {
+    "message": "Not interested"
+  },
+  "toast_reason_country": {
+    "message": "Country filter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Region filter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Action notifications"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. What it does: When the extension blocks, mutes, or marks a post Not interested, a short toast appears at the bottom of X with that account's name, @handle, and profile photo."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Benefits when on: You can see each automatic action as it happens, with a 6-second countdown before the toast disappears."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. If you turn it off: Actions still run as usual; only the on-page toast is hidden. The toolbar badge flash still works."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Toggle action notifications on X"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Blockera alla tweets från det landet eller den regionen"
+  },
+  "ext_description": {
+    "message": "Upptäcker land eller region för X-konton i din tidslinje (Om det här kontot)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Landsfilter"
+  },
+  "pop_heading": {
+    "message": "X - Blockera alla tweets från det landet eller den regionen"
+  },
+  "pop_lane_block": {
+    "message": "Blockera"
+  },
+  "pop_lane_mute": {
+    "message": "Ignorera"
+  },
+  "pop_lane_notinterested": {
+    "message": "Inte intresserad"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Aktivera eller inaktivera kolumnen Blockera"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Aktivera eller inaktivera kolumnen Ignorera"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Aktivera eller inaktivera kolumnen Inte intresserad"
+  },
+  "pop_mode_warning_label": {
+    "message": "VARNING:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Valda konton blockeras på ditt X-konto. Deras inlägg syns inte längre i någon av dina X-appar: dator, Android, iOS eller webb."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Valda konton ignoreras på ditt X-konto. Deras inlägg syns inte längre i någon av dina X-appar: dator, Android, iOS eller webb."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Inlägg från valda konton markeras som Inte intresserad på ditt X-konto, så att X visar dig färre av dem på dator, Android, iOS och webb."
+  },
+  "pop_regions_label": {
+    "message": "Regioner"
+  },
+  "pop_countries_label": {
+    "message": "Länder"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ valda",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Växla region"
+  },
+  "a11y_toggle_country": {
+    "message": "Växla land"
+  },
+  "pop_search_regions": {
+    "message": "Sök regioner…"
+  },
+  "pop_search_countries": {
+    "message": "Sök länder…"
+  },
+  "pop_search_no_results": {
+    "message": "Inga träffar"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Blockerade konton"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Ignorerade konton"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Konton Inte intresserad"
+  },
+  "pop_search_accounts": {
+    "message": "Sök konton…"
+  },
+  "pop_managed_empty": {
+    "message": "Inga hanterade konton ännu"
+  },
+  "pop_managed_mode_block": {
+    "message": "Blockera"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Ignorera"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Inte intresserad"
+  },
+  "a11y_release_account": {
+    "message": "Frigör hanterat konto"
+  },
+  "a11y_open_premium11": {
+    "message": "Öppna Premium11-webbplatsen"
+  },
+  "a11y_premium_facts": {
+    "message": "Premiumuppgifter"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktiverat"
+  },
+  "pop_premium_chip_title": {
+    "message": "Visa din aktiverade Premium-åtkomst."
+  },
+  "pop_premium_back": {
+    "message": "Tillbaka"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Livstids-Premium aktiverat"
+  },
+  "pop_premium_subtitle": {
+    "message": "Njut av hela Premium-sviten i X - Blockera alla tweets från det landet eller den regionen från Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Din Premium-prenumeration"
+  },
+  "pop_premium_status_active": {
+    "message": "Livstids-Premium aktivt"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Utvecklargåva"
+  },
+  "pop_premium_gift_message": {
+    "message": "Tilläggsutvecklaren har gett dig en livstids-Premium-prenumeration (USD 29.99). Tack för att du är en trogen användare av X - Blockera alla tweets från det landet eller den regionen från Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Tilläggsversion"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Senast uppdaterad"
+  },
+  "pop_premium_fact_license": {
+    "message": "Giltighet för Premium-licens"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Livstid"
+  },
+  "pop_premium_fact_features": {
+    "message": "Aktiverade funktioner"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Alla"
+  },
+  "pop_settings_title": {
+    "message": "Inställningar"
+  },
+  "pop_settings_btn_title": {
+    "message": "Öppna inställningar"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Visa kontots land bredvid användarnamnet i flöde, Utforska och profiler"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Visa kontots landsflagga bredvid användarnamnet i flöde, Utforska och profiler"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Obs: Det här tillägget fungerar bara när X.com anger land eller region för ett konto (Om det här kontot). X visar ofta inte den informationen, så även med alternativet på kan land eller region saknas bredvid namnet. Begränsningarna kommer från X.com, inte från det här tillägget."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Växla landsetiketter i tidslinjen"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Växla landsflaggor i tidslinjen"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Högre kolumner"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Gör listorna för regioner, länder och hanterade konton ungefär två till tre gånger högre och låter hela popupen rulla så att layouten känns mindre trång. Av som standard."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Växla högre kolumner"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Lokal landscache"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Vad det gör: Efter en lyckad uppslagning av «Om det här kontot» sparas kontots land eller region på den här enheten så att tillägget kan återanvända det senare utan att fråga X igen."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Fördelar när det är på: Färre nätverksanrop, lägre risk för hastighetsbegränsningar och snabbare landsetiketter plus automatiska ignorera/blockera-beslut för konton du redan sett."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Om du stänger av det: Varje uppslagning går till X igen — högre risk för begränsningar, långsammare etiketter och mer dataanvändning vid rullning. Befintlig cache ligger kvar på disken men används inte förrän du slår på det igen."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Lagring: Mycket lätt — cirka 100 000 användare ≈ 10 MB, ungefär storleken på en modern MP3 på din PC. Endast lyckade land-/regionträffar sparas."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Växla lokal landscache"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Cachelagrade konton"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Använt utrymme (ca)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Ångra vid listklick"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Vad det gör: När det är på tar ett klick på ett hanterat konto bort det från listan och ångrar åtgärden på X (sluta ignorera eller avblockera). När det är av frigör listklick inte konton — de visar bara en tipsruta att aktivera alternativet."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Så fungerar det: Öppnar en kortlivad flik i bakgrunden till profilen, kör samma ⋯-menyflöde som för ignorera/blockera och stänger fliken. Poster med Inte intresserad är endast listbaserade på X (ingen tillförlitlig ångring)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Fördelar när det är på: Ett klick rensar listan och återställer ignorera/blockera på ditt X-konto."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Obs: En profilflik öppnas kort i bakgrunden så att tillägget kan sluta ignorera/avblockera. Av som standard så att oavsiktliga klick inte öppnar flikar eller ångrar åtgärder."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Växla ångra vid klick i hanterad lista"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "För att automatiskt sluta ignorera, avblockera eller ta bort Inte intresserad när du klickar på ett hanterat konto, aktivera Ångra vid listklick. Du kan slå på det nu eller senare under Inställningar."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Aktivera nu"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Stäng"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Hanterat konto (aktivera Ångra vid listklick för att frigöra)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Frigöra det här kontot på X? Om det fortfarande matchar ett aktivt lands-/regionsfilter kan tillägget agera igen om du inte vitlistar det."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Frigör + vitlista (filtrera aldrig igen)"
+  },
+  "pop_toast_release_once": {
+    "message": "Bara den här gången"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Avbryt"
+  },
+  "toast_blocked": {
+    "message": "Blockerad"
+  },
+  "toast_muted": {
+    "message": "Ignorerad"
+  },
+  "toast_notinterested": {
+    "message": "Inte intresserad"
+  },
+  "toast_reason_country": {
+    "message": "Landsfilter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Regionsfilter: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Åtgärdsaviseringar"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Vad det gör: När tillägget blockerar, ignorerar eller markerar ett inlägg som Inte intresserad visas en kort toast längst ner på X med kontots namn, @användarnamn och profilbild."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Fördelar när det är på: Du ser varje automatisk åtgärd direkt, med en 6-sekunders nedräkning innan toasten försvinner."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Om du stänger av det: Åtgärder körs som vanligt; bara toasten på sidan döljs. Verktygsfältets badge-blink fungerar fortfarande."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Växla åtgärdsaviseringar på X"
+  }
+}

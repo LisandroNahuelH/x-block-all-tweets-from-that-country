@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Blokovat všechny tweety z dané země nebo regionu"
+  },
+  "ext_description": {
+    "message": "Zjistí zemi nebo region účtů X na vaší časové ose (Informace o tomto účtu)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Filtr země"
+  },
+  "pop_heading": {
+    "message": "X - Blokovat všechny tweety z dané země nebo regionu"
+  },
+  "pop_lane_block": {
+    "message": "Blokovat"
+  },
+  "pop_lane_mute": {
+    "message": "Ztlumit"
+  },
+  "pop_lane_notinterested": {
+    "message": "Nezajímá mě"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Zapnout nebo vypnout sloupec Blokovat"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Zapnout nebo vypnout sloupec Ztlumit"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Zapnout nebo vypnout sloupec Nezajímá mě"
+  },
+  "pop_mode_warning_label": {
+    "message": "UPOZORNĚNÍ:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Vybrané účty se na vašem účtu X zablokují. Jejich příspěvky se už neobjeví v žádné aplikaci X: desktop, Android, iOS ani web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Vybrané účty se na vašem účtu X ztlumí. Jejich příspěvky se už neobjeví v žádné aplikaci X: desktop, Android, iOS ani web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Příspěvky vybraných účtů se na vašem účtu X označí jako Nezajímá mě, takže X jich ukáže méně na desktopu, Androidu, iOS a webu."
+  },
+  "pop_regions_label": {
+    "message": "Regiony"
+  },
+  "pop_countries_label": {
+    "message": "Země"
+  },
+  "pop_selected_count": {
+    "message": "Vybráno: $COUNT$",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Přepnout region"
+  },
+  "a11y_toggle_country": {
+    "message": "Přepnout zemi"
+  },
+  "pop_search_regions": {
+    "message": "Hledat regiony…"
+  },
+  "pop_search_countries": {
+    "message": "Hledat země…"
+  },
+  "pop_search_no_results": {
+    "message": "Žádné shody"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Zablokované účty"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Ztlumené účty"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Účty Nezajímá mě"
+  },
+  "pop_search_accounts": {
+    "message": "Hledat účty…"
+  },
+  "pop_managed_empty": {
+    "message": "Zatím žádné spravované účty"
+  },
+  "pop_managed_mode_block": {
+    "message": "Blokovat"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Ztlumit"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Nezajímá mě"
+  },
+  "a11y_release_account": {
+    "message": "Uvolnit spravovaný účet"
+  },
+  "a11y_open_premium11": {
+    "message": "Otevřít web Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Údaje Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktivováno"
+  },
+  "pop_premium_chip_title": {
+    "message": "Zobrazit aktivovaný přístup Premium."
+  },
+  "pop_premium_back": {
+    "message": "Zpět"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Doživotní Premium aktivováno"
+  },
+  "pop_premium_subtitle": {
+    "message": "Užijte si kompletní sadu Premium v rozšíření X - Blokovat všechny tweety z dané země nebo regionu od Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Vaše předplatné Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Doživotní Premium aktivní"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Dárek od vývojáře"
+  },
+  "pop_premium_gift_message": {
+    "message": "Vývojář rozšíření vám daroval doživotní předplatné Premium (USD 29.99). Děkujeme, že jste věrným uživatelem X - Blokovat všechny tweety z dané země nebo regionu od Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Verze rozšíření"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Naposledy aktualizováno"
+  },
+  "pop_premium_fact_license": {
+    "message": "Platnost licence Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Doživotní"
+  },
+  "pop_premium_fact_features": {
+    "message": "Povolené funkce"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Všechny"
+  },
+  "pop_settings_title": {
+    "message": "Nastavení"
+  },
+  "pop_settings_btn_title": {
+    "message": "Otevřít nastavení"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Zobrazit zemi účtu vedle uživatelského jména ve feedu, v Prozkoumat a v profilech"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Zobrazit vlajku země účtu vedle uživatelského jména ve feedu, v Prozkoumat a v profilech"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Poznámka: Toto rozšíření funguje jen tehdy, když X.com uvede zemi nebo region účtu (Informace o tomto účtu). X tyto údaje často neposkytuje, takže i se zapnutou volbou se země nebo region nemusí u jména objevit. Tato omezení pocházejí z X.com, ne z tohoto rozšíření."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Přepnout popisky zemí na časové ose"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Přepnout vlajky zemí na časové ose"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Vyšší sloupce"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Zvýší seznamy regionů, zemí a spravovaných účtů zhruba dvakrát až třikrát a umožní posouvat celé vyskakovací okno, aby rozvržení působilo méně stísněně. Ve výchozím stavu vypnuto."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Přepnout vyšší sloupce"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Místní mezipaměť zemí"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Co dělá: Po úspěšném načtení «Informace o tomto účtu» uloží zemi nebo region tohoto účtu na toto zařízení, aby je rozšíření mohlo později znovu použít bez dalšího dotazu na X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Výhody při zapnutí: Méně síťových požadavků, nižší riziko rate limitů a rychlejší popisky zemí plus automatická rozhodnutí ztlumit/blokovat u už viděných účtů."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Pokud vypnete: Každý dotaz znovu jde na X — vyšší riziko limitů, pomalejší popisky a větší spotřeba dat při scrollování. Existující mezipaměť zůstane na disku, ale nepoužije se, dokud volbu znovu nezapnete."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Úložiště: Velmi lehká — asi 100 000 uživatelů ≈ 10 MB, zhruba velikost jedné moderní MP3 na PC. Ukládají se jen úspěšné zásahy země/regionu."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Přepnout místní mezipaměť zemí"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Účty v mezipaměti"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Využité úložiště (přibl.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Vrátit kliknutím v seznamu"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Co dělá: Když je zapnuto, klik na spravovaný účet ho odebere ze seznamu a vrátí akci na X (zrušit ztlumení nebo odblokovat). Když je vypnuto, kliky v seznamu účty neuvolní — jen ukážou tip k zapnutí této volby."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Jak to funguje: Krátce otevře karta na pozadí k profilu, spustí stejný tok menu ⋯ jako u ztlumení/blokování a kartu zavře. Položky Nezajímá mě jsou na X jen v seznamu (spolehlivé vrácení neexistuje)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Výhody při zapnutí: Jedno kliknutí vyčistí seznam a vrátí ztlumení/blokování na vašem účtu X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Poznámka: Na chvíli se otevře karta profilu na pozadí, aby rozšíření mohlo zrušit ztlumení/odblokovat. Ve výchozím stavu vypnuto, aby náhodné kliknutí neotevíralo karty ani nevracelo akce."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Přepnout vrácení kliknutím ve spravovaném seznamu"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Chcete-li automaticky zrušit ztlumení, odblokovat nebo odebrat Nezajímá mě po kliknutí na spravovaný účet, zapněte Vrátit kliknutím v seznamu. Můžete to udělat teď nebo později v Nastavení."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Zapnout teď"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Zavřít"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Spravovaný účet (pro uvolnění zapněte Vrátit kliknutím v seznamu)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Uvolnit tento účet na X? Pokud stále odpovídá aktivnímu filtru země/regionu, rozšíření může znovu zasáhnout, pokud ho nedáte na výjimku."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Uvolnit + výjimka (už nikdy nefiltrovat)"
+  },
+  "pop_toast_release_once": {
+    "message": "Jen tentokrát"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Zrušit"
+  },
+  "toast_blocked": {
+    "message": "Zablokováno"
+  },
+  "toast_muted": {
+    "message": "Ztlumeno"
+  },
+  "toast_notinterested": {
+    "message": "Nezajímá mě"
+  },
+  "toast_reason_country": {
+    "message": "Filtr země: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Filtr regionu: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Oznámení o akcích"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Co dělá: Když rozšíření zablokuje, ztlumí nebo označí příspěvek jako Nezajímá mě, dole na X se objeví krátký toast se jménem účtu, @handle a fotkou profilu."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Výhody při zapnutí: Každou automatickou akci vidíte hned, s odpočtem 6 sekund, než toast zmizí."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Pokud vypnete: Akce běží dál jako obvykle; skryje se jen toast na stránce. Blikání odznaku na panelu nástrojů funguje dál."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Přepnout oznámení o akcích na X"
+  }
+}

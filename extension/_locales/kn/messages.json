@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - ಆ ದೇಶ ಅಥವಾ ಪ್ರದೇಶದ ಎಲ್ಲಾ ಟ್ವೀಟ್‌ಗಳನ್ನು ಬ್ಲಾಕ್ ಮಾಡಿ"
+  },
+  "ext_description": {
+    "message": "ನಿಮ್ಮ ಟೈಮ್‌ಲೈನ್‌ನಲ್ಲಿ X ಖಾತೆಗಳ ದೇಶ ಅಥವಾ ಪ್ರದೇಶವನ್ನು ಪತ್ತೆ ಮಾಡಿ (ಈ ಖಾತೆಯ ಬಗ್ಗೆ)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "ದೇಶ ಫಿಲ್ಟರ್"
+  },
+  "pop_heading": {
+    "message": "X - ಆ ದೇಶ ಅಥವಾ ಪ್ರದೇಶದ ಎಲ್ಲಾ ಟ್ವೀಟ್‌ಗಳನ್ನು ಬ್ಲಾಕ್ ಮಾಡಿ"
+  },
+  "pop_lane_block": {
+    "message": "ಬ್ಲಾಕ್"
+  },
+  "pop_lane_mute": {
+    "message": "ಮ್ಯೂಟ್"
+  },
+  "pop_lane_notinterested": {
+    "message": "ಆಸಕ್ತಿ ಇಲ್ಲ"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "ಬ್ಲಾಕ್ ಕಾಲಮ್ ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡಿ"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "ಮ್ಯೂಟ್ ಕಾಲಮ್ ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡಿ"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "ಆಸಕ್ತಿ ಇಲ್ಲ ಕಾಲಮ್ ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡಿ"
+  },
+  "pop_mode_warning_label": {
+    "message": "ಎಚ್ಚರಿಕೆ:"
+  },
+  "pop_mode_hint_block": {
+    "message": "ಆಯ್ಕೆಮಾಡಿದ ಖಾತೆಗಳು ನಿಮ್ಮ X ಖಾತೆಯಲ್ಲಿ ಬ್ಲಾಕ್ ಆಗುತ್ತವೆ. ಅವುಗಳ ಪೋಸ್ಟ್‌ಗಳು ಇನ್ನು ಮುಂದೆ ಯಾವುದೇ X ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಕಾಣಿಸುವುದಿಲ್ಲ: ಡೆಸ್ಕ್‌ಟಾಪ್, Android, iOS ಅಥವಾ ವೆಬ್."
+  },
+  "pop_mode_hint_mute": {
+    "message": "ಆಯ್ಕೆಮಾಡಿದ ಖಾತೆಗಳು ನಿಮ್ಮ X ಖಾತೆಯಲ್ಲಿ ಮ್ಯೂಟ್ ಆಗುತ್ತವೆ. ಅವುಗಳ ಪೋಸ್ಟ್‌ಗಳು ಇನ್ನು ಮುಂದೆ ಯಾವುದೇ X ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಕಾಣಿಸುವುದಿಲ್ಲ: ಡೆಸ್ಕ್‌ಟಾಪ್, Android, iOS ಅಥವಾ ವೆಬ್."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "ಆಯ್ಕೆಮಾಡಿದ ಖಾತೆಗಳ ಪೋಸ್ಟ್‌ಗಳು ನಿಮ್ಮ X ಖಾತೆಯಲ್ಲಿ «ಆಸಕ್ತಿ ಇಲ್ಲ» ಎಂದು ಗುರುತಿಸಲಾಗುತ್ತದೆ, ಆದ್ದರಿಂದ X ಡೆಸ್ಕ್‌ಟಾಪ್, Android, iOS ಮತ್ತು ವೆಬ್‌ನಲ್ಲಿ ಕಡಿಮೆ ತೋರಿಸುತ್ತದೆ."
+  },
+  "pop_regions_label": {
+    "message": "ಪ್ರದೇಶಗಳು"
+  },
+  "pop_countries_label": {
+    "message": "ದೇಶಗಳು"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ ಆಯ್ಕೆ",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "ಪ್ರದೇಶ ಟಾಗಲ್ ಮಾಡಿ"
+  },
+  "a11y_toggle_country": {
+    "message": "ದೇಶ ಟಾಗಲ್ ಮಾಡಿ"
+  },
+  "pop_search_regions": {
+    "message": "ಪ್ರದೇಶಗಳನ್ನು ಹುಡುಕಿ…"
+  },
+  "pop_search_countries": {
+    "message": "ದೇಶಗಳನ್ನು ಹುಡುಕಿ…"
+  },
+  "pop_search_no_results": {
+    "message": "ಹೊಂದಾಣಿಕೆಗಳಿಲ್ಲ"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "ಬ್ಲಾಕ್ ಮಾಡಿದ ಖಾತೆಗಳು"
+  },
+  "pop_muted_accounts_label": {
+    "message": "ಮ್ಯೂಟ್ ಮಾಡಿದ ಖಾತೆಗಳು"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "ಆಸಕ್ತಿ ಇಲ್ಲ ಖಾತೆಗಳು"
+  },
+  "pop_search_accounts": {
+    "message": "ಖಾತೆಗಳನ್ನು ಹುಡುಕಿ…"
+  },
+  "pop_managed_empty": {
+    "message": "ಇನ್ನೂ ನಿರ್ವಹಿತ ಖಾತೆಗಳಿಲ್ಲ"
+  },
+  "pop_managed_mode_block": {
+    "message": "ಬ್ಲಾಕ್"
+  },
+  "pop_managed_mode_mute": {
+    "message": "ಮ್ಯೂಟ್"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "ಆಸಕ್ತಿ ಇಲ್ಲ"
+  },
+  "a11y_release_account": {
+    "message": "ನಿರ್ವಹಿತ ಖಾತೆಯನ್ನು ಬಿಡುಗಡೆ ಮಾಡಿ"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11 ವೆಬ್‌ಸೈಟ್ ತೆರೆಯಿರಿ"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium ವಿವರಗಳು"
+  },
+  "pop_premium_chip": {
+    "message": "Premium ಸಕ್ರಿಯ"
+  },
+  "pop_premium_chip_title": {
+    "message": "ನಿಮ್ಮ ಸಕ್ರಿಯ Premium ಪ್ರವೇಶವನ್ನು ನೋಡಿ."
+  },
+  "pop_premium_back": {
+    "message": "ಹಿಂದೆ"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "ಜೀವಮಾನದ Premium ಸಕ್ರಿಯ"
+  },
+  "pop_premium_subtitle": {
+    "message": "Premium11 ನ X - ಆ ದೇಶ ಅಥವಾ ಪ್ರದೇಶದ ಎಲ್ಲಾ ಟ್ವೀಟ್‌ಗಳನ್ನು ಬ್ಲಾಕ್ ಮಾಡಿ ಒಳಗೆ ಸಂಪೂರ್ಣ Premium ಸೂಟ್ ಅನುಭವಿಸಿ."
+  },
+  "pop_premium_status_title": {
+    "message": "ನಿಮ್ಮ Premium ಚಂದಾ"
+  },
+  "pop_premium_status_active": {
+    "message": "ಜೀವಮಾನದ Premium ಸಕ್ರಿಯ"
+  },
+  "pop_premium_gift_badge": {
+    "message": "ಡೆವಲಪರ್ ಉಡುಗೊರೆ"
+  },
+  "pop_premium_gift_message": {
+    "message": "ಎಕ್ಸ್‌ಟೆನ್ಷನ್ ಡೆವಲಪರ್ ನಿಮಗೆ ಜೀವಮಾನದ Premium ಚಂದಾ (USD 29.99) ನೀಡಿದ್ದಾರೆ. Premium11 ನ X - ಆ ದೇಶ ಅಥವಾ ಪ್ರದೇಶದ ಎಲ್ಲಾ ಟ್ವೀಟ್‌ಗಳನ್ನು ಬ್ಲಾಕ್ ಮಾಡಿ ನ ನಿಷ್ಠಾವಂತ ಬಳಕೆದಾರರಾಗಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು."
+  },
+  "pop_premium_fact_version": {
+    "message": "ಎಕ್ಸ್‌ಟೆನ್ಷನ್ ಆವೃತ್ತಿ"
+  },
+  "pop_premium_fact_updated": {
+    "message": "ಕೊನೆಯ ನವೀಕರಣ"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium ಪರವಾನಗಿ ಮಾನ್ಯತೆ"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "ಜೀವಮಾನ"
+  },
+  "pop_premium_fact_features": {
+    "message": "ಸಕ್ರಿಯ ವೈಶಿಷ್ಟ್ಯಗಳು"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "ಎಲ್ಲಾ"
+  },
+  "pop_settings_title": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  },
+  "pop_settings_btn_title": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "ಫೀಡ್, ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗಳಲ್ಲಿ ಬಳಕೆದಾರ ಹೆಸರಿನ ಪಕ್ಕದಲ್ಲಿ ಖಾತೆಯ ದೇಶ ತೋರಿಸಿ"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "ಫೀಡ್, ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗಳಲ್ಲಿ ಬಳಕೆದಾರ ಹೆಸರಿನ ಪಕ್ಕದಲ್ಲಿ ಖಾತೆಯ ದೇಶದ ಧ್ವಜ ತೋರಿಸಿ"
+  },
+  "pop_opt_show_country_note": {
+    "message": "ಗಮನಿಸಿ: X.com ಖಾತೆಗೆ ದೇಶ ಅಥವಾ ಪ್ರದೇಶ ಡೇಟಾ ವರದಿ ಮಾಡಿದಾಗ ಮಾತ್ರ ಈ ಎಕ್ಸ್‌ಟೆನ್ಷನ್ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ (ಈ ಖಾತೆಯ ಬಗ್ಗೆ). X ಆಗಾಗ್ಗೆ ಆ ಮಾಹಿತಿಯನ್ನು ಬಹಿರಂಗಪಡಿಸುವುದಿಲ್ಲ, ಆದ್ದರಿಂದ ಈ ಆಯ್ಕೆ ಆನ್ ಆಗಿದ್ದರೂ ದೇಶ ಅಥವಾ ಪ್ರದೇಶ ಹೆಸರಿನ ಪಕ್ಕದಲ್ಲಿ ಕಾಣಿಸದಿರಬಹುದು. ಈ ಮಿತಿಗಳು X.com ನಿಂದ, ಈ ಎಕ್ಸ್‌ಟೆನ್ಷನ್‌ನಿಂದ ಅಲ್ಲ."
+  },
+  "a11y_toggle_show_country": {
+    "message": "ಟೈಮ್‌ಲೈನ್‌ನಲ್ಲಿ ದೇಶ ಲೇಬಲ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡಿ"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "ಟೈಮ್‌ಲೈನ್‌ನಲ್ಲಿ ದೇಶ ಧ್ವಜಗಳನ್ನು ಟಾಗಲ್ ಮಾಡಿ"
+  },
+  "pop_opt_taller_columns": {
+    "message": "ಎತ್ತರದ ಕಾಲಮ್‌ಗಳು"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "ಪ್ರದೇಶ, ದೇಶ ಮತ್ತು ನಿರ್ವಹಿತ-ಖಾತೆ ಪಟ್ಟಿಗಳನ್ನು ಸುಮಾರು ಎರಡರಿಂದ ಮೂರು ಪಟ್ಟು ಎತ್ತರ ಮಾಡುತ್ತದೆ, ಮತ್ತು ಸಂಪೂರ್ಣ ಪಾಪ್‌ಅಪ್ ಸ್ಕ್ರಾಲ್ ಮಾಡಲು ಅನುಮತಿಸುತ್ತದೆ. ಡೀಫಾಲ್ಟ್ ಆಫ್."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "ಎತ್ತರದ ಕಾಲಮ್ ಲೇಔಟ್ ಟಾಗಲ್ ಮಾಡಿ"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "ಸ್ಥಳೀಯ ದೇಶ ಕ್ಯಾಶೆ"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. ಇದು ಏನು ಮಾಡುತ್ತದೆ: ಯಶಸ್ವಿ «ಈ ಖಾತೆಯ ಬಗ್ಗೆ» ಹುಡುಕಾಟದ ನಂತರ, ಆ ಖಾತೆಯ ದೇಶ ಅಥವಾ ಪ್ರದೇಶವನ್ನು ಈ ಸಾಧನದಲ್ಲಿ ಉಳಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಎಕ್ಸ್‌ಟೆನ್ಷನ್ ನಂತರ X ಅನ್ನು ಮತ್ತೆ ಕೇಳದೆ ಬಳಸಬಹುದು."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. ಆನ್ ಆಗಿರುವಾಗ ಪ್ರಯೋಜನಗಳು: ಕಡಿಮೆ ನೆಟ್‌ವರ್ಕ್ ಕರೆಗಳು, ರೇಟ್-ಲಿಮಿಟ್ ಕಡಿಮೆ ಅವಕಾಶ, ಮತ್ತು ಈಗಾಗಲೇ ನೋಡಿದ ಖಾತೆಗಳಿಗೆ ವೇಗದ ದೇಶ ಲೇಬಲ್‌ಗಳು ಮತ್ತು ಸ್ವಯಂ ಮ್ಯೂಟ್/ಬ್ಲಾಕ್ ನಿರ್ಧಾರಗಳು."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. ಆಫ್ ಮಾಡಿದರೆ: ಪ್ರತಿ ಹುಡುಕಾಟ ಮತ್ತೆ X ಅನ್ನು ಹೊಡೆಯುತ್ತದೆ — ಹೆಚ್ಚು ರೇಟ್-ಲಿಮಿಟ್ ಅಪಾಯ, ನಿಧಾನ ಲೇಬಲ್‌ಗಳು, ಸ್ಕ್ರಾಲ್ ಮಾಡುವಾಗ ಹೆಚ್ಚು ಡೇಟಾ. ಅಸ್ತಿತ್ವದ ಕ್ಯಾಶೆ ಡಿಸ್ಕ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತದೆ ಆದರೆ ಮತ್ತೆ ಆನ್ ಮಾಡುವವರೆಗೆ ಬಳಕೆಯಾಗುವುದಿಲ್ಲ."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. ಸಂಗ್ರಹಣೆ: ತುಂಬಾ ಹಗುರ — ಸುಮಾರು 100,000 ಬಳಕೆದಾರರು ≈ 10 MB, ನಿಮ್ಮ PC ನಲ್ಲಿ ಒಂದು ಆಧುನಿಕ MP3 ಗಾತ್ರ. ಯಶಸ್ವಿ ದೇಶ/ಪ್ರದೇಶ ಹಿಟ್‌ಗಳು ಮಾತ್ರ ಸಂಗ್ರಹವಾಗುತ್ತವೆ."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "ಸ್ಥಳೀಯ ದೇಶ ಕ್ಯಾಶೆ ಟಾಗಲ್ ಮಾಡಿ"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "ಕ್ಯಾಶೆ ಮಾಡಿದ ಖಾತೆಗಳು"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "ಬಳಸಿದ ಸಂಗ್ರಹಣೆ (ಅಂದಾಜು)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "ಪಟ್ಟಿ ಕ್ಲಿಕ್‌ನಲ್ಲಿ ರದ್ದು"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. ಇದು ಏನು ಮಾಡುತ್ತದೆ: ಆನ್ ಆಗಿರುವಾಗ, ನಿರ್ವಹಿತ ಖಾತೆಯನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿದರೆ ಪಟ್ಟಿಯಿಂದ ತೆಗೆದು X ನಲ್ಲಿ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಮಾಡುತ್ತದೆ (ಅನ್‌ಮ್ಯೂಟ್ ಅಥವಾ ಅನ್‌ಬ್ಲಾಕ್). ಆಫ್ ಆಗಿರುವಾಗ ಕ್ಲಿಕ್‌ಗಳು ಖಾತೆಗಳನ್ನು ಬಿಡುಗಡೆ ಮಾಡುವುದಿಲ್ಲ — ಈ ಆಯ್ಕೆಯನ್ನು ಆನ್ ಮಾಡಲು ಟಿಪ್ ಮಾತ್ರ ತೋರಿಸುತ್ತವೆ."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ: ಆ ಪ್ರೊಫೈಲ್‌ಗೆ ಅಲ್ಪಕಾಲಿಕ ಹಿನ್ನೆಲೆ ಟ್ಯಾಬ್ ತೆರೆಯುತ್ತದೆ, ಮ್ಯೂಟ್/ಬ್ಲಾಕ್‌ಗೆ ಬಳಸುವ ಅದೇ ⋯ ಮೆನು ಹರಿವು ನಡೆಸುತ್ತದೆ, ನಂತರ ಟ್ಯಾಬ್ ಮುಚ್ಚುತ್ತದೆ. «ಆಸಕ್ತಿ ಇಲ್ಲ» ನಮೂದುಗಳು X ನಲ್ಲಿ ಪಟ್ಟಿ ಮಾತ್ರ (ವಿಶ್ವಾಸಾರ್ಹ ರದ್ದು ಇಲ್ಲ)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. ಆನ್ ಆಗಿರುವಾಗ ಪ್ರಯೋಜನಗಳು: ಒಂದು ಕ್ಲಿಕ್ ಪಟ್ಟಿಯನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ನಿಮ್ಮ X ಖಾತೆಯಲ್ಲಿ ಮ್ಯೂಟ್/ಬ್ಲಾಕ್ ತಿರುಗಿಸುತ್ತದೆ."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. ಗಮನಿಸಿ: ಎಕ್ಸ್‌ಟೆನ್ಷನ್ ಅನ್‌ಮ್ಯೂಟ್/ಅನ್‌ಬ್ಲಾಕ್ ಮಾಡಲು ಹಿನ್ನೆಲೆ ಪ್ರೊಫೈಲ್ ಟ್ಯಾಬ್ ಸ್ವಲ್ಪ ಸಮಯ ತೆರೆಯುತ್ತದೆ. ಆಕಸ್ಮಿಕ ಕ್ಲಿಕ್‌ಗಳು ಟ್ಯಾಬ್ ತೆರೆಯದಂತೆ ಅಥವಾ ಕ್ರಿಯೆಗಳನ್ನು ತಿರುಗಿಸದಂತೆ ಡೀಫಾಲ್ಟ್ ಆಫ್."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "ನಿರ್ವಹಿತ ಪಟ್ಟಿ ಕ್ಲಿಕ್‌ನಲ್ಲಿ ರದ್ದು ಟಾಗಲ್ ಮಾಡಿ"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "ನಿರ್ವಹಿತ ಖಾತೆಯನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅನ್‌ಮ್ಯೂಟ್, ಅನ್‌ಬ್ಲಾಕ್ ಅಥವಾ «ಆಸಕ್ತಿ ಇಲ್ಲ» ತೆರವುಗೊಳಿಸಲು «ಪಟ್ಟಿ ಕ್ಲಿಕ್‌ನಲ್ಲಿ ರದ್ದು» ಆನ್ ಮಾಡಿ. ಈಗ ಅಥವಾ ನಂತರ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಸಕ್ರಿಯಗೊಳಿಸಿ."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "ಈಗ ಸಕ್ರಿಯಗೊಳಿಸಿ"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "ವಜಾಗೊಳಿಸಿ"
+  },
+  "a11y_managed_account_locked": {
+    "message": "ನಿರ್ವಹಿತ ಖಾತೆ (ಬಿಡುಗಡೆಗೆ ಪಟ್ಟಿ ಕ್ಲಿಕ್‌ನಲ್ಲಿ ರದ್ದು ಆನ್ ಮಾಡಿ)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "ಈ ಖಾತೆಯನ್ನು X ನಲ್ಲಿ ಬಿಡುಗಡೆ ಮಾಡಬೇಕೇ? ಸಕ್ರಿಯ ದೇಶ/ಪ್ರದೇಶ ಫಿಲ್ಟರ್‌ಗೆ ಇನ್ನೂ ಹೊಂದಿಕೆಯಾದರೆ, ವೈಟ್‌ಲಿಸ್ಟ್ ಮಾಡದಿದ್ದರೆ ಎಕ್ಸ್‌ಟೆನ್ಷನ್ ಮತ್ತೆ ಕಾರ್ಯನಿರ್ವಹಿಸಬಹುದು."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "ಬಿಡುಗಡೆ + ವೈಟ್‌ಲಿಸ್ಟ್ (ಮತ್ತೆ ಫಿಲ್ಟರ್ ಮಾಡಬೇಡಿ)"
+  },
+  "pop_toast_release_once": {
+    "message": "ಈ ಬಾರಿ ಮಾತ್ರ"
+  },
+  "pop_toast_release_cancel": {
+    "message": "ರದ್ದು"
+  },
+  "toast_blocked": {
+    "message": "ಬ್ಲಾಕ್ ಮಾಡಲಾಗಿದೆ"
+  },
+  "toast_muted": {
+    "message": "ಮ್ಯೂಟ್ ಮಾಡಲಾಗಿದೆ"
+  },
+  "toast_notinterested": {
+    "message": "ಆಸಕ್ತಿ ಇಲ್ಲ"
+  },
+  "toast_reason_country": {
+    "message": "ದೇಶ ಫಿಲ್ಟರ್: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "ಪ್ರದೇಶ ಫಿಲ್ಟರ್: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "ಕ್ರಿಯೆ ಅಧಿಸೂಚನೆಗಳು"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. ಇದು ಏನು ಮಾಡುತ್ತದೆ: ಎಕ್ಸ್‌ಟೆನ್ಷನ್ ಬ್ಲಾಕ್, ಮ್ಯೂಟ್ ಅಥವಾ ಪೋಸ್ಟ್ ಅನ್ನು «ಆಸಕ್ತಿ ಇಲ್ಲ» ಎಂದು ಗುರುತಿಸಿದಾಗ, X ಕೆಳಭಾಗದಲ್ಲಿ ಆ ಖಾತೆಯ ಹೆಸರು, @ಹ್ಯಾಂಡಲ್ ಮತ್ತು ಪ್ರೊಫೈಲ್ ಫೋಟೋದೊಂದಿಗೆ ಚಿಕ್ಕ ಟೋಸ್ಟ್ ಕಾಣಿಸುತ್ತದೆ."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. ಆನ್ ಆಗಿರುವಾಗ ಪ್ರಯೋಜನಗಳು: ಪ್ರತಿ ಸ್ವಯಂಚಾಲಿತ ಕ್ರಿಯೆಯನ್ನು ನಡೆಯುವಾಗ ನೋಡಬಹುದು; ಟೋಸ್ಟ್ ಕಣ್ಮರೆಯಾಗುವ ಮೊದಲು 6 ಸೆಕೆಂಡ್ ಕೌಂಟ್‌ಡೌನ್."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. ಆಫ್ ಮಾಡಿದರೆ: ಕ್ರಿಯೆಗಳು ಸಾಮಾನ್ಯವಾಗಿ ನಡೆಯುತ್ತವೆ; ಪುಟದ ಟೋಸ್ಟ್ ಮಾತ್ರ ಮರೆಮಾಚಲಾಗುತ್ತದೆ. ಟೂಲ್‌ಬಾರ್ ಬ್ಯಾಡ್ಜ್ ಫ್ಲ್ಯಾಶ್ ಇನ್ನೂ ಕೆಲಸ ಮಾಡುತ್ತದೆ."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "X ನಲ್ಲಿ ಕ್ರಿಯೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ಟಾಗಲ್ ಮಾಡಿ"
+  }
+}

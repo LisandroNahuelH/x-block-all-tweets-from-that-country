@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Bloqueja tots els tuits d’aquell país o regió"
+  },
+  "ext_description": {
+    "message": "Detecta el país o la regió dels comptes d’X a la teva cronologia (Quant a aquest compte)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Filtre per país"
+  },
+  "pop_heading": {
+    "message": "X - Bloqueja tots els tuits d’aquell país o regió"
+  },
+  "pop_lane_block": {
+    "message": "Bloquejar"
+  },
+  "pop_lane_mute": {
+    "message": "Silenciar"
+  },
+  "pop_lane_notinterested": {
+    "message": "No m’interessa"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Activa o desactiva la columna Bloquejar"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Activa o desactiva la columna Silenciar"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Activa o desactiva la columna No m’interessa"
+  },
+  "pop_mode_warning_label": {
+    "message": "AVÍS:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Els comptes seleccionats es bloquegen al teu compte d’X. Les seves publicacions ja no apareixeran a cap de les teves apps d’X: escriptori, Android, iOS o web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Els comptes seleccionats se silencien al teu compte d’X. Les seves publicacions ja no apareixeran a cap de les teves apps d’X: escriptori, Android, iOS o web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Les publicacions dels comptes seleccionats es marquen com a No m’interessa al teu compte d’X, perquè X te’n mostri menys a l’escriptori, Android, iOS i web."
+  },
+  "pop_regions_label": {
+    "message": "Regions geogràfiques"
+  },
+  "pop_countries_label": {
+    "message": "Països"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ seleccionats",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Commuta la regió"
+  },
+  "a11y_toggle_country": {
+    "message": "Commuta el país"
+  },
+  "pop_search_regions": {
+    "message": "Cerca regions…"
+  },
+  "pop_search_countries": {
+    "message": "Cerca països…"
+  },
+  "pop_search_no_results": {
+    "message": "Cap coincidència"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Comptes bloquejats"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Comptes silenciats"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Comptes No m’interessa"
+  },
+  "pop_search_accounts": {
+    "message": "Cerca comptes…"
+  },
+  "pop_managed_empty": {
+    "message": "Encara no hi ha comptes gestionats"
+  },
+  "pop_managed_mode_block": {
+    "message": "Bloquejar"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Silenciar"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "No m’interessa"
+  },
+  "a11y_release_account": {
+    "message": "Allibera el compte gestionat"
+  },
+  "a11y_open_premium11": {
+    "message": "Obre el lloc web de Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Dades de Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium activat"
+  },
+  "pop_premium_chip_title": {
+    "message": "Mostra el teu accés Premium activat."
+  },
+  "pop_premium_back": {
+    "message": "Enrere"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Premium de per vida activat"
+  },
+  "pop_premium_subtitle": {
+    "message": "Gaudeix de la suite Premium completa a X - Bloqueja tots els tuits d’aquell país o regió de Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "La teva subscripció Premium"
+  },
+  "pop_premium_status_active": {
+    "message": "Premium de per vida actiu"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Regal del desenvolupador"
+  },
+  "pop_premium_gift_message": {
+    "message": "El desenvolupador de l’extensió t’ha regalat una subscripció Premium de per vida (USD 29.99). Gràcies per ser un usuari fidel de X - Bloqueja tots els tuits d’aquell país o regió de Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Versió de l’extensió"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Última actualització"
+  },
+  "pop_premium_fact_license": {
+    "message": "Validesa de la llicència Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "De per vida"
+  },
+  "pop_premium_fact_features": {
+    "message": "Funcions activades"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Totes"
+  },
+  "pop_settings_title": {
+    "message": "Configuració"
+  },
+  "pop_settings_btn_title": {
+    "message": "Obre la configuració"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Mostra el país del compte al costat del nom d’usuari al fil, Explora i perfils"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Mostra la bandera del país del compte al costat del nom d’usuari al fil, Explora i perfils"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Nota: Aquesta extensió només funciona quan X.com indica el país o la regió d’un compte (Quant a aquest compte). Sovint X no exposa aquesta informació, així que, encara que l’opció estigui activada, el país o la regió poden no aparèixer al costat del nom. Aquestes limitacions venen d’X.com, no d’aquesta extensió."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Mostra o amaga les etiquetes de país a la cronologia"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Mostra o amaga les banderes de país a la cronologia"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Columnes més altes"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Fa les llistes de regions, països i comptes gestionats unes dues o tres vegades més altes i permet desplaçar tot el popup perquè el disseny es noti menys atapeït. Desactivat per defecte."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Activa o desactiva les columnes més altes"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Memòria cau local de països"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Què fa: Després d’una consulta correcta de «Quant a aquest compte», desa el país o la regió d’aquest compte en aquest dispositiu perquè l’extensió el pugui reutilitzar més tard sense tornar a preguntar a X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Avantatges quan està activada: Menys peticions de xarxa, menys risc de límits de freqüència i etiquetes de país més ràpides, a més de decisions automàtiques de silenciar/bloquejar per a comptes que ja has vist."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Si la desactives: Cada consulta torna a anar a X — més risc de límits, etiquetes més lentes i més ús de dades en desplaçar-te. La memòria cau existent es conserva al disc, però no s’usa fins que no la tornis a activar."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Emmagatzematge: Molt lleugera — uns 100.000 usuaris ≈ 10 MB, aproximadament la mida d’un MP3 modern al teu PC. Només es guarden encerts de país/regió."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Activa o desactiva la memòria cau local de països"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Comptes a la memòria cau"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Espai usat (aprox.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Desfés en fer clic a la llista"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Què fa: Si està activada, en fer clic a un compte gestionat se’l treu de la llista i es desfà l’acció a X (deixar de silenciar o desbloquejar). Si està desactivada, el clic a la llista no allibera comptes: només mostra un consell per activar l’opció."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Com funciona: Obre una pestanya breu en segon pla al perfil, executa el mateix flux del menú ⋯ que es fa servir per silenciar/bloquejar i tanca la pestanya. Les entrades de No m’interessa són només de llista a X (no hi ha desfer fiable)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Avantatges quan està activada: Un sol clic neteja la llista i reverteix silenciar/bloquejar al teu compte d’X."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Nota: S’obrirà un moment una pestanya de perfil en segon pla perquè l’extensió pugui deixar de silenciar o desbloquejar. Desactivat per defecte perquè un clic accidental no obri pestanyes ni desfacis accions sense voler."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Activa o desactiva desfer en fer clic a la llista gestionada"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Per deixar de silenciar, desbloquejar o treure No m’interessa en fer clic a un compte gestionat, activa Desfés en fer clic a la llista. Pots activar-ho ara o més tard a Configuració."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Activa ara"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Descarta"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Compte gestionat (activa Desfés en fer clic a la llista per alliberar-lo)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Alliberar aquest compte a X? Si encara coincideix amb un filtre actiu de país/regió, l’extensió pot tornar a actuar si no el poses a la llista blanca."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Allibera + llista blanca (no filtrar mai més)"
+  },
+  "pop_toast_release_once": {
+    "message": "Només aquesta vegada"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Cancel·la"
+  },
+  "toast_blocked": {
+    "message": "Bloquejat"
+  },
+  "toast_muted": {
+    "message": "Silenciat"
+  },
+  "toast_notinterested": {
+    "message": "No m’interessa"
+  },
+  "toast_reason_country": {
+    "message": "Filtre de país: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Filtre de regió: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Avisos d’accions"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Què fa: Quan l’extensió bloqueja, silencia o marca una publicació com a No m’interessa, apareix un avís breu al peu d’X amb el nom del compte, l’@usuari i la foto de perfil."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Avantatges quan està activada: Veus cada acció automàtica al moment, amb un compte enrere de 6 segons abans que l’avís desaparegui."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Si la desactives: Les accions segueixen executant-se amb normalitat; només s’amaga l’avís a la pàgina. El flaix de la insígnia de la barra d’eines continua funcionant."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Activa o desactiva els avisos d’accions a X"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - חסימת כל הציוצים מהמדינה או האזור הזה"
+  },
+  "ext_description": {
+    "message": "זיהוי מדינה או אזור של חשבונות X בציר הזמן שלך (אודות החשבון הזה)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "מסנן מדינה"
+  },
+  "pop_heading": {
+    "message": "X - חסימת כל הציוצים מהמדינה או האזור הזה"
+  },
+  "pop_lane_block": {
+    "message": "חסימה"
+  },
+  "pop_lane_mute": {
+    "message": "השתקה"
+  },
+  "pop_lane_notinterested": {
+    "message": "לא מעוניין"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "הפעלה או כיבוי של עמודת חסימה"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "הפעלה או כיבוי של עמודת השתקה"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "הפעלה או כיבוי של עמודת לא מעוניין"
+  },
+  "pop_mode_warning_label": {
+    "message": "אזהרה:"
+  },
+  "pop_mode_hint_block": {
+    "message": "החשבונות שנבחרו נחסמים בחשבון ה-X שלך. הפוסטים שלהם לא יופיעו עוד באף אפליקציית X: שולחן עבודה, Android, iOS או אינטרנט."
+  },
+  "pop_mode_hint_mute": {
+    "message": "החשבונות שנבחרו מושתקים בחשבון ה-X שלך. הפוסטים שלהם לא יופיעו עוד באף אפליקציית X: שולחן עבודה, Android, iOS או אינטרנט."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "פוסטים מחשבונות שנבחרו מסומנים כלא מעוניין בחשבון ה-X שלך, כך ש-X יציג לך פחות מהם בשולחן עבודה, Android, iOS ואינטרנט."
+  },
+  "pop_regions_label": {
+    "message": "אזורים"
+  },
+  "pop_countries_label": {
+    "message": "מדינות"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ נבחרו",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "החלפת אזור"
+  },
+  "a11y_toggle_country": {
+    "message": "החלפת מדינה"
+  },
+  "pop_search_regions": {
+    "message": "חיפוש אזורים…"
+  },
+  "pop_search_countries": {
+    "message": "חיפוש מדינות…"
+  },
+  "pop_search_no_results": {
+    "message": "אין התאמות"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "חשבונות חסומים"
+  },
+  "pop_muted_accounts_label": {
+    "message": "חשבונות מושתקים"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "חשבונות לא מעוניין"
+  },
+  "pop_search_accounts": {
+    "message": "חיפוש חשבונות…"
+  },
+  "pop_managed_empty": {
+    "message": "עדיין אין חשבונות מנוהלים"
+  },
+  "pop_managed_mode_block": {
+    "message": "חסימה"
+  },
+  "pop_managed_mode_mute": {
+    "message": "השתקה"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "לא מעוניין"
+  },
+  "a11y_release_account": {
+    "message": "שחרור חשבון מנוהל"
+  },
+  "a11y_open_premium11": {
+    "message": "פתיחת אתר Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "פרטי Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium מופעל"
+  },
+  "pop_premium_chip_title": {
+    "message": "צפייה בגישת Premium המופעלת שלך."
+  },
+  "pop_premium_back": {
+    "message": "חזרה"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Premium לכל החיים מופעל"
+  },
+  "pop_premium_subtitle": {
+    "message": "תהנה מחבילת Premium המלאה בתוך X - חסימת כל הציוצים מהמדינה או האזור הזה מאת Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "מנוי ה-Premium שלך"
+  },
+  "pop_premium_status_active": {
+    "message": "Premium לכל החיים פעיל"
+  },
+  "pop_premium_gift_badge": {
+    "message": "מתנת המפתח"
+  },
+  "pop_premium_gift_message": {
+    "message": "מפתח התוסף העניק לך מנוי Premium לכל החיים (USD 29.99). תודה שאתה משתמש נאמן של X - חסימת כל הציוצים מהמדינה או האזור הזה מאת Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "גרסת התוסף"
+  },
+  "pop_premium_fact_updated": {
+    "message": "עודכן לאחרונה"
+  },
+  "pop_premium_fact_license": {
+    "message": "תוקף רישיון Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "לכל החיים"
+  },
+  "pop_premium_fact_features": {
+    "message": "תכונות מופעלות"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "הכל"
+  },
+  "pop_settings_title": {
+    "message": "הגדרות"
+  },
+  "pop_settings_btn_title": {
+    "message": "פתיחת הגדרות"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "הצגת מדינת החשבון ליד שם המשתמש בפיד, בגילוי ובפרופילים"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "הצגת דגל מדינת החשבון ליד שם המשתמש בפיד, בגילוי ובפרופילים"
+  },
+  "pop_opt_show_country_note": {
+    "message": "הערה: התוסף עובד רק כאשר X.com מדווח נתוני מדינה או אזור לחשבון (אודות החשבון הזה). לעיתים קרובות X לא חושף מידע זה, ולכן גם כשהאפשרות מופעלת המדינה או האזור עלולים לא להופיע ליד שם המשתמש. המגבלות האלה מגיעות מ-X.com, לא מהתוסף."
+  },
+  "a11y_toggle_show_country": {
+    "message": "החלפת תוויות מדינה בציר הזמן"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "החלפת דגלי מדינה בציר הזמן"
+  },
+  "pop_opt_taller_columns": {
+    "message": "עמודות גבוהות יותר"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "מגדיל את רשימות האזורים, המדינות והחשבונות המנוהלים פי שניים עד שלושה בערך, ומאפשר גלילה של כל החלון הקופץ כדי שהפריסה תהיה פחות צפופה. כבוי כברירת מחדל."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "החלפת פריסת עמודות גבוהות"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "מטמון מדינה מקומי"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. מה זה עושה: אחרי חיפוש מוצלח של «אודות החשבון הזה», שומר את המדינה או האזור של החשבון במכשיר הזה כדי שהתוסף יוכל להשתמש בהם שוב בלי לשאול את X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. יתרונות כשמופעל: פחות קריאות רשת, סיכון נמוך יותר להגבלת קצב, ותוויות מדינה מהירות יותר יחד עם החלטות השתקה/חסימה אוטומטיות לחשבונות שכבר ראית."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. אם תכבה: כל חיפוש פונה שוב ל-X — יותר סיכון להגבלת קצב, תוויות איטיות יותר ושימוש גבוה יותר בנתונים בגלילה. המטמון נשמר בדיסק אך לא בשימוש עד שתפעיל שוב."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. אחסון: קל מאוד — כ־100,000 משתמשים ≈ 10 MB, בערך גודל MP3 מודרני אחד במחשב. נשמרים רק פגיעות מדינה/אזור מוצלחות."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "החלפת מטמון מדינה מקומי"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "חשבונות במטמון"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "אחסון בשימוש (בערך)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "ביטול בלחיצה ברשימה"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. מה זה עושה: כשמופעל, לחיצה על חשבון מנוהל מסירה אותו מהרשימה ומבטלת את הפעולה ב-X (ביטול השתקה או חסימה). כשכבוי, לחיצות לא משחררות חשבונות — רק מציגות טיפ להפעלת האפשרות."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. איך זה עובד: פותח לשונית רקע קצרה לפרופיל, מריץ את אותו זרימת תפריט ⋯ של השתקה/חסימה, ואז סוגר את הלשונית. רשומות «לא מעוניין» הן רשימה בלבד ב-X (אין ביטול אמין)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. יתרונות כשמופעל: לחיצה אחת מנקה את הרשימה והופכת השתקה/חסימה בחשבון ה-X שלך."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. הערה: לשונית פרופיל ברקע תיפתח לרגע כדי שהתוסף יוכל לבטל השתקה/חסימה. כבוי כברירת מחדל כדי שלחיצות מקריות לא יפתחו לשוניות או יהפכו פעולות בלי כוונה."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "החלפת ביטול בלחיצה ברשימה המנוהלת"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "כדי לבטל השתקה, חסימה או לנקות «לא מעוניין» אוטומטית בלחיצה על חשבון מנוהל, הפעל «ביטול בלחיצה ברשימה». אפשר להפעיל עכשיו או מאוחר יותר בהגדרות."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "הפעל עכשיו"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "סגור"
+  },
+  "a11y_managed_account_locked": {
+    "message": "חשבון מנוהל (הפעל ביטול בלחיצה ברשימה לשחרור)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "לשחרר את החשבון הזה ב-X? אם הוא עדיין תואם מסנן מדינה/אזור פעיל, התוסף עלול לפעול שוב אלא אם תוסיף אותו לרשימת ההיתרים."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "שחרור + רשימת היתר (ללא סינון חוזר)"
+  },
+  "pop_toast_release_once": {
+    "message": "רק הפעם"
+  },
+  "pop_toast_release_cancel": {
+    "message": "ביטול"
+  },
+  "toast_blocked": {
+    "message": "נחסם"
+  },
+  "toast_muted": {
+    "message": "הושתק"
+  },
+  "toast_notinterested": {
+    "message": "לא מעוניין"
+  },
+  "toast_reason_country": {
+    "message": "מסנן מדינה: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "מסנן אזור: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "התראות פעולה"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. מה זה עושה: כשהתוסף חוסם, משתיק או מסמן פוסט כלא מעוניין, מופיעה הודעה קצרה בתחתית X עם שם החשבון, @המזהה ותמונת הפרופיל."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. יתרונות כשמופעל: רואים כל פעולה אוטומטית כשהיא קורה, עם ספירה לאחור של 6 שניות לפני שההודעה נעלמת."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. אם תכבה: הפעולות ממשיכות כרגיל; רק ההודעה בעמוד מוסתרת. הבהוב תג סרגל הכלים עדיין עובד."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "החלפת התראות פעולה ב-X"
+  }
+}

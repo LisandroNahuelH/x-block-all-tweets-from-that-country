@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Estä kaikki twiitit kyseisestä maasta tai alueelta"
+  },
+  "ext_description": {
+    "message": "Tunnistaa X-tilien maan tai alueen aikajanallasi (Tietoja tästä tilistä)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Maasuodatin"
+  },
+  "pop_heading": {
+    "message": "X - Estä kaikki twiitit kyseisestä maasta tai alueelta"
+  },
+  "pop_lane_block": {
+    "message": "Estä"
+  },
+  "pop_lane_mute": {
+    "message": "Mykistä"
+  },
+  "pop_lane_notinterested": {
+    "message": "Ei kiinnosta"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Ota Estä-sarake käyttöön tai poista se käytöstä"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Ota Mykistä-sarake käyttöön tai poista se käytöstä"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Ota Ei kiinnosta -sarake käyttöön tai poista se käytöstä"
+  },
+  "pop_mode_warning_label": {
+    "message": "VAROITUS:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Valitut tilit estetään X-tililläsi. Niiden julkaisut eivät enää näy missään X-sovelluksissasi: työpöytä, Android, iOS tai web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Valitut tilit mykistetään X-tililläsi. Niiden julkaisut eivät enää näy missään X-sovelluksissasi: työpöytä, Android, iOS tai web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Valittujen tilien julkaisut merkitään Ei kiinnosta -tilaan X-tililläsi, joten X näyttää niitä vähemmän työpöydällä, Androidissa, iOS:ssä ja webissä."
+  },
+  "pop_regions_label": {
+    "message": "Alueet"
+  },
+  "pop_countries_label": {
+    "message": "Maat"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ valittu",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Vaihda alue"
+  },
+  "a11y_toggle_country": {
+    "message": "Vaihda maa"
+  },
+  "pop_search_regions": {
+    "message": "Hae alueita…"
+  },
+  "pop_search_countries": {
+    "message": "Hae maita…"
+  },
+  "pop_search_no_results": {
+    "message": "Ei tuloksia"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Estetyt tilit"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Mykistetyt tilit"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Ei kiinnosta -tilit"
+  },
+  "pop_search_accounts": {
+    "message": "Hae tilejä…"
+  },
+  "pop_managed_empty": {
+    "message": "Ei vielä hallittuja tilejä"
+  },
+  "pop_managed_mode_block": {
+    "message": "Estä"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Mykistä"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Ei kiinnosta"
+  },
+  "a11y_release_account": {
+    "message": "Vapauta hallittu tili"
+  },
+  "a11y_open_premium11": {
+    "message": "Avaa Premium11-sivusto"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium-tiedot"
+  },
+  "pop_premium_chip": {
+    "message": "Premium aktivoitu"
+  },
+  "pop_premium_chip_title": {
+    "message": "Näytä aktivoitu Premium-käyttöoikeutesi."
+  },
+  "pop_premium_back": {
+    "message": "Takaisin"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Elinikäinen Premium aktivoitu"
+  },
+  "pop_premium_subtitle": {
+    "message": "Nauti täydestä Premium-kokonaisuudesta laajennuksessa X - Estä kaikki twiitit kyseisestä maasta tai alueelta Premium11:ltä."
+  },
+  "pop_premium_status_title": {
+    "message": "Premium-tilauksesi"
+  },
+  "pop_premium_status_active": {
+    "message": "Elinikäinen Premium aktiivinen"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Kehittäjän lahja"
+  },
+  "pop_premium_gift_message": {
+    "message": "Laajennuksen kehittäjä on lahjoittanut sinulle elinikäisen Premium-tilauksen (USD 29.99). Kiitos, että olet uskollinen käyttäjä: X - Estä kaikki twiitit kyseisestä maasta tai alueelta Premium11:ltä."
+  },
+  "pop_premium_fact_version": {
+    "message": "Laajennuksen versio"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Viimeksi päivitetty"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium-lisenssin voimassaolo"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Elinikäinen"
+  },
+  "pop_premium_fact_features": {
+    "message": "Käytössä olevat ominaisuudet"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Kaikki"
+  },
+  "pop_settings_title": {
+    "message": "Asetukset"
+  },
+  "pop_settings_btn_title": {
+    "message": "Avaa asetukset"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Näytä tilin maa käyttäjänimen vieressä syötteessä, Tutki-näkymässä ja profiileissa"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Näytä tilin maa lippu käyttäjänimen vieressä syötteessä, Tutki-näkymässä ja profiileissa"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Huom: Tämä laajennus toimii vain, kun X.com ilmoittaa tilin maan tai alueen (Tietoja tästä tilistä). X ei usein paljasta tietoja, joten vaikka asetus olisi päällä, maa tai alue ei välttämättä näy nimen vieressä. Rajoitukset tulevat X.comista, ei tästä laajennuksesta."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Vaihda maamerkinnät aikajanalla"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Vaihda maalisput aikajanalla"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Korkeammat sarakkeet"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Tekee alue-, maa- ja hallittujen tilien listoista noin kaksi–kolme kertaa korkeampia ja sallii koko ponnahdusikkunan vierityksen, jotta asettelu tuntuu vähemmän ahtaalta. Oletuksena pois päältä."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Vaihda korkeammat sarakkeet"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Paikallinen maavälimuisti"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Mitä se tekee: Onnistuneen «Tietoja tästä tilistä» -haun jälkeen tallentaa tilin maan tai alueen tälle laitteelle, jotta laajennus voi käyttää sitä myöhemmin ilman uutta kyselyä X:ään."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Hyödyt kun päällä: Vähemmän verkkopyyntöjä, pienempi rate limit -riski sekä nopeammat maamerkinnät ja automaattiset mykistys/esto-päätökset jo nähdyille tileille."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Jos poistat käytöstä: Jokainen haku menee taas X:ään — suurempi rajoitusriski, hitaammat merkit ja enemmän datankäyttöä selatessa. Olemassa oleva välimuisti säilyy levyllä, mutta sitä ei käytetä ennen kuin otat asetuksen uudelleen käyttöön."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Tallennustila: Erittäin kevyt — noin 100 000 käyttäjää ≈ 10 Mt, suunnilleen yhden modernin MP3:n koko PC:lläsi. Vain onnistuneet maa-/alueosumat tallennetaan."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Vaihda paikallinen maavälimuisti"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Välimuistissa olevat tilit"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Käytetty tila (n.)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Kumoa listan napsautuksella"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Mitä se tekee: Kun päällä, hallitun tilin napsautus poistaa sen listalta ja kumoaa toiminnon X:ssä (poista mykistys tai poista esto). Kun pois päältä, listan napsautukset eivät vapauta tilejä — ne näyttävät vain vinkin tämän asetuksen käyttöönotosta."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Miten se toimii: Avaa lyhyen taustavälilehden profiiliin, suorittaa saman ⋯-valikkovirran kuin mykistys/esto ja sulkee välilehden. Ei kiinnosta -merkinnät ovat X:ssä vain listakohtaisia (ei luotettavaa kumoamista)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Hyödyt kun päällä: Yksi napsautus tyhjentää listan ja kumoaa mykistyksen/eston X-tililläsi."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Huom: Profiilivälilehti aukeaa hetkeksi taustalla, jotta laajennus voi poistaa mykistyksen/eston. Oletuksena pois, jotta vahingossa napauttaminen ei avaa välilehtiä tai kumoa toimintoja."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Vaihda kumoa hallitun listan napsautuksella"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Jotta voit automaattisesti poistaa mykistyksen, poistaa eston tai poistaa Ei kiinnosta -merkinnän hallittua tiliä napsauttaessasi, ota käyttöön Kumoa listan napsautuksella. Voit ottaa sen käyttöön nyt tai myöhemmin Asetuksissa."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Ota käyttöön nyt"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Sulje"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Hallittu tili (ota Kumoa listan napsautuksella käyttöön vapauttaaksesi)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Vapautetaanko tämä tili X:ssä? Jos se vastaa yhä aktiivista maa-/aluesuodatinta, laajennus voi toimia uudelleen, ellet lisää sitä poikkeuslistalle."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Vapauta + poikkeuslista (ei suodateta uudelleen)"
+  },
+  "pop_toast_release_once": {
+    "message": "Vain tällä kertaa"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Peruuta"
+  },
+  "toast_blocked": {
+    "message": "Estetty"
+  },
+  "toast_muted": {
+    "message": "Mykistetty"
+  },
+  "toast_notinterested": {
+    "message": "Ei kiinnosta"
+  },
+  "toast_reason_country": {
+    "message": "Maasuodatin: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Aluesuodatin: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Toimintailmoitukset"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Mitä se tekee: Kun laajennus estää, mykistää tai merkitsee julkaisun Ei kiinnosta -tilaan, X:n alareunaan ilmestyy lyhyt toast tilin nimellä, @tunnuksella ja profiilikuvalla."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Hyödyt kun päällä: Näet jokaisen automaattisen toiminnon heti, 6 sekunnin lähtölaskennalla ennen toastin katoamista."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Jos poistat käytöstä: Toiminnot jatkuvat normaalisti; vain sivun toast piilotetaan. Työkalupalkin merkin vilkkuminen toimii edelleen."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Vaihda toimintailmoitukset X:ssä"
+  }
+}

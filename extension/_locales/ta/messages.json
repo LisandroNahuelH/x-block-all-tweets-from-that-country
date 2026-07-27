@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - அந்த நாடு அல்லது பகுதியின் அனைத்து ட்வீட்களையும் தடுக்கவும்"
+  },
+  "ext_description": {
+    "message": "உங்கள் காலவரிசையில் X கணக்குகளின் நாடு அல்லது பகுதியை கண்டறியும் (இந்தக் கணக்கைப் பற்றி)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "நாடு வடிகட்டி"
+  },
+  "pop_heading": {
+    "message": "X - அந்த நாடு அல்லது பகுதியின் அனைத்து ட்வீட்களையும் தடுக்கவும்"
+  },
+  "pop_lane_block": {
+    "message": "தடு"
+  },
+  "pop_lane_mute": {
+    "message": "முடக்கு"
+  },
+  "pop_lane_notinterested": {
+    "message": "ஆர்வமில்லை"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "தடு நிரலை இயக்கு அல்லது முடக்கு"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "முடக்கு நிரலை இயக்கு அல்லது முடக்கு"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "ஆர்வமில்லை நிரலை இயக்கு அல்லது முடக்கு"
+  },
+  "pop_mode_warning_label": {
+    "message": "எச்சரிக்கை:"
+  },
+  "pop_mode_hint_block": {
+    "message": "தேர்ந்தெடுத்த கணக்குகள் உங்கள் X கணக்கில் தடுக்கப்படும். அவற்றின் இடுகைகள் இனி எந்த X செயலியிலும் தோன்றாது: டெஸ்க்டாப், Android, iOS அல்லது வலை."
+  },
+  "pop_mode_hint_mute": {
+    "message": "தேர்ந்தெடுத்த கணக்குகள் உங்கள் X கணக்கில் முடக்கப்படும். அவற்றின் இடுகைகள் இனி எந்த X செயலியிலும் தோன்றாது: டெஸ்க்டாப், Android, iOS அல்லது வலை."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "தேர்ந்தெடுத்த கணக்குகளின் இடுகைகள் உங்கள் X கணக்கில் «ஆர்வமில்லை» எனக் குறிக்கப்படும், எனவே X டெஸ்க்டாப், Android, iOS மற்றும் வலையில் குறைவாகக் காட்டும்."
+  },
+  "pop_regions_label": {
+    "message": "பகுதிகள்"
+  },
+  "pop_countries_label": {
+    "message": "நாடுகள்"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ தேர்ந்தெடுக்கப்பட்டது",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "பகுதியை மாற்று"
+  },
+  "a11y_toggle_country": {
+    "message": "நாட்டை மாற்று"
+  },
+  "pop_search_regions": {
+    "message": "பகுதிகளைத் தேடு…"
+  },
+  "pop_search_countries": {
+    "message": "நாடுகளைத் தேடு…"
+  },
+  "pop_search_no_results": {
+    "message": "பொருத்தங்கள் இல்லை"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "தடுக்கப்பட்ட கணக்குகள்"
+  },
+  "pop_muted_accounts_label": {
+    "message": "முடக்கப்பட்ட கணக்குகள்"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "ஆர்வமில்லை கணக்குகள்"
+  },
+  "pop_search_accounts": {
+    "message": "கணக்குகளைத் தேடு…"
+  },
+  "pop_managed_empty": {
+    "message": "இன்னும் நிர்வகிக்கப்பட்ட கணக்குகள் இல்லை"
+  },
+  "pop_managed_mode_block": {
+    "message": "தடு"
+  },
+  "pop_managed_mode_mute": {
+    "message": "முடக்கு"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "ஆர்வமில்லை"
+  },
+  "a11y_release_account": {
+    "message": "நிர்வகிக்கப்பட்ட கணக்கை விடுவி"
+  },
+  "a11y_open_premium11": {
+    "message": "Premium11 வலைத்தளத்தைத் திற"
+  },
+  "a11y_premium_facts": {
+    "message": "Premium விவரங்கள்"
+  },
+  "pop_premium_chip": {
+    "message": "Premium செயலில்"
+  },
+  "pop_premium_chip_title": {
+    "message": "உங்கள் செயல்படுத்தப்பட்ட Premium அணுகலைப் பார்க்கவும்."
+  },
+  "pop_premium_back": {
+    "message": "பின்"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "வாழ்நாள் Premium செயல்படுத்தப்பட்டது"
+  },
+  "pop_premium_subtitle": {
+    "message": "Premium11 வழங்கும் X - அந்த நாடு அல்லது பகுதியின் அனைத்து ட்வீட்களையும் தடுக்கவும்-இல் முழு Premium தொகுப்பை அனுபவிக்கவும்."
+  },
+  "pop_premium_status_title": {
+    "message": "உங்கள் Premium சந்தா"
+  },
+  "pop_premium_status_active": {
+    "message": "வாழ்நாள் Premium செயலில்"
+  },
+  "pop_premium_gift_badge": {
+    "message": "டெவலப்பர் பரிசு"
+  },
+  "pop_premium_gift_message": {
+    "message": "நீட்டிப்பு டெவலப்பர் உங்களுக்கு வாழ்நாள் Premium சந்தாவை (USD 29.99) வழங்கியுள்ளார். Premium11 வழங்கும் X - அந்த நாடு அல்லது பகுதியின் அனைத்து ட்வீட்களையும் தடுக்கவும்-இன் விசுவாசமான பயனராக இருந்ததற்கு நன்றி."
+  },
+  "pop_premium_fact_version": {
+    "message": "நீட்டிப்பு பதிப்பு"
+  },
+  "pop_premium_fact_updated": {
+    "message": "கடைசியாக புதுப்பிக்கப்பட்டது"
+  },
+  "pop_premium_fact_license": {
+    "message": "Premium உரிம செல்லுபடி"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "வாழ்நாள்"
+  },
+  "pop_premium_fact_features": {
+    "message": "இயக்கப்பட்ட அம்சங்கள்"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "அனைத்தும்"
+  },
+  "pop_settings_title": {
+    "message": "அமைப்புகள்"
+  },
+  "pop_settings_btn_title": {
+    "message": "அமைப்புகளைத் திற"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "ஊட்டம், ஆராய்க மற்றும் சுயவிவரங்களில் பயனர்பெயருக்கு அருகில் கணக்கு நாட்டைக் காட்டு"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "ஊட்டம், ஆராய்க மற்றும் சுயவிவரங்களில் பயனர்பெயருக்கு அருகில் கணக்கு நாட்டுக் கொடியைக் காட்டு"
+  },
+  "pop_opt_show_country_note": {
+    "message": "குறிப்பு: X.com ஒரு கணக்கிற்கு நாடு அல்லது பகுதி தரவை அறிவிக்கும்போது மட்டுமே இந்த நீட்டிப்பு வேலை செய்யும் (இந்தக் கணக்கைப் பற்றி). X அடிக்கடி அந்த தகவலை வெளிப்படுத்தாது, எனவே இந்த விருப்பம் இயங்கியும் நாடு அல்லது பகுதி பயனர்பெயருக்கு அருகில் தோன்றாமல் இருக்கலாம். இந்த வரம்புகள் X.com-இலிருந்து, இந்த நீட்டிப்பிலிருந்து அல்ல."
+  },
+  "a11y_toggle_show_country": {
+    "message": "காலவரிசையில் நாட்டு லேபிள்களை மாற்று"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "காலவரிசையில் நாட்டுக் கொடிகளை மாற்று"
+  },
+  "pop_opt_taller_columns": {
+    "message": "உயரமான நிரல்கள்"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "பகுதி, நாடு மற்றும் நிர்வகிக்கப்பட்ட-கணக்கு பட்டியல்களை சுமார் இரண்டு முதல் மூன்று மடங்கு உயரமாக்கி, முழு பாப்அப்பும் உருட்ட அனுமதிக்கிறது. இயல்பாக அணைக்கப்பட்டுள்ளது."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "உயரமான நிரல்கள் அமைப்பை மாற்று"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "உள்ளூர் நாட்டு தற்காலிக சேமிப்பு"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. இது என்ன செய்கிறது: வெற்றிகரமான «இந்தக் கணக்கைப் பற்றி» தேடலுக்குப் பிறகு, அந்தக் கணக்கின் நாடு அல்லது பகுதியை இந்த சாதனத்தில் சேமிக்கிறது, பின்னர் X-ஐ மீண்டும் கேட்காமல் நீட்டிப்பு பயன்படுத்த."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. இயக்கத்தில் நன்மைகள்: குறைவான பிணைய அழைப்புகள், விகித வரம்பு குறைந்த வாய்ப்பு, ஏற்கனவே பார்த்த கணக்குகளுக்கு வேகமான நாட்டு லேபிள்கள் மற்றும் தானியங்கி முடக்கு/தடு முடிவுகள்."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. அணைத்தால்: ஒவ்வொரு தேடலும் மீண்டும் X-ஐ அடிக்கும் — அதிக விகித வரம்பு ஆபத்து, மெதுவான லேபிள்கள், உருட்டும்போது அதிக தரவு. உள்ள சேமிப்பு வட்டில் இருக்கும் ஆனால் மீண்டும் இயக்கும் வரை பயன்படாது."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. சேமிப்பகம்: மிக இலகு — சுமார் 100,000 பயனர்கள் ≈ 10 MB, உங்கள் PC-இல் ஒரு நவீன MP3 அளவு. வெற்றிகரமான நாடு/பகுதி முடிவுகள் மட்டும் சேமிக்கப்படும்."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "உள்ளூர் நாட்டு தற்காலிக சேமிப்பை மாற்று"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "சேமிக்கப்பட்ட கணக்குகள்"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "பயன்படுத்திய சேமிப்பகம் (தோராயம்)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "பட்டியல் கிளிக்கில் செயல்தவிர்"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. இது என்ன செய்கிறது: இயக்கத்தில், நிர்வகிக்கப்பட்ட கணக்கைக் கிளிக் செய்தால் பட்டியலிலிருந்து நீக்கி X-இல் செயலைத் திருப்பும் (முடக்கம் நீக்கு அல்லது தடை நீக்கு). அணைக்கப்பட்டிருந்தால் கிளிக்குகள் கணக்குகளை விடுவிக்காது — இந்த விருப்பத்தை இயக்க டிப் மட்டும் காட்டும்."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. எப்படி வேலை செய்கிறது: அந்த சுயவிவரத்திற்கு குறுகிய பின்னணி தாவலைத் திறந்து, முடக்கு/தடுவுக்கான அதே ⋯ மெனு ஓட்டத்தை இயக்கி, தாவலை மூடும். «ஆர்வமில்லை» பதிவுகள் X-இல் பட்டியல் மட்டும் (நம்பகமான செயல்தவிர் இல்லை)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. இயக்கத்தில் நன்மைகள்: ஒரு கிளிக் பட்டியலை சுத்தம் செய்து உங்கள் X கணக்கில் முடக்கு/தடுவைத் திருப்பும்."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. குறிப்பு: நீட்டிப்பு முடக்கம்/தடை நீக்க பின்னணி சுயவிவர தாவல் சிறிது நேரம் திறக்கும். தவறான கிளிக்குகள் தாவல் திறக்கவோ செயல்களைத் திருப்பவோ இல்லாமல் இயல்பாக அணைக்கப்பட்டுள்ளது."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "நிர்வகிக்கப்பட்ட பட்டியல் கிளிக்கில் செயல்தவிரை மாற்று"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "நிர்வகிக்கப்பட்ட கணக்கைக் கிளிக் செய்தால் தானாக முடக்கம் நீக்கு, தடை நீக்கு அல்லது «ஆர்வமில்லை» அழிக்க «பட்டியல் கிளிக்கில் செயல்தவிர்»-ஐ இயக்கவும். இப்போது அல்லது பின்னர் அமைப்புகளில் இயக்கலாம்."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "இப்போது இயக்கு"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "நிராகரி"
+  },
+  "a11y_managed_account_locked": {
+    "message": "நிர்வகிக்கப்பட்ட கணக்கு (விடுவிக்க பட்டியல் கிளிக்கில் செயல்தவிர் இயக்கவும்)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "இந்தக் கணக்கை X-இல் விடுவிக்கவா? செயலில் உள்ள நாடு/பகுதி வடிகட்டியுடன் இன்னும் பொருந்தினால், வெள்ளைப்பட்டியலில் சேர்க்காவிட்டால் நீட்டிப்பு மீண்டும் செயல்படலாம்."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "விடுவி + வெள்ளைப்பட்டியல் (மீண்டும் வடிகட்டாதே)"
+  },
+  "pop_toast_release_once": {
+    "message": "இந்த முறை மட்டும்"
+  },
+  "pop_toast_release_cancel": {
+    "message": "ரத்து"
+  },
+  "toast_blocked": {
+    "message": "தடுக்கப்பட்டது"
+  },
+  "toast_muted": {
+    "message": "முடக்கப்பட்டது"
+  },
+  "toast_notinterested": {
+    "message": "ஆர்வமில்லை"
+  },
+  "toast_reason_country": {
+    "message": "நாடு வடிகட்டி: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "பகுதி வடிகட்டி: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "செயல் அறிவிப்புகள்"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. இது என்ன செய்கிறது: நீட்டிப்பு தடுக்கும்போது, முடக்கும்போது அல்லது இடுகையை «ஆர்வமில்லை» எனக் குறிக்கும்போது, X கீழே கணக்கு பெயர், @ஹேண்டில் மற்றும் சுயவிவர புகைப்படத்துடன் குறுகிய டோஸ்ட் தோன்றும்."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. இயக்கத்தில் நன்மைகள்: ஒவ்வொரு தானியங்கி செயலையும் நடக்கும்போதே பார்க்கலாம்; டோஸ்ட் மறைய 6 வினாடி கவுண்டவுன்."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. அணைத்தால்: செயல்கள் வழக்கம் போல் நடக்கும்; பக்க டோஸ்ட் மட்டும் மறைக்கப்படும். கருவிப்பட்டி பேட்ஜ் ஒளிருதல் இன்னும் வேலை செய்யும்."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "X-இல் செயல் அறிவிப்புகளை மாற்று"
+  }
+}

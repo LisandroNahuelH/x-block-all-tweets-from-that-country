@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Chặn mọi tweet từ quốc gia hoặc khu vực đó"
+  },
+  "ext_description": {
+    "message": "Phát hiện quốc gia hoặc khu vực của tài khoản X trên dòng thời gian của bạn (Giới thiệu về tài khoản này)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Bộ lọc quốc gia"
+  },
+  "pop_heading": {
+    "message": "X - Chặn mọi tweet từ quốc gia hoặc khu vực đó"
+  },
+  "pop_lane_block": {
+    "message": "Chặn"
+  },
+  "pop_lane_mute": {
+    "message": "Tắt tiếng"
+  },
+  "pop_lane_notinterested": {
+    "message": "Không quan tâm"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Bật hoặc tắt cột Chặn"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Bật hoặc tắt cột Tắt tiếng"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Bật hoặc tắt cột Không quan tâm"
+  },
+  "pop_mode_warning_label": {
+    "message": "CẢNH BÁO:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Các tài khoản đã chọn bị chặn trên tài khoản X của bạn. Bài đăng của họ sẽ không còn xuất hiện trong bất kỳ ứng dụng X nào: máy tính, Android, iOS hoặc web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Các tài khoản đã chọn bị tắt tiếng trên tài khoản X của bạn. Bài đăng của họ sẽ không còn xuất hiện trong bất kỳ ứng dụng X nào: máy tính, Android, iOS hoặc web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Bài đăng từ các tài khoản đã chọn được đánh dấu Không quan tâm trên tài khoản X của bạn, nên X sẽ hiển thị ít hơn trên máy tính, Android, iOS và web."
+  },
+  "pop_regions_label": {
+    "message": "Khu vực"
+  },
+  "pop_countries_label": {
+    "message": "Quốc gia"
+  },
+  "pop_selected_count": {
+    "message": "Đã chọn $COUNT$",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Bật/tắt khu vực"
+  },
+  "a11y_toggle_country": {
+    "message": "Bật/tắt quốc gia"
+  },
+  "pop_search_regions": {
+    "message": "Tìm khu vực…"
+  },
+  "pop_search_countries": {
+    "message": "Tìm quốc gia…"
+  },
+  "pop_search_no_results": {
+    "message": "Không có kết quả"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Tài khoản đã chặn"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Tài khoản đã tắt tiếng"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Tài khoản Không quan tâm"
+  },
+  "pop_search_accounts": {
+    "message": "Tìm tài khoản…"
+  },
+  "pop_managed_empty": {
+    "message": "Chưa có tài khoản được quản lý"
+  },
+  "pop_managed_mode_block": {
+    "message": "Chặn"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Tắt tiếng"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Không quan tâm"
+  },
+  "a11y_release_account": {
+    "message": "Giải phóng tài khoản được quản lý"
+  },
+  "a11y_open_premium11": {
+    "message": "Mở trang web Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Chi tiết Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium đã kích hoạt"
+  },
+  "pop_premium_chip_title": {
+    "message": "Xem quyền truy cập Premium đã kích hoạt của bạn."
+  },
+  "pop_premium_back": {
+    "message": "Quay lại"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Premium trọn đời đã kích hoạt"
+  },
+  "pop_premium_subtitle": {
+    "message": "Tận hưởng bộ Premium đầy đủ trong X - Chặn mọi tweet từ quốc gia hoặc khu vực đó của Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Gói Premium của bạn"
+  },
+  "pop_premium_status_active": {
+    "message": "Premium trọn đời đang hoạt động"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Quà từ nhà phát triển"
+  },
+  "pop_premium_gift_message": {
+    "message": "Nhà phát triển tiện ích đã tặng bạn gói Premium trọn đời (USD 29.99). Cảm ơn bạn đã là người dùng trung thành của X - Chặn mọi tweet từ quốc gia hoặc khu vực đó của Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Phiên bản tiện ích"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Cập nhật lần cuối"
+  },
+  "pop_premium_fact_license": {
+    "message": "Hiệu lực giấy phép Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Trọn đời"
+  },
+  "pop_premium_fact_features": {
+    "message": "Tính năng đã bật"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Tất cả"
+  },
+  "pop_settings_title": {
+    "message": "Cài đặt"
+  },
+  "pop_settings_btn_title": {
+    "message": "Mở cài đặt"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Hiện quốc gia tài khoản cạnh tên người dùng trên bảng tin, khám phá và hồ sơ"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Hiện cờ quốc gia tài khoản cạnh tên người dùng trên bảng tin, khám phá và hồ sơ"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Lưu ý: Tiện ích này chỉ hoạt động khi X.com báo cáo dữ liệu quốc gia hoặc khu vực cho tài khoản (Giới thiệu về tài khoản này). X thường không hiển thị thông tin đó, nên dù bật tùy chọn này quốc gia hoặc khu vực có thể không xuất hiện cạnh tên. Các giới hạn này đến từ X.com, không phải từ tiện ích này."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Bật/tắt nhãn quốc gia trên dòng thời gian"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Bật/tắt cờ quốc gia trên dòng thời gian"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Cột cao hơn"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Làm danh sách khu vực, quốc gia và tài khoản được quản lý cao gấp khoảng hai đến ba lần, và cho phép cuộn toàn bộ cửa sổ bật lên. Tắt theo mặc định."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Bật/tắt bố cục cột cao hơn"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Bộ nhớ đệm quốc gia cục bộ"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Việc này làm gì: Sau khi tra cứu «Giới thiệu về tài khoản này» thành công, lưu quốc gia hoặc khu vực của tài khoản đó trên thiết bị này để tiện ích dùng lại sau mà không hỏi X lần nữa."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Lợi ích khi bật: Ít cuộc gọi mạng hơn, ít rủi ro giới hạn tốc độ hơn, nhãn quốc gia nhanh hơn và quyết định tắt tiếng/chặn tự động cho tài khoản đã xem."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Nếu tắt: Mọi tra cứu lại gửi tới X — rủi ro giới hạn tốc độ cao hơn, nhãn chậm hơn, dùng dữ liệu nhiều hơn khi cuộn. Bộ nhớ đệm hiện có vẫn trên đĩa nhưng không dùng cho đến khi bật lại."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Dung lượng: Rất nhẹ — khoảng 100.000 người dùng ≈ 10 MB, cỡ một file MP3 hiện đại trên PC. Chỉ lưu kết quả quốc gia/khu vực thành công."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Bật/tắt bộ nhớ đệm quốc gia cục bộ"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Tài khoản đã lưu đệm"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Dung lượng đã dùng (xấp xỉ)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Hoàn tác khi bấm danh sách"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Việc này làm gì: Khi bật, bấm tài khoản được quản lý sẽ gỡ khỏi danh sách và hoàn tác trên X (bật tiếng hoặc bỏ chặn). Khi tắt, bấm không giải phóng tài khoản — chỉ hiện gợi ý bật tùy chọn này."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Cách hoạt động: Mở tab nền ngắn tới hồ sơ đó, chạy cùng luồng menu ⋯ dùng cho tắt tiếng/chặn, rồi đóng tab. Mục «Không quan tâm» chỉ là danh sách trên X (không có hoàn tác đáng tin)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Lợi ích khi bật: Một lần bấm vừa dọn danh sách vừa đảo tắt tiếng/chặn trên tài khoản X của bạn."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Lưu ý: Tab hồ sơ nền sẽ mở ngắn để tiện ích bật tiếng/bỏ chặn. Tắt theo mặc định để bấm nhầm không mở tab hay đảo hành động ngoài ý muốn."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Bật/tắt hoàn tác khi bấm danh sách được quản lý"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Để tự động bật tiếng, bỏ chặn hoặc xóa Không quan tâm khi bấm tài khoản được quản lý, hãy bật Hoàn tác khi bấm danh sách. Có thể bật ngay hoặc sau trong Cài đặt."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Bật ngay"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Bỏ qua"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Tài khoản được quản lý (bật Hoàn tác khi bấm danh sách để giải phóng)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Giải phóng tài khoản này trên X? Nếu vẫn khớp bộ lọc quốc gia/khu vực đang bật, tiện ích có thể hành động lại trừ khi bạn đưa vào danh sách trắng."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Giải phóng + danh sách trắng (không lọc lại)"
+  },
+  "pop_toast_release_once": {
+    "message": "Chỉ lần này"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Hủy"
+  },
+  "toast_blocked": {
+    "message": "Đã chặn"
+  },
+  "toast_muted": {
+    "message": "Đã tắt tiếng"
+  },
+  "toast_notinterested": {
+    "message": "Không quan tâm"
+  },
+  "toast_reason_country": {
+    "message": "Bộ lọc quốc gia: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Bộ lọc khu vực: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Thông báo hành động"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Việc này làm gì: Khi tiện ích chặn, tắt tiếng hoặc đánh dấu bài Không quan tâm, một toast ngắn hiện ở cuối X với tên tài khoản, @handle và ảnh hồ sơ."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Lợi ích khi bật: Bạn thấy từng hành động tự động khi xảy ra, với đếm ngược 6 giây trước khi toast biến mất."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Nếu tắt: Hành động vẫn chạy bình thường; chỉ ẩn toast trên trang. Nháy huy hiệu thanh công cụ vẫn hoạt động."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Bật/tắt thông báo hành động trên X"
+  }
+}

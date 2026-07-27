@@ -1,0 +1,302 @@
+{
+  "ext_name": {
+    "message": "X - Blokir semua tweet dari negara atau wilayah itu"
+  },
+  "ext_description": {
+    "message": "Deteksi negara atau wilayah akun X di linimasa Anda (Tentang akun ini)."
+  },
+  "msg_location_suffix": {
+    "message": " · $COUNTRY$",
+    "placeholders": {
+      "COUNTRY": {
+        "content": "$1",
+        "example": "United States"
+      }
+    }
+  },
+  "pop_eyebrow": {
+    "message": "Filter negara"
+  },
+  "pop_heading": {
+    "message": "X - Blokir semua tweet dari negara atau wilayah itu"
+  },
+  "pop_lane_block": {
+    "message": "Blokir"
+  },
+  "pop_lane_mute": {
+    "message": "Bisukan"
+  },
+  "pop_lane_notinterested": {
+    "message": "Tidak tertarik"
+  },
+  "a11y_toggle_lane_block": {
+    "message": "Aktifkan atau nonaktifkan kolom Blokir"
+  },
+  "a11y_toggle_lane_mute": {
+    "message": "Aktifkan atau nonaktifkan kolom Bisukan"
+  },
+  "a11y_toggle_lane_notinterested": {
+    "message": "Aktifkan atau nonaktifkan kolom Tidak tertarik"
+  },
+  "pop_mode_warning_label": {
+    "message": "PERINGATAN:"
+  },
+  "pop_mode_hint_block": {
+    "message": "Akun yang dipilih diblokir di akun X Anda. Postingan mereka tidak akan lagi muncul di aplikasi X mana pun: desktop, Android, iOS, atau web."
+  },
+  "pop_mode_hint_mute": {
+    "message": "Akun yang dipilih dibisukan di akun X Anda. Postingan mereka tidak akan lagi muncul di aplikasi X mana pun: desktop, Android, iOS, atau web."
+  },
+  "pop_mode_hint_notinterested": {
+    "message": "Postingan dari akun yang dipilih ditandai Tidak tertarik di akun X Anda, sehingga X menampilkan lebih sedikit di desktop, Android, iOS, dan web."
+  },
+  "pop_regions_label": {
+    "message": "Wilayah"
+  },
+  "pop_countries_label": {
+    "message": "Negara"
+  },
+  "pop_selected_count": {
+    "message": "$COUNT$ dipilih",
+    "placeholders": {
+      "COUNT": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "a11y_toggle_region": {
+    "message": "Alihkan wilayah"
+  },
+  "a11y_toggle_country": {
+    "message": "Alihkan negara"
+  },
+  "pop_search_regions": {
+    "message": "Cari wilayah…"
+  },
+  "pop_search_countries": {
+    "message": "Cari negara…"
+  },
+  "pop_search_no_results": {
+    "message": "Tidak ada hasil"
+  },
+  "pop_blocked_accounts_label": {
+    "message": "Akun diblokir"
+  },
+  "pop_muted_accounts_label": {
+    "message": "Akun dibisukan"
+  },
+  "pop_notinterested_accounts_label": {
+    "message": "Akun Tidak tertarik"
+  },
+  "pop_search_accounts": {
+    "message": "Cari akun…"
+  },
+  "pop_managed_empty": {
+    "message": "Belum ada akun terkelola"
+  },
+  "pop_managed_mode_block": {
+    "message": "Blokir"
+  },
+  "pop_managed_mode_mute": {
+    "message": "Bisukan"
+  },
+  "pop_managed_mode_notinterested": {
+    "message": "Tidak tertarik"
+  },
+  "a11y_release_account": {
+    "message": "Lepas akun terkelola"
+  },
+  "a11y_open_premium11": {
+    "message": "Buka situs Premium11"
+  },
+  "a11y_premium_facts": {
+    "message": "Detail Premium"
+  },
+  "pop_premium_chip": {
+    "message": "Premium Aktif"
+  },
+  "pop_premium_chip_title": {
+    "message": "Lihat akses Premium yang diaktifkan."
+  },
+  "pop_premium_back": {
+    "message": "Kembali"
+  },
+  "pop_premium_eyebrow": {
+    "message": "Premium"
+  },
+  "pop_premium_title": {
+    "message": "Premium seumur hidup aktif"
+  },
+  "pop_premium_subtitle": {
+    "message": "Nikmati rangkaian Premium lengkap di X - Blokir semua tweet dari negara atau wilayah itu oleh Premium11."
+  },
+  "pop_premium_status_title": {
+    "message": "Langganan Premium Anda"
+  },
+  "pop_premium_status_active": {
+    "message": "Premium seumur hidup aktif"
+  },
+  "pop_premium_gift_badge": {
+    "message": "Hadiah pengembang"
+  },
+  "pop_premium_gift_message": {
+    "message": "Pengembang ekstensi telah memberikan langganan Premium seumur hidup (USD 29.99). Terima kasih telah menjadi pengguna setia X - Blokir semua tweet dari negara atau wilayah itu oleh Premium11."
+  },
+  "pop_premium_fact_version": {
+    "message": "Versi ekstensi"
+  },
+  "pop_premium_fact_updated": {
+    "message": "Terakhir diperbarui"
+  },
+  "pop_premium_fact_license": {
+    "message": "Masa berlaku lisensi Premium"
+  },
+  "pop_premium_fact_license_value": {
+    "message": "Seumur hidup"
+  },
+  "pop_premium_fact_features": {
+    "message": "Fitur diaktifkan"
+  },
+  "pop_premium_fact_features_value": {
+    "message": "Semua"
+  },
+  "pop_settings_title": {
+    "message": "Pengaturan"
+  },
+  "pop_settings_btn_title": {
+    "message": "Buka pengaturan"
+  },
+  "pop_opt_show_country_labels": {
+    "message": "Tampilkan negara akun di samping nama pengguna di feed, jelajahi, dan profil"
+  },
+  "pop_opt_show_country_flags": {
+    "message": "Tampilkan bendera negara akun di samping nama pengguna di feed, jelajahi, dan profil"
+  },
+  "pop_opt_show_country_note": {
+    "message": "Catatan: Ekstensi ini hanya berfungsi saat X.com melaporkan data negara atau wilayah untuk akun (Tentang akun ini). X sering tidak menampilkan informasi itu, jadi meski opsi ini aktif negara atau wilayah mungkin tidak muncul di samping nama. Batasan ini dari X.com, bukan dari ekstensi ini."
+  },
+  "a11y_toggle_show_country": {
+    "message": "Alihkan label negara di linimasa"
+  },
+  "a11y_toggle_show_country_flags": {
+    "message": "Alihkan bendera negara di linimasa"
+  },
+  "pop_opt_taller_columns": {
+    "message": "Kolom lebih tinggi"
+  },
+  "pop_opt_taller_columns_note": {
+    "message": "Membuat daftar wilayah, negara, dan akun terkelola sekitar dua hingga tiga kali lebih tinggi, dan memungkinkan seluruh popup digulir. Nonaktif secara default."
+  },
+  "a11y_toggle_taller_columns": {
+    "message": "Alihkan tata letak kolom lebih tinggi"
+  },
+  "pop_opt_geo_local_cache": {
+    "message": "Cache negara lokal"
+  },
+  "pop_opt_geo_local_cache_what": {
+    "message": "1. Fungsinya: Setelah pencarian «Tentang akun ini» berhasil, menyimpan negara atau wilayah akun itu di perangkat ini agar ekstensi dapat menggunakannya lagi tanpa bertanya ke X."
+  },
+  "pop_opt_geo_local_cache_benefits": {
+    "message": "2. Manfaat saat aktif: Lebih sedikit panggilan jaringan, risiko batas laju lebih rendah, label negara lebih cepat plus keputusan bisukan/blokir otomatis untuk akun yang sudah dilihat."
+  },
+  "pop_opt_geo_local_cache_off": {
+    "message": "3. Jika dimatikan: Setiap pencarian ke X lagi — risiko batas laju lebih tinggi, label lebih lambat, data lebih banyak saat menggulir. Cache yang ada tetap di disk tetapi tidak dipakai sampai diaktifkan lagi."
+  },
+  "pop_opt_geo_local_cache_size": {
+    "message": "4. Penyimpanan: Sangat ringan — sekitar 100.000 pengguna ≈ 10 MB, seukuran satu MP3 modern di PC. Hanya hasil negara/wilayah yang berhasil disimpan."
+  },
+  "a11y_toggle_geo_local_cache": {
+    "message": "Alihkan cache negara lokal"
+  },
+  "pop_opt_geo_cache_accounts": {
+    "message": "Akun yang di-cache"
+  },
+  "pop_opt_geo_cache_storage": {
+    "message": "Penyimpanan terpakai (perkiraan)"
+  },
+  "pop_opt_undo_on_list_click": {
+    "message": "Urungkan saat klik daftar"
+  },
+  "pop_opt_undo_on_list_click_what": {
+    "message": "1. Fungsinya: Saat aktif, mengeklik akun terkelola menghapusnya dari daftar dan mengurungkan di X (nyalakan suara atau buka blokir). Saat nonaktif, klik tidak melepaskan akun — hanya menampilkan tip untuk mengaktifkan opsi ini."
+  },
+  "pop_opt_undo_on_list_click_how": {
+    "message": "2. Cara kerja: Membuka tab latar singkat ke profil itu, menjalankan alur menu ⋯ yang sama untuk bisukan/blokir, lalu menutup tab. Entri Tidak tertarik hanya daftar di X (tidak ada urungan andal)."
+  },
+  "pop_opt_undo_on_list_click_benefits": {
+    "message": "3. Manfaat saat aktif: Satu klik membersihkan daftar dan membalik bisukan/blokir di akun X Anda."
+  },
+  "pop_opt_undo_on_list_click_note": {
+    "message": "4. Catatan: Tab profil latar akan terbuka sebentar agar ekstensi bisa nyalakan suara/buka blokir. Nonaktif secara default agar klik tidak disengaja tidak membuka tab atau membalik tindakan."
+  },
+  "a11y_toggle_undo_on_list_click": {
+    "message": "Alihkan urungkan saat klik daftar terkelola"
+  },
+  "pop_toast_undo_on_list_off": {
+    "message": "Untuk otomatis nyalakan suara, buka blokir, atau hapus Tidak tertarik saat mengeklik akun terkelola, aktifkan Urungkan saat klik daftar. Aktifkan sekarang atau nanti di Pengaturan."
+  },
+  "pop_toast_undo_on_list_cta": {
+    "message": "Aktifkan sekarang"
+  },
+  "pop_toast_undo_on_list_dismiss": {
+    "message": "Tutup"
+  },
+  "a11y_managed_account_locked": {
+    "message": "Akun terkelola (aktifkan Urungkan saat klik daftar untuk melepas)"
+  },
+  "pop_toast_release_confirm": {
+    "message": "Lepas akun ini di X? Jika masih cocok dengan filter negara/wilayah aktif, ekstensi mungkin bertindak lagi kecuali Anda masukkan ke daftar putih."
+  },
+  "pop_toast_release_whitelist": {
+    "message": "Lepas + daftar putih (jangan filter ulang)"
+  },
+  "pop_toast_release_once": {
+    "message": "Hanya kali ini"
+  },
+  "pop_toast_release_cancel": {
+    "message": "Batal"
+  },
+  "toast_blocked": {
+    "message": "Diblokir"
+  },
+  "toast_muted": {
+    "message": "Dibisukan"
+  },
+  "toast_notinterested": {
+    "message": "Tidak tertarik"
+  },
+  "toast_reason_country": {
+    "message": "Filter negara: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "Argentina"
+      }
+    }
+  },
+  "toast_reason_region": {
+    "message": "Filter wilayah: $FILTER$",
+    "placeholders": {
+      "FILTER": {
+        "content": "$1",
+        "example": "European Union"
+      }
+    }
+  },
+  "pop_opt_show_action_toasts": {
+    "message": "Notifikasi tindakan"
+  },
+  "pop_opt_show_action_toasts_what": {
+    "message": "1. Fungsinya: Saat ekstensi memblokir, membisukan, atau menandai postingan Tidak tertarik, toast singkat muncul di bawah X dengan nama akun, @handle, dan foto profil."
+  },
+  "pop_opt_show_action_toasts_benefits": {
+    "message": "2. Manfaat saat aktif: Anda melihat setiap tindakan otomatis saat terjadi, dengan hitungan mundur 6 detik sebelum toast hilang."
+  },
+  "pop_opt_show_action_toasts_off": {
+    "message": "3. Jika dimatikan: Tindakan tetap berjalan; hanya toast di halaman yang disembunyikan. Kilatan lencana bilah alat tetap berfungsi."
+  },
+  "a11y_toggle_show_action_toasts": {
+    "message": "Alihkan notifikasi tindakan di X"
+  }
+}
