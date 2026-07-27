@@ -13,20 +13,71 @@
   /** @type {Set<Element>} */
   const pendingEls = new Set();
   let showCountryLabels = true;
+  let showCountryFlags = false;
 
   async function loadUiPrefs() {
     try {
       if (globalThis.XCD_SETTINGS?.getSettings) {
         const s = await globalThis.XCD_SETTINGS.getSettings();
         showCountryLabels = s.showCountryLabels !== false;
+        showCountryFlags = s.showCountryFlags === true;
       }
     } catch (_) {
       showCountryLabels = true;
+      showCountryFlags = false;
     }
   }
 
   function removeAllCountryMarks() {
     document.querySelectorAll('.xcd-mark').forEach(el => el.remove());
+  }
+
+  function emojiForLocation(location) {
+    const key = String(location || '')
+      .trim()
+      .toLowerCase();
+    if (!key) return '';
+    const geo = globalThis.XCD_GEO;
+    if (!geo) return '🌍';
+    if (geo.COUNTRY_FLAGS && geo.COUNTRY_FLAGS[key]) return geo.COUNTRY_FLAGS[key];
+    const region = Array.isArray(geo.REGION_DATA)
+      ? geo.REGION_DATA.find(r => r && r.key === key)
+      : null;
+    if (region?.flag) return region.flag;
+    return '🌍';
+  }
+
+  function appendFlagNode(container, emoji) {
+    const value = emoji || '🏳️';
+    try {
+      const codePoints = Array.from(value)
+        .map(c => c.codePointAt(0).toString(16))
+        .join('-');
+      if (codePoints) {
+        const img = document.createElement('img');
+        img.className = 'xcd-flag';
+        img.src = `https://abs-0.twimg.com/emoji/v2/svg/${codePoints}.svg`;
+        img.alt = '';
+        img.draggable = false;
+        img.decoding = 'async';
+        img.loading = 'lazy';
+        img.referrerPolicy = 'no-referrer';
+        img.style.cssText =
+          'width:14px;height:14px;vertical-align:-2px;margin-right:3px;display:inline-block';
+        img.onerror = () => {
+          try {
+            img.replaceWith(document.createTextNode(value));
+          } catch (_) {
+            /* ignore */
+          }
+        };
+        container.appendChild(img);
+        return;
+      }
+    } catch (_) {
+      /* fall through */
+    }
+    container.appendChild(document.createTextNode(value));
   }
 
   function sendMessage(message) {
@@ -199,18 +250,21 @@
     el.dataset.xLocationAccurate = info?.locationAccurate === false ? '0' : '1';
     el.dataset.xScreenName = screenName;
     const existing = el.querySelector('.xcd-mark');
-    if (!showCountryLabels) {
+    const location = info?.location;
+    if (!location || (!showCountryLabels && !showCountryFlags)) {
       if (existing) existing.remove();
       return;
     }
-    if (info?.location && !existing) {
-      const mark = document.createElement('span');
-      mark.className = 'xcd-mark';
+    const mark = existing || document.createElement('span');
+    mark.className = 'xcd-mark';
+    mark.replaceChildren();
+    mark.style.cssText = 'font-size:11px;opacity:.75;margin-left:4px;white-space:nowrap;';
+    if (showCountryFlags) appendFlagNode(mark, emojiForLocation(location));
+    if (showCountryLabels) {
       const t = (globalThis.XCD_I18N && XCD_I18N.t) || (k => k);
-      mark.textContent = t('msg_location_suffix', [info.location]);
-      mark.style.cssText = 'font-size:11px;opacity:.75;margin-left:4px;white-space:nowrap;';
-      el.appendChild(mark);
+      mark.appendChild(document.createTextNode(t('msg_location_suffix', [location])));
     }
+    if (!existing) el.appendChild(mark);
   }
 
   async function processElement(el) {
@@ -295,7 +349,7 @@
         const key = globalThis.XCD_SETTINGS?.STORAGE_KEY || 'xcd_settings';
         if (!changes[key]) return;
         loadUiPrefs().then(() => {
-          if (!showCountryLabels) removeAllCountryMarks();
+          if (!showCountryLabels && !showCountryFlags) removeAllCountryMarks();
           else {
             // force re-apply marks on next scan for already-processed nodes
             document.querySelectorAll('[data-xcd-processed], [data-xcdProcessed]').forEach(el => {
