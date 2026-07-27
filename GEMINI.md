@@ -55,7 +55,7 @@ This file is the canonical agent operating contract for this repository.
 2. Account entries: `{ screenName, name, avatarUrl, ts }`.
 3. Toolbar badge: session counter + red (block) / yellow (mute) / blue (notinterested) flash via `shared/badge.js` + SW.
 4. Opening external URLs (Premium11 home): message SW `OPEN_URL` then `window.close()` — never hang the popup.
-5. Timeline country UI prefs (independent): `showCountryLabels` (default ON, opt-out) and `showCountryFlags` (default OFF, opt-in). Both can be on/off in any combo. When both on, `.xcd-mark` order is **flag → name** (Twemoji SVG from `abs-0.twimg.com` via `XCD_GEO.COUNTRY_FLAGS` / `REGION_DATA`).
+5. Timeline country UI prefs (independent): `showCountryLabels` and `showCountryFlags` (both default ON, opt-out). Both can be on/off in any combo. When both on, `.xcd-mark` order is **flag → name** (Twemoji SVG from `abs-0.twimg.com` via `XCD_GEO.COUNTRY_FLAGS` / `REGION_DATA`).
 
 ### Build and verify
 

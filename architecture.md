@@ -15,7 +15,7 @@ UI prefs relevant to timeline marks:
 | Key | Default | Semantics |
 |-----|---------|-----------|
 | `showCountryLabels` | `true` | Opt-out (`!== false`). Text suffix ` · {location}` next to username. |
-| `showCountryFlags` | `false` | Opt-in (`=== true`). Country/region flag image next to username. |
+| `showCountryFlags` | `true` | Opt-out (`!== false`). Country/region flag image next to username. |
 
 ## Timeline country mark
 
