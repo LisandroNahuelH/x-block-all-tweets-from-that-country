@@ -26,6 +26,7 @@
       mute: emptyLane(true),
       notinterested: emptyLane(true),
       showCountryLabels: true,
+      showCountryFlags: false,
       tallerColumns: false,
       geoLocalCache: true,
       undoOnListClick: false,
@@ -38,6 +39,7 @@
     mute: Object.freeze(emptyLane(true)),
     notinterested: Object.freeze(emptyLane(true)),
     showCountryLabels: true,
+    showCountryFlags: false,
     tallerColumns: false,
     geoLocalCache: true,
     undoOnListClick: false,
@@ -213,6 +215,7 @@
       mute: normalizeLaneStrict(base.mute),
       notinterested: normalizeLaneStrict(base.notinterested),
       showCountryLabels: base.showCountryLabels !== false,
+      showCountryFlags: base.showCountryFlags === true,
       tallerColumns: base.tallerColumns === true,
       geoLocalCache: base.geoLocalCache !== false,
       undoOnListClick: base.undoOnListClick === true,
@@ -250,6 +253,10 @@
         partial && 'showCountryLabels' in partial
           ? !!partial.showCountryLabels
           : current.showCountryLabels !== false,
+      showCountryFlags:
+        partial && 'showCountryFlags' in partial
+          ? !!partial.showCountryFlags
+          : current.showCountryFlags === true,
       tallerColumns:
         partial && 'tallerColumns' in partial
           ? !!partial.tallerColumns
@@ -283,6 +290,10 @@
 
   async function setShowCountryLabels(enabled) {
     return setSettings({ showCountryLabels: !!enabled });
+  }
+
+  async function setShowCountryFlags(enabled) {
+    return setSettings({ showCountryFlags: !!enabled });
   }
 
   async function setTallerColumns(enabled) {
@@ -448,6 +459,7 @@
     setSettings,
     setLaneEnabled,
     setShowCountryLabels,
+    setShowCountryFlags,
     setTallerColumns,
     setGeoLocalCache,
     setUndoOnListClick,
