@@ -761,6 +761,13 @@
     input.checked = s.showCountryLabels !== false;
   }
 
+  async function syncShowCountryFlagsToggle() {
+    const input = document.getElementById('optShowCountryFlags');
+    if (!input || !globalThis.XCD_SETTINGS) return;
+    const s = await XCD_SETTINGS.getSettings();
+    input.checked = s.showCountryFlags === true;
+  }
+
   async function syncTallerColumnsToggle() {
     const input = document.getElementById('optTallerColumns');
     if (!globalThis.XCD_SETTINGS) return;
@@ -797,6 +804,12 @@
     await XCD_SETTINGS.setShowCountryLabels(!!input.checked);
   }
 
+  async function onShowCountryFlagsToggle(event) {
+    const input = event.currentTarget;
+    if (!globalThis.XCD_SETTINGS) return;
+    await XCD_SETTINGS.setShowCountryFlags(!!input.checked);
+  }
+
   async function onTallerColumnsToggle(event) {
     const input = event.currentTarget;
     if (!globalThis.XCD_SETTINGS) return;
@@ -831,6 +844,7 @@
     applyDom(document);
     fillPremiumFacts();
     await syncShowCountryToggle();
+    await syncShowCountryFlagsToggle();
     await syncTallerColumnsToggle();
     await syncGeoLocalCacheToggle();
     await syncUndoOnListClickToggle();
@@ -845,6 +859,9 @@
     document
       .getElementById('optShowCountryLabels')
       ?.addEventListener('change', onShowCountryToggle);
+    document
+      .getElementById('optShowCountryFlags')
+      ?.addEventListener('change', onShowCountryFlagsToggle);
     document
       .getElementById('optTallerColumns')
       ?.addEventListener('change', onTallerColumnsToggle);
@@ -916,6 +933,8 @@
             if (tallEl) tallEl.checked = settings.tallerColumns === true;
             const countryEl = document.getElementById('optShowCountryLabels');
             if (countryEl) countryEl.checked = settings.showCountryLabels !== false;
+            const flagsEl = document.getElementById('optShowCountryFlags');
+            if (flagsEl) flagsEl.checked = settings.showCountryFlags === true;
             const geoEl = document.getElementById('optGeoLocalCache');
             if (geoEl) geoEl.checked = settings.geoLocalCache !== false;
             const undoEl = document.getElementById('optUndoOnListClick');
