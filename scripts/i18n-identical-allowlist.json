@@ -1,4 +1,7 @@
 {
-  "identicalMessageKeys": [],
-  "notes": "Keys allowed to remain identical to English in non-en locales. Add product brand/token keys only when deliberate (e.g. short 'Premium'). en_AU/en_GB/en_US are skipped by audit as English variants."
+  "identicalMessageKeys": [
+    "msg_location_suffix",
+    "pop_premium_eyebrow"
+  ],
+  "notes": "Keys allowed to remain identical to English in non-en locales. msg_location_suffix keeps the · + English country token from X. pop_premium_eyebrow keeps brand word Premium. en_AU/en_GB/en_US are skipped by audit as English variants."
 }
