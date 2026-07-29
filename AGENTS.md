@@ -136,6 +136,16 @@ Skip only for pure Q&A / read-only exploration with no file changes.
 | CWS registry | `D:\OfiSync\0. Lisandro\0. Programacion\0. Chrome Web Store Publish\extensions.json` (name match / `--extension-id`) |
 | Current stage | Popup 3 lanes + geo detection + **auto engine on X** (menu ⋯ port of I Don't Care) |
 
+### Heartbeat (anonymous diagnostics)
+
+1. Product slug: `x-block-all-tweets-from-that-country` — module `extension/shared/heartbeat.js` (`self.XCD_HEARTBEAT`).
+2. `POST https://www.premium11.com/api/heartbeat` with header `X-Heartbeat-Key` (fire-and-forget; no tracks/handles in payload).
+3. Events: `install` / `update` on SW `onInstalled`; `ping` when popup opens (`HEARTBEAT_PING` message), throttled ~24h via `xcd_lastHeartbeatAt`.
+4. Storage keys: `xcd_installId` (UUID), `xcd_lastHeartbeatAt`.
+5. Uninstall: `chrome.runtime.setUninstallURL` → `https://www.premium11.com/goodbye/x-block-all-tweets-from-that-country?id=<installId>&v=<extVersion>` (no SW fetch on remove).
+6. Manifest `host_permissions`: `https://www.premium11.com/*`, `https://premium11.com/*`.
+7. Admin dashboard: `https://www.premium11.com/admin/x-block-all-tweets-from-that-country`.
+
 ### Content engine contract
 
 1. Action execution must follow IDC menu flow: caret → Dropdown/menu → keyword item → optional block confirm (`content/engine/actions.js`).
