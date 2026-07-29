@@ -30,6 +30,10 @@ Either, both, or neither may be enabled. Pref changes via `storage.onChanged` cl
 
 `popup.html` settings view: toggle `#optShowCountryLabels`, then `#optShowCountryFlags`, then shared data-availability note.
 
+## Heartbeat (Premium11)
+
+Anonymous install/update/ping diagnostics via `shared/heartbeat.js` (`XCD_HEARTBEAT`). Background SW registers uninstall farewell URL and sends install/update; popup init triggers throttled ping. Payload `{ v:1, product:'x-block-all-tweets-from-that-country', event, extVersion, installId, locale, … }` to `https://www.premium11.com/api/heartbeat`. Local keys `xcd_installId` / `xcd_lastHeartbeatAt`. Admin: `https://www.premium11.com/admin/x-block-all-tweets-from-that-country`.
+
 ## Chrome Web Store
 
 - Extension ID: `obpgcigehkijhgjdldddiaijimhihpma`
