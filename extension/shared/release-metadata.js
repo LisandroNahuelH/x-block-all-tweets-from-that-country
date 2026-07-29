@@ -6,10 +6,10 @@
   'use strict';
 
   /** ISO date (YYYY-MM-DD) of the latest published release. */
-  const EXTENSION_LAST_UPDATE_ISO = '2026-07-27';
+  const EXTENSION_LAST_UPDATE_ISO = '2026-07-29';
 
   /** Fallback when chrome.runtime.getManifest() is unavailable. Keep in sync with manifest/package.json. */
-  const EXTENSION_RELEASE_VERSION = '0.1.12';
+  const EXTENSION_RELEASE_VERSION = '0.1.13';
 
   const api = {
     EXTENSION_LAST_UPDATE_ISO,
