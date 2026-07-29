@@ -6,6 +6,7 @@ importScripts('shared/badge.js');
 importScripts('shared/settings.js');
 importScripts('shared/geo-cache-idb.js');
 importScripts('shared/dev-reload.js');
+importScripts('shared/heartbeat.js');
 
 const QUERY_ID = 'XRqGa7EeokUU5kppkh13EA';
 const BASE_URL = 'https://x.com/i/api/graphql';
@@ -444,6 +445,10 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       }
       case 'FETCH_USER_INFO':
         return await handleFetchUserInfo(payload);
+      case 'HEARTBEAT_PING': {
+        void self.XCD_HEARTBEAT?.sendAnonymousHeartbeat?.('ping');
+        return { success: true };
+      }
       case 'RELEASE_ACCOUNT':
         return await handleReleaseAccount(payload);
       case 'OPEN_URL': {
@@ -510,14 +515,24 @@ async function boot() {
     }
   }
   if (self.XCD_BADGE) self.XCD_BADGE.initBadge();
+  try {
+    void self.XCD_HEARTBEAT?.registerUninstallFarewellUrl?.();
+  } catch (_) {
+    /* ignore */
+  }
 }
 
 boot();
 
 chrome.runtime.onStartup?.addListener?.(() => {
   self.XCD_BADGE?.initBadge?.();
+  void self.XCD_HEARTBEAT?.registerUninstallFarewellUrl?.();
 });
-chrome.runtime.onInstalled?.addListener?.(() => {
+chrome.runtime.onInstalled?.addListener?.((details) => {
   self.XCD_BADGE?.initBadge?.();
   boot();
+  const reason = details?.reason;
+  if (reason === 'install') void self.XCD_HEARTBEAT?.sendAnonymousHeartbeat?.('install');
+  else if (reason === 'update') void self.XCD_HEARTBEAT?.sendAnonymousHeartbeat?.('update');
+  void self.XCD_HEARTBEAT?.registerUninstallFarewellUrl?.();
 });

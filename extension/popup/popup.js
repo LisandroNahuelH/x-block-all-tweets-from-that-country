@@ -841,6 +841,11 @@
 
   async function init() {
     document.title = t('ext_name') || 'X - Block All Tweets From That Country Or Region';
+    try {
+      chrome.runtime.sendMessage({ type: 'HEARTBEAT_PING' }, () => void chrome.runtime.lastError);
+    } catch (_) {
+      /* ignore */
+    }
     applyDom(document);
     fillPremiumFacts();
     await syncShowCountryToggle();

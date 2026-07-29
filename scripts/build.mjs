@@ -43,6 +43,7 @@ const required = [
   'shared/geo-cache-idb.js',
   'shared/release-metadata.js',
   'shared/dev-reload.js',
+  'shared/heartbeat.js',
   'brand/premium11-mark.svg',
   'assets/fonts/montserrat/montserrat-latin.woff2',
   '_locales/en/messages.json',

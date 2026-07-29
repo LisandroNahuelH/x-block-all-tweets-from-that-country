@@ -14,7 +14,9 @@
     "*://*.x.com/*",
     "*://*.twitter.com/*",
     "https://abs-0.twimg.com/*",
-    "https://pbs.twimg.com/*"
+    "https://pbs.twimg.com/*",
+    "https://www.premium11.com/*",
+    "https://premium11.com/*"
   ],
   "background": {
     "service_worker": "background.js"
