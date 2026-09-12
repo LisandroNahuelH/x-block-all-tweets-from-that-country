@@ -1,0 +1,24 @@
+# CI - mirrors the local gate: mirrors + i18n + build + release pins.
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Verify (mirrors + i18n + build)
+        run: npm run verify
+      - name: Check release pins
+        run: npm run versions:check
