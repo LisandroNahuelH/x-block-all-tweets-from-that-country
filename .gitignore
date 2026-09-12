@@ -1,13 +1,25 @@
-node_modules/
+# The extension build output — never committed.
 dist/
+node_modules/
 coverage/
-.env*
-!.env.example
-.DS_Store
-Thumbs.db
-*.zip
+
+# Local state and artifact dirs (keep the public tree clean).
+Backups/
 Backups UI/
 Backups .txt/
+release/
+.cursor/
 _upstream/
 .agent/
 .codex/
+
+# Local install artifacts.
+*.zip
+*.bak-*
+.env*
+!.env.example
+
+# OS noise.
+.DS_Store
+Thumbs.db
+desktop.ini
