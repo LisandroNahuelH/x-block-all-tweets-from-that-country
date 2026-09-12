@@ -59,6 +59,8 @@ Full detail: [`docs/architecture.md`](docs/architecture.md).
 
 ## Install
 
+**Quick start:** end users install from the Chrome Web Store (below); developers build from source in three commands.
+
 ### From the Chrome Web Store (recommended)
 
 **[X - Block All Tweets From That Country Or Region](https://chromewebstore.google.com/detail/obpgcigehkijhgjdldddiaijimhihpma)**
@@ -81,6 +83,12 @@ On Windows, `install/install.ps1` automates exactly those steps (dry run:
 `install/install.ps1 -WhatIf`). Agents: follow [`AGENTS.md`](AGENTS.md).
 
 <img src="docs/assets/screenshots/screenshot-1-1280x800.png" alt="Extension UI (from the Chrome Web Store listing)" width="720">
+
+## Requirements
+
+- **Chrome 111+** on any Chromium browser (Manifest V3). Not available for Firefox.
+- **Node 18+** for the dev path (build and checks). Zero npm dependencies — nothing to install.
+- **Windows v1** for `install/install.ps1`; the build itself is plain Node and runs on any OS.
 
 ## What this repository touches
 
