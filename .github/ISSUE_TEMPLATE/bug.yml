@@ -1,0 +1,55 @@
+name: Bug report
+description: The extension or the build does not behave as described.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please **do not include tokens, install IDs, or personal data**.
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: The store listing version, or `dist/manifest.json` for source builds.
+      placeholder: "0.1.13"
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How do you run it?
+      options:
+        - Chrome Web Store
+        - Loaded unpacked from source
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version and OS
+      placeholder: "Chrome 130, Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: Service worker console or installer log excerpts. Never include secrets or personal data.
+    validations:
+      required: false

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Chrome Web Store listing
+    url: https://chromewebstore.google.com/detail/obpgcigehkijhgjdldddiaijimhihpma
+    about: Install the extension, or leave a store review.
+  - name: Security report (private)
+    url: https://github.com/LisandroNahuelH/x-block-all-tweets-from-that-country/security/advisories/new
+    about: Privately report a vulnerability - see SECURITY.md.
+  - name: Documentation
+    url: https://github.com/LisandroNahuelH/x-block-all-tweets-from-that-country/blob/main/docs/architecture.md
+    about: How it works, limits, and troubleshooting before opening an issue.
