@@ -1,0 +1,23 @@
+{
+  "version": "0.1.13",
+  "updated_at": "2026-09-12",
+  "installer": {
+    "path": "install/install.ps1",
+    "sha256": "7d3bf355f3b346e74df5cfde308af8658959860c27ecae72812604f33c78154a"
+  },
+  "artifacts": [
+    {
+      "path": "package.json",
+      "sha256": "e6fa98b32e05fe7c5049707553e196b7a722b96208e9379626230609fc9ff1f8"
+    },
+    {
+      "path": "scripts/build.mjs",
+      "sha256": "315e381a64586488ad569d51627e16eb0a2c94ddcc0f4a5b9a3edad5d4373d01"
+    },
+    {
+      "path": "extension/manifest.json",
+      "sha256": "9d6554ba7214af05d0739c6e64bcdcd9ff97100dfd2a924080851c65310b9103"
+    }
+  ],
+  "min_host": null
+}
