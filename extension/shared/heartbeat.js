@@ -1,10 +1,11 @@
 /**
- * Anonymous usage heartbeat → Premium11 (install / update / ping).
+ * Pseudonymous usage heartbeat → Premium11 (install / update / ping).
  * Fire-and-forget; never blocks SW or popup.
  */
 ;(() => {
   const PRODUCT = 'x-block-all-tweets-from-that-country';
   const ENDPOINT = 'https://www.premium11.com/api/heartbeat';
+  // Public client key: identifies this product; ships in every released build, not confidential.
   const API_KEY = '0xathm93deqzsbw6u1folgj7kric4ynv';
   const THROTTLE_MS = 24 * 60 * 60 * 1000;
   const INSTALL_ID_KEY = 'xcd_installId';

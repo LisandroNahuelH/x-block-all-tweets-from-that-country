@@ -1,6 +1,6 @@
 /**
- * MAIN world: captura headers de sesión de X y resuelve AboutAccountQuery.
- * Tech adaptada de xaitax/x-account-location-device (MIT).
+ * MAIN world: captures X session headers and resolves AboutAccountQuery.
+ * Detection technique adapted from xaitax/x-account-location-device (MIT).
  */
 (function () {
   'use strict';
