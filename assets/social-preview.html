@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- Social preview source (1280x640). Text is exact - never re-render with a diffusion model.
+     Render:
+       & $chrome --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=2 `
+         --window-size=1280,640 --screenshot="assets/social-preview@2x.png" ([Uri]$html).AbsoluteUri
+     Then downscale to 1280x640 (LANCZOS) -> assets/social-preview.png (<= 1 MB). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --bg0:#0b0e14; --bg1:#141926; --panel:rgba(255,255,255,.04); --line:rgba(255,255,255,.10);
+    --t0:#eef3fb; --t1:#9fb0c8; --t2:#5b677a;
+    --accent:#ff9752; --accent-strong:#ff6c2f;
+  }
+  *{margin:0;box-sizing:border-box;font-family:"Segoe UI",system-ui,-apple-system,sans-serif}
+  body{width:1280px;height:640px;background:
+    radial-gradient(1100px 560px at 88% -12%, rgba(255,108,47,.14), transparent 62%),
+    radial-gradient(900px 500px at -10% 110%, rgba(255,151,82,.08), transparent 60%),
+    linear-gradient(135deg,var(--bg0),var(--bg1));
+    color:var(--t0);overflow:hidden;position:relative}
+  .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:26px 26px}
+  .wrap{position:relative;padding:64px 72px;display:flex;flex-direction:column;gap:20px;height:100%}
+  .eyebrow{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--t2)}
+  h1{font-size:52px;line-height:1.12;font-weight:700;letter-spacing:-.6px;max-width:1040px}
+  h1 .a{color:var(--accent)}
+  .sub{font-size:19px;color:var(--t1);max-width:980px}
+  .chips{display:flex;gap:10px;margin-top:2px;flex-wrap:wrap}
+  .chip{font-size:14px;padding:8px 15px;border:1px solid var(--line);background:var(--panel);border-radius:999px;color:var(--t1)}
+  .chip.on{color:var(--t0);border-color:var(--accent)}
+  .card{margin-top:auto;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:16px}
+  .avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--accent-strong),#b8441f);flex:none}
+  .who{flex:1;min-width:0}
+  .name{font-size:17px;font-weight:600}
+  .who .sub2{font-size:14px;color:var(--t1);margin-top:2px}
+  .pill{font-size:14px;font-weight:600;color:#fff;background:linear-gradient(135deg,var(--accent-strong),#d2541f);border-radius:999px;padding:9px 18px;flex:none}
+  .foot{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--t2)}
+  .foot .r{color:var(--t1)}
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="wrap">
+    <div class="eyebrow">X - Block All Tweets From That Country Or Region</div>
+    <h1>Block or mute X accounts by country or region<br><span class="a">straight from the timeline.</span></h1>
+    <div class="sub">A Chromium MV3 extension for x.com. Detection runs in your browser, the geo cache stays on your device.</div>
+    <div class="chips">
+      <span class="chip on">Block &#183; Mute &#183; Not interested</span>
+      <span class="chip">Client-side detection</span>
+      <span class="chip">Local IndexedDB cache</span>
+      <span class="chip">Manifest V3</span>
+    </div>
+    <div class="card">
+      <div class="avatar"></div>
+      <div class="who">
+        <div class="name">@some_account</div>
+        <div class="sub2">About this account &#183; based in the Netherlands</div>
+      </div>
+      <div class="pill">Blocked</div>
+    </div>
+    <div class="foot">
+      <span>Premium11 &#183; MIT</span>
+      <span class="r">github.com/LisandroNahuelH/x-block-all-tweets-from-that-country</span>
+    </div>
+  </div>
+</body>
+</html>
